@@ -121,17 +121,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">1</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">0</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">1</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">0</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">3</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">1</span></a>
 
   </li>
         <li class="menu-item menu-item-福利姬">
@@ -162,92 +162,6 @@
 
           <div class="content index posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://navoni1024.github.io/request%E6%98%AF%E4%BB%80%E9%BA%BC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/vichy.gif">
-      <meta itemprop="name" content="navoni1023">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="皇家維修熱線">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/request%E6%98%AF%E4%BB%80%E9%BA%BC/" class="post-title-link" itemprop="url">request是什麼</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-              
-
-              <time title="創建時間：2023-07-24 10:13:21 / 修改時間：11:00:26" itemprop="dateCreated datePublished" datetime="2023-07-24T10:13:21+08:00">2023-07-24</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="TEST"><a href="#TEST" class="headerlink" title="TEST"></a>TEST</h2><hr>
-<p>對了之前忘記講，本系列預設各位擁有基本的python能力，對各種資料結構、套件、模組等有一定概念就行了。<br>本文的範例都是在python 3.10下操作的。</p>
-<p><img src="/request%E6%98%AF%E4%BB%80%E9%BA%BC/2ee3t-bkryh.gif" alt="2ee3t-bkryh.gif"></p>
-<hr>
-<h2 id="requests是什麼"><a href="#requests是什麼" class="headerlink" title="requests是什麼?"></a>requests是什麼?</h2><p>簡單來說就是能讓你抓取整個網頁的東西，也能夠丟上去一些東西。<br>比較常用到的有下列功能。</p>
-<ul>
-<li>get</li>
-<li>post</li>
-<li>session</li>
-</ul>
-<p>python預設並沒有安裝，所以要先用pip安裝下。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
-
-<p>安裝完後在寫程式前也記得先import</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="get"><a href="#get" class="headerlink" title="get"></a>get</h2><p>基本上就是抓下網頁。在抓取網頁時加上昨天提到的header比較不會被擋下來。</p>
-<p>舉例來說:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">	&#x27;Users-agent&#x27;: &#x27;Mozilla/5.0 (X11; Ubuntu; Linux x86 64; rv:91.0) Gecko/20100101 Firefox/91.0&#x27;,</span><br><span class="line">&#125;</span><br><span class="line">url = &#x27;你想爬的網站&#x27;</span><br><span class="line">r = requests.get(url, headers = headers)</span><br><span class="line"></span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
-
-<p>上述的程式應該會把網頁的html印在終端機，<br>可以填入各種網址試試看這樣的程式會印出什麼。<br>當然單純只做這樣被擋下來而只會顯示<code>respone&lt;XXX&gt;</code>的機率也不低就是。<br>也可以試試看換個header看網頁會不會有差異。</p>
-<p>總之抓下來的單純html當然是沒什麼用，要解析html並取出其中有用的資訊的話就要靠後面幾天會提到的bs4跟lxml了。</p>
-<hr>
-<h2 id="post"><a href="#post" class="headerlink" title="post"></a>post</h2><p>能夠丟字串或json檔上去，在需要給網站資訊時會用到。<br>舉例來說，投票機器人。<br>但一時之間想不到什麼很好的網站舉例。</p>
-<hr>
-<h2 id="session"><a href="#session" class="headerlink" title="session"></a>session</h2><p>能夠在多個請求中保持一些數據。<br>如果網站會用到cookie的話就需要使用這個。</p>
-<p>舉例來說你用session登入一個網站後，之後在用這個物件抓取該網站其他頁面也會默認你是登入的。<br>但一時之間想不到什麼很好的網站舉例。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
       
   
   
@@ -299,113 +213,6 @@
       
           <h2 id="哲學系發癲"><a href="#哲學系發癲" class="headerlink" title="哲學系發癲"></a>哲學系發癲</h2><p>原來我開的笑話都指向空虛的所指<br>我還以為你是一個真實他者<br>沒想到是個大他者<br>我的能指只是傳達了純粹意識形態<br>我們的關係之間連一場遊戲都玩不成</p>
 <p><img src="/%E5%93%B2%E5%AD%B8%E7%B3%BB%E7%99%BC%E7%99%B2/tien.jpg" alt="TIEN"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://navoni1024.github.io/test/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/vichy.gif">
-      <meta itemprop="name" content="navoni1023">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="皇家維修熱線">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/test/" class="post-title-link" itemprop="url">星爆氣流斬</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2023-07-16 00:20:28" itemprop="dateCreated datePublished" datetime="2023-07-16T00:20:28+08:00">2023-07-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2023-07-24 10:32:26" itemprop="dateModified" datetime="2023-07-24T10:32:26+08:00">2023-07-24</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/test/" itemprop="url" rel="index"><span itemprop="name">-[test]</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>昨天介紹了dc的功能還有bot要怎麼申請，今天就可以來講他的基本架構了。</p>
-<hr>
-<p>首先先用一個最基本的機器人來示範。請打開一個python檔並鍵入以下內容:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">from discord.ext import commands</span><br><span class="line"></span><br><span class="line">bot = commands.Bot(&#x27;%&#x27;)</span><br><span class="line"></span><br><span class="line">@bot.event</span><br><span class="line">async def on_ready():</span><br><span class="line">	print(&#x27;不客气！&#x27;)</span><br><span class="line">	print(&#x27;感谢您使用Discord产品, 欢迎您继续咨询Discord社区！&#x27;)</span><br><span class="line">	</span><br><span class="line">@bot.command(aliases=[&#x27;touch&#x27;])</span><br><span class="line">async def t(message):</span><br><span class="line">	await message.channel.send(&#x27;请不要随意地触碰我！ 十分感谢！&#x27;)</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">	bot.run(&#x27;在這裡輸入您的token&#x27;)</span><br></pre></td></tr></table></figure>
-
-<p>接下來分行解釋下。</p>
-<hr>
-<h4 id="bot-commands-bot-‘-’"><a href="#bot-commands-bot-‘-’" class="headerlink" title="bot &#x3D; commands.bot(‘%’)"></a>bot &#x3D; commands.bot(‘%’)</h4><p>造出一個bot的物件。而那個<code>&#39;%&#39;</code>就是呼叫機器人的前綴。<br>不一定要一個字，你要拿<code>&#39;peko&#39;</code>當前綴也是完全可以的。</p>
-<p>小補充，如果你也想要用標記機器人來呼叫機器人的話可以這樣寫:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bot = commands.bot(commands.when_mentioned_or(&#x27;%&#x27;))</span><br></pre></td></tr></table></figure>
-<p>效果會像這樣:<br><img src="https://ithelp.ithome.com.tw/upload/images/20221010/20152706nEGgzYWzSc.png" alt="https://ithelp.ithome.com.tw/upload/images/20221010/20152706nEGgzYWzSc.png"></p>
-<p>bot裡面詳細有什麼功能可以看一下<a target="_blank" rel="noopener" href="https://discordpy.readthedocs.io/en/stable/ext/commands/api.html#bots">官方API的文件</a><br>看不懂也沒關係，後面會帶到一些常見的用法。</p>
-<hr>
-<h4 id="bot-event"><a href="#bot-event" class="headerlink" title="@bot.event"></a>@bot.event</h4><p>這個<code>@</code>叫<strong>decorator</strong>，是python的語法糖。<br>簡單來說這東西會把下面的函數丟到你@的函數裡面加工，詳細可以看一下<a target="_blank" rel="noopener" href="https://medium.com/citycoddee/python%E9%80%B2%E9%9A%8E%E6%8A%80%E5%B7%A7-3-%E7%A5%9E%E5%A5%87%E5%8F%88%E7%BE%8E%E5%A5%BD%E7%9A%84-decorator-%E5%97%B7%E5%97%9A-6559edc87bc0">這篇</a>。<br>官方API的解釋則在<a target="_blank" rel="noopener" href="https://discordpy.readthedocs.io/en/stable/ext/commands/api.html#decorators">這裡</a>。</p>
-<p>看不懂也沒什麼關係，就當作一種固定語法。記得在你寫的函數前面加上對應的decorator就行。<br>像這邊就是因為要使用底下的<code>on_ready()</code>所以才會在上面加@bot.event的，可以看下<a target="_blank" rel="noopener" href="https://discordpy.readthedocs.io/en/stable/ext/commands/api.html#discord.ext.commands.Bot.event">官方API</a></p>
-<p>另外如果點進去官方API的話可以發現他的例子是加了<code>@client.event</code>。<br>使用<code>discord.clinet</code>是另一種Discord機器人的寫法，client的語法基本上把<code>client</code>代換成<code>bot</code>都可用。<br>不過bot(<code>discord.ext.commands.Bot</code>)似乎功能比較多一點加上兩者不能混用所以我都用bot寫。<br>一言以蔽之，看到範例是用<code>clinet</code>就換成<code>bot</code>試試看吧。</p>
-<hr>
-<h4 id="async-def-on-ready"><a href="#async-def-on-ready" class="headerlink" title="async def on_ready():"></a>async def on_ready():</h4><p>這邊的<code>async</code>和<code>await</code>是python異步執行套件<code>asyncio</code>的語法。</p>
-<p>不過這邊難的地方都寫在discord套件底層了，<br>所以我們只要記得在函數前面加async跟在discord提供的方法前加await就行。</p>
-<p><code>on_ready()</code>這個方法，其功能是在機器人上線的那刻執行下列內容。<br>所以如果機器人成功運行了可以看到命令列有以下的輸出。<br><img src="https://ithelp.ithome.com.tw/upload/images/20221009/20152706Sv659LuuVk.png" alt="https://ithelp.ithome.com.tw/upload/images/20221009/20152706Sv659LuuVk.png"><br>這樣可以方便我們確定機器人是不是正常上線了。</p>
-<hr>
-<h4 id="bot-command-aliases-‘touch’"><a href="#bot-command-aliases-‘touch’" class="headerlink" title="@bot.command(aliases&#x3D;[‘touch’])"></a>@bot.command(aliases&#x3D;[‘touch’])</h4><p><code>@bot.command()</code>這個語法糖可以將下面的函數變成我們在頻道可以使用的指令。<br>預設指令名稱就是下面的函數名。以這個例子來說就是t</p>
-<p>括號中間的<code>aliases=[&#39;touch&#39;]</code>則是為這個函數添加更多指令名的。<br>所以結合我們在上面的<code>bot = commands.bot(&#39;%&#39;)</code>設定的前綴，<br>機器人上線後我們用<code>%touch</code>和<code>%t</code>都可以叫出一樣的指令。</p>
-<hr>
-<h4 id="async-def-t-message"><a href="#async-def-t-message" class="headerlink" title="async def t(message):"></a>async def t(message):</h4><p>如上所述，函數名就是你在頻道打的指令名。</p>
-<p>括號裡面的message基本上就是你在discord發的訊息。<br>但他不僅僅是文字，而是discord api一個’Message’類別的物件。</p>
-<p>裡面的功能相當的豐富，可以從中取出相當多的資訊，下面會做說明。</p>
-<hr>
-<h4 id="await-message-channel-send-‘请不要随意地触碰我！-十分感谢！’"><a href="#await-message-channel-send-‘请不要随意地触碰我！-十分感谢！’" class="headerlink" title="await message.channel.send(‘请不要随意地触碰我！ 十分感谢！’)"></a>await message.channel.send(‘请不要随意地触碰我！ 十分感谢！’)</h4><p>像這邊我們就從中取出了你發送指令的頻道並在那頻道發送了訊息。<br>具體而言看起來像這樣。<br><img src="https://ithelp.ithome.com.tw/upload/images/20221009/20152706UMjauH0ZsL.png" alt="https://ithelp.ithome.com.tw/upload/images/20221009/20152706UMjauH0ZsL.png"></p>
-<p>其他更多的用法一樣可以詳閱<a target="_blank" rel="noopener" href="https://discordpy.readthedocs.io/en/stable/api.html#discord.Message">官方API的公開說明書</a></p>
-<hr>
-<h4 id="if-name-“-main-“"><a href="#if-name-“-main-“" class="headerlink" title="if __name__ &#x3D;&#x3D; “__main__“:"></a>if __name__ &#x3D;&#x3D; “__main__“:</h4><p>這行就是確保你是直接執行了這檔案才會跑以下的指令。<br>bot.run()的括號中間輸入您昨天取得的token碼。</p>
-<hr>
-<p>接著就讓機器人上線並邀請你的機器人進自己的伺服器來玩玩吧。<br>也可以試著改一些設定，或甚至嘗試一些你在官方API找到的功能。<br>看不太懂上面和官方API到底在講什麼鬼的也沒關係，後面跟著做就會漸漸熟悉了。</p>
 
       
     </div>
@@ -489,21 +296,9 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">文章</span>
         </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">分類</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
 </div>
