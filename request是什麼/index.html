@@ -20,15 +20,19 @@
     var CONFIG = {"hostname":"navoni1024.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="TEST 對了之前忘記講，本系列預設各位擁有基本的python能力，對各種資料結構、套件、模組等有一定概念就行了。本文的範例都是在python 3.10下操作的。   requests是什麼?簡單來說就是能讓你抓取整個網頁的東西，也能夠丟上去一些東西。比較常用到的有下列功能。  get post session  python預設並沒有安裝，所以要先用pip安裝下。 1pip install re">
+<meta property="og:type" content="article">
 <meta property="og:title" content="request是什麼">
 <meta property="og:url" content="http://navoni1024.github.io/request%E6%98%AF%E4%BB%80%E9%BA%BC/">
 <meta property="og:site_name" content="皇家維修熱線">
+<meta property="og:description" content="TEST 對了之前忘記講，本系列預設各位擁有基本的python能力，對各種資料結構、套件、模組等有一定概念就行了。本文的範例都是在python 3.10下操作的。   requests是什麼?簡單來說就是能讓你抓取整個網頁的東西，也能夠丟上去一些東西。比較常用到的有下列功能。  get post session  python預設並沒有安裝，所以要先用pip安裝下。 1pip install re">
 <meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="http://navoni1024.github.io/2ee3t-bkryh.gif">
 <meta property="article:published_time" content="2023-07-24T02:13:21.000Z">
-<meta property="article:modified_time" content="2023-07-24T02:13:21.784Z">
+<meta property="article:modified_time" content="2023-07-24T02:32:22.189Z">
 <meta property="article:author" content="navoni1023">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://navoni1024.github.io/2ee3t-bkryh.gif">
 
 <link rel="canonical" href="http://navoni1024.github.io/request%E6%98%AF%E4%BB%80%E9%BA%BC/">
 
@@ -191,8 +195,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
+              
 
-              <time title="創建時間：2023-07-24 10:13:21" itemprop="dateCreated datePublished" datetime="2023-07-24T10:13:21+08:00">2023-07-24</time>
+              <time title="創建時間：2023-07-24 10:13:21 / 修改時間：10:32:22" itemprop="dateCreated datePublished" datetime="2023-07-24T10:13:21+08:00">2023-07-24</time>
             </span>
 
           
@@ -206,7 +211,35 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <h2 id="TEST"><a href="#TEST" class="headerlink" title="TEST"></a>TEST</h2><hr>
+<p>對了之前忘記講，本系列預設各位擁有基本的python能力，對各種資料結構、套件、模組等有一定概念就行了。<br>本文的範例都是在python 3.10下操作的。</p>
+<p><img src="/2ee3t-bkryh.gif" alt="2ee3t-bkryh.gif"></p>
+<hr>
+<h2 id="requests是什麼"><a href="#requests是什麼" class="headerlink" title="requests是什麼?"></a>requests是什麼?</h2><p>簡單來說就是能讓你抓取整個網頁的東西，也能夠丟上去一些東西。<br>比較常用到的有下列功能。</p>
+<ul>
+<li>get</li>
+<li>post</li>
+<li>session</li>
+</ul>
+<p>python預設並沒有安裝，所以要先用pip安裝下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
+
+<p>安裝完後在寫程式前也記得先import</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="get"><a href="#get" class="headerlink" title="get"></a>get</h2><p>基本上就是抓下網頁。在抓取網頁時加上昨天提到的header比較不會被擋下來。</p>
+<p>舉例來說:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">	&#x27;Users-agent&#x27;: &#x27;Mozilla/5.0 (X11; Ubuntu; Linux x86 64; rv:91.0) Gecko/20100101 Firefox/91.0&#x27;,</span><br><span class="line">&#125;</span><br><span class="line">url = &#x27;你想爬的網站&#x27;</span><br><span class="line">r = requests.get(url, headers = headers)</span><br><span class="line"></span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
+
+<p>上述的程式應該會把網頁的html印在終端機，<br>可以填入各種網址試試看這樣的程式會印出什麼。<br>當然單純只做這樣被擋下來而只會顯示<code>respone&lt;XXX&gt;</code>的機率也不低就是。<br>也可以試試看換個header看網頁會不會有差異。</p>
+<p>總之抓下來的單純html當然是沒什麼用，要解析html並取出其中有用的資訊的話就要靠後面幾天會提到的bs4跟lxml了。</p>
+<hr>
+<h2 id="post"><a href="#post" class="headerlink" title="post"></a>post</h2><p>能夠丟字串或json檔上去，在需要給網站資訊時會用到。<br>舉例來說，投票機器人。<br>但一時之間想不到什麼很好的網站舉例。</p>
+<hr>
+<h2 id="session"><a href="#session" class="headerlink" title="session"></a>session</h2><p>能夠在多個請求中保持一些數據。<br>如果網站會用到cookie的話就需要使用這個。</p>
+<p>舉例來說你用session登入一個網站後，之後在用這個物件抓取該網站其他頁面也會默認你是登入的。<br>但一時之間想不到什麼很好的網站舉例。</p>
+
     </div>
 
     
@@ -283,6 +316,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#TEST"><span class="nav-number">1.</span> <span class="nav-text">TEST</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#requests%E6%98%AF%E4%BB%80%E9%BA%BC"><span class="nav-number">2.</span> <span class="nav-text">requests是什麼?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#get"><span class="nav-number">3.</span> <span class="nav-text">get</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#post"><span class="nav-number">4.</span> <span class="nav-text">post</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#session"><span class="nav-number">5.</span> <span class="nav-text">session</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

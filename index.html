@@ -189,8 +189,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
+              
 
-              <time title="創建時間：2023-07-24 10:13:21" itemprop="dateCreated datePublished" datetime="2023-07-24T10:13:21+08:00">2023-07-24</time>
+              <time title="創建時間：2023-07-24 10:13:21 / 修改時間：10:32:22" itemprop="dateCreated datePublished" datetime="2023-07-24T10:13:21+08:00">2023-07-24</time>
             </span>
 
           
@@ -204,7 +205,35 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <h2 id="TEST"><a href="#TEST" class="headerlink" title="TEST"></a>TEST</h2><hr>
+<p>對了之前忘記講，本系列預設各位擁有基本的python能力，對各種資料結構、套件、模組等有一定概念就行了。<br>本文的範例都是在python 3.10下操作的。</p>
+<p><img src="/2ee3t-bkryh.gif" alt="2ee3t-bkryh.gif"></p>
+<hr>
+<h2 id="requests是什麼"><a href="#requests是什麼" class="headerlink" title="requests是什麼?"></a>requests是什麼?</h2><p>簡單來說就是能讓你抓取整個網頁的東西，也能夠丟上去一些東西。<br>比較常用到的有下列功能。</p>
+<ul>
+<li>get</li>
+<li>post</li>
+<li>session</li>
+</ul>
+<p>python預設並沒有安裝，所以要先用pip安裝下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
+
+<p>安裝完後在寫程式前也記得先import</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="get"><a href="#get" class="headerlink" title="get"></a>get</h2><p>基本上就是抓下網頁。在抓取網頁時加上昨天提到的header比較不會被擋下來。</p>
+<p>舉例來說:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">	&#x27;Users-agent&#x27;: &#x27;Mozilla/5.0 (X11; Ubuntu; Linux x86 64; rv:91.0) Gecko/20100101 Firefox/91.0&#x27;,</span><br><span class="line">&#125;</span><br><span class="line">url = &#x27;你想爬的網站&#x27;</span><br><span class="line">r = requests.get(url, headers = headers)</span><br><span class="line"></span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
+
+<p>上述的程式應該會把網頁的html印在終端機，<br>可以填入各種網址試試看這樣的程式會印出什麼。<br>當然單純只做這樣被擋下來而只會顯示<code>respone&lt;XXX&gt;</code>的機率也不低就是。<br>也可以試試看換個header看網頁會不會有差異。</p>
+<p>總之抓下來的單純html當然是沒什麼用，要解析html並取出其中有用的資訊的話就要靠後面幾天會提到的bs4跟lxml了。</p>
+<hr>
+<h2 id="post"><a href="#post" class="headerlink" title="post"></a>post</h2><p>能夠丟字串或json檔上去，在需要給網站資訊時會用到。<br>舉例來說，投票機器人。<br>但一時之間想不到什麼很好的網站舉例。</p>
+<hr>
+<h2 id="session"><a href="#session" class="headerlink" title="session"></a>session</h2><p>能夠在多個請求中保持一些數據。<br>如果網站會用到cookie的話就需要使用這個。</p>
+<p>舉例來說你用session登入一個網站後，之後在用這個物件抓取該網站其他頁面也會默認你是登入的。<br>但一時之間想不到什麼很好的網站舉例。</p>
+
       
     </div>
 
@@ -254,7 +283,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2023-07-24 10:18:18" itemprop="dateModified" datetime="2023-07-24T10:18:18+08:00">2023-07-24</time>
+                <time title="修改時間：2023-07-24 10:32:44" itemprop="dateModified" datetime="2023-07-24T10:32:44+08:00">2023-07-24</time>
               </span>
 
           
@@ -269,7 +298,7 @@
 
       
           <h2 id="哲學系發癲"><a href="#哲學系發癲" class="headerlink" title="哲學系發癲"></a>哲學系發癲</h2><p>原來我開的笑話都指向空虛的所指<br>我還以為你是一個真實他者<br>沒想到是個大他者<br>我的能指只是傳達了純粹意識形態<br>我們的關係之間連一場遊戲都玩不成</p>
-<p><img src="/./2023-07-22-%E5%93%B2%E5%AD%B8%E7%B3%BB%E7%99%BC%E7%99%B2/tien.jpg" alt="TIEN"></p>
+<p><img src="/%E5%93%B2%E5%AD%B8%E7%B3%BB%E7%99%BC%E7%99%B2/tien.jpg" alt="TIEN"></p>
 
       
     </div>
@@ -312,10 +341,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2023-07-16 00:20:28 / 修改時間：00:32:24" itemprop="dateCreated datePublished" datetime="2023-07-16T00:20:28+08:00">2023-07-16</time>
+              <time title="創建時間：2023-07-16 00:20:28" itemprop="dateCreated datePublished" datetime="2023-07-16T00:20:28+08:00">2023-07-16</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2023-07-24 10:32:26" itemprop="dateModified" datetime="2023-07-24T10:32:26+08:00">2023-07-24</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
