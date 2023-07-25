@@ -22,7 +22,7 @@
 
   <meta name="description" content="什麼是BeautifulSoup?BeautifulSoup，又名美麗的湯，就如同魯迅所說過的，吃日料要喝味噌湯，到台南要喝牛肉湯，爬蟲的話就要用美麗的湯。(誤BeautifulSoup4我們一般簡稱BS4，是用來做網站的html架構解析，如同前面所講的，html碼是以多層標籤作為架構，也因此我們可以利用BS4這個套件來建立其專屬class BeautifulSoup底下的物件，其就包含了原網站h">
 <meta property="og:type" content="article">
-<meta property="og:title" content=" 爬蟲基礎入門與實際應用: Beautiful Soup">
+<meta property="og:title" content=" 爬蟲基礎入門: Beautiful Soup">
 <meta property="og:url" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/">
 <meta property="og:site_name" content="皇家維修熱線">
 <meta property="og:description" content="什麼是BeautifulSoup?BeautifulSoup，又名美麗的湯，就如同魯迅所說過的，吃日料要喝味噌湯，到台南要喝牛肉湯，爬蟲的話就要用美麗的湯。(誤BeautifulSoup4我們一般簡稱BS4，是用來做網站的html架構解析，如同前面所講的，html碼是以多層標籤作為架構，也因此我們可以利用BS4這個套件來建立其專屬class BeautifulSoup底下的物件，其就包含了原網站h">
@@ -30,7 +30,7 @@
 <meta property="og:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/20152706UAEuGzKBvW.png">
 <meta property="og:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/20152706L0rBAzgmoz.png">
 <meta property="article:published_time" content="2023-07-25T15:40:35.000Z">
-<meta property="article:modified_time" content="2023-07-25T15:59:29.164Z">
+<meta property="article:modified_time" content="2023-07-25T20:47:29.146Z">
 <meta property="article:author" content="navoni1023">
 <meta property="article:tag" content="爬蟲">
 <meta property="article:tag" content="程式">
@@ -51,7 +51,7 @@
   };
 </script>
 
-  <title> 爬蟲基礎入門與實際應用: Beautiful Soup | 皇家維修熱線</title>
+  <title> 爬蟲基礎入門: Beautiful Soup | 皇家維修熱線</title>
   
 
 
@@ -190,7 +190,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-           爬蟲基礎入門與實際應用: Beautiful Soup
+           爬蟲基礎入門: Beautiful Soup
         </h1>
 
         <div class="post-meta">
@@ -199,10 +199,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2023-07-25 23:40:35 / 修改時間：23:59:29" itemprop="dateCreated datePublished" datetime="2023-07-25T23:40:35+08:00">2023-07-25</time>
+              <time title="創建時間：2023-07-25 23:40:35" itemprop="dateCreated datePublished" datetime="2023-07-25T23:40:35+08:00">2023-07-25</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2023-07-26 04:47:29" itemprop="dateModified" datetime="2023-07-26T04:47:29+08:00">2023-07-26</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -229,6 +235,8 @@
 
       
         <h3 id="什麼是BeautifulSoup"><a href="#什麼是BeautifulSoup" class="headerlink" title="什麼是BeautifulSoup?"></a>什麼是BeautifulSoup?</h3><p>BeautifulSoup，又名美麗的湯，就如同魯迅所說過的，吃日料要喝味噌湯，到台南要喝牛肉湯，爬蟲的話就要用美麗的湯。(誤<br>BeautifulSoup4我們一般簡稱BS4，是用來做網站的html架構解析，如同前面所講的，html碼是以多層標籤作為架構，也因此我們可以利用BS4這個套件來建立其專屬class BeautifulSoup底下的物件，其就包含了原網站html碼的相關結構，像是標籤的父子、兄弟關係，更可以利用其中的搜尋功能找尋標籤名稱、內容或屬性，進而定位到我們感興趣的位置。</p>
+<span id="more"></span>
+
 <p>在經過基本的pip install後，我們就可以引入bs4了。<br><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/20152706UAEuGzKBvW.png" alt="20152706UAEuGzKBvW.png"></p>
 <p>之後我們就能像這樣，引入網址後，利用基本request取得html源碼，再利用BS4進行基本解析，建立出soup_m1的物件，之後便可以利用BS4的函式對其定位、分析。<br><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/20152706L0rBAzgmoz.png" alt="20152706L0rBAzgmoz.png"></p>
 <h3 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h3><p>昨天出現的這句</p>
@@ -261,12 +269,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Requests/" rel="prev" title=" 爬蟲基礎入門與實際應用: Requests">
-      <i class="fa fa-chevron-left"></i>  爬蟲基礎入門與實際應用: Requests
+    <a href="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Requests/" rel="prev" title=" 爬蟲基礎入門: Requests">
+      <i class="fa fa-chevron-left"></i>  爬蟲基礎入門: Requests
     </a></div>
       <div class="post-nav-item">
-    <a href="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/" rel="next" title=" 爬蟲基礎入門與實際應用: robots.txt & header">
-       爬蟲基礎入門與實際應用: robots.txt & header <i class="fa fa-chevron-right"></i>
+    <a href="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/" rel="next" title=" 爬蟲基礎入門: robots.txt & header">
+       爬蟲基礎入門: robots.txt & header <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>

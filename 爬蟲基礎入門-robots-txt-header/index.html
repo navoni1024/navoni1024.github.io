@@ -22,7 +22,7 @@
 
   <meta name="description" content="今天要來介紹當我們在爬蟲前，應該要知道的一些技巧與規範  為甚麼需要知道這些爬蟲規範？首先，我們必須知道過度的網路爬蟲可能是違法的，如使用多執行緒進行對網站的大量拜訪，在沒有適當的存取時間間隔下，可能會造成一般人熟知的DDOS(Denial-Of-Service Attack)，進而造成其他使用者無法拜訪、甚至是主機癱瘓。因此，某些網站有制定所謂的「規範」，讓爬蟲使用者能夠去遵守並避免存取到pri">
 <meta property="og:type" content="article">
-<meta property="og:title" content=" 爬蟲基礎入門與實際應用: robots.txt &amp; header">
+<meta property="og:title" content=" 爬蟲基礎入門: robots.txt &amp; header">
 <meta property="og:url" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/">
 <meta property="og:site_name" content="皇家維修熱線">
 <meta property="og:description" content="今天要來介紹當我們在爬蟲前，應該要知道的一些技巧與規範  為甚麼需要知道這些爬蟲規範？首先，我們必須知道過度的網路爬蟲可能是違法的，如使用多執行緒進行對網站的大量拜訪，在沒有適當的存取時間間隔下，可能會造成一般人熟知的DDOS(Denial-Of-Service Attack)，進而造成其他使用者無法拜訪、甚至是主機癱瘓。因此，某些網站有制定所謂的「規範」，讓爬蟲使用者能夠去遵守並避免存取到pri">
@@ -30,7 +30,7 @@
 <meta property="og:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706kiMp9LoNrj.png">
 <meta property="og:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706qRcQSJ2ABd.png">
 <meta property="article:published_time" content="2023-07-25T15:51:41.000Z">
-<meta property="article:modified_time" content="2023-07-25T15:58:01.689Z">
+<meta property="article:modified_time" content="2023-07-25T20:47:20.977Z">
 <meta property="article:author" content="navoni1023">
 <meta property="article:tag" content="爬蟲">
 <meta property="article:tag" content="程式">
@@ -51,7 +51,7 @@
   };
 </script>
 
-  <title> 爬蟲基礎入門與實際應用: robots.txt & header | 皇家維修熱線</title>
+  <title> 爬蟲基礎入門: robots.txt & header | 皇家維修熱線</title>
   
 
 
@@ -190,7 +190,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-           爬蟲基礎入門與實際應用: robots.txt & header
+           爬蟲基礎入門: robots.txt & header
         </h1>
 
         <div class="post-meta">
@@ -199,10 +199,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2023-07-25 23:51:41 / 修改時間：23:58:01" itemprop="dateCreated datePublished" datetime="2023-07-25T23:51:41+08:00">2023-07-25</time>
+              <time title="創建時間：2023-07-25 23:51:41" itemprop="dateCreated datePublished" datetime="2023-07-25T23:51:41+08:00">2023-07-25</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2023-07-26 04:47:20" itemprop="dateModified" datetime="2023-07-26T04:47:20+08:00">2023-07-26</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -231,6 +237,8 @@
         <p>今天要來介紹當我們在爬蟲前，應該要知道的一些技巧與規範</p>
 <hr>
 <h3 id="為甚麼需要知道這些爬蟲規範？"><a href="#為甚麼需要知道這些爬蟲規範？" class="headerlink" title="為甚麼需要知道這些爬蟲規範？"></a>為甚麼需要知道這些爬蟲規範？</h3><p>首先，我們必須知道過度的網路爬蟲可能是違法的，<br>如使用多執行緒進行對網站的大量拜訪，在沒有適當的存取時間間隔下，可能會造成一般人熟知的<strong>DDOS</strong>(Denial-Of-Service Attack)，進而造成其他使用者無法拜訪、甚至是主機癱瘓。<br>因此，某些網站有制定所謂的「規範」，讓爬蟲使用者能夠去遵守並避免存取到private data<br>請注意這項規範並不具有強制力，並無法阻擋真正有心攻擊的爬蟲程式。</p>
+<span id="more"></span>
+
 <h3 id="「規範」—-robots-txt"><a href="#「規範」—-robots-txt" class="headerlink" title="「規範」— robots.txt"></a>「規範」— robots.txt</h3><p>robots.txt是一個告訴爬蟲哪些內容是否可存取的文字檔。<br>這項檔案通常位於網頁根目錄下的robots.txt，<br>換句話說，在main-page下加個&#x2F;robots.txt就能檢視。</p>
 <p>舉個例子吧，我們先進到<a target="_blank" rel="noopener" href="http://google.com/">google</a>的首頁</p>
 <p><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706kiMp9LoNrj.png" alt="20152706kiMp9LoNrj.png"></p>
@@ -268,8 +276,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/" rel="prev" title=" 爬蟲基礎入門與實際應用: Beautiful Soup">
-      <i class="fa fa-chevron-left"></i>  爬蟲基礎入門與實際應用: Beautiful Soup
+    <a href="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/" rel="prev" title=" 爬蟲基礎入門: Beautiful Soup">
+      <i class="fa fa-chevron-left"></i>  爬蟲基礎入門: Beautiful Soup
     </a></div>
       <div class="post-nav-item"></div>
     </div>

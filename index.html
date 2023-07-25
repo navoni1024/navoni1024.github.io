@@ -180,7 +180,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/" class="post-title-link" itemprop="url"> 爬蟲基礎入門與實際應用: robots.txt & header</a>
+            <a href="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/" class="post-title-link" itemprop="url"> 爬蟲基礎入門: robots.txt & header</a>
         </h2>
 
         <div class="post-meta">
@@ -189,10 +189,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2023-07-25 23:51:41 / 修改時間：23:58:01" itemprop="dateCreated datePublished" datetime="2023-07-25T23:51:41+08:00">2023-07-25</time>
+              <time title="創建時間：2023-07-25 23:51:41" itemprop="dateCreated datePublished" datetime="2023-07-25T23:51:41+08:00">2023-07-25</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2023-07-26 04:47:20" itemprop="dateModified" datetime="2023-07-26T04:47:20+08:00">2023-07-26</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -221,24 +227,14 @@
           <p>今天要來介紹當我們在爬蟲前，應該要知道的一些技巧與規範</p>
 <hr>
 <h3 id="為甚麼需要知道這些爬蟲規範？"><a href="#為甚麼需要知道這些爬蟲規範？" class="headerlink" title="為甚麼需要知道這些爬蟲規範？"></a>為甚麼需要知道這些爬蟲規範？</h3><p>首先，我們必須知道過度的網路爬蟲可能是違法的，<br>如使用多執行緒進行對網站的大量拜訪，在沒有適當的存取時間間隔下，可能會造成一般人熟知的<strong>DDOS</strong>(Denial-Of-Service Attack)，進而造成其他使用者無法拜訪、甚至是主機癱瘓。<br>因此，某些網站有制定所謂的「規範」，讓爬蟲使用者能夠去遵守並避免存取到private data<br>請注意這項規範並不具有強制力，並無法阻擋真正有心攻擊的爬蟲程式。</p>
-<h3 id="「規範」—-robots-txt"><a href="#「規範」—-robots-txt" class="headerlink" title="「規範」— robots.txt"></a>「規範」— robots.txt</h3><p>robots.txt是一個告訴爬蟲哪些內容是否可存取的文字檔。<br>這項檔案通常位於網頁根目錄下的robots.txt，<br>換句話說，在main-page下加個&#x2F;robots.txt就能檢視。</p>
-<p>舉個例子吧，我們先進到<a target="_blank" rel="noopener" href="http://google.com/">google</a>的首頁</p>
-<p><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706kiMp9LoNrj.png" alt="20152706kiMp9LoNrj.png"></p>
-<p>相當正常，不是嗎?<br>再來利用上面的方法去找robots.txt，<br>我們接著在.com後面接著&#x2F;robots.txt，<br>使網址成為<a target="_blank" rel="noopener" href="https://www.google.com/robots.txt">https://www.google.com/robots.txt</a></p>
-<p><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706qRcQSJ2ABd.png" alt="20152706qRcQSJ2ABd.png"></p>
-<p>成功了！<br>可是密密麻麻的，打這麼多字誰他媽看得完?<br>但事實上，這份文字檔可以被拆分成幾個部分，<br>我們從第一行開始：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1. User-Agent: *</span><br></pre></td></tr></table></figure>
-<p>User-Agent這一欄代表的是允許的爬蟲類型，而 <strong>*</strong> 則代表<strong>所有</strong>的意思，<br>所以第一行可以被解讀成，允許所有爬蟲拜訪。<br>此外有一些特別的程式只允許特定爬蟲拜訪網頁，如Googlebot、Applebot等，<br>如在最後幾行處，可以看到google的網頁允許Twitterbot能夠比一般使用者額外拜訪&#x2F;imgres的子目錄。</p>
-<p>再來我們繼續往下探討，大致上可以分為<strong>Allow</strong>開頭的，以及<strong>Disallow</strong>開頭的句子</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2. Disallow: /search</span><br></pre></td></tr></table></figure>
-<p>這句話代表著，拒絕網路爬蟲訪問search子目錄以及其子目錄下所有目錄，<br>而接下來的第三行，你們應該也就猜的到意思了，就是允許拜訪冒號後面的子目錄。</p>
-<h3 id="表頭headers"><a href="#表頭headers" class="headerlink" title="表頭headers"></a>表頭headers</h3><p>headers是對client端向server發出請求時的敘述資訊。<br>有一些網站會針對網路爬蟲進行阻擋，其中一項阻擋的手法就是針對headers，<br>當網頁收到非瀏覽器的headers發出的請求時，網頁就拒絕client的存取。</p>
-<p>解決手段非常的簡單粗暴，既然你拒絕非瀏覽器外的訪問，那我就成為瀏覽器就好了啊!?<br>那我們要怎麼成為瀏覽器呢?<br>這樣推薦一個作法：</p>
-<ul>
-<li>開啟Chrome時按下F12鍵後，先按F5使其重整載入資源，點選其中一項被載入的資源，點選Network欄中的Header，複製其中的Uger-Agent</li>
-</ul>
-<p>如此一來就得到瀏覽器的header，將自己偽裝成瀏覽器了。<br>下一章在requests時，我們會介紹在requests.get()中可以帶入header參數，<br>在header參數中帶入我們剛剛取得的瀏覽器header，我們就可以成功偽裝了。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -271,7 +267,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/" class="post-title-link" itemprop="url"> 爬蟲基礎入門與實際應用: Beautiful Soup</a>
+            <a href="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/" class="post-title-link" itemprop="url"> 爬蟲基礎入門: Beautiful Soup</a>
         </h2>
 
         <div class="post-meta">
@@ -280,10 +276,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2023-07-25 23:40:35 / 修改時間：23:59:29" itemprop="dateCreated datePublished" datetime="2023-07-25T23:40:35+08:00">2023-07-25</time>
+              <time title="創建時間：2023-07-25 23:40:35" itemprop="dateCreated datePublished" datetime="2023-07-25T23:40:35+08:00">2023-07-25</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2023-07-26 04:47:29" itemprop="dateModified" datetime="2023-07-26T04:47:29+08:00">2023-07-26</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -310,19 +312,14 @@
 
       
           <h3 id="什麼是BeautifulSoup"><a href="#什麼是BeautifulSoup" class="headerlink" title="什麼是BeautifulSoup?"></a>什麼是BeautifulSoup?</h3><p>BeautifulSoup，又名美麗的湯，就如同魯迅所說過的，吃日料要喝味噌湯，到台南要喝牛肉湯，爬蟲的話就要用美麗的湯。(誤<br>BeautifulSoup4我們一般簡稱BS4，是用來做網站的html架構解析，如同前面所講的，html碼是以多層標籤作為架構，也因此我們可以利用BS4這個套件來建立其專屬class BeautifulSoup底下的物件，其就包含了原網站html碼的相關結構，像是標籤的父子、兄弟關係，更可以利用其中的搜尋功能找尋標籤名稱、內容或屬性，進而定位到我們感興趣的位置。</p>
-<p>在經過基本的pip install後，我們就可以引入bs4了。<br><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/20152706UAEuGzKBvW.png" alt="20152706UAEuGzKBvW.png"></p>
-<p>之後我們就能像這樣，引入網址後，利用基本request取得html源碼，再利用BS4進行基本解析，建立出soup_m1的物件，之後便可以利用BS4的函式對其定位、分析。<br><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/20152706L0rBAzgmoz.png" alt="20152706L0rBAzgmoz.png"></p>
-<h3 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h3><p>昨天出現的這句</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">soup_m1 = BeautifulSoup(html_m1.text, &quot;html.parser&quot;)</span><br></pre></td></tr></table></figure>
-<p>其中的<code>html.parser</code>便是使用的解析器，是python內建的。<br>除了這個外還能用html5lib和lxml但我也沒用過，詳細優缺點可能要google下。<br>哪天有試了再補充上來吧</p>
-<h3 id="解析方法"><a href="#解析方法" class="headerlink" title="解析方法"></a>解析方法</h3><p>比較常用到的是find()、find_all()和select()。</p>
-<ul>
-<li><p>find()、find_all()<br>兩個都是使用html的標籤進行搜尋的。<br>而這兩者的差別是find()只會回傳第一個符合的結果，find_all()則會回傳所有符合的結果</p>
-</li>
-<li><p>select()<br>使用CSS選擇器(CSS selectors)來進行搜尋。<br>CSS之前沒有提到，主要是用來把網站上色的。<br>其中會用到選擇器來指定特定範圍的HTML進行操作。<br>select()便是利用這東西的語法來爬的。</p>
-</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -355,7 +352,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Requests/" class="post-title-link" itemprop="url"> 爬蟲基礎入門與實際應用: Requests</a>
+            <a href="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Requests/" class="post-title-link" itemprop="url"> 爬蟲基礎入門: Requests</a>
         </h2>
 
         <div class="post-meta">
@@ -364,10 +361,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2023-07-25 23:32:56 / 修改時間：23:59:16" itemprop="dateCreated datePublished" datetime="2023-07-25T23:32:56+08:00">2023-07-25</time>
+              <time title="創建時間：2023-07-25 23:32:56" itemprop="dateCreated datePublished" datetime="2023-07-25T23:32:56+08:00">2023-07-25</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2023-07-26 04:47:42" itemprop="dateModified" datetime="2023-07-26T04:47:42+08:00">2023-07-26</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -400,22 +403,14 @@
 <li>post</li>
 <li>session</li>
 </ul>
-<p>python預設並沒有安裝，所以要先用pip安裝下。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
-
-<p>安裝完後在寫程式前也記得先import</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br></pre></td></tr></table></figure>
-
-<h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><p>基本上就是抓下網頁。在抓取網頁時加上昨天提到的header比較不會被擋下來。</p>
-<p>舉例來說:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">	&#x27;Users-agent&#x27;: &#x27;Mozilla/5.0 (X11; Ubuntu; Linux x86 64; rv:91.0) Gecko/20100101 Firefox/91.0&#x27;,</span><br><span class="line">&#125;</span><br><span class="line">url = &#x27;你想爬的網站&#x27;</span><br><span class="line">r = requests.get(url, headers = headers)</span><br><span class="line"></span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
-
-<p>上述的程式應該會把網頁的html印在終端機，<br>可以填入各種網址試試看這樣的程式會印出什麼。<br>當然單純只做這樣被擋下來而只會顯示<code>respone&lt;XXX&gt;</code>的機率也不低就是。<br>也可以試試看換個header看網頁會不會有差異。</p>
-<p>總之抓下來的單純html當然是沒什麼用，要解析html並取出其中有用的資訊的話就要靠後面幾天會提到的bs4跟lxml了。</p>
-<h3 id="post"><a href="#post" class="headerlink" title="post"></a>post</h3><p>能夠丟字串或json檔上去，在需要給網站資訊時會用到。<br>舉例來說，投票機器人。<br>但一時之間想不到什麼很好的網站舉例。</p>
-<h3 id="session"><a href="#session" class="headerlink" title="session"></a>session</h3><p>能夠在多個請求中保持一些數據。<br>如果網站會用到cookie的話就需要使用這個。</p>
-<p>舉例來說你用session登入一個網站後，之後在用這個物件抓取該網站其他頁面也會默認你是登入的。<br>但一時之間想不到什麼很好的網站舉例。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Requests/" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -457,10 +452,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2023-07-25 22:50:43 / 修改時間：23:27:45" itemprop="dateCreated datePublished" datetime="2023-07-25T22:50:43+08:00">2023-07-25</time>
+              <time title="創建時間：2023-07-25 22:50:43" itemprop="dateCreated datePublished" datetime="2023-07-25T22:50:43+08:00">2023-07-25</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2023-07-26 04:48:07" itemprop="dateModified" datetime="2023-07-26T04:48:07+08:00">2023-07-26</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -487,9 +488,14 @@
 
       
           <h1 id="【B級調酒EP1】"><a href="#【B級調酒EP1】" class="headerlink" title="【B級調酒EP1】"></a>【B級調酒EP1】</h1><p>覺旅咖啡英式午餐茶+蘇格蘭威士忌<br>酒譜<br>520ml紅茶<br>15ml 威士忌</p>
-<h3 id="短評"><a href="#短評" class="headerlink" title="短評"></a>短評</h3><p>大概連ddffg都喝不下去</p>
-<p><img src="/%E3%80%90B%E7%B4%9A%E8%AA%BF%E9%85%92EP1%E3%80%91/grose.png" alt="grose.png"></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E3%80%90B%E7%B4%9A%E8%AA%BF%E9%85%92EP1%E3%80%91/" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -539,7 +545,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2023-07-25 23:59:38" itemprop="dateModified" datetime="2023-07-25T23:59:38+08:00">2023-07-25</time>
+                <time title="修改時間：2023-07-26 04:47:51" itemprop="dateModified" datetime="2023-07-26T04:47:51+08:00">2023-07-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -563,8 +569,14 @@
 
       
           <h1 id="哲學系發癲"><a href="#哲學系發癲" class="headerlink" title="哲學系發癲"></a>哲學系發癲</h1><p>原來我開的笑話都指向空虛的所指<br>我還以為你是一個真實他者<br>沒想到是個大他者<br>我的能指只是傳達了純粹意識形態<br>我們的關係之間連一場遊戲都玩不成</p>
-<p><img src="/%E5%93%B2%E5%AD%B8%E7%B3%BB%E7%99%BC%E7%99%B2/tien.jpg" alt="TIEN"></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E5%93%B2%E5%AD%B8%E7%B3%BB%E7%99%BC%E7%99%B2/" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
