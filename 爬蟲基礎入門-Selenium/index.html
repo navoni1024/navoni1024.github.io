@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"navoni1024.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Selenium前置設定首先如果要先使用selenium，我們要先下載webdriver在資料夾中給予selenium使用。https:&#x2F;&#x2F;chromedriver.chromium.org&#x2F;downloads上述網址即為chrome的webdriver下載地點。下載好webdriver後我們就可以把他的exe檔丟到code的資料夾中了，就像這樣。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="爬蟲基礎入門-Selenium">
+<meta property="og:url" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/">
+<meta property="og:site_name" content="皇家維修熱線">
+<meta property="og:description" content="Selenium前置設定首先如果要先使用selenium，我們要先下載webdriver在資料夾中給予selenium使用。https:&#x2F;&#x2F;chromedriver.chromium.org&#x2F;downloads上述網址即為chrome的webdriver下載地點。下載好webdriver後我們就可以把他的exe檔丟到code的資料夾中了，就像這樣。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/20152706vGDAntGabq.png">
+<meta property="og:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/20152706yg28xxCq3g.png">
+<meta property="og:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/20152706nZU06VhtHp.png">
+<meta property="og:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/01.png">
+<meta property="og:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/02.png">
+<meta property="og:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/03.png">
+<meta property="og:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/04.png">
+<meta property="og:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/05.png">
+<meta property="og:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/06.png">
+<meta property="og:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/07.png">
+<meta property="og:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/01-1.png">
+<meta property="og:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/02-1.png">
+<meta property="og:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/03-1.png">
+<meta property="og:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/04-1.png">
+<meta property="article:published_time" content="2023-07-26T06:45:33.000Z">
+<meta property="article:modified_time" content="2023-07-26T07:12:01.889Z">
+<meta property="article:author" content="navoni1024">
+<meta property="article:tag" content="爬蟲">
+<meta property="article:tag" content="程式">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/20152706vGDAntGabq.png">
+
+<link rel="canonical" href="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>爬蟲基礎入門-Selenium | 皇家維修熱線</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">皇家維修熱線</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">奇怪的人都在這裡</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">10</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">7</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">14</span></a>
+
+  </li>
+        <li class="menu-item menu-item-author">
+
+    <a href="/author/" rel="section"><i class="fa fa-archive fa-fw"></i>author</a>
+
+  </li>
+        <li class="menu-item menu-item-福利姬">
+
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" rel="noopener" target="_blank"><i class="fa fa-user fa-fw"></i>福利姬</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/vichy.gif">
+      <meta itemprop="name" content="navoni1024">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="皇家維修熱線">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          爬蟲基礎入門-Selenium
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2023-07-26 14:45:33 / 修改時間：15:12:01" itemprop="dateCreated datePublished" datetime="2023-07-26T14:45:33+08:00">2023-07-26</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A8%8B%E5%BC%8F/" itemprop="url" rel="index"><span itemprop="name">程式</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A8%8B%E5%BC%8F/%E7%88%AC%E8%9F%B2/" itemprop="url" rel="index"><span itemprop="name">爬蟲</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="Selenium前置設定"><a href="#Selenium前置設定" class="headerlink" title="Selenium前置設定"></a>Selenium前置設定</h3><p>首先如果要先使用selenium，我們要先下載webdriver在資料夾中給予selenium使用。<br><a href="http://">https://chromedriver.chromium.org/downloads</a><br>上述網址即為chrome的webdriver下載地點。<br>下載好webdriver後我們就可以把他的exe檔丟到code的資料夾中了，就像這樣。</p>
+<span id="more"></span>
+<p><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/20152706vGDAntGabq.png" alt="20152706vGDAntGabq.png"></p>
+<p>接著我們就可以準備import了。<br><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/20152706yg28xxCq3g.png" alt="20152706yg28xxCq3g.png"><br>像這樣，其中webdriver就是引入我們剛剛載的webdriver，<br>Options則是selenium針對不同webdriver所納入的不同設定，<br>WebDriverWait跟EC則是在讓瀏覽器等待時會用到，像是我們可能會需要等到某網頁元素完整載入後才繼續程式，否則可能就會出錯，<br>最後By則是selenium中的內部語法，像是這樣，<br><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/20152706nZU06VhtHp.png" alt="20152706nZU06VhtHp.png"><br>這就表示著find_element這個函式將用XPath的方式定位元素。</p>
+<h3 id="Selenium的指令使用"><a href="#Selenium的指令使用" class="headerlink" title="Selenium的指令使用"></a>Selenium的指令使用</h3><p><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/01.png" alt="01.png"><br><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/02.png" alt="02.png"><br>首先我們先如上圖，套入webdriver的設定，讓程式載入我們先前載的chrome webdriver，接著再讓他導到我們想要的網址，這邊以youtube作範例。如果成功的話應該會如下圖這樣。<br><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/03.png" alt="03.png"><br>阿記得開完網址後要time.sleep()一下，才不會直接跳掉。<br>其實在之後我們對selenium操控時，也必須要定時的time.sleep()或者是利用別的方法讓程式暫停，否則就會產生網頁還沒完全載入，我們就要找到他的元素等等的尷尬事情。</p>
+<p>開完網頁後，就來介紹第一個函式，find_element<br><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/04.png" alt="04.png"><br>find_element可以讓selenium定位到特定網頁元素，這邊的例子就是yt的搜尋欄。<br>其實selenium可以透過非常多方式定位，像是html碼裡的id、name等等，或者是class、css等其他方法，那麼我們這邊就用xpath這種定位方式，較為直接準確。但其實這邊範例比較不好的一點是xpath採用了絕對位置來定位，事實上，我們可以利用xpath的相對位置來達到簡潔、準確、可變動的性質，則之後在提及xpath時會在講解。</p>
+<p>再來，既然我們定位到了網頁元素，則我們就要發揮selenium的強項了，就是模擬使用者對網頁的互動，這邊我們透過下圖講解兩個例子。<br><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/05.png" alt="05.png"><br>這邊我們的目標是要進去yt，蒐集不同關鍵字搜尋後的影片，因此我們先建立一個list做作search_keys，裡面有著我們之後要輸入進搜尋欄的搜尋關鍵字。<br>則首先是element.send_keys()，我們先定位到搜尋欄位置後，將其命名為search_box，則search_box.send_keys()就能讓我們輸入關鍵字進去。<br>再來就是element.click()，在輸入進去後，我們還要再定位到yt網頁的搜尋按鈕上，在這裡，我們將其命名為search_box，則search_box.click()就能讓selenium模擬使用者對著搜尋按鈕按下滑鼠左鍵的這個動作。<br>就像這樣<br><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/06.png" alt="06.png"><br>其實只要有這基本的動作，我們就能讓selenium動起來了，就像真人一樣互動，當然selenium還有更多的功能，像是WebDriverWait等等的功能，但這邊就不多做贅述了，我們明天會在講使用selenium常遇到的問題，其實很多都跟網頁載入時間有關。</p>
+<p>喔對了，突然想到的小補充，上圖的範例其實就是之後其中一個專題內容，目標正是要讓selenium幫我們整理出想要的影片並輸出到discord上，因此也可以預見之後的專題應該會出現很多vt剪輯。<br><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/07.png" alt="07.png"></p>
+<h3 id="Selenium的常見Bug"><a href="#Selenium的常見Bug" class="headerlink" title="Selenium的常見Bug"></a>Selenium的常見Bug</h3><p>首先，第一個是版本問題，這其實是我前天在挖之前的程式出來跑時才發現的問題，<br><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/01-1.png" alt="01-1.png"><br>這問題基本上是driver跟瀏覽器版本不支援，最簡單只要重新下載對應版本的webdriver就好。</p>
+<p>接著是這個，<br><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/02-1.png" alt="02-1.png"><br>這代表著selenium無法找到你所指定的元素，一般來說，如果不是你定位位置錯誤，<br>八成就是網頁還沒有完整載入，就使selemium搜尋元素。<br>此時，我們可以試著使用簡單的方法，time.sleep()，使程式整體暫停n秒，也可以配合try except使用。<br>當然，selenium針對這個問題也有開發相關函式，首先是顯式等待，<br><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/03-1.png" alt="03-1.png"><br>在這邊的意思是，我們針對所給予的元素，等待10秒，每0.2秒檢查是否出現，如果出現了就繼續，<br>如果10秒內還沒出現則報錯。<br>另外一種則是隱式等待，<br><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/04-1.png" alt="04-1.png"><br>相對於顯式等待是針對個別元素是否生成，隱式等待則是針對整個頁面，以上圖為例，這邊就是讓整個程式暫停，<br>給予瀏覽器10秒的時間，如果10秒內”整個頁面都已經生成完成”(講得直白一點其實就是我們頁面左上角的圈圈不再轉動)，則繼續程式運行，如果10內還沒載完，則報錯，因此可以看的出來，相對於顯式等待，隱式等待跟強制等待可能會要花費更久的時間。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%88%AC%E8%9F%B2/" rel="tag"># 爬蟲</a>
+              <a href="/tags/%E7%A8%8B%E5%BC%8F/" rel="tag"># 程式</a>
+              <a href="/tags/python/" rel="tag"># python</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-JSON/" rel="prev" title="爬蟲基礎入門-JSON">
+      <i class="fa fa-chevron-left"></i> 爬蟲基礎入門-JSON
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-XPath/" rel="next" title="爬蟲基礎入門-XPath">
+      爬蟲基礎入門-XPath <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Selenium%E5%89%8D%E7%BD%AE%E8%A8%AD%E5%AE%9A"><span class="nav-number">1.</span> <span class="nav-text">Selenium前置設定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Selenium%E7%9A%84%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8"><span class="nav-number">2.</span> <span class="nav-text">Selenium的指令使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Selenium%E7%9A%84%E5%B8%B8%E8%A6%8BBug"><span class="nav-number">3.</span> <span class="nav-text">Selenium的常見Bug</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="navoni1024"
+      src="/images/vichy.gif">
+  <p class="site-author-name" itemprop="name">navoni1024</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="GitHub → https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v&#x3D;dQw4w9WgXcQ" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder"><a target="_blank" rel="noopener" href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'> 福利姬</a></span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
