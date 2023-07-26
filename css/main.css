@@ -1193,7 +1193,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #eda69a;
+  background: #253870;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2574,7 +2574,7 @@ ul.breadcrumb li + li:last-child {
   }
 }
 body {
-  background: url("/images/VON_workspace.JPG");
+  background: url("/images/SAO.gif");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
