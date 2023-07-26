@@ -16,25 +16,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【B級調酒EP1】</title>
-    <url>/%E3%80%90B%E7%B4%9A%E8%AA%BF%E9%85%92EP1%E3%80%91/</url>
-    <content><![CDATA[<p>覺旅咖啡英式午餐茶+蘇格蘭威士忌 </p>
-<p>酒譜<br>520ml紅茶<br>15ml 威士忌</p>
-<span id="more"></span>
-<h3 id="短評"><a href="#短評" class="headerlink" title="短評"></a>短評</h3><p>大概連ddffg都喝不下去</p>
-<p><img src="/%E3%80%90B%E7%B4%9A%E8%AA%BF%E9%85%92EP1%E3%80%91/grose.png" alt="grose.png"></p>
-]]></content>
-      <categories>
-        <category>飲食</category>
-        <category>酒</category>
-      </categories>
-      <tags>
-        <tag>調酒</tag>
-        <tag>酒譜</tag>
-        <tag>土製</tag>
-      </tags>
-  </entry>
-  <entry>
     <title> 爬蟲基礎入門: Beautiful Soup</title>
     <url>/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/</url>
     <content><![CDATA[<h3 id="什麼是BeautifulSoup"><a href="#什麼是BeautifulSoup" class="headerlink" title="什麼是BeautifulSoup?"></a>什麼是BeautifulSoup?</h3><p>BeautifulSoup，又名美麗的湯，就如同魯迅所說過的，吃日料要喝味噌湯，到台南要喝牛肉湯，爬蟲的話就要用美麗的湯。(誤<br>BeautifulSoup4我們一般簡稱BS4，是用來做網站的html架構解析，如同前面所講的，html碼是以多層標籤作為架構，也因此我們可以利用BS4這個套件來建立其專屬class BeautifulSoup底下的物件，其就包含了原網站html碼的相關結構，像是標籤的父子、兄弟關係，更可以利用其中的搜尋功能找尋標籤名稱、內容或屬性，進而定位到我們感興趣的位置。</p>
@@ -64,6 +45,25 @@
       </tags>
   </entry>
   <entry>
+    <title>【B級調酒EP1】</title>
+    <url>/%E3%80%90B%E7%B4%9A%E8%AA%BF%E9%85%92EP1%E3%80%91/</url>
+    <content><![CDATA[<p>覺旅咖啡英式午餐茶+蘇格蘭威士忌 </p>
+<p>酒譜<br>520ml紅茶<br>15ml 威士忌</p>
+<span id="more"></span>
+<h3 id="短評"><a href="#短評" class="headerlink" title="短評"></a>短評</h3><p>大概連ddffg都喝不下去</p>
+<p><img src="/%E3%80%90B%E7%B4%9A%E8%AA%BF%E9%85%92EP1%E3%80%91/grose.png" alt="grose.png"></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>酒</category>
+      </categories>
+      <tags>
+        <tag>調酒</tag>
+        <tag>酒譜</tag>
+        <tag>土製</tag>
+      </tags>
+  </entry>
+  <entry>
     <title> 爬蟲基礎入門: Requests</title>
     <url>/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Requests/</url>
     <content><![CDATA[<p>本系列預設各位擁有基本的python能力，對各種資料結構、套件、模組等有一定概念就行了。<br>本文的範例都是在python 3.10下操作的。</p>
@@ -90,42 +90,6 @@
 <h3 id="post"><a href="#post" class="headerlink" title="post"></a>post</h3><p>能夠丟字串或json檔上去，在需要給網站資訊時會用到。<br>舉例來說，投票機器人。<br>但一時之間想不到什麼很好的網站舉例。</p>
 <h3 id="session"><a href="#session" class="headerlink" title="session"></a>session</h3><p>能夠在多個請求中保持一些數據。<br>如果網站會用到cookie的話就需要使用這個。</p>
 <p>舉例來說你用session登入一個網站後，之後在用這個物件抓取該網站其他頁面也會默認你是登入的。<br>但一時之間想不到什麼很好的網站舉例。</p>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>爬蟲</category>
-      </categories>
-      <tags>
-        <tag>爬蟲</tag>
-        <tag>程式</tag>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title> 爬蟲基礎入門: robots.txt &amp; header</title>
-    <url>/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/</url>
-    <content><![CDATA[<p>今天要來介紹當我們在爬蟲前，應該要知道的一些技巧與規範</p>
-<hr>
-<h3 id="為甚麼需要知道這些爬蟲規範？"><a href="#為甚麼需要知道這些爬蟲規範？" class="headerlink" title="為甚麼需要知道這些爬蟲規範？"></a>為甚麼需要知道這些爬蟲規範？</h3><p>首先，我們必須知道過度的網路爬蟲可能是違法的，<br>如使用多執行緒進行對網站的大量拜訪，在沒有適當的存取時間間隔下，可能會造成一般人熟知的<strong>DDOS</strong>(Denial-Of-Service Attack)，進而造成其他使用者無法拜訪、甚至是主機癱瘓。<br>因此，某些網站有制定所謂的「規範」，讓爬蟲使用者能夠去遵守並避免存取到private data</p>
-<span id="more"></span>
-<p>請注意這項規範並不具有強制力，並無法阻擋真正有心攻擊的爬蟲程式。</p>
-<h3 id="「規範」—-robots-txt"><a href="#「規範」—-robots-txt" class="headerlink" title="「規範」— robots.txt"></a>「規範」— robots.txt</h3><p>robots.txt是一個告訴爬蟲哪些內容是否可存取的文字檔。<br>這項檔案通常位於網頁根目錄下的robots.txt，<br>換句話說，在main-page下加個&#x2F;robots.txt就能檢視。</p>
-<p>舉個例子吧，我們先進到<a href="http://google.com/">google</a>的首頁</p>
-<p><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706kiMp9LoNrj.png" alt="20152706kiMp9LoNrj.png"></p>
-<p>相當正常，不是嗎?<br>再來利用上面的方法去找robots.txt，<br>我們接著在.com後面接著&#x2F;robots.txt，<br>使網址成為<a href="https://www.google.com/robots.txt">https://www.google.com/robots.txt</a></p>
-<p><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706qRcQSJ2ABd.png" alt="20152706qRcQSJ2ABd.png"></p>
-<p>成功了！<br>可是密密麻麻的，打這麼多字誰他媽看得完?<br>但事實上，這份文字檔可以被拆分成幾個部分，<br>我們從第一行開始：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. User-Agent: *</span><br></pre></td></tr></table></figure>
-<p>User-Agent這一欄代表的是允許的爬蟲類型，而 <strong>*</strong> 則代表<strong>所有</strong>的意思，<br>所以第一行可以被解讀成，允許所有爬蟲拜訪。<br>此外有一些特別的程式只允許特定爬蟲拜訪網頁，如Googlebot、Applebot等，<br>如在最後幾行處，可以看到google的網頁允許Twitterbot能夠比一般使用者額外拜訪&#x2F;imgres的子目錄。</p>
-<p>再來我們繼續往下探討，大致上可以分為<strong>Allow</strong>開頭的，以及<strong>Disallow</strong>開頭的句子</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2. Disallow: /search</span><br></pre></td></tr></table></figure>
-<p>這句話代表著，拒絕網路爬蟲訪問search子目錄以及其子目錄下所有目錄，<br>而接下來的第三行，你們應該也就猜的到意思了，就是允許拜訪冒號後面的子目錄。</p>
-<h3 id="表頭headers"><a href="#表頭headers" class="headerlink" title="表頭headers"></a>表頭headers</h3><p>headers是對client端向server發出請求時的敘述資訊。<br>有一些網站會針對網路爬蟲進行阻擋，其中一項阻擋的手法就是針對headers，<br>當網頁收到非瀏覽器的headers發出的請求時，網頁就拒絕client的存取。</p>
-<p>解決手段非常的簡單粗暴，既然你拒絕非瀏覽器外的訪問，那我就成為瀏覽器就好了啊!?<br>那我們要怎麼成為瀏覽器呢?<br>這樣推薦一個作法：</p>
-<ul>
-<li>開啟Chrome時按下F12鍵後，先按F5使其重整載入資源，點選其中一項被載入的資源，點選Network欄中的Header，複製其中的Uger-Agent</li>
-</ul>
-<p>如此一來就得到瀏覽器的header，將自己偽裝成瀏覽器了。<br>下一章在requests時，我們會介紹在requests.get()中可以帶入header參數，<br>在header參數中帶入我們剛剛取得的瀏覽器header，我們就可以成功偽裝了。</p>
 ]]></content>
       <categories>
         <category>程式</category>
@@ -186,6 +150,60 @@
       </tags>
   </entry>
   <entry>
+    <title> 爬蟲基礎入門: robots.txt &amp; header</title>
+    <url>/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/</url>
+    <content><![CDATA[<p>今天要來介紹當我們在爬蟲前，應該要知道的一些技巧與規範</p>
+<hr>
+<h3 id="為甚麼需要知道這些爬蟲規範？"><a href="#為甚麼需要知道這些爬蟲規範？" class="headerlink" title="為甚麼需要知道這些爬蟲規範？"></a>為甚麼需要知道這些爬蟲規範？</h3><p>首先，我們必須知道過度的網路爬蟲可能是違法的，<br>如使用多執行緒進行對網站的大量拜訪，在沒有適當的存取時間間隔下，可能會造成一般人熟知的<strong>DDOS</strong>(Denial-Of-Service Attack)，進而造成其他使用者無法拜訪、甚至是主機癱瘓。<br>因此，某些網站有制定所謂的「規範」，讓爬蟲使用者能夠去遵守並避免存取到private data</p>
+<span id="more"></span>
+<p>請注意這項規範並不具有強制力，並無法阻擋真正有心攻擊的爬蟲程式。</p>
+<h3 id="「規範」—-robots-txt"><a href="#「規範」—-robots-txt" class="headerlink" title="「規範」— robots.txt"></a>「規範」— robots.txt</h3><p>robots.txt是一個告訴爬蟲哪些內容是否可存取的文字檔。<br>這項檔案通常位於網頁根目錄下的robots.txt，<br>換句話說，在main-page下加個&#x2F;robots.txt就能檢視。</p>
+<p>舉個例子吧，我們先進到<a href="http://google.com/">google</a>的首頁</p>
+<p><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706kiMp9LoNrj.png" alt="20152706kiMp9LoNrj.png"></p>
+<p>相當正常，不是嗎?<br>再來利用上面的方法去找robots.txt，<br>我們接著在.com後面接著&#x2F;robots.txt，<br>使網址成為<a href="https://www.google.com/robots.txt">https://www.google.com/robots.txt</a></p>
+<p><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706qRcQSJ2ABd.png" alt="20152706qRcQSJ2ABd.png"></p>
+<p>成功了！<br>可是密密麻麻的，打這麼多字誰他媽看得完?<br>但事實上，這份文字檔可以被拆分成幾個部分，<br>我們從第一行開始：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. User-Agent: *</span><br></pre></td></tr></table></figure>
+<p>User-Agent這一欄代表的是允許的爬蟲類型，而 <strong>*</strong> 則代表<strong>所有</strong>的意思，<br>所以第一行可以被解讀成，允許所有爬蟲拜訪。<br>此外有一些特別的程式只允許特定爬蟲拜訪網頁，如Googlebot、Applebot等，<br>如在最後幾行處，可以看到google的網頁允許Twitterbot能夠比一般使用者額外拜訪&#x2F;imgres的子目錄。</p>
+<p>再來我們繼續往下探討，大致上可以分為<strong>Allow</strong>開頭的，以及<strong>Disallow</strong>開頭的句子</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2. Disallow: /search</span><br></pre></td></tr></table></figure>
+<p>這句話代表著，拒絕網路爬蟲訪問search子目錄以及其子目錄下所有目錄，<br>而接下來的第三行，你們應該也就猜的到意思了，就是允許拜訪冒號後面的子目錄。</p>
+<h3 id="表頭headers"><a href="#表頭headers" class="headerlink" title="表頭headers"></a>表頭headers</h3><p>headers是對client端向server發出請求時的敘述資訊。<br>有一些網站會針對網路爬蟲進行阻擋，其中一項阻擋的手法就是針對headers，<br>當網頁收到非瀏覽器的headers發出的請求時，網頁就拒絕client的存取。</p>
+<p>解決手段非常的簡單粗暴，既然你拒絕非瀏覽器外的訪問，那我就成為瀏覽器就好了啊!?<br>那我們要怎麼成為瀏覽器呢?<br>這樣推薦一個作法：</p>
+<ul>
+<li>開啟Chrome時按下F12鍵後，先按F5使其重整載入資源，點選其中一項被載入的資源，點選Network欄中的Header，複製其中的Uger-Agent</li>
+</ul>
+<p>如此一來就得到瀏覽器的header，將自己偽裝成瀏覽器了。<br>下一章在requests時，我們會介紹在requests.get()中可以帶入header參數，<br>在header參數中帶入我們剛剛取得的瀏覽器header，我們就可以成功偽裝了。</p>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>爬蟲</category>
+      </categories>
+      <tags>
+        <tag>爬蟲</tag>
+        <tag>程式</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Discord Bot-創建一隻bot</title>
+    <url>/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/</url>
+    <content><![CDATA[<p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
+<span id="more"></span>
+<p><img src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706MBGmHIhGdS.png" alt="20152706MBGmHIhGdS.png"><br>大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。</p>
+<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706uRtcasLHmn.png" alt="20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706cOtUkl6jZV.png" alt="20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706nF0OR14070.png" alt="20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>Discord bot</category>
+      </categories>
+      <tags>
+        <tag>程式</tag>
+        <tag>python</tag>
+        <tag>Discord</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Discord Bot-基本架構</title>
     <url>/Discord-Bot-%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%A7%8B/</url>
     <content><![CDATA[<p>首先先用一個最基本的機器人來示範。請打開一個python檔並鍵入以下內容:</p>
@@ -226,29 +244,9 @@
       </tags>
   </entry>
   <entry>
-    <title>Discord Bot-創建一隻bot</title>
-    <url>/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/</url>
-    <content><![CDATA[<p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
-<span id="more"></span>
-<p><img src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706MBGmHIhGdS.png" alt="20152706MBGmHIhGdS.png"><br>大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。</p>
-<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706uRtcasLHmn.png" alt="20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706cOtUkl6jZV.png" alt="20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706nF0OR14070.png" alt="20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>Discord bot</category>
-      </categories>
-      <tags>
-        <tag>程式</tag>
-        <tag>python</tag>
-        <tag>Discord</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>最近的夜晚</title>
     <url>/%E6%9C%80%E8%BF%91%E7%9A%84%E5%A4%9C%E6%99%9A/</url>
-    <content><![CDATA[<p>最近晚上一直都是喝著gin fizz渡過的<br>琴酒+檸檬+糖漿攪拌或搖晃<br>最後加入氣泡水<br>清爽的口感加上琴酒的藥草香以及檸檬的酸和糖漿的甜</p>
-<span id="more"></span>
-<p>最後加入氣泡水增添的口感<br>同時也有效將琴酒的口味分層<br>不由得一杯接著一杯</p>
+    <content><![CDATA[<p>最近晚上一直都是喝著gin fizz渡過的<br>琴酒+檸檬+糖漿攪拌或搖晃<br>最後加入氣泡水<br>清爽的口感加上琴酒的藥草香以及檸檬的酸和糖漿的甜<span id="more"></span><br>最後加入氣泡水增添的口感<br>同時也有效將琴酒的口味分層<br>不由得一杯接著一杯</p>
 <p>建議用可林杯與長冰調配<br>克林杯放入長冰冰杯<br>倒出融水後<br>將琴酒、半顆檸檬的檸檬汁、與糖漿倒入<br>攪拌均勻<br>隨後用氣泡水填滿<br>若剩下半顆檸檬<br>可切一片放杯緣<br>如此一來你便完成了一杯gin fizz</p>
 <p>如果想要提升味覺感受<br>可以從琴酒以及氣泡水下手</p>
 <p>最後<br>以上言論不代表本人立場</p>
@@ -397,9 +395,7 @@
   <entry>
     <title>越式涼拌的醬料</title>
     <url>/%E8%B6%8A%E5%BC%8F%E6%B6%BC%E6%8B%8C%E7%9A%84%E9%86%AC%E6%96%99/</url>
-    <content><![CDATA[<p>1.蒜頭、辣椒切碎<br>2.加入糖一匙<br>3.魚露兩匙</p>
-<span id="more"></span>
-<p>4.檸檬汁一顆的量<br>5.白胡椒粉一小匙<br>6.加入兩匙水、拌勻</p>
+    <content><![CDATA[<p>1.蒜頭、辣椒切碎<br>2.加入糖一匙<br>3.魚露兩匙<span id="more"></span><br>4.檸檬汁一顆的量<br>5.白胡椒粉一小匙<br>6.加入兩匙水、拌勻</p>
 <p>切個青木瓜絲、紅蘿蔔絲、小黃瓜絲丟進去拌一拌，灑上一把鹹花生就完成了。</p>
 <p>好吃到<em><strong>Xin chao</strong></em></p>
 <p><strong>筆者：蔡銘揚</strong></p>
