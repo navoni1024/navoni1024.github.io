@@ -394,7 +394,11 @@
   <entry>
     <title>地形考察報告</title>
     <url>/%E5%9C%B0%E5%BD%A2%E8%80%83%E5%AF%9F%E5%A0%B1%E5%91%8A/</url>
-    <content><![CDATA[<p>國立台北教育大學<br>地形考察報告<br>結報</p>
+    <content><![CDATA[<div style="text-align:center">
+國立台北教育大學
+地形考察報告
+結報
+</div>
 <span id="more"></span>
 
 <div class="pdfobject-container" data-target="NTUE-Geo.pdf" data-height="500px"></div>]]></content>
@@ -450,7 +454,9 @@
   <entry>
     <title>熱流實驗 風洞與流視 結報</title>
     <url>/%E7%86%B1%E6%B5%81%E5%AF%A6%E9%A9%97-%E9%A2%A8%E6%B4%9E%E8%88%87%E6%B5%81%E8%A6%96-%E7%B5%90%E5%A0%B1/</url>
-    <content><![CDATA[<p>國立清華大學動力機械工程學系<br>熱流實驗-風洞與流視<br>結報</p>
+    <content><![CDATA[<center>國立清華大學動力機械工程學系</center>
+<center>熱流實驗-風洞與流視</center>
+<center>結報</center>
 <span id="more"></span>
 
 <div class="pdfobject-container" data-target="110033210.pdf" data-height="500px"></div>
