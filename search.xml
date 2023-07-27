@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>【B級調酒EP1】</title>
-    <url>/%E3%80%90B%E7%B4%9A%E8%AA%BF%E9%85%92EP1%E3%80%91/</url>
-    <content><![CDATA[<p>覺旅咖啡英式午餐茶+蘇格蘭威士忌 </p>
-<p>酒譜<br>520ml紅茶<br>15ml 威士忌</p>
-<span id="more"></span>
-<h3 id="短評"><a href="#短評" class="headerlink" title="短評"></a>短評</h3><p>大概連ddffg都喝不下去</p>
-<p><img src="/%E3%80%90B%E7%B4%9A%E8%AA%BF%E9%85%92EP1%E3%80%91/grose.png" alt="grose.png"></p>
-]]></content>
-      <categories>
-        <category>飲食</category>
-        <category>酒</category>
-      </categories>
-      <tags>
-        <tag>調酒</tag>
-        <tag>酒譜</tag>
-        <tag>土製</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>哲學系發癲</title>
     <url>/%E5%93%B2%E5%AD%B8%E7%B3%BB%E7%99%BC%E7%99%B2/</url>
     <content><![CDATA[<p>原來我開的笑話都指向空虛的所指<br>我還以為你是一個真實他者<br>沒想到是個大他者<br>我的能指只是傳達了純粹意識形態<br>我們的關係之間連一場遊戲都玩不成</p>
@@ -61,6 +42,25 @@
         <tag>爬蟲</tag>
         <tag>程式</tag>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【B級調酒EP1】</title>
+    <url>/%E3%80%90B%E7%B4%9A%E8%AA%BF%E9%85%92EP1%E3%80%91/</url>
+    <content><![CDATA[<p>覺旅咖啡英式午餐茶+蘇格蘭威士忌 </p>
+<p>酒譜<br>520ml紅茶<br>15ml 威士忌</p>
+<span id="more"></span>
+<h3 id="短評"><a href="#短評" class="headerlink" title="短評"></a>短評</h3><p>大概連ddffg都喝不下去</p>
+<p><img src="/%E3%80%90B%E7%B4%9A%E8%AA%BF%E9%85%92EP1%E3%80%91/grose.png" alt="grose.png"></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>酒</category>
+      </categories>
+      <tags>
+        <tag>調酒</tag>
+        <tag>酒譜</tag>
+        <tag>土製</tag>
       </tags>
   </entry>
   <entry>
@@ -186,24 +186,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Discord Bot-創建一隻bot</title>
-    <url>/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/</url>
-    <content><![CDATA[<p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
-<span id="more"></span>
-<p><img src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706MBGmHIhGdS.png" alt="20152706MBGmHIhGdS.png"><br>大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。</p>
-<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706uRtcasLHmn.png" alt="20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706cOtUkl6jZV.png" alt="20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706nF0OR14070.png" alt="20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>Discord bot</category>
-      </categories>
-      <tags>
-        <tag>程式</tag>
-        <tag>python</tag>
-        <tag>Discord</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Discord Bot-基本架構</title>
     <url>/Discord-Bot-%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%A7%8B/</url>
     <content><![CDATA[<p>首先先用一個最基本的機器人來示範。請打開一個python檔並鍵入以下內容:</p>
@@ -244,6 +226,43 @@
       </tags>
   </entry>
   <entry>
+    <title>Discord Bot-創建一隻bot</title>
+    <url>/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/</url>
+    <content><![CDATA[<p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
+<span id="more"></span>
+<p><img src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706MBGmHIhGdS.png" alt="20152706MBGmHIhGdS.png"><br>大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。</p>
+<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706uRtcasLHmn.png" alt="20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706cOtUkl6jZV.png" alt="20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706nF0OR14070.png" alt="20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>Discord bot</category>
+      </categories>
+      <tags>
+        <tag>程式</tag>
+        <tag>python</tag>
+        <tag>Discord</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>最近的夜晚</title>
+    <url>/%E6%9C%80%E8%BF%91%E7%9A%84%E5%A4%9C%E6%99%9A/</url>
+    <content><![CDATA[<p>最近晚上一直都是喝著gin fizz渡過的<br>琴酒+檸檬+糖漿攪拌或搖晃<br>最後加入氣泡水<br>清爽的口感加上琴酒的藥草香以及檸檬的酸和糖漿的甜<span id="more"></span><br>最後加入氣泡水增添的口感<br>同時也有效將琴酒的口味分層<br>不由得一杯接著一杯</p>
+<p>建議用可林杯與長冰調配<br>克林杯放入長冰冰杯<br>倒出融水後<br>將琴酒、半顆檸檬的檸檬汁、與糖漿倒入<br>攪拌均勻<br>隨後用氣泡水填滿<br>若剩下半顆檸檬<br>可切一片放杯緣<br>如此一來你便完成了一杯gin fizz</p>
+<p>如果想要提升味覺感受<br>可以從琴酒以及氣泡水下手</p>
+<p>最後<br>以上言論不代表本人立場</p>
+<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>酒</category>
+      </categories>
+      <tags>
+        <tag>調酒</tag>
+        <tag>酒譜</tag>
+        <tag>自製</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>清蒸鱸魚食譜</title>
     <url>/%E6%B8%85%E8%92%B8%E9%B1%B8%E9%AD%9A%E9%A3%9F%E8%AD%9C/</url>
     <content><![CDATA[<h3 id="所需材料："><a href="#所需材料：" class="headerlink" title="所需材料："></a>所需材料：</h3><ul>
@@ -269,27 +288,8 @@
         <category>食譜</category>
       </categories>
       <tags>
+        <tag>自製</tag>
         <tag>食譜</tag>
-        <tag>自製</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>最近的夜晚</title>
-    <url>/%E6%9C%80%E8%BF%91%E7%9A%84%E5%A4%9C%E6%99%9A/</url>
-    <content><![CDATA[<p>最近晚上一直都是喝著gin fizz渡過的<br>琴酒+檸檬+糖漿攪拌或搖晃<br>最後加入氣泡水<br>清爽的口感加上琴酒的藥草香以及檸檬的酸和糖漿的甜<span id="more"></span><br>最後加入氣泡水增添的口感<br>同時也有效將琴酒的口味分層<br>不由得一杯接著一杯</p>
-<p>建議用可林杯與長冰調配<br>克林杯放入長冰冰杯<br>倒出融水後<br>將琴酒、半顆檸檬的檸檬汁、與糖漿倒入<br>攪拌均勻<br>隨後用氣泡水填滿<br>若剩下半顆檸檬<br>可切一片放杯緣<br>如此一來你便完成了一杯gin fizz</p>
-<p>如果想要提升味覺感受<br>可以從琴酒以及氣泡水下手</p>
-<p>最後<br>以上言論不代表本人立場</p>
-<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
-]]></content>
-      <categories>
-        <category>飲食</category>
-        <category>酒</category>
-      </categories>
-      <tags>
-        <tag>調酒</tag>
-        <tag>酒譜</tag>
-        <tag>自製</tag>
       </tags>
   </entry>
   <entry>
@@ -426,8 +426,8 @@
         <category>食譜</category>
       </categories>
       <tags>
-        <tag>食譜</tag>
         <tag>自製</tag>
+        <tag>食譜</tag>
       </tags>
   </entry>
 </search>
