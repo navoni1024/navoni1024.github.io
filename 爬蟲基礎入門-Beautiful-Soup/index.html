@@ -15,8 +15,6 @@
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-loading-bar.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
@@ -33,7 +31,7 @@
 <meta property="og:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/20152706UAEuGzKBvW.png">
 <meta property="og:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/20152706L0rBAzgmoz.png">
 <meta property="article:published_time" content="2023-07-25T15:40:35.000Z">
-<meta property="article:modified_time" content="2023-07-25T20:47:29.146Z">
+<meta property="article:modified_time" content="2023-07-27T05:44:58.199Z">
 <meta property="article:author" content="navoni1024">
 <meta property="article:tag" content="爬蟲">
 <meta property="article:tag" content="程式">
@@ -243,7 +241,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2023-07-26 04:47:29" itemprop="dateModified" datetime="2023-07-26T04:47:29+08:00">2023-07-26</time>
+                <time title="修改時間：2023-07-27 13:44:58" itemprop="dateModified" datetime="2023-07-27T13:44:58+08:00">2023-07-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -273,8 +271,8 @@
         <h3 id="什麼是BeautifulSoup"><a href="#什麼是BeautifulSoup" class="headerlink" title="什麼是BeautifulSoup?"></a>什麼是BeautifulSoup?</h3><p>BeautifulSoup，又名美麗的湯，就如同魯迅所說過的，吃日料要喝味噌湯，到台南要喝牛肉湯，爬蟲的話就要用美麗的湯。(誤<br>BeautifulSoup4我們一般簡稱BS4，是用來做網站的html架構解析，如同前面所講的，html碼是以多層標籤作為架構，也因此我們可以利用BS4這個套件來建立其專屬class BeautifulSoup底下的物件，其就包含了原網站html碼的相關結構，像是標籤的父子、兄弟關係，更可以利用其中的搜尋功能找尋標籤名稱、內容或屬性，進而定位到我們感興趣的位置。</p>
 <span id="more"></span>
 
-<p>在經過基本的pip install後，我們就可以引入bs4了。<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/20152706UAEuGzKBvW.png" alt="20152706UAEuGzKBvW.png"></p>
-<p>之後我們就能像這樣，引入網址後，利用基本request取得html源碼，再利用BS4進行基本解析，建立出soup_m1的物件，之後便可以利用BS4的函式對其定位、分析。<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/20152706L0rBAzgmoz.png" alt="20152706L0rBAzgmoz.png"></p>
+<p>在經過基本的pip install後，我們就可以引入bs4了。<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/20152706UAEuGzKBvW.png"></p>
+<p>之後我們就能像這樣，引入網址後，利用基本request取得html源碼，再利用BS4進行基本解析，建立出soup_m1的物件，之後便可以利用BS4的函式對其定位、分析。<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/20152706L0rBAzgmoz.png"></p>
 <h3 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h3><p>昨天出現的這句</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">soup_m1 = BeautifulSoup(html_m1.text, &quot;html.parser&quot;)</span><br></pre></td></tr></table></figure>
 <p>其中的<code>html.parser</code>便是使用的解析器，是python內建的。<br>除了這個外還能用html5lib和lxml但我也沒用過，詳細優缺點可能要google下。<br>哪天有試了再補充上來吧</p>

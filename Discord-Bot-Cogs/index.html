@@ -15,8 +15,6 @@
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-loading-bar.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
@@ -36,7 +34,7 @@
 <meta property="og:image" content="http://navoni1024.github.io/Discord-Bot-Cogs/20152706uqPycyubVO.png">
 <meta property="og:image" content="http://navoni1024.github.io/Discord-Bot-Cogs/20152706kGyb4P4XHd.png">
 <meta property="article:published_time" content="2023-07-26T07:01:14.000Z">
-<meta property="article:modified_time" content="2023-07-26T07:36:08.529Z">
+<meta property="article:modified_time" content="2023-07-27T05:45:39.686Z">
 <meta property="article:author" content="navoni1024">
 <meta property="article:tag" content="程式">
 <meta property="article:tag" content="python">
@@ -238,10 +236,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2023-07-26 15:01:14 / 修改時間：15:36:08" itemprop="dateCreated datePublished" datetime="2023-07-26T15:01:14+08:00">2023-07-26</time>
+              <time title="創建時間：2023-07-26 15:01:14" itemprop="dateCreated datePublished" datetime="2023-07-26T15:01:14+08:00">2023-07-26</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2023-07-27 13:45:39" itemprop="dateModified" datetime="2023-07-27T13:45:39+08:00">2023-07-27</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -278,7 +282,7 @@
 <li>Cogs可以用<code>Bot.remove_cog()</code>來卸載</li>
 <li>通常會跟<a target="_blank" rel="noopener" href="https://discordpy.readthedocs.io/en/stable/ext/commands/extensions.html#ext-commands-extensions">Extension</a>功能配合</li>
 </ul>
-<p>當然單純這樣條列出來是看不懂的，底下來看實例。<br>其檔案架構通常會長下面這樣<br><img data-src="/Discord-Bot-Cogs/20152706EJhEPhiYQA.png" alt="20152706EJhEPhiYQA.png"></p>
+<p>當然單純這樣條列出來是看不懂的，底下來看實例。<br>其檔案架構通常會長下面這樣<br><img data-src="/Discord-Bot-Cogs/20152706EJhEPhiYQA.png"></p>
 <p>cogs資料夾是拿來放各個cogs的<br>core資料夾是拿來放一些你cogs可能會常用到的函數。<br>main.py是拿來運行的檔案，裡面也包含了載入和裝卸cogs的程式碼，會長的類似下面這樣:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">from discord.ext import commands</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line">bot = commands.Bot(&#x27;prefix&#x27;)</span><br><span class="line"></span><br><span class="line">#下面這塊從cogs資料夾中取出所有.py結尾的檔案並用load_extension載入cogs</span><br><span class="line">for filename in os.listdir(&#x27;./cogs&#x27;):</span><br><span class="line">	if filename.endswith(&#x27;.py&#x27;):</span><br><span class="line">		bot.load_extension(f&#x27;cogs.&#123;filename[:-3]&#125;&#x27;) </span><br><span class="line"></span><br><span class="line">@bot.event</span><br><span class="line">async def on_ready():</span><br><span class="line">	print(&#x27;Test begin...&#x27;) </span><br><span class="line">	</span><br><span class="line">#這裡建個指令讓你可以載入Cog</span><br><span class="line">@bot.command()</span><br><span class="line">async def load(ctx, cog_name):</span><br><span class="line">	try:</span><br><span class="line">		bot.load_extension(f&#x27;cogs.&#123;cog_name&#125;&#x27;)</span><br><span class="line">	except:</span><br><span class="line">		await ctx.send(&#x27;Failed.&#x27;)</span><br><span class="line">		return</span><br><span class="line">	await ctx.send(&#x27;load success!&#x27;)</span><br><span class="line"></span><br><span class="line">#這裡建個指令讓你可以卸載Cog</span><br><span class="line">@bot.command()</span><br><span class="line">async def unload(ctx, cog_name):</span><br><span class="line">	try:</span><br><span class="line">		bot.unload_extension(f&#x27;cogs.&#123;cog_name&#125;&#x27;)</span><br><span class="line">	except:</span><br><span class="line">		await ctx.send(&#x27;Failed.&#x27;)</span><br><span class="line">		return</span><br><span class="line">	await ctx.send(&#x27;unload success!&#x27;)</span><br><span class="line"></span><br><span class="line">#這裡建個指令讓你可以重新載入Cog</span><br><span class="line">@bot.command()</span><br><span class="line">async def reload(ctx, cog_name):</span><br><span class="line">	try:</span><br><span class="line">		bot.reload_extension(f&#x27;cogs.&#123;cog_name&#125;&#x27;)</span><br><span class="line">	except:</span><br><span class="line">		await ctx.send(&#x27;Failed.&#x27;)</span><br><span class="line">		return</span><br><span class="line">	await ctx.send(&#x27;reload success!&#x27;)</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">	bot.run(&#x27;TOKEN&#x27;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -296,11 +300,11 @@
 <p>接著在下面加上setup的函數</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">from discord.ext import commands</span><br><span class="line">from core.init import Cog_Extension</span><br><span class="line"></span><br><span class="line">class touch(Cog_Extension):</span><br><span class="line">	@commands.command(aliases=[&#x27;touch&#x27;])</span><br><span class="line">	async def t(self, message):</span><br><span class="line">		await message.channel.send(&#x27;请不要随意地触碰我！ 十分感谢！&#x27;)</span><br><span class="line"></span><br><span class="line">def setup(bot):</span><br><span class="line">	bot.add_cog(touch(bot))</span><br><span class="line">#這裡的bot.add_cog(touch(bot))中的(bot)前面填上你class的名子</span><br></pre></td></tr></table></figure>
 
-<p>這樣運行後給機器人預設的help指令後就能看到結構了。<br><img data-src="/Discord-Bot-Cogs/20152706dMFbDgmc8p.png" alt="20152706dMFbDgmc8p.png"></p>
-<p>像這邊unload掉touch後可以發現輸t他也沒反應了，輸help也看不見了。<br><img data-src="/Discord-Bot-Cogs/20152706NNRA2I8xr8.png" alt="20152706NNRA2I8xr8.png"></p>
-<p>而load回來的話可以發現指令有反應了，help中也看的到了。<br><img data-src="/Discord-Bot-Cogs/20152706uqPycyubVO.png" alt="20152706uqPycyubVO.png"></p>
+<p>這樣運行後給機器人預設的help指令後就能看到結構了。<br><img data-src="/Discord-Bot-Cogs/20152706dMFbDgmc8p.png"></p>
+<p>像這邊unload掉touch後可以發現輸t他也沒反應了，輸help也看不見了。<br><img data-src="/Discord-Bot-Cogs/20152706NNRA2I8xr8.png"></p>
+<p>而load回來的話可以發現指令有反應了，help中也看的到了。<br><img data-src="/Discord-Bot-Cogs/20152706uqPycyubVO.png"></p>
 <hr>
-<p>前述的的程式結構較簡單可能沒什麼感覺，但要是程式複雜到如下圖能夠先unload一塊調整完後再load回去還是挺方便的。<br><img data-src="/Discord-Bot-Cogs/20152706kGyb4P4XHd.png" alt="20152706kGyb4P4XHd.png"></p>
+<p>前述的的程式結構較簡單可能沒什麼感覺，但要是程式複雜到如下圖能夠先unload一塊調整完後再load回去還是挺方便的。<br><img data-src="/Discord-Bot-Cogs/20152706kGyb4P4XHd.png"></p>
 
     </div>
 

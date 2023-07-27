@@ -15,8 +15,6 @@
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-loading-bar.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
@@ -33,7 +31,7 @@
 <meta property="og:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706kiMp9LoNrj.png">
 <meta property="og:image" content="http://navoni1024.github.io/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706qRcQSJ2ABd.png">
 <meta property="article:published_time" content="2023-07-25T15:51:41.000Z">
-<meta property="article:modified_time" content="2023-07-26T06:44:36.332Z">
+<meta property="article:modified_time" content="2023-07-27T05:45:12.003Z">
 <meta property="article:author" content="navoni1024">
 <meta property="article:tag" content="爬蟲">
 <meta property="article:tag" content="程式">
@@ -243,7 +241,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2023-07-26 14:44:36" itemprop="dateModified" datetime="2023-07-26T14:44:36+08:00">2023-07-26</time>
+                <time title="修改時間：2023-07-27 13:45:12" itemprop="dateModified" datetime="2023-07-27T13:45:12+08:00">2023-07-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -277,9 +275,9 @@
 <p>請注意這項規範並不具有強制力，並無法阻擋真正有心攻擊的爬蟲程式。</p>
 <h3 id="「規範」—-robots-txt"><a href="#「規範」—-robots-txt" class="headerlink" title="「規範」— robots.txt"></a>「規範」— robots.txt</h3><p>robots.txt是一個告訴爬蟲哪些內容是否可存取的文字檔。<br>這項檔案通常位於網頁根目錄下的robots.txt，<br>換句話說，在main-page下加個&#x2F;robots.txt就能檢視。</p>
 <p>舉個例子吧，我們先進到<a target="_blank" rel="noopener" href="http://google.com/">google</a>的首頁</p>
-<p><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706kiMp9LoNrj.png" alt="20152706kiMp9LoNrj.png"></p>
+<p><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706kiMp9LoNrj.png"></p>
 <p>相當正常，不是嗎?<br>再來利用上面的方法去找robots.txt，<br>我們接著在.com後面接著&#x2F;robots.txt，<br>使網址成為<a target="_blank" rel="noopener" href="https://www.google.com/robots.txt">https://www.google.com/robots.txt</a></p>
-<p><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706qRcQSJ2ABd.png" alt="20152706qRcQSJ2ABd.png"></p>
+<p><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706qRcQSJ2ABd.png"></p>
 <p>成功了！<br>可是密密麻麻的，打這麼多字誰他媽看得完?<br>但事實上，這份文字檔可以被拆分成幾個部分，<br>我們從第一行開始：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1. User-Agent: *</span><br></pre></td></tr></table></figure>
 <p>User-Agent這一欄代表的是允許的爬蟲類型，而 <strong>*</strong> 則代表<strong>所有</strong>的意思，<br>所以第一行可以被解讀成，允許所有爬蟲拜訪。<br>此外有一些特別的程式只允許特定爬蟲拜訪網頁，如Googlebot、Applebot等，<br>如在最後幾行處，可以看到google的網頁允許Twitterbot能夠比一般使用者額外拜訪&#x2F;imgres的子目錄。</p>
