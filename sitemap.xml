@@ -2,7 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://navoni1024.github.io/%E7%86%B1%E6%B5%81%E5%AF%A6%E9%A9%97-%E9%A2%A8%E6%B4%9E%E8%88%87%E6%B5%81%E8%A6%96-%E7%B5%90%E5%A0%B1/</loc>
+    
+    <lastmod>2023-07-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/%E5%9C%B0%E5%BD%A2%E8%80%83%E5%AF%9F%E5%A0%B1%E5%91%8A/</loc>
+    
+    <lastmod>2023-07-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://navoni1024.github.io/%E8%B6%8A%E5%BC%8F%E6%B6%BC%E6%8B%8C/</loc>
+    
+    <lastmod>2023-07-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/about/</loc>
     
     <lastmod>2023-07-27</lastmod>
     
@@ -119,15 +146,6 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/about/</loc>
-    
-    <lastmod>2023-07-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://navoni1024.github.io/%E6%9C%80%E8%BF%91%E7%9A%84%E5%A4%9C%E6%99%9A/</loc>
     
     <lastmod>2023-07-26</lastmod>
@@ -209,27 +227,6 @@
 
   
   <url>
-    <loc>http://navoni1024.github.io/tags/%E7%88%AC%E8%9F%B2/</loc>
-    <lastmod>2023-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://navoni1024.github.io/tags/%E7%A8%8B%E5%BC%8F/</loc>
-    <lastmod>2023-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://navoni1024.github.io/tags/python/</loc>
-    <lastmod>2023-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://navoni1024.github.io/tags/%E5%93%B2%E5%AD%B8/</loc>
     <lastmod>2023-07-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -258,6 +255,27 @@
   </url>
   
   <url>
+    <loc>http://navoni1024.github.io/tags/%E7%88%AC%E8%9F%B2/</loc>
+    <lastmod>2023-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/tags/%E7%A8%8B%E5%BC%8F/</loc>
+    <lastmod>2023-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/tags/python/</loc>
+    <lastmod>2023-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://navoni1024.github.io/tags/Discord/</loc>
     <lastmod>2023-07-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -278,14 +296,14 @@
     <priority>0.2</priority>
   </url>
   
-
-  
   <url>
-    <loc>http://navoni1024.github.io/categories/%E7%A8%8B%E5%BC%8F/</loc>
+    <loc>http://navoni1024.github.io/tags/%E7%B5%90%E5%A0%B1/</loc>
     <lastmod>2023-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
+  
+
   
   <url>
     <loc>http://navoni1024.github.io/categories/%E6%97%A5%E5%B8%B8%E5%BB%A2%E6%96%87/</loc>
@@ -302,14 +320,7 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/%E7%A8%8B%E5%BC%8F/%E7%88%AC%E8%9F%B2/</loc>
-    <lastmod>2023-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://navoni1024.github.io/categories/%E7%A8%8B%E5%BC%8F/Discord-bot/</loc>
+    <loc>http://navoni1024.github.io/categories/%E7%A8%8B%E5%BC%8F/</loc>
     <lastmod>2023-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -323,7 +334,42 @@
   </url>
   
   <url>
+    <loc>http://navoni1024.github.io/categories/%E7%A8%8B%E5%BC%8F/Discord-bot/</loc>
+    <lastmod>2023-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/categories/%E7%A8%8B%E5%BC%8F/%E7%88%AC%E8%9F%B2/</loc>
+    <lastmod>2023-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://navoni1024.github.io/categories/%E9%A3%B2%E9%A3%9F/%E9%A3%9F%E8%AD%9C/</loc>
+    <lastmod>2023-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/categories/%E7%B5%90%E5%A0%B1/</loc>
+    <lastmod>2023-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/categories/%E7%B5%90%E5%A0%B1/%E6%B8%85%E5%A4%A7%E5%8B%95%E6%A9%9F/</loc>
+    <lastmod>2023-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/categories/%E7%B5%90%E5%A0%B1/%E5%9C%8B%E5%8C%97%E6%95%99%E8%87%AA/</loc>
     <lastmod>2023-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

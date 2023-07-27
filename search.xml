@@ -1,35 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title> 爬蟲基礎入門: Beautiful Soup</title>
-    <url>/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/</url>
-    <content><![CDATA[<h3 id="什麼是BeautifulSoup"><a href="#什麼是BeautifulSoup" class="headerlink" title="什麼是BeautifulSoup?"></a>什麼是BeautifulSoup?</h3><p>BeautifulSoup，又名美麗的湯，就如同魯迅所說過的，吃日料要喝味噌湯，到台南要喝牛肉湯，爬蟲的話就要用美麗的湯。(誤<br>BeautifulSoup4我們一般簡稱BS4，是用來做網站的html架構解析，如同前面所講的，html碼是以多層標籤作為架構，也因此我們可以利用BS4這個套件來建立其專屬class BeautifulSoup底下的物件，其就包含了原網站html碼的相關結構，像是標籤的父子、兄弟關係，更可以利用其中的搜尋功能找尋標籤名稱、內容或屬性，進而定位到我們感興趣的位置。</p>
-<span id="more"></span>
-
-<p>在經過基本的pip install後，我們就可以引入bs4了。<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/20152706UAEuGzKBvW.png"></p>
-<p>之後我們就能像這樣，引入網址後，利用基本request取得html源碼，再利用BS4進行基本解析，建立出soup_m1的物件，之後便可以利用BS4的函式對其定位、分析。<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/20152706L0rBAzgmoz.png"></p>
-<h3 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h3><p>昨天出現的這句</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">soup_m1 = BeautifulSoup(html_m1.text, &quot;html.parser&quot;)</span><br></pre></td></tr></table></figure>
-<p>其中的<code>html.parser</code>便是使用的解析器，是python內建的。<br>除了這個外還能用html5lib和lxml但我也沒用過，詳細優缺點可能要google下。<br>哪天有試了再補充上來吧</p>
-<h3 id="解析方法"><a href="#解析方法" class="headerlink" title="解析方法"></a>解析方法</h3><p>比較常用到的是find()、find_all()和select()。</p>
-<ul>
-<li><p>find()、find_all()<br>兩個都是使用html的標籤進行搜尋的。<br>而這兩者的差別是find()只會回傳第一個符合的結果，find_all()則會回傳所有符合的結果</p>
-</li>
-<li><p>select()<br>使用CSS選擇器(CSS selectors)來進行搜尋。<br>CSS之前沒有提到，主要是用來把網站上色的。<br>其中會用到選擇器來指定特定範圍的HTML進行操作。<br>select()便是利用這東西的語法來爬的。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>爬蟲</category>
-      </categories>
-      <tags>
-        <tag>爬蟲</tag>
-        <tag>程式</tag>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>哲學系發癲</title>
     <url>/%E5%93%B2%E5%AD%B8%E7%B3%BB%E7%99%BC%E7%99%B2/</url>
     <content><![CDATA[<p>原來我開的笑話都指向空虛的所指<br>我還以為你是一個真實他者<br>沒想到是個大他者<br>我的能指只是傳達了純粹意識形態<br>我們的關係之間連一場遊戲都玩不成</p>
@@ -61,6 +32,35 @@
         <tag>調酒</tag>
         <tag>酒譜</tag>
         <tag>土製</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title> 爬蟲基礎入門: Beautiful Soup</title>
+    <url>/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/</url>
+    <content><![CDATA[<h3 id="什麼是BeautifulSoup"><a href="#什麼是BeautifulSoup" class="headerlink" title="什麼是BeautifulSoup?"></a>什麼是BeautifulSoup?</h3><p>BeautifulSoup，又名美麗的湯，就如同魯迅所說過的，吃日料要喝味噌湯，到台南要喝牛肉湯，爬蟲的話就要用美麗的湯。(誤<br>BeautifulSoup4我們一般簡稱BS4，是用來做網站的html架構解析，如同前面所講的，html碼是以多層標籤作為架構，也因此我們可以利用BS4這個套件來建立其專屬class BeautifulSoup底下的物件，其就包含了原網站html碼的相關結構，像是標籤的父子、兄弟關係，更可以利用其中的搜尋功能找尋標籤名稱、內容或屬性，進而定位到我們感興趣的位置。</p>
+<span id="more"></span>
+
+<p>在經過基本的pip install後，我們就可以引入bs4了。<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/20152706UAEuGzKBvW.png"></p>
+<p>之後我們就能像這樣，引入網址後，利用基本request取得html源碼，再利用BS4進行基本解析，建立出soup_m1的物件，之後便可以利用BS4的函式對其定位、分析。<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/20152706L0rBAzgmoz.png"></p>
+<h3 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h3><p>昨天出現的這句</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">soup_m1 = BeautifulSoup(html_m1.text, &quot;html.parser&quot;)</span><br></pre></td></tr></table></figure>
+<p>其中的<code>html.parser</code>便是使用的解析器，是python內建的。<br>除了這個外還能用html5lib和lxml但我也沒用過，詳細優缺點可能要google下。<br>哪天有試了再補充上來吧</p>
+<h3 id="解析方法"><a href="#解析方法" class="headerlink" title="解析方法"></a>解析方法</h3><p>比較常用到的是find()、find_all()和select()。</p>
+<ul>
+<li><p>find()、find_all()<br>兩個都是使用html的標籤進行搜尋的。<br>而這兩者的差別是find()只會回傳第一個符合的結果，find_all()則會回傳所有符合的結果</p>
+</li>
+<li><p>select()<br>使用CSS選擇器(CSS selectors)來進行搜尋。<br>CSS之前沒有提到，主要是用來把網站上色的。<br>其中會用到選擇器來指定特定範圍的HTML進行操作。<br>select()便是利用這東西的語法來爬的。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>爬蟲</category>
+      </categories>
+      <tags>
+        <tag>爬蟲</tag>
+        <tag>程式</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -204,25 +204,6 @@
       </tags>
   </entry>
   <entry>
-    <title>最近的夜晚</title>
-    <url>/%E6%9C%80%E8%BF%91%E7%9A%84%E5%A4%9C%E6%99%9A/</url>
-    <content><![CDATA[<p>最近晚上一直都是喝著gin fizz渡過的<br>琴酒+檸檬+糖漿攪拌或搖晃<br>最後加入氣泡水<br>清爽的口感加上琴酒的藥草香以及檸檬的酸和糖漿的甜<span id="more"></span><br>最後加入氣泡水增添的口感<br>同時也有效將琴酒的口味分層<br>不由得一杯接著一杯</p>
-<p>建議用可林杯與長冰調配<br>克林杯放入長冰冰杯<br>倒出融水後<br>將琴酒、半顆檸檬的檸檬汁、與糖漿倒入<br>攪拌均勻<br>隨後用氣泡水填滿<br>若剩下半顆檸檬<br>可切一片放杯緣<br>如此一來你便完成了一杯gin fizz</p>
-<p>如果想要提升味覺感受<br>可以從琴酒以及氣泡水下手</p>
-<p>最後<br>以上言論不代表本人立場</p>
-<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
-]]></content>
-      <categories>
-        <category>飲食</category>
-        <category>酒</category>
-      </categories>
-      <tags>
-        <tag>調酒</tag>
-        <tag>酒譜</tag>
-        <tag>自製</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Discord Bot-基本架構</title>
     <url>/Discord-Bot-%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%A7%8B/</url>
     <content><![CDATA[<p>首先先用一個最基本的機器人來示範。請打開一個python檔並鍵入以下內容:</p>
@@ -260,6 +241,25 @@
         <tag>程式</tag>
         <tag>python</tag>
         <tag>Discord</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>最近的夜晚</title>
+    <url>/%E6%9C%80%E8%BF%91%E7%9A%84%E5%A4%9C%E6%99%9A/</url>
+    <content><![CDATA[<p>最近晚上一直都是喝著gin fizz渡過的<br>琴酒+檸檬+糖漿攪拌或搖晃<br>最後加入氣泡水<br>清爽的口感加上琴酒的藥草香以及檸檬的酸和糖漿的甜<span id="more"></span><br>最後加入氣泡水增添的口感<br>同時也有效將琴酒的口味分層<br>不由得一杯接著一杯</p>
+<p>建議用可林杯與長冰調配<br>克林杯放入長冰冰杯<br>倒出融水後<br>將琴酒、半顆檸檬的檸檬汁、與糖漿倒入<br>攪拌均勻<br>隨後用氣泡水填滿<br>若剩下半顆檸檬<br>可切一片放杯緣<br>如此一來你便完成了一杯gin fizz</p>
+<p>如果想要提升味覺感受<br>可以從琴酒以及氣泡水下手</p>
+<p>最後<br>以上言論不代表本人立場</p>
+<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>酒</category>
+      </categories>
+      <tags>
+        <tag>調酒</tag>
+        <tag>酒譜</tag>
+        <tag>自製</tag>
       </tags>
   </entry>
   <entry>
@@ -392,6 +392,39 @@
       </tags>
   </entry>
   <entry>
+    <title>地形考察報告</title>
+    <url>/%E5%9C%B0%E5%BD%A2%E8%80%83%E5%AF%9F%E5%A0%B1%E5%91%8A/</url>
+    <content><![CDATA[<p>國立台北教育大學<br>地形考察報告<br>結報</p>
+<span id="more"></span>
+
+<div class="pdfobject-container" data-target="NTUE-Geo.pdf" data-height="500px"></div>]]></content>
+      <categories>
+        <category>結報</category>
+        <category>國北教自</category>
+      </categories>
+      <tags>
+        <tag>結報</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>越式涼拌</title>
+    <url>/%E8%B6%8A%E5%BC%8F%E6%B6%BC%E6%8B%8C/</url>
+    <content><![CDATA[<h3 id="醬料"><a href="#醬料" class="headerlink" title="醬料"></a>醬料</h3><p>1.蒜頭、辣椒切碎<br>2.加入糖一匙<br>3.魚露兩匙<br>4.檸檬汁一顆的量<span id="more"></span><br>5.白胡椒粉一小匙<br>6.加入兩匙水、拌勻</p>
+<p>再切個青木瓜絲、紅蘿蔔絲、小黃瓜絲丟進去拌一拌，灑上一把鹹花生就完成了。</p>
+<div class="pdfobject-container" data-target="pdf/110033210.pdf" data-height="500px"></div>
+
+<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>食譜</category>
+      </categories>
+      <tags>
+        <tag>自製</tag>
+        <tag>食譜</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>舒服的暑假</title>
     <url>/%E8%88%92%E6%9C%8D%E7%9A%84%E6%9A%91%E5%81%87/</url>
     <content><![CDATA[<p>最近放暑假，最舒服的就是中午起床弄個午餐，配杯highball搭著netflix或VT。<br>嗨波其實就是簡單的威士忌加氣泡水，而清爽的口感在夏日午後絕對是最好的享受。</p>
@@ -415,19 +448,20 @@
       </tags>
   </entry>
   <entry>
-    <title>越式涼拌</title>
-    <url>/%E8%B6%8A%E5%BC%8F%E6%B6%BC%E6%8B%8C/</url>
-    <content><![CDATA[<h3 id="醬料"><a href="#醬料" class="headerlink" title="醬料"></a>醬料</h3><p>1.蒜頭、辣椒切碎<br>2.加入糖一匙<br>3.魚露兩匙<br>4.檸檬汁一顆的量<span id="more"></span><br>5.白胡椒粉一小匙<br>6.加入兩匙水、拌勻</p>
-<p>再切個青木瓜絲、紅蘿蔔絲、小黃瓜絲丟進去拌一拌，灑上一把鹹花生就完成了。</p>
-<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+    <title>熱流實驗 風洞與流視 結報</title>
+    <url>/%E7%86%B1%E6%B5%81%E5%AF%A6%E9%A9%97-%E9%A2%A8%E6%B4%9E%E8%88%87%E6%B5%81%E8%A6%96-%E7%B5%90%E5%A0%B1/</url>
+    <content><![CDATA[<p>國立清華大學動力機械工程學系<br>熱流實驗-風洞與流視<br>結報</p>
+<span id="more"></span>
+
+<div class="pdfobject-container" data-target="110033210.pdf" data-height="500px"></div>
+
 ]]></content>
       <categories>
-        <category>飲食</category>
-        <category>食譜</category>
+        <category>結報</category>
+        <category>清大動機</category>
       </categories>
       <tags>
-        <tag>自製</tag>
-        <tag>食譜</tag>
+        <tag>結報</tag>
       </tags>
   </entry>
 </search>
