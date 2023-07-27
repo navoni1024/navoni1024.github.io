@@ -14,10 +14,13 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-loading-bar.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"navoni1024.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"navoni1024.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。">
@@ -152,9 +155,9 @@
     <a href="/author/" rel="section"><i class="fa fa-archive fa-fw"></i>author</a>
 
   </li>
-        <li class="menu-item menu-item-ntust">
+        <li class="menu-item menu-item-猜地圖遊戲">
 
-    <a href="https://johnson1205.github.io/react_TAIWAN_TOWNSHIP_GUESS_GAME/" rel="noopener" target="_blank"><i class="fa "fa-earth-asia" fa-fw"></i>NTUST</a>
+    <a href="https://johnson1205.github.io/react_TAIWAN_TOWNSHIP_GUESS_GAME/" rel="noopener" target="_blank"><i class="fa fa-globe fa-fw"></i>猜地圖遊戲</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -265,8 +268,8 @@
       
         <p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
 <span id="more"></span>
-<p><img src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706MBGmHIhGdS.png" alt="20152706MBGmHIhGdS.png"><br>大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。</p>
-<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706uRtcasLHmn.png" alt="20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706cOtUkl6jZV.png" alt="20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706nF0OR14070.png" alt="20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
+<p><img data-src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706MBGmHIhGdS.png" alt="20152706MBGmHIhGdS.png"><br>大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。</p>
+<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img data-src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706uRtcasLHmn.png" alt="20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img data-src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706cOtUkl6jZV.png" alt="20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img data-src="/Discord-Bot-%E5%89%B5%E5%BB%BA%E4%B8%80%E9%9A%BBbot/20152706nF0OR14070.png" alt="20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
 
     </div>
 
@@ -436,6 +439,10 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
@@ -448,6 +455,65 @@
 
 
 <script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
 
 
 
@@ -472,9 +538,11 @@
 
 
 
+    <div id="pjax">
   
 
   
 
+    </div>
 </body>
 </html>

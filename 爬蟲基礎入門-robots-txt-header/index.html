@@ -14,10 +14,13 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-loading-bar.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"navoni1024.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"navoni1024.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="今天要來介紹當我們在爬蟲前，應該要知道的一些技巧與規範  為甚麼需要知道這些爬蟲規範？首先，我們必須知道過度的網路爬蟲可能是違法的，如使用多執行緒進行對網站的大量拜訪，在沒有適當的存取時間間隔下，可能會造成一般人熟知的DDOS(Denial-Of-Service Attack)，進而造成其他使用者無法拜訪、甚至是主機癱瘓。因此，某些網站有制定所謂的「規範」，讓爬蟲使用者能夠去遵守並避免存取到pri">
@@ -150,9 +153,9 @@
     <a href="/author/" rel="section"><i class="fa fa-archive fa-fw"></i>author</a>
 
   </li>
-        <li class="menu-item menu-item-ntust">
+        <li class="menu-item menu-item-猜地圖遊戲">
 
-    <a href="https://johnson1205.github.io/react_TAIWAN_TOWNSHIP_GUESS_GAME/" rel="noopener" target="_blank"><i class="fa "fa-earth-asia" fa-fw"></i>NTUST</a>
+    <a href="https://johnson1205.github.io/react_TAIWAN_TOWNSHIP_GUESS_GAME/" rel="noopener" target="_blank"><i class="fa fa-globe fa-fw"></i>猜地圖遊戲</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -274,9 +277,9 @@
 <p>請注意這項規範並不具有強制力，並無法阻擋真正有心攻擊的爬蟲程式。</p>
 <h3 id="「規範」—-robots-txt"><a href="#「規範」—-robots-txt" class="headerlink" title="「規範」— robots.txt"></a>「規範」— robots.txt</h3><p>robots.txt是一個告訴爬蟲哪些內容是否可存取的文字檔。<br>這項檔案通常位於網頁根目錄下的robots.txt，<br>換句話說，在main-page下加個&#x2F;robots.txt就能檢視。</p>
 <p>舉個例子吧，我們先進到<a target="_blank" rel="noopener" href="http://google.com/">google</a>的首頁</p>
-<p><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706kiMp9LoNrj.png" alt="20152706kiMp9LoNrj.png"></p>
+<p><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706kiMp9LoNrj.png" alt="20152706kiMp9LoNrj.png"></p>
 <p>相當正常，不是嗎?<br>再來利用上面的方法去找robots.txt，<br>我們接著在.com後面接著&#x2F;robots.txt，<br>使網址成為<a target="_blank" rel="noopener" href="https://www.google.com/robots.txt">https://www.google.com/robots.txt</a></p>
-<p><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706qRcQSJ2ABd.png" alt="20152706qRcQSJ2ABd.png"></p>
+<p><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706qRcQSJ2ABd.png" alt="20152706qRcQSJ2ABd.png"></p>
 <p>成功了！<br>可是密密麻麻的，打這麼多字誰他媽看得完?<br>但事實上，這份文字檔可以被拆分成幾個部分，<br>我們從第一行開始：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1. User-Agent: *</span><br></pre></td></tr></table></figure>
 <p>User-Agent這一欄代表的是允許的爬蟲類型，而 <strong>*</strong> 則代表<strong>所有</strong>的意思，<br>所以第一行可以被解讀成，允許所有爬蟲拜訪。<br>此外有一些特別的程式只允許特定爬蟲拜訪網頁，如Googlebot、Applebot等，<br>如在最後幾行處，可以看到google的網頁允許Twitterbot能夠比一般使用者額外拜訪&#x2F;imgres的子目錄。</p>
@@ -459,6 +462,10 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
@@ -471,6 +478,65 @@
 
 
 <script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
 
 
 
@@ -495,9 +561,11 @@
 
 
 
+    <div id="pjax">
   
 
   
 
+    </div>
 </body>
 </html>

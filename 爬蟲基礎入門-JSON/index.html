@@ -14,10 +14,13 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-loading-bar.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"navoni1024.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"navoni1024.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="Json又名為JavaScript Object Notation，一般應用在資料傳輸上，其實Json並不複雜，簡單來說，我們可以把它當作成是一種資料撰寫儲存的格式，就像這樣：">
@@ -151,9 +154,9 @@
     <a href="/author/" rel="section"><i class="fa fa-archive fa-fw"></i>author</a>
 
   </li>
-        <li class="menu-item menu-item-ntust">
+        <li class="menu-item menu-item-猜地圖遊戲">
 
-    <a href="https://johnson1205.github.io/react_TAIWAN_TOWNSHIP_GUESS_GAME/" rel="noopener" target="_blank"><i class="fa "fa-earth-asia" fa-fw"></i>NTUST</a>
+    <a href="https://johnson1205.github.io/react_TAIWAN_TOWNSHIP_GUESS_GAME/" rel="noopener" target="_blank"><i class="fa fa-globe fa-fw"></i>猜地圖遊戲</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -263,7 +266,7 @@
 
       
         <p>Json又名為JavaScript Object Notation，一般應用在資料傳輸上，其實Json並不複雜，簡單來說，我們可以把它當作成是一種資料撰寫儲存的格式，就像這樣：</p>
-<p><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-JSON/20152706kAFVfBtVRV.png" alt="20152706kAFVfBtVRV.png"><br><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-JSON/20152706j6dhBN2Goo.png" alt="20152706j6dhBN2Goo.png"></p>
+<p><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-JSON/20152706kAFVfBtVRV.png" alt="20152706kAFVfBtVRV.png"><br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-JSON/20152706j6dhBN2Goo.png" alt="20152706j6dhBN2Goo.png"></p>
 <span id="more"></span>
 
 <p>上圖是我平常dc群組裡所有的表情符號，將其抓下來後以json的格式儲存，以便之後查詢利用。另外，我們在爬蟲時也經常看到json，像是有時候在網站上做互動功能時，其實就是生成一個json後利用request上傳到網站，使其做出相對應的行為。<br>而我們這邊主要用到的是將資料以json的方式儲存，之後再利用python的json套件，將其載入後，轉成dict型態，就可以方便我們加工處理了。</p>
@@ -285,7 +288,7 @@
 
 <p>如果今天想要透過同個資料夾的python檔案將其中的score改成100，拿load&#x2F;dump會這樣寫:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import json</span><br><span class="line"></span><br><span class="line">with open (&#x27;ex.json&#x27;, &#x27;r&#x27;, encoding=&#x27;utf8&#x27;) as i:</span><br><span class="line">	jData = json.load(i)        #讀取json的資料並轉換成dictionary</span><br><span class="line"></span><br><span class="line">jData[&#x27;score&#x27;] = 100</span><br><span class="line"></span><br><span class="line">with open (&#x27;ex.json&#x27;, &#x27;w&#x27;) as i:</span><br><span class="line">	json.dump(jData, i)   #將dictionary轉換成json檔並寫入原本的檔案</span><br></pre></td></tr></table></figure>
-<p>跑完後json檔就會變這樣<br><img src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-JSON/20152706aTZbLcqqi6.png" alt="20152706aTZbLcqqi6.png"></p>
+<p>跑完後json檔就會變這樣<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-JSON/20152706aTZbLcqqi6.png" alt="20152706aTZbLcqqi6.png"></p>
 <hr>
 <p>以loads&#x2F;dumps的話就會長得像下面這樣:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import json</span><br><span class="line"></span><br><span class="line">with open (&#x27;ex.json&#x27;, &#x27;r&#x27;) as i:</span><br><span class="line">	t = i.read()        	#以str格式讀取json的資料</span><br><span class="line">	jData = json.loads(t)	#將str轉換成dictionary</span><br><span class="line"></span><br><span class="line">jData[&#x27;score&#x27;] = 100</span><br><span class="line"> </span><br><span class="line">with open (&#x27;ex.json&#x27;, &#x27;w&#x27;) as i:</span><br><span class="line">	i.write(json.dumps(jData))   #將dictionary轉換成符合json格式的字串並寫入原本的檔案 </span><br></pre></td></tr></table></figure>
@@ -459,6 +462,10 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
@@ -471,6 +478,65 @@
 
 
 <script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
 
 
 
@@ -495,9 +561,11 @@
 
 
 
+    <div id="pjax">
   
 
   
 
+    </div>
 </body>
 </html>
