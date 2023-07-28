@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>【B級調酒EP1】</title>
-    <url>/%E3%80%90B%E7%B4%9A%E8%AA%BF%E9%85%92EP1%E3%80%91/</url>
-    <content><![CDATA[<p>覺旅咖啡英式午餐茶+蘇格蘭威士忌 </p>
-<p>酒譜<br>520ml紅茶<br>15ml 威士忌</p>
-<span id="more"></span>
-<h3 id="短評"><a href="#短評" class="headerlink" title="短評"></a>短評</h3><p>大概連ddffg都喝不下去</p>
-<p><img data-src="/%E3%80%90B%E7%B4%9A%E8%AA%BF%E9%85%92EP1%E3%80%91/grose.png"></p>
-]]></content>
-      <categories>
-        <category>飲食</category>
-        <category>酒</category>
-      </categories>
-      <tags>
-        <tag>調酒</tag>
-        <tag>酒譜</tag>
-        <tag>土製</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>哲學系發癲</title>
     <url>/%E5%93%B2%E5%AD%B8%E7%B3%BB%E7%99%BC%E7%99%B2/</url>
     <content><![CDATA[<p>原來我開的笑話都指向空虛的所指<br>我還以為你是一個真實他者<br>沒想到是個大他者<br>我的能指只是傳達了純粹意識形態<br>我們的關係之間連一場遊戲都玩不成</p>
@@ -32,35 +13,6 @@
       </categories>
       <tags>
         <tag>哲學</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title> 爬蟲基礎入門: Beautiful Soup</title>
-    <url>/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/</url>
-    <content><![CDATA[<h3 id="什麼是BeautifulSoup"><a href="#什麼是BeautifulSoup" class="headerlink" title="什麼是BeautifulSoup?"></a>什麼是BeautifulSoup?</h3><p>BeautifulSoup，又名美麗的湯，就如同魯迅所說過的，吃日料要喝味噌湯，到台南要喝牛肉湯，爬蟲的話就要用美麗的湯。(誤<br>BeautifulSoup4我們一般簡稱BS4，是用來做網站的html架構解析，如同前面所講的，html碼是以多層標籤作為架構，也因此我們可以利用BS4這個套件來建立其專屬class BeautifulSoup底下的物件，其就包含了原網站html碼的相關結構，像是標籤的父子、兄弟關係，更可以利用其中的搜尋功能找尋標籤名稱、內容或屬性，進而定位到我們感興趣的位置。</p>
-<span id="more"></span>
-
-<p>在經過基本的pip install後，我們就可以引入bs4了。<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/20152706UAEuGzKBvW.png"></p>
-<p>之後我們就能像這樣，引入網址後，利用基本request取得html源碼，再利用BS4進行基本解析，建立出soup_m1的物件，之後便可以利用BS4的函式對其定位、分析。<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/20152706L0rBAzgmoz.png"></p>
-<h3 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h3><p>昨天出現的這句</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">soup_m1 = BeautifulSoup(html_m1.text, &quot;html.parser&quot;)</span><br></pre></td></tr></table></figure>
-<p>其中的<code>html.parser</code>便是使用的解析器，是python內建的。<br>除了這個外還能用html5lib和lxml但我也沒用過，詳細優缺點可能要google下。<br>哪天有試了再補充上來吧</p>
-<h3 id="解析方法"><a href="#解析方法" class="headerlink" title="解析方法"></a>解析方法</h3><p>比較常用到的是find()、find_all()和select()。</p>
-<ul>
-<li><p>find()、find_all()<br>兩個都是使用html的標籤進行搜尋的。<br>而這兩者的差別是find()只會回傳第一個符合的結果，find_all()則會回傳所有符合的結果</p>
-</li>
-<li><p>select()<br>使用CSS選擇器(CSS selectors)來進行搜尋。<br>CSS之前沒有提到，主要是用來把網站上色的。<br>其中會用到選擇器來指定特定範圍的HTML進行操作。<br>select()便是利用這東西的語法來爬的。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>爬蟲</category>
-      </categories>
-      <tags>
-        <tag>爬蟲</tag>
-        <tag>程式</tag>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -102,30 +54,42 @@
       </tags>
   </entry>
   <entry>
-    <title> 爬蟲基礎入門: robots.txt &amp; header</title>
-    <url>/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/</url>
-    <content><![CDATA[<p>今天要來介紹當我們在爬蟲前，應該要知道的一些技巧與規範</p>
-<hr>
-<h3 id="為甚麼需要知道這些爬蟲規範？"><a href="#為甚麼需要知道這些爬蟲規範？" class="headerlink" title="為甚麼需要知道這些爬蟲規範？"></a>為甚麼需要知道這些爬蟲規範？</h3><p>首先，我們必須知道過度的網路爬蟲可能是違法的，<br>如使用多執行緒進行對網站的大量拜訪，在沒有適當的存取時間間隔下，可能會造成一般人熟知的<strong>DDOS</strong>(Denial-Of-Service Attack)，進而造成其他使用者無法拜訪、甚至是主機癱瘓。<br>因此，某些網站有制定所謂的「規範」，讓爬蟲使用者能夠去遵守並避免存取到private data</p>
+    <title>【B級調酒EP1】</title>
+    <url>/%E3%80%90B%E7%B4%9A%E8%AA%BF%E9%85%92EP1%E3%80%91/</url>
+    <content><![CDATA[<p>覺旅咖啡英式午餐茶+蘇格蘭威士忌 </p>
+<p>酒譜<br>520ml紅茶<br>15ml 威士忌</p>
 <span id="more"></span>
-<p>請注意這項規範並不具有強制力，並無法阻擋真正有心攻擊的爬蟲程式。</p>
-<h3 id="「規範」—-robots-txt"><a href="#「規範」—-robots-txt" class="headerlink" title="「規範」— robots.txt"></a>「規範」— robots.txt</h3><p>robots.txt是一個告訴爬蟲哪些內容是否可存取的文字檔。<br>這項檔案通常位於網頁根目錄下的robots.txt，<br>換句話說，在main-page下加個&#x2F;robots.txt就能檢視。</p>
-<p>舉個例子吧，我們先進到<a href="http://google.com/">google</a>的首頁</p>
-<p><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706kiMp9LoNrj.png"></p>
-<p>相當正常，不是嗎?<br>再來利用上面的方法去找robots.txt，<br>我們接著在.com後面接著&#x2F;robots.txt，<br>使網址成為<a href="https://www.google.com/robots.txt">https://www.google.com/robots.txt</a></p>
-<p><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706qRcQSJ2ABd.png"></p>
-<p>成功了！<br>可是密密麻麻的，打這麼多字誰他媽看得完?<br>但事實上，這份文字檔可以被拆分成幾個部分，<br>我們從第一行開始：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. User-Agent: *</span><br></pre></td></tr></table></figure>
-<p>User-Agent這一欄代表的是允許的爬蟲類型，而 <strong>*</strong> 則代表<strong>所有</strong>的意思，<br>所以第一行可以被解讀成，允許所有爬蟲拜訪。<br>此外有一些特別的程式只允許特定爬蟲拜訪網頁，如Googlebot、Applebot等，<br>如在最後幾行處，可以看到google的網頁允許Twitterbot能夠比一般使用者額外拜訪&#x2F;imgres的子目錄。</p>
-<p>再來我們繼續往下探討，大致上可以分為<strong>Allow</strong>開頭的，以及<strong>Disallow</strong>開頭的句子</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2. Disallow: /search</span><br></pre></td></tr></table></figure>
-<p>這句話代表著，拒絕網路爬蟲訪問search子目錄以及其子目錄下所有目錄，<br>而接下來的第三行，你們應該也就猜的到意思了，就是允許拜訪冒號後面的子目錄。</p>
-<h3 id="表頭headers"><a href="#表頭headers" class="headerlink" title="表頭headers"></a>表頭headers</h3><p>headers是對client端向server發出請求時的敘述資訊。<br>有一些網站會針對網路爬蟲進行阻擋，其中一項阻擋的手法就是針對headers，<br>當網頁收到非瀏覽器的headers發出的請求時，網頁就拒絕client的存取。</p>
-<p>解決手段非常的簡單粗暴，既然你拒絕非瀏覽器外的訪問，那我就成為瀏覽器就好了啊!?<br>那我們要怎麼成為瀏覽器呢?<br>這樣推薦一個作法：</p>
+<h3 id="短評"><a href="#短評" class="headerlink" title="短評"></a>短評</h3><p>大概連ddffg都喝不下去</p>
+<p><img data-src="/%E3%80%90B%E7%B4%9A%E8%AA%BF%E9%85%92EP1%E3%80%91/grose.png"></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>酒</category>
+      </categories>
+      <tags>
+        <tag>調酒</tag>
+        <tag>酒譜</tag>
+        <tag>土製</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title> 爬蟲基礎入門: Beautiful Soup</title>
+    <url>/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/</url>
+    <content><![CDATA[<h3 id="什麼是BeautifulSoup"><a href="#什麼是BeautifulSoup" class="headerlink" title="什麼是BeautifulSoup?"></a>什麼是BeautifulSoup?</h3><p>BeautifulSoup，又名美麗的湯，就如同魯迅所說過的，吃日料要喝味噌湯，到台南要喝牛肉湯，爬蟲的話就要用美麗的湯。(誤<br>BeautifulSoup4我們一般簡稱BS4，是用來做網站的html架構解析，如同前面所講的，html碼是以多層標籤作為架構，也因此我們可以利用BS4這個套件來建立其專屬class BeautifulSoup底下的物件，其就包含了原網站html碼的相關結構，像是標籤的父子、兄弟關係，更可以利用其中的搜尋功能找尋標籤名稱、內容或屬性，進而定位到我們感興趣的位置。</p>
+<span id="more"></span>
+
+<p>在經過基本的pip install後，我們就可以引入bs4了。<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/20152706UAEuGzKBvW.png"></p>
+<p>之後我們就能像這樣，引入網址後，利用基本request取得html源碼，再利用BS4進行基本解析，建立出soup_m1的物件，之後便可以利用BS4的函式對其定位、分析。<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Beautiful-Soup/20152706L0rBAzgmoz.png"></p>
+<h3 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h3><p>昨天出現的這句</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">soup_m1 = BeautifulSoup(html_m1.text, &quot;html.parser&quot;)</span><br></pre></td></tr></table></figure>
+<p>其中的<code>html.parser</code>便是使用的解析器，是python內建的。<br>除了這個外還能用html5lib和lxml但我也沒用過，詳細優缺點可能要google下。<br>哪天有試了再補充上來吧</p>
+<h3 id="解析方法"><a href="#解析方法" class="headerlink" title="解析方法"></a>解析方法</h3><p>比較常用到的是find()、find_all()和select()。</p>
 <ul>
-<li>開啟Chrome時按下F12鍵後，先按F5使其重整載入資源，點選其中一項被載入的資源，點選Network欄中的Header，複製其中的Uger-Agent</li>
+<li><p>find()、find_all()<br>兩個都是使用html的標籤進行搜尋的。<br>而這兩者的差別是find()只會回傳第一個符合的結果，find_all()則會回傳所有符合的結果</p>
+</li>
+<li><p>select()<br>使用CSS選擇器(CSS selectors)來進行搜尋。<br>CSS之前沒有提到，主要是用來把網站上色的。<br>其中會用到選擇器來指定特定範圍的HTML進行操作。<br>select()便是利用這東西的語法來爬的。</p>
+</li>
 </ul>
-<p>如此一來就得到瀏覽器的header，將自己偽裝成瀏覽器了。<br>下一章在requests時，我們會介紹在requests.get()中可以帶入header參數，<br>在header參數中帶入我們剛剛取得的瀏覽器header，我們就可以成功偽裝了。</p>
 ]]></content>
       <categories>
         <category>程式</category>
@@ -183,6 +147,42 @@
         <tag>程式</tag>
         <tag>python</tag>
         <tag>Discord</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title> 爬蟲基礎入門: robots.txt &amp; header</title>
+    <url>/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/</url>
+    <content><![CDATA[<p>今天要來介紹當我們在爬蟲前，應該要知道的一些技巧與規範</p>
+<hr>
+<h3 id="為甚麼需要知道這些爬蟲規範？"><a href="#為甚麼需要知道這些爬蟲規範？" class="headerlink" title="為甚麼需要知道這些爬蟲規範？"></a>為甚麼需要知道這些爬蟲規範？</h3><p>首先，我們必須知道過度的網路爬蟲可能是違法的，<br>如使用多執行緒進行對網站的大量拜訪，在沒有適當的存取時間間隔下，可能會造成一般人熟知的<strong>DDOS</strong>(Denial-Of-Service Attack)，進而造成其他使用者無法拜訪、甚至是主機癱瘓。<br>因此，某些網站有制定所謂的「規範」，讓爬蟲使用者能夠去遵守並避免存取到private data</p>
+<span id="more"></span>
+<p>請注意這項規範並不具有強制力，並無法阻擋真正有心攻擊的爬蟲程式。</p>
+<h3 id="「規範」—-robots-txt"><a href="#「規範」—-robots-txt" class="headerlink" title="「規範」— robots.txt"></a>「規範」— robots.txt</h3><p>robots.txt是一個告訴爬蟲哪些內容是否可存取的文字檔。<br>這項檔案通常位於網頁根目錄下的robots.txt，<br>換句話說，在main-page下加個&#x2F;robots.txt就能檢視。</p>
+<p>舉個例子吧，我們先進到<a href="http://google.com/">google</a>的首頁</p>
+<p><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706kiMp9LoNrj.png"></p>
+<p>相當正常，不是嗎?<br>再來利用上面的方法去找robots.txt，<br>我們接著在.com後面接著&#x2F;robots.txt，<br>使網址成為<a href="https://www.google.com/robots.txt">https://www.google.com/robots.txt</a></p>
+<p><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-robots-txt-header/20152706qRcQSJ2ABd.png"></p>
+<p>成功了！<br>可是密密麻麻的，打這麼多字誰他媽看得完?<br>但事實上，這份文字檔可以被拆分成幾個部分，<br>我們從第一行開始：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. User-Agent: *</span><br></pre></td></tr></table></figure>
+<p>User-Agent這一欄代表的是允許的爬蟲類型，而 <strong>*</strong> 則代表<strong>所有</strong>的意思，<br>所以第一行可以被解讀成，允許所有爬蟲拜訪。<br>此外有一些特別的程式只允許特定爬蟲拜訪網頁，如Googlebot、Applebot等，<br>如在最後幾行處，可以看到google的網頁允許Twitterbot能夠比一般使用者額外拜訪&#x2F;imgres的子目錄。</p>
+<p>再來我們繼續往下探討，大致上可以分為<strong>Allow</strong>開頭的，以及<strong>Disallow</strong>開頭的句子</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2. Disallow: /search</span><br></pre></td></tr></table></figure>
+<p>這句話代表著，拒絕網路爬蟲訪問search子目錄以及其子目錄下所有目錄，<br>而接下來的第三行，你們應該也就猜的到意思了，就是允許拜訪冒號後面的子目錄。</p>
+<h3 id="表頭headers"><a href="#表頭headers" class="headerlink" title="表頭headers"></a>表頭headers</h3><p>headers是對client端向server發出請求時的敘述資訊。<br>有一些網站會針對網路爬蟲進行阻擋，其中一項阻擋的手法就是針對headers，<br>當網頁收到非瀏覽器的headers發出的請求時，網頁就拒絕client的存取。</p>
+<p>解決手段非常的簡單粗暴，既然你拒絕非瀏覽器外的訪問，那我就成為瀏覽器就好了啊!?<br>那我們要怎麼成為瀏覽器呢?<br>這樣推薦一個作法：</p>
+<ul>
+<li>開啟Chrome時按下F12鍵後，先按F5使其重整載入資源，點選其中一項被載入的資源，點選Network欄中的Header，複製其中的Uger-Agent</li>
+</ul>
+<p>如此一來就得到瀏覽器的header，將自己偽裝成瀏覽器了。<br>下一章在requests時，我們會介紹在requests.get()中可以帶入header參數，<br>在header參數中帶入我們剛剛取得的瀏覽器header，我們就可以成功偽裝了。</p>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>爬蟲</category>
+      </categories>
+      <tags>
+        <tag>爬蟲</tag>
+        <tag>程式</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -334,6 +334,30 @@
       </tags>
   </entry>
   <entry>
+    <title>爬蟲基礎入門-Selenium</title>
+    <url>/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/</url>
+    <content><![CDATA[<h3 id="Selenium前置設定"><a href="#Selenium前置設定" class="headerlink" title="Selenium前置設定"></a>Selenium前置設定</h3><p>首先如果要先使用selenium，我們要先下載webdriver在資料夾中給予selenium使用。<br><a href="http://">https://chromedriver.chromium.org/downloads</a><br>上述網址即為chrome的webdriver下載地點。<br>下載好webdriver後我們就可以把他的exe檔丟到code的資料夾中了，就像這樣。</p>
+<span id="more"></span>
+<p><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/20152706vGDAntGabq.png"></p>
+<p>接著我們就可以準備import了。<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/20152706yg28xxCq3g.png"><br>像這樣，其中webdriver就是引入我們剛剛載的webdriver，<br>Options則是selenium針對不同webdriver所納入的不同設定，<br>WebDriverWait跟EC則是在讓瀏覽器等待時會用到，像是我們可能會需要等到某網頁元素完整載入後才繼續程式，否則可能就會出錯，<br>最後By則是selenium中的內部語法，像是這樣，<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/20152706nZU06VhtHp.png"><br>這就表示著find_element這個函式將用XPath的方式定位元素。</p>
+<h3 id="Selenium的指令使用"><a href="#Selenium的指令使用" class="headerlink" title="Selenium的指令使用"></a>Selenium的指令使用</h3><p><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/01.png"><br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/02.png"><br>首先我們先如上圖，套入webdriver的設定，讓程式載入我們先前載的chrome webdriver，接著再讓他導到我們想要的網址，這邊以youtube作範例。如果成功的話應該會如下圖這樣。<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/03.png"><br>阿記得開完網址後要time.sleep()一下，才不會直接跳掉。<br>其實在之後我們對selenium操控時，也必須要定時的time.sleep()或者是利用別的方法讓程式暫停，否則就會產生網頁還沒完全載入，我們就要找到他的元素等等的尷尬事情。</p>
+<p>開完網頁後，就來介紹第一個函式，find_element<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/04.png"><br>find_element可以讓selenium定位到特定網頁元素，這邊的例子就是yt的搜尋欄。<br>其實selenium可以透過非常多方式定位，像是html碼裡的id、name等等，或者是class、css等其他方法，那麼我們這邊就用xpath這種定位方式，較為直接準確。但其實這邊範例比較不好的一點是xpath採用了絕對位置來定位，事實上，我們可以利用xpath的相對位置來達到簡潔、準確、可變動的性質，則之後在提及xpath時會在講解。</p>
+<p>再來，既然我們定位到了網頁元素，則我們就要發揮selenium的強項了，就是模擬使用者對網頁的互動，這邊我們透過下圖講解兩個例子。<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/05.png"><br>這邊我們的目標是要進去yt，蒐集不同關鍵字搜尋後的影片，因此我們先建立一個list做作search_keys，裡面有著我們之後要輸入進搜尋欄的搜尋關鍵字。<br>則首先是element.send_keys()，我們先定位到搜尋欄位置後，將其命名為search_box，則search_box.send_keys()就能讓我們輸入關鍵字進去。<br>再來就是element.click()，在輸入進去後，我們還要再定位到yt網頁的搜尋按鈕上，在這裡，我們將其命名為search_box，則search_box.click()就能讓selenium模擬使用者對著搜尋按鈕按下滑鼠左鍵的這個動作。<br>就像這樣<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/06.png"><br>其實只要有這基本的動作，我們就能讓selenium動起來了，就像真人一樣互動，當然selenium還有更多的功能，像是WebDriverWait等等的功能，但這邊就不多做贅述了，我們明天會在講使用selenium常遇到的問題，其實很多都跟網頁載入時間有關。</p>
+<p>喔對了，突然想到的小補充，上圖的範例其實就是之後其中一個專題內容，目標正是要讓selenium幫我們整理出想要的影片並輸出到discord上，因此也可以預見之後的專題應該會出現很多vt剪輯。<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/07.png"></p>
+<h3 id="Selenium的常見Bug"><a href="#Selenium的常見Bug" class="headerlink" title="Selenium的常見Bug"></a>Selenium的常見Bug</h3><p>首先，第一個是版本問題，這其實是我前天在挖之前的程式出來跑時才發現的問題，<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/01-1.png"><br>這問題基本上是driver跟瀏覽器版本不支援，最簡單只要重新下載對應版本的webdriver就好。</p>
+<p>接著是這個，<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/02-1.png"><br>這代表著selenium無法找到你所指定的元素，一般來說，如果不是你定位位置錯誤，<br>八成就是網頁還沒有完整載入，就使selemium搜尋元素。<br>此時，我們可以試著使用簡單的方法，time.sleep()，使程式整體暫停n秒，也可以配合try except使用。<br>當然，selenium針對這個問題也有開發相關函式，首先是顯式等待，<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/03-1.png"><br>在這邊的意思是，我們針對所給予的元素，等待10秒，每0.2秒檢查是否出現，如果出現了就繼續，<br>如果10秒內還沒出現則報錯。<br>另外一種則是隱式等待，<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/04-1.png"><br>相對於顯式等待是針對個別元素是否生成，隱式等待則是針對整個頁面，以上圖為例，這邊就是讓整個程式暫停，<br>給予瀏覽器10秒的時間，如果10秒內”整個頁面都已經生成完成”(講得直白一點其實就是我們頁面左上角的圈圈不再轉動)，則繼續程式運行，如果10內還沒載完，則報錯，因此可以看的出來，相對於顯式等待，隱式等待跟強制等待可能會要花費更久的時間。</p>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>爬蟲</category>
+      </categories>
+      <tags>
+        <tag>爬蟲</tag>
+        <tag>程式</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>爬蟲基礎入門-XPath</title>
     <url>/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-XPath/</url>
     <content><![CDATA[<p>我們在selenium時有講到幾個指令像是find_element_by的指令，<br>但如果我們的html沒有class或是id等節點的話，其實對我們爬蟲有點不太友善，<br>所以今天我們會教xpath的搜尋方法</p>
@@ -386,27 +410,22 @@
       </tags>
   </entry>
   <entry>
-    <title>爬蟲基礎入門-Selenium</title>
-    <url>/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/</url>
-    <content><![CDATA[<h3 id="Selenium前置設定"><a href="#Selenium前置設定" class="headerlink" title="Selenium前置設定"></a>Selenium前置設定</h3><p>首先如果要先使用selenium，我們要先下載webdriver在資料夾中給予selenium使用。<br><a href="http://">https://chromedriver.chromium.org/downloads</a><br>上述網址即為chrome的webdriver下載地點。<br>下載好webdriver後我們就可以把他的exe檔丟到code的資料夾中了，就像這樣。</p>
+    <title>地形考察報告</title>
+    <url>/%E5%9C%B0%E5%BD%A2%E8%80%83%E5%AF%9F%E5%A0%B1%E5%91%8A/</url>
+    <content><![CDATA[<div style="text-align:center">
+國立台北教育大學
+地形考察報告
+結報
+</div>
 <span id="more"></span>
-<p><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/20152706vGDAntGabq.png"></p>
-<p>接著我們就可以準備import了。<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/20152706yg28xxCq3g.png"><br>像這樣，其中webdriver就是引入我們剛剛載的webdriver，<br>Options則是selenium針對不同webdriver所納入的不同設定，<br>WebDriverWait跟EC則是在讓瀏覽器等待時會用到，像是我們可能會需要等到某網頁元素完整載入後才繼續程式，否則可能就會出錯，<br>最後By則是selenium中的內部語法，像是這樣，<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/20152706nZU06VhtHp.png"><br>這就表示著find_element這個函式將用XPath的方式定位元素。</p>
-<h3 id="Selenium的指令使用"><a href="#Selenium的指令使用" class="headerlink" title="Selenium的指令使用"></a>Selenium的指令使用</h3><p><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/01.png"><br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/02.png"><br>首先我們先如上圖，套入webdriver的設定，讓程式載入我們先前載的chrome webdriver，接著再讓他導到我們想要的網址，這邊以youtube作範例。如果成功的話應該會如下圖這樣。<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/03.png"><br>阿記得開完網址後要time.sleep()一下，才不會直接跳掉。<br>其實在之後我們對selenium操控時，也必須要定時的time.sleep()或者是利用別的方法讓程式暫停，否則就會產生網頁還沒完全載入，我們就要找到他的元素等等的尷尬事情。</p>
-<p>開完網頁後，就來介紹第一個函式，find_element<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/04.png"><br>find_element可以讓selenium定位到特定網頁元素，這邊的例子就是yt的搜尋欄。<br>其實selenium可以透過非常多方式定位，像是html碼裡的id、name等等，或者是class、css等其他方法，那麼我們這邊就用xpath這種定位方式，較為直接準確。但其實這邊範例比較不好的一點是xpath採用了絕對位置來定位，事實上，我們可以利用xpath的相對位置來達到簡潔、準確、可變動的性質，則之後在提及xpath時會在講解。</p>
-<p>再來，既然我們定位到了網頁元素，則我們就要發揮selenium的強項了，就是模擬使用者對網頁的互動，這邊我們透過下圖講解兩個例子。<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/05.png"><br>這邊我們的目標是要進去yt，蒐集不同關鍵字搜尋後的影片，因此我們先建立一個list做作search_keys，裡面有著我們之後要輸入進搜尋欄的搜尋關鍵字。<br>則首先是element.send_keys()，我們先定位到搜尋欄位置後，將其命名為search_box，則search_box.send_keys()就能讓我們輸入關鍵字進去。<br>再來就是element.click()，在輸入進去後，我們還要再定位到yt網頁的搜尋按鈕上，在這裡，我們將其命名為search_box，則search_box.click()就能讓selenium模擬使用者對著搜尋按鈕按下滑鼠左鍵的這個動作。<br>就像這樣<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/06.png"><br>其實只要有這基本的動作，我們就能讓selenium動起來了，就像真人一樣互動，當然selenium還有更多的功能，像是WebDriverWait等等的功能，但這邊就不多做贅述了，我們明天會在講使用selenium常遇到的問題，其實很多都跟網頁載入時間有關。</p>
-<p>喔對了，突然想到的小補充，上圖的範例其實就是之後其中一個專題內容，目標正是要讓selenium幫我們整理出想要的影片並輸出到discord上，因此也可以預見之後的專題應該會出現很多vt剪輯。<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/07.png"></p>
-<h3 id="Selenium的常見Bug"><a href="#Selenium的常見Bug" class="headerlink" title="Selenium的常見Bug"></a>Selenium的常見Bug</h3><p>首先，第一個是版本問題，這其實是我前天在挖之前的程式出來跑時才發現的問題，<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/01-1.png"><br>這問題基本上是driver跟瀏覽器版本不支援，最簡單只要重新下載對應版本的webdriver就好。</p>
-<p>接著是這個，<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/02-1.png"><br>這代表著selenium無法找到你所指定的元素，一般來說，如果不是你定位位置錯誤，<br>八成就是網頁還沒有完整載入，就使selemium搜尋元素。<br>此時，我們可以試著使用簡單的方法，time.sleep()，使程式整體暫停n秒，也可以配合try except使用。<br>當然，selenium針對這個問題也有開發相關函式，首先是顯式等待，<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/03-1.png"><br>在這邊的意思是，我們針對所給予的元素，等待10秒，每0.2秒檢查是否出現，如果出現了就繼續，<br>如果10秒內還沒出現則報錯。<br>另外一種則是隱式等待，<br><img data-src="/%E7%88%AC%E8%9F%B2%E5%9F%BA%E7%A4%8E%E5%85%A5%E9%96%80-Selenium/04-1.png"><br>相對於顯式等待是針對個別元素是否生成，隱式等待則是針對整個頁面，以上圖為例，這邊就是讓整個程式暫停，<br>給予瀏覽器10秒的時間，如果10秒內”整個頁面都已經生成完成”(講得直白一點其實就是我們頁面左上角的圈圈不再轉動)，則繼續程式運行，如果10內還沒載完，則報錯，因此可以看的出來，相對於顯式等待，隱式等待跟強制等待可能會要花費更久的時間。</p>
-]]></content>
+
+<div class="pdfobject-container" data-target="/pdf/NTUE-Geo.pdf" data-height="900pt"></div>]]></content>
       <categories>
-        <category>程式</category>
-        <category>爬蟲</category>
+        <category>結報</category>
+        <category>國北教自</category>
       </categories>
       <tags>
-        <tag>爬蟲</tag>
-        <tag>程式</tag>
-        <tag>python</tag>
+        <tag>結報</tag>
       </tags>
   </entry>
   <entry>
@@ -433,25 +452,6 @@
       </tags>
   </entry>
   <entry>
-    <title>地形考察報告</title>
-    <url>/%E5%9C%B0%E5%BD%A2%E8%80%83%E5%AF%9F%E5%A0%B1%E5%91%8A/</url>
-    <content><![CDATA[<div style="text-align:center">
-國立台北教育大學
-地形考察報告
-結報
-</div>
-<span id="more"></span>
-
-<div class="pdfobject-container" data-target="/pdf/NTUE-Geo.pdf" data-height="900pt"></div>]]></content>
-      <categories>
-        <category>結報</category>
-        <category>國北教自</category>
-      </categories>
-      <tags>
-        <tag>結報</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>熱流實驗 風洞與流視 結報</title>
     <url>/%E7%86%B1%E6%B5%81%E5%AF%A6%E9%A9%97-%E9%A2%A8%E6%B4%9E%E8%88%87%E6%B5%81%E8%A6%96-%E7%B5%90%E5%A0%B1/</url>
     <content><![CDATA[<center>國立清華大學動力機械工程學系</center>
@@ -459,7 +459,7 @@
 <center>結報</center>
 <span id="more"></span>
 
-<div class="pdfobject-container" data-target="110033210.pdf" data-height="900pt"></div>
+<div class="pdfobject-container" data-target="/pdf/110033210.pdf" data-height="900pt"></div>
 
 ]]></content>
       <categories>
