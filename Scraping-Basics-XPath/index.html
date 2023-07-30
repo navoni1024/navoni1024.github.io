@@ -21,28 +21,24 @@
     var CONFIG = {"hostname":"navoni1024.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="如果你的機器人功能多到一個程度，把全部的程式碼全部塞在一個文件裡顯然不是好辦法。不但看起來雜亂，也難以維護，就算只是其中一個功能出問題也必須要把整個bot關掉。這時候就可以使用Cogs的架構來寫，可以將commands和listener等東西分堆塞在各自文件裡並方便我們裝卸。">
+  <meta name="description" content="我們在selenium時有講到幾個指令像是find_element_by的指令，但如果我們的html沒有class或是id等節點的話，其實對我們爬蟲有點不太友善，所以今天我們會教xpath的搜尋方法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Discord Bot-Cogs">
-<meta property="og:url" content="http://navoni1024.github.io/Discord-Bot-Cogs/">
+<meta property="og:title" content="爬蟲基礎入門-XPath">
+<meta property="og:url" content="http://navoni1024.github.io/Scraping-Basics-XPath/">
 <meta property="og:site_name" content="皇家維修熱線">
-<meta property="og:description" content="如果你的機器人功能多到一個程度，把全部的程式碼全部塞在一個文件裡顯然不是好辦法。不但看起來雜亂，也難以維護，就算只是其中一個功能出問題也必須要把整個bot關掉。這時候就可以使用Cogs的架構來寫，可以將commands和listener等東西分堆塞在各自文件裡並方便我們裝卸。">
+<meta property="og:description" content="我們在selenium時有講到幾個指令像是find_element_by的指令，但如果我們的html沒有class或是id等節點的話，其實對我們爬蟲有點不太友善，所以今天我們會教xpath的搜尋方法">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="http://navoni1024.github.io/Discord-Bot-Cogs/20152706EJhEPhiYQA.png">
-<meta property="og:image" content="http://navoni1024.github.io/Discord-Bot-Cogs/20152706dMFbDgmc8p.png">
-<meta property="og:image" content="http://navoni1024.github.io/Discord-Bot-Cogs/20152706NNRA2I8xr8.png">
-<meta property="og:image" content="http://navoni1024.github.io/Discord-Bot-Cogs/20152706uqPycyubVO.png">
-<meta property="og:image" content="http://navoni1024.github.io/Discord-Bot-Cogs/20152706kGyb4P4XHd.png">
-<meta property="article:published_time" content="2023-07-26T07:01:14.000Z">
-<meta property="article:modified_time" content="2023-07-27T05:45:39.686Z">
+<meta property="og:image" content="http://navoni1024.github.io/Scraping-Basics-XPath/20152706sgIGrAITNx.png">
+<meta property="article:published_time" content="2023-07-26T06:51:00.000Z">
+<meta property="article:modified_time" content="2023-07-27T05:47:29.883Z">
 <meta property="article:author" content="navoni1024">
+<meta property="article:tag" content="爬蟲">
 <meta property="article:tag" content="程式">
 <meta property="article:tag" content="python">
-<meta property="article:tag" content="Discord">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://navoni1024.github.io/Discord-Bot-Cogs/20152706EJhEPhiYQA.png">
+<meta name="twitter:image" content="http://navoni1024.github.io/Scraping-Basics-XPath/20152706sgIGrAITNx.png">
 
-<link rel="canonical" href="http://navoni1024.github.io/Discord-Bot-Cogs/">
+<link rel="canonical" href="http://navoni1024.github.io/Scraping-Basics-XPath/">
 
 
 <script id="page-configurations">
@@ -55,7 +51,7 @@
   };
 </script>
 
-  <title>Discord Bot-Cogs | 皇家維修熱線</title>
+  <title>爬蟲基礎入門-XPath | 皇家維修熱線</title>
   
 
 
@@ -214,7 +210,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://navoni1024.github.io/Discord-Bot-Cogs/">
+    <link itemprop="mainEntityOfPage" href="http://navoni1024.github.io/Scraping-Basics-XPath/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/vichy.gif">
@@ -227,7 +223,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Discord Bot-Cogs
+          爬蟲基礎入門-XPath
         </h1>
 
         <div class="post-meta">
@@ -237,14 +233,14 @@
               </span>
               <span class="post-meta-item-text">發表於</span>
 
-              <time title="創建時間：2023-07-26 15:01:14" itemprop="dateCreated datePublished" datetime="2023-07-26T15:01:14+08:00">2023-07-26</time>
+              <time title="創建時間：2023-07-26 14:51:00" itemprop="dateCreated datePublished" datetime="2023-07-26T14:51:00+08:00">2023-07-26</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2023-07-27 13:45:39" itemprop="dateModified" datetime="2023-07-27T13:45:39+08:00">2023-07-27</time>
+                <time title="修改時間：2023-07-27 13:47:29" itemprop="dateModified" datetime="2023-07-27T13:47:29+08:00">2023-07-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -256,7 +252,7 @@
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%A8%8B%E5%BC%8F/Discord-bot/" itemprop="url" rel="index"><span itemprop="name">Discord bot</span></a>
+                  <a href="/categories/%E7%A8%8B%E5%BC%8F/%E7%88%AC%E8%9F%B2/" itemprop="url" rel="index"><span itemprop="name">爬蟲</span></a>
                 </span>
             </span>
 
@@ -271,40 +267,26 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>如果你的機器人功能多到一個程度，把全部的程式碼全部塞在一個文件裡顯然不是好辦法。<br>不但看起來雜亂，也難以維護，就算只是其中一個功能出問題也必須要把整個bot關掉。<br>這時候就可以使用<strong>Cogs</strong>的架構來寫，<br>可以將commands和listener等東西分堆塞在各自文件裡並方便我們裝卸。</p>
+        <p>我們在selenium時有講到幾個指令像是find_element_by的指令，<br>但如果我們的html沒有class或是id等節點的話，其實對我們爬蟲有點不太友善，<br>所以今天我們會教xpath的搜尋方法</p>
 <span id="more"></span>
-<p>照<a target="_blank" rel="noopener" href="https://discordpy.readthedocs.io/en/stable/ext/commands/cogs.html">官方文件</a>的說法，比較重要的有這幾點:</p>
-<ul>
-<li>每個cogs都是<code>commands.Cog</code>的子類別</li>
-<li>每個command要前加<code>@commands.command()</code></li>
-<li>每個listener要前加<code>@commands.Cog.listener()</code></li>
-<li>Cogs可以用<code>Bot.add_cog()</code>來註冊</li>
-<li>Cogs可以用<code>Bot.remove_cog()</code>來卸載</li>
-<li>通常會跟<a target="_blank" rel="noopener" href="https://discordpy.readthedocs.io/en/stable/ext/commands/extensions.html#ext-commands-extensions">Extension</a>功能配合</li>
-</ul>
-<p>當然單純這樣條列出來是看不懂的，底下來看實例。<br>其檔案架構通常會長下面這樣<br><img data-src="/Discord-Bot-Cogs/20152706EJhEPhiYQA.png"></p>
-<p>cogs資料夾是拿來放各個cogs的<br>core資料夾是拿來放一些你cogs可能會常用到的函數。<br>main.py是拿來運行的檔案，裡面也包含了載入和裝卸cogs的程式碼，會長的類似下面這樣:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">from discord.ext import commands</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line">bot = commands.Bot(&#x27;prefix&#x27;)</span><br><span class="line"></span><br><span class="line">#下面這塊從cogs資料夾中取出所有.py結尾的檔案並用load_extension載入cogs</span><br><span class="line">for filename in os.listdir(&#x27;./cogs&#x27;):</span><br><span class="line">	if filename.endswith(&#x27;.py&#x27;):</span><br><span class="line">		bot.load_extension(f&#x27;cogs.&#123;filename[:-3]&#125;&#x27;) </span><br><span class="line"></span><br><span class="line">@bot.event</span><br><span class="line">async def on_ready():</span><br><span class="line">	print(&#x27;Test begin...&#x27;) </span><br><span class="line">	</span><br><span class="line">#這裡建個指令讓你可以載入Cog</span><br><span class="line">@bot.command()</span><br><span class="line">async def load(ctx, cog_name):</span><br><span class="line">	try:</span><br><span class="line">		bot.load_extension(f&#x27;cogs.&#123;cog_name&#125;&#x27;)</span><br><span class="line">	except:</span><br><span class="line">		await ctx.send(&#x27;Failed.&#x27;)</span><br><span class="line">		return</span><br><span class="line">	await ctx.send(&#x27;load success!&#x27;)</span><br><span class="line"></span><br><span class="line">#這裡建個指令讓你可以卸載Cog</span><br><span class="line">@bot.command()</span><br><span class="line">async def unload(ctx, cog_name):</span><br><span class="line">	try:</span><br><span class="line">		bot.unload_extension(f&#x27;cogs.&#123;cog_name&#125;&#x27;)</span><br><span class="line">	except:</span><br><span class="line">		await ctx.send(&#x27;Failed.&#x27;)</span><br><span class="line">		return</span><br><span class="line">	await ctx.send(&#x27;unload success!&#x27;)</span><br><span class="line"></span><br><span class="line">#這裡建個指令讓你可以重新載入Cog</span><br><span class="line">@bot.command()</span><br><span class="line">async def reload(ctx, cog_name):</span><br><span class="line">	try:</span><br><span class="line">		bot.reload_extension(f&#x27;cogs.&#123;cog_name&#125;&#x27;)</span><br><span class="line">	except:</span><br><span class="line">		await ctx.send(&#x27;Failed.&#x27;)</span><br><span class="line">		return</span><br><span class="line">	await ctx.send(&#x27;reload success!&#x27;)</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">	bot.run(&#x27;TOKEN&#x27;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
+<h3 id="XPath"><a href="#XPath" class="headerlink" title="XPath"></a>XPath</h3><p>XML Path簡稱XPath，是一種可以用來確定一個東西在XML&#x2F;HTML檔案中的位置的語言&#x2F;工具<br>可以將一個HTML看成是一棵樹，或是更生活化一點，利用樹狀結構的目錄資料夾<br>像是檔案開頭的<code>&lt;html&gt;</code>包含了整個文件，而這個節點就是整個html的根節點<br>或者是如<code>&lt;head&gt;</code>或是<code>&lt;body&gt;</code>在html下一層，而這兩個節點就是html的子節點，<br>相反地，<code>&lt;html&gt;</code>也是<code>&lt;head&gt;</code>或是<code>&lt;body&gt;</code>的父節點<br>此外，<code>&lt;html&gt;</code>與<code>&lt;head&gt;</code>相互是兄弟節點<br>樹中有許多的節點代表不同元素，而我們就可以使用XPath去查詢這些節點</p>
+<h2 id="在XPath中，我們有兩種方式去表現一個節點的位置-絕對路徑-絕對路徑以-來代表，需要從html的根節點開始寫完整的路徑到目標的節點-如-html-1-body-1-div-3-div-1-div-1-div-1-div-2-div-3-div-1-h2-1-，是我們在Day13網頁中標題的絕對路徑-相對路徑-相對路徑以-來代表-如-h2-contains-text-’Day13、Selenium指令使用’-來代表上面相同上面絕對路徑的相對路徑"><a href="#在XPath中，我們有兩種方式去表現一個節點的位置-絕對路徑-絕對路徑以-來代表，需要從html的根節點開始寫完整的路徑到目標的節點-如-html-1-body-1-div-3-div-1-div-1-div-1-div-2-div-3-div-1-h2-1-，是我們在Day13網頁中標題的絕對路徑-相對路徑-相對路徑以-來代表-如-h2-contains-text-’Day13、Selenium指令使用’-來代表上面相同上面絕對路徑的相對路徑" class="headerlink" title="在XPath中，我們有兩種方式去表現一個節點的位置- 絕對路徑    絕對路徑以 &#x2F; 來代表，需要從html的根節點開始寫完整的路徑到目標的節點    如:&#x2F;html[1]&#x2F;body[1]&#x2F;div[3]&#x2F;div[1]&#x2F;div[1]&#x2F;div[1]&#x2F;div[2]&#x2F;div[3]&#x2F;div[1]&#x2F;h2[1]，是我們在Day13網頁中標題的絕對路徑- 相對路徑    相對路徑以 &#x2F;&#x2F; 來代表    如:&#x2F;&#x2F;h2[contains(text(),’Day13、Selenium指令使用’)]來代表上面相同上面絕對路徑的相對路徑"></a>在XPath中，我們有兩種方式去表現一個節點的位置<br>- <strong>絕對路徑</strong><br>    絕對路徑以 <strong>&#x2F;</strong> 來代表，需要從html的根節點開始寫完整的路徑到目標的節點<br>    如:&#x2F;html[1]&#x2F;body[1]&#x2F;div[3]&#x2F;div[1]&#x2F;div[1]&#x2F;div[1]&#x2F;div[2]&#x2F;div[3]&#x2F;div[1]&#x2F;h2[1]，是我們在Day13網頁中標題的絕對路徑<br>- <strong>相對路徑</strong><br>    相對路徑以 <strong>&#x2F;&#x2F;</strong> 來代表<br>    如:&#x2F;&#x2F;h2[contains(text(),’Day13、Selenium指令使用’)]來代表上面相同上面絕對路徑的相對路徑</h2><h3 id="find-element-by-xpath"><a href="#find-element-by-xpath" class="headerlink" title="find_element_by_xpath()"></a>find_element_by_xpath()</h3><p>利用上面絕對路徑或是相對路徑的方法，直接塞進function就好了，如:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&#x27;/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/h2[1]&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
-<p>接著在core底下加一個文檔，這裡我叫他init.py</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import discord</span><br><span class="line">from discord.ext import commands</span><br><span class="line"></span><br><span class="line">class Cog_Extension(commands.Cog):</span><br><span class="line">	def __init__(self, bot):</span><br><span class="line">		self.bot = bot</span><br></pre></td></tr></table></figure>
+<p>常常在html中會看到在同個檔案不同個子樹下有相同的節點命名，當使用xpath的相對路徑時可能會有問題<br>這個時候可以透過index索引去找是哪一個節點，如:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&#x27;//p[0]&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>或是利用attribute屬性去標註說我們現在要的是哪一個，如:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&#x27;title&#x27;</span>&gt;</span>I&#x27;m title<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&quot;//p[@class=&#x27;title&#x27;]&quot;</span>)</span><br></pre></td></tr></table></figure>
 
+<p>還有一些神奇的指令像是contains()，可以找出包含字串的節點，如:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&quot;//p[contains(text(), &#x27;title&#x27;)]&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-<p>接著來把一個指令用成cogs。<br>就拿上篇那個<a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10306205">请不要随意地触碰我！ 十分感谢！</a>來舉例<br>他原本的程式區塊大概長這樣:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@bot.command(aliases=[&#x27;touch&#x27;])</span><br><span class="line">async def t(message):</span><br><span class="line">	await message.channel.send(&#x27;请不要随意地触碰我！ 十分感谢！&#x27;)</span><br></pre></td></tr></table></figure>
-
-<p>把他用成cogs的話會需要把它塞進Class並加上我們剛剛寫的東西，所以會長得像這樣</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from discord.ext import commands</span><br><span class="line">from core.init import Cog_Extension</span><br><span class="line"></span><br><span class="line">class touch(Cog_Extension):        #建議class名稱跟檔案名稱一樣</span><br><span class="line">@commands.command(aliases=[&#x27;touch&#x27;])    </span><br><span class="line">	async def t(self, message):    #記得在參數列最前面加上self</span><br><span class="line">		await message.channel.send(&#x27;请不要随意地触碰我！ 十分感谢！&#x27;)</span><br></pre></td></tr></table></figure>
-<p>記得要import需要的套件</p>
-<p>接著在下面加上setup的函數</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">from discord.ext import commands</span><br><span class="line">from core.init import Cog_Extension</span><br><span class="line"></span><br><span class="line">class touch(Cog_Extension):</span><br><span class="line">	@commands.command(aliases=[&#x27;touch&#x27;])</span><br><span class="line">	async def t(self, message):</span><br><span class="line">		await message.channel.send(&#x27;请不要随意地触碰我！ 十分感谢！&#x27;)</span><br><span class="line"></span><br><span class="line">def setup(bot):</span><br><span class="line">	bot.add_cog(touch(bot))</span><br><span class="line">#這裡的bot.add_cog(touch(bot))中的(bot)前面填上你class的名子</span><br></pre></td></tr></table></figure>
-
-<p>這樣運行後給機器人預設的help指令後就能看到結構了。<br><img data-src="/Discord-Bot-Cogs/20152706dMFbDgmc8p.png"></p>
-<p>像這邊unload掉touch後可以發現輸t他也沒反應了，輸help也看不見了。<br><img data-src="/Discord-Bot-Cogs/20152706NNRA2I8xr8.png"></p>
-<p>而load回來的話可以發現指令有反應了，help中也看的到了。<br><img data-src="/Discord-Bot-Cogs/20152706uqPycyubVO.png"></p>
 <hr>
-<p>前述的的程式結構較簡單可能沒什麼感覺，但要是程式複雜到如下圖能夠先unload一塊調整完後再load回去還是挺方便的。<br><img data-src="/Discord-Bot-Cogs/20152706kGyb4P4XHd.png"></p>
+<p>上面講了xpath的語法，但是其實你知道只需要有html樹狀的概念就好了嗎?<br>俗話說的好，不要重複造輪子，今天就介紹一個好用的工具可以自動產生xpath</p>
+<h3 id="ChroPath"><a href="#ChroPath" class="headerlink" title="ChroPath"></a>ChroPath</h3><p>ChroPath是一個Chrome的插件，可以在chrome的應用程式商店找到他<br>它是一個協助我們在chrome中定位想要的元素的插件<br>假如你想針對一個網頁的按鈕找出它的xpath去進行selenium控制的話，可以右鍵找到「檢查」的地方後點下去，會進入F12開發者模式，同時F12的html畫面也會同步到一樣的程式片段<br>在此時，我們在右邊開發者模式視窗的地方中間有一排選擇子視窗的地方去找一個叫做ChroPath的地方點開來<br>點開之後，插件就會告訴你路徑的絕對位置或相對位置囉!<br><img data-src="/Scraping-Basics-XPath/20152706sgIGrAITNx.png"></p>
+<p>XPath就是這麼簡單!</p>
 
     </div>
 
@@ -314,9 +296,9 @@
 
       <footer class="post-footer">
           <div class="post-tags">
+              <a href="/tags/%E7%88%AC%E8%9F%B2/" rel="tag"># 爬蟲</a>
               <a href="/tags/%E7%A8%8B%E5%BC%8F/" rel="tag"># 程式</a>
               <a href="/tags/python/" rel="tag"># python</a>
-              <a href="/tags/Discord/" rel="tag"># Discord</a>
           </div>
 
         
@@ -325,12 +307,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/Discord-Bot-Basic-structure/" rel="prev" title="Discord Bot-基本架構">
-      <i class="fa fa-chevron-left"></i> Discord Bot-基本架構
+    <a href="/Scraping-Basics-Selenium/" rel="prev" title="爬蟲基礎入門-Selenium">
+      <i class="fa fa-chevron-left"></i> 爬蟲基礎入門-Selenium
     </a></div>
       <div class="post-nav-item">
-    <a href="/Gin-Fizz/" rel="next" title="最近的夜晚-Gin Fizz">
-      最近的夜晚-Gin Fizz <i class="fa fa-chevron-right"></i>
+    <a href="/Discord-Bot-create-a-bot/" rel="next" title="Discord Bot-創建一隻bot">
+      Discord Bot-創建一隻bot <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -390,6 +372,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#XPath"><span class="nav-number">1.</span> <span class="nav-text">XPath</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8XPath%E4%B8%AD%EF%BC%8C%E6%88%91%E5%80%91%E6%9C%89%E5%85%A9%E7%A8%AE%E6%96%B9%E5%BC%8F%E5%8E%BB%E8%A1%A8%E7%8F%BE%E4%B8%80%E5%80%8B%E7%AF%80%E9%BB%9E%E7%9A%84%E4%BD%8D%E7%BD%AE-%E7%B5%95%E5%B0%8D%E8%B7%AF%E5%BE%91-%E7%B5%95%E5%B0%8D%E8%B7%AF%E5%BE%91%E4%BB%A5-%E4%BE%86%E4%BB%A3%E8%A1%A8%EF%BC%8C%E9%9C%80%E8%A6%81%E5%BE%9Ehtml%E7%9A%84%E6%A0%B9%E7%AF%80%E9%BB%9E%E9%96%8B%E5%A7%8B%E5%AF%AB%E5%AE%8C%E6%95%B4%E7%9A%84%E8%B7%AF%E5%BE%91%E5%88%B0%E7%9B%AE%E6%A8%99%E7%9A%84%E7%AF%80%E9%BB%9E-%E5%A6%82-html-1-body-1-div-3-div-1-div-1-div-1-div-2-div-3-div-1-h2-1-%EF%BC%8C%E6%98%AF%E6%88%91%E5%80%91%E5%9C%A8Day13%E7%B6%B2%E9%A0%81%E4%B8%AD%E6%A8%99%E9%A1%8C%E7%9A%84%E7%B5%95%E5%B0%8D%E8%B7%AF%E5%BE%91-%E7%9B%B8%E5%B0%8D%E8%B7%AF%E5%BE%91-%E7%9B%B8%E5%B0%8D%E8%B7%AF%E5%BE%91%E4%BB%A5-%E4%BE%86%E4%BB%A3%E8%A1%A8-%E5%A6%82-h2-contains-text-%E2%80%99Day13%E3%80%81Selenium%E6%8C%87%E4%BB%A4%E4%BD%BF%E7%94%A8%E2%80%99-%E4%BE%86%E4%BB%A3%E8%A1%A8%E4%B8%8A%E9%9D%A2%E7%9B%B8%E5%90%8C%E4%B8%8A%E9%9D%A2%E7%B5%95%E5%B0%8D%E8%B7%AF%E5%BE%91%E7%9A%84%E7%9B%B8%E5%B0%8D%E8%B7%AF%E5%BE%91"><span class="nav-number"></span> <span class="nav-text">在XPath中，我們有兩種方式去表現一個節點的位置- 絕對路徑    絕對路徑以 &#x2F; 來代表，需要從html的根節點開始寫完整的路徑到目標的節點    如:&#x2F;html[1]&#x2F;body[1]&#x2F;div[3]&#x2F;div[1]&#x2F;div[1]&#x2F;div[1]&#x2F;div[2]&#x2F;div[3]&#x2F;div[1]&#x2F;h2[1]，是我們在Day13網頁中標題的絕對路徑- 相對路徑    相對路徑以 &#x2F;&#x2F; 來代表    如:&#x2F;&#x2F;h2[contains(text(),’Day13、Selenium指令使用’)]來代表上面相同上面絕對路徑的相對路徑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#find-element-by-xpath"><span class="nav-number">1.</span> <span class="nav-text">find_element_by_xpath()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ChroPath"><span class="nav-number">2.</span> <span class="nav-text">ChroPath</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
