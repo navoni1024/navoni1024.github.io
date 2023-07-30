@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://navoni1024.github.io/Scraping-Basics-JSON/</loc>
+    
+    <lastmod>2023-07-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/Scraping-Basics-XPath/</loc>
+    
+    <lastmod>2023-07-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://navoni1024.github.io/Gin-Fizz/</loc>
     
     <lastmod>2023-07-30</lastmod>
@@ -56,25 +74,7 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/Scraping-Basics-XPath/</loc>
-    
-    <lastmod>2023-07-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://navoni1024.github.io/Scraping-Basics-Selenium/</loc>
-    
-    <lastmod>2023-07-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://navoni1024.github.io/Scraping-Basics-JSON/</loc>
     
     <lastmod>2023-07-27</lastmod>
     
@@ -334,14 +334,14 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/%E7%A8%8B%E5%BC%8F/%E7%88%AC%E8%9F%B2/</loc>
+    <loc>http://navoni1024.github.io/categories/%E7%A8%8B%E5%BC%8F/Discord-bot/</loc>
     <lastmod>2023-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/%E7%A8%8B%E5%BC%8F/Discord-bot/</loc>
+    <loc>http://navoni1024.github.io/categories/%E7%A8%8B%E5%BC%8F/%E7%88%AC%E8%9F%B2/</loc>
     <lastmod>2023-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
