@@ -29,7 +29,7 @@
 <meta property="og:description" content="本系列預設各位擁有基本的python能力，對各種資料結構、套件、模組等有一定概念就行了。本文的範例都是在python 3.10下操作的。 requests是什麼?簡單來說就是能讓你抓取整個網頁的東西，也能夠丟上去一些東西。比較常用到的有下列功能。  get post session">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2023-07-25T15:32:56.000Z">
-<meta property="article:modified_time" content="2023-07-26T07:12:08.588Z">
+<meta property="article:modified_time" content="2023-07-30T07:32:43.195Z">
 <meta property="article:author" content="navoni1024">
 <meta property="article:tag" content="爬蟲">
 <meta property="article:tag" content="程式">
@@ -233,7 +233,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2023-07-26 15:12:08" itemprop="dateModified" datetime="2023-07-26T15:12:08+08:00">2023-07-26</time>
+                <time title="修改時間：2023-07-30 15:32:43" itemprop="dateModified" datetime="2023-07-30T15:32:43+08:00">2023-07-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -270,20 +270,20 @@
 <span id="more"></span>
 
 <p>python預設並沒有安裝，所以要先用pip安裝下。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
 
 <p>安裝完後在寫程式前也記得先import</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br></pre></td></tr></table></figure>
 
 <h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><p>基本上就是抓下網頁。在抓取網頁時加上昨天提到的header比較不會被擋下來。</p>
 <p>舉例來說:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">	&#x27;Users-agent&#x27;: &#x27;Mozilla/5.0 (X11; Ubuntu; Linux x86 64; rv:91.0) Gecko/20100101 Firefox/91.0&#x27;,</span><br><span class="line">&#125;</span><br><span class="line">url = &#x27;你想爬的網站&#x27;</span><br><span class="line">r = requests.get(url, headers = headers)</span><br><span class="line"></span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">	<span class="string">&#x27;Users-agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (X11; Ubuntu; Linux x86 64; rv:91.0) Gecko/20100101 Firefox/91.0&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">&#x27;你想爬的網站&#x27;</span></span><br><span class="line">r = requests.get(url, headers = headers)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(r.text)</span><br></pre></td></tr></table></figure>
 
 <p>上述的程式應該會把網頁的html印在終端機，<br>可以填入各種網址試試看這樣的程式會印出什麼。<br>當然單純只做這樣被擋下來而只會顯示<code>respone&lt;XXX&gt;</code>的機率也不低就是。<br>也可以試試看換個header看網頁會不會有差異。</p>
 <p>總之抓下來的單純html當然是沒什麼用，要解析html並取出其中有用的資訊的話就要靠後面幾天會提到的bs4跟lxml了。</p>
 <h3 id="post"><a href="#post" class="headerlink" title="post"></a>post</h3><p>能夠丟字串或json檔上去，在需要給網站資訊時會用到。<br>舉例來說，投票機器人。<br>但一時之間想不到什麼很好的網站舉例。</p>
 <h3 id="session"><a href="#session" class="headerlink" title="session"></a>session</h3><p>能夠在多個請求中保持一些數據。<br>如果網站會用到cookie的話就需要使用這個。</p>
-<p>舉例來說你用session登入一個網站後，之後在用這個物件抓取該網站其他頁面也會默認你是登入的。<br>但一時之間想不到什麼很好的網站舉例。</p>
+<p>舉例來說你用session登入一個網站後，之後在用這個物件抓取該網站其他頁面也會默認你是登入的。<br>但一時之間想不到什麼很好的網站舉例。S</p>
 
     </div>
 

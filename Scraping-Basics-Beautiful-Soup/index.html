@@ -31,7 +31,7 @@
 <meta property="og:image" content="http://navoni1024.github.io/Scraping-Basics-Beautiful-Soup/20152706UAEuGzKBvW.png">
 <meta property="og:image" content="http://navoni1024.github.io/Scraping-Basics-Beautiful-Soup/20152706L0rBAzgmoz.png">
 <meta property="article:published_time" content="2023-07-25T15:40:35.000Z">
-<meta property="article:modified_time" content="2023-07-27T05:44:58.199Z">
+<meta property="article:modified_time" content="2023-07-30T07:29:21.396Z">
 <meta property="article:author" content="navoni1024">
 <meta property="article:tag" content="爬蟲">
 <meta property="article:tag" content="程式">
@@ -236,7 +236,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2023-07-27 13:44:58" itemprop="dateModified" datetime="2023-07-27T13:44:58+08:00">2023-07-27</time>
+                <time title="修改時間：2023-07-30 15:29:21" itemprop="dateModified" datetime="2023-07-30T15:29:21+08:00">2023-07-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -269,7 +269,7 @@
 <p>在經過基本的pip install後，我們就可以引入bs4了。<br><img data-src="/Scraping-Basics-Beautiful-Soup/20152706UAEuGzKBvW.png"></p>
 <p>之後我們就能像這樣，引入網址後，利用基本request取得html源碼，再利用BS4進行基本解析，建立出soup_m1的物件，之後便可以利用BS4的函式對其定位、分析。<br><img data-src="/Scraping-Basics-Beautiful-Soup/20152706L0rBAzgmoz.png"></p>
 <h3 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h3><p>昨天出現的這句</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">soup_m1 = BeautifulSoup(html_m1.text, &quot;html.parser&quot;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">soup_m1 = BeautifulSoup(html_m1.text, <span class="string">&quot;html.parser&quot;</span>)</span><br></pre></td></tr></table></figure>
 <p>其中的<code>html.parser</code>便是使用的解析器，是python內建的。<br>除了這個外還能用html5lib和lxml但我也沒用過，詳細優缺點可能要google下。<br>哪天有試了再補充上來吧</p>
 <h3 id="解析方法"><a href="#解析方法" class="headerlink" title="解析方法"></a>解析方法</h3><p>比較常用到的是find()、find_all()和select()。</p>
 <ul>
