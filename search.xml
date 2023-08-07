@@ -65,6 +65,44 @@
       </tags>
   </entry>
   <entry>
+    <title> 爬蟲基礎入門: Requests</title>
+    <url>/Scraping-Basics-Requests/</url>
+    <content><![CDATA[<p>本系列預設各位擁有基本的python能力，對各種資料結構、套件、模組等有一定概念就行了。<br>本文的範例都是在python 3.10下操作的。</p>
+<h3 id="requests是什麼"><a href="#requests是什麼" class="headerlink" title="requests是什麼?"></a>requests是什麼?</h3><p>簡單來說就是能讓你抓取整個網頁的東西，也能夠丟上去一些東西。<br>比較常用到的有下列功能。</p>
+<ul>
+<li>get</li>
+<li>post</li>
+<li>session</li>
+</ul>
+<span id="more"></span>
+
+<p>python預設並沒有安裝，所以要先用pip安裝下。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
+
+<p>安裝完後在寫程式前也記得先import</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br></pre></td></tr></table></figure>
+
+<h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><p>基本上就是抓下網頁。在抓取網頁時加上昨天提到的header比較不會被擋下來。</p>
+<p>舉例來說:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">	<span class="string">&#x27;Users-agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (X11; Ubuntu; Linux x86 64; rv:91.0) Gecko/20100101 Firefox/91.0&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">&#x27;你想爬的網站&#x27;</span></span><br><span class="line">r = requests.get(url, headers = headers)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(r.text)</span><br></pre></td></tr></table></figure>
+
+<p>上述的程式應該會把網頁的html印在終端機，<br>可以填入各種網址試試看這樣的程式會印出什麼。<br>當然單純只做這樣被擋下來而只會顯示<code>respone&lt;XXX&gt;</code>的機率也不低就是。<br>也可以試試看換個header看網頁會不會有差異。</p>
+<p>總之抓下來的單純html當然是沒什麼用，要解析html並取出其中有用的資訊的話就要靠後面幾天會提到的bs4跟lxml了。</p>
+<h3 id="post"><a href="#post" class="headerlink" title="post"></a>post</h3><p>能夠丟字串或json檔上去，在需要給網站資訊時會用到。<br>舉例來說，投票機器人。<br>但一時之間想不到什麼很好的網站舉例。</p>
+<h3 id="session"><a href="#session" class="headerlink" title="session"></a>session</h3><p>能夠在多個請求中保持一些數據。<br>如果網站會用到cookie的話就需要使用這個。</p>
+<p>舉例來說你用session登入一個網站後，之後在用這個物件抓取該網站其他頁面也會默認你是登入的。<br>但一時之間想不到什麼很好的網站舉例。</p>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>爬蟲</category>
+      </categories>
+      <tags>
+        <tag>爬蟲</tag>
+        <tag>程式</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title> 爬蟲基礎入門: robots.txt &amp; header</title>
     <url>/Scraping-Basics-robots-txt-header/</url>
     <content><![CDATA[<p>今天要來介紹當我們在爬蟲前，應該要知道的一些技巧與規範</p>
@@ -101,41 +139,43 @@
       </tags>
   </entry>
   <entry>
-    <title> 爬蟲基礎入門: Requests</title>
-    <url>/Scraping-Basics-Requests/</url>
-    <content><![CDATA[<p>本系列預設各位擁有基本的python能力，對各種資料結構、套件、模組等有一定概念就行了。<br>本文的範例都是在python 3.10下操作的。</p>
-<h3 id="requests是什麼"><a href="#requests是什麼" class="headerlink" title="requests是什麼?"></a>requests是什麼?</h3><p>簡單來說就是能讓你抓取整個網頁的東西，也能夠丟上去一些東西。<br>比較常用到的有下列功能。</p>
-<ul>
-<li>get</li>
-<li>post</li>
-<li>session</li>
-</ul>
+    <title>Discord Bot-基本架構</title>
+    <url>/Discord-Bot-Basic-structure/</url>
+    <content><![CDATA[<p>首先先用一個最基本的機器人來示範。請打開一個python檔並鍵入以下內容:</p>
 <span id="more"></span>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands</span><br><span class="line"></span><br><span class="line">bot = commands.Bot(<span class="string">&#x27;%&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@bot.event</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">on_ready</span>():</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&#x27;不客气！&#x27;</span>)</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&#x27;感谢您使用Discord产品, 欢迎您继续咨询Discord社区！&#x27;</span>)</span><br><span class="line">	</span><br><span class="line"><span class="meta">@bot.command(<span class="params">aliases=[<span class="string">&#x27;touch&#x27;</span>]</span>)</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">t</span>(<span class="params">message</span>):</span><br><span class="line">	<span class="keyword">await</span> message.channel.send(<span class="string">&#x27;请不要随意地触碰我！ 十分感谢！&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">	bot.run(<span class="string">&#x27;在這裡輸入您的token&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
-<p>python預設並沒有安裝，所以要先用pip安裝下。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
-
-<p>安裝完後在寫程式前也記得先import</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br></pre></td></tr></table></figure>
-
-<h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><p>基本上就是抓下網頁。在抓取網頁時加上昨天提到的header比較不會被擋下來。</p>
-<p>舉例來說:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">	<span class="string">&#x27;Users-agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (X11; Ubuntu; Linux x86 64; rv:91.0) Gecko/20100101 Firefox/91.0&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">&#x27;你想爬的網站&#x27;</span></span><br><span class="line">r = requests.get(url, headers = headers)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(r.text)</span><br></pre></td></tr></table></figure>
-
-<p>上述的程式應該會把網頁的html印在終端機，<br>可以填入各種網址試試看這樣的程式會印出什麼。<br>當然單純只做這樣被擋下來而只會顯示<code>respone&lt;XXX&gt;</code>的機率也不低就是。<br>也可以試試看換個header看網頁會不會有差異。</p>
-<p>總之抓下來的單純html當然是沒什麼用，要解析html並取出其中有用的資訊的話就要靠後面幾天會提到的bs4跟lxml了。</p>
-<h3 id="post"><a href="#post" class="headerlink" title="post"></a>post</h3><p>能夠丟字串或json檔上去，在需要給網站資訊時會用到。<br>舉例來說，投票機器人。<br>但一時之間想不到什麼很好的網站舉例。</p>
-<h3 id="session"><a href="#session" class="headerlink" title="session"></a>session</h3><p>能夠在多個請求中保持一些數據。<br>如果網站會用到cookie的話就需要使用這個。</p>
-<p>舉例來說你用session登入一個網站後，之後在用這個物件抓取該網站其他頁面也會默認你是登入的。<br>但一時之間想不到什麼很好的網站舉例。</p>
+<p>接下來分行解釋下。</p>
+<h3 id="bot-commands-bot-‘-’"><a href="#bot-commands-bot-‘-’" class="headerlink" title="bot &#x3D; commands.bot(‘%’)"></a>bot &#x3D; commands.bot(‘%’)</h3><p>造出一個bot的物件。而那個<code>&#39;%&#39;</code>就是呼叫機器人的前綴。<br>不一定要一個字，你要拿<code>&#39;peko&#39;</code>當前綴也是完全可以的。</p>
+<p>小補充，如果你也想要用標記機器人來呼叫機器人的話可以這樣寫:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bot = commands.bot(commands.when_mentioned_or(<span class="string">&#x27;%&#x27;</span>))</span><br></pre></td></tr></table></figure>
+<p>效果會像這樣:<br><img data-src="/Discord-Bot-Basic-structure/20152706nEGgzYWzSc.png"></p>
+<p>bot裡面詳細有什麼功能可以看一下<a href="https://discordpy.readthedocs.io/en/stable/ext/commands/api.html#bots">官方API的文件</a><br>看不懂也沒關係，後面會帶到一些常見的用法。</p>
+<h3 id="bot-event"><a href="#bot-event" class="headerlink" title="@bot.event"></a>@bot.event</h3><p>這個<code>@</code>叫<strong>decorator</strong>，是python的語法糖。<br>簡單來說這東西會把下面的函數丟到你@的函數裡面加工，詳細可以看一下<a href="https://medium.com/citycoddee/python%E9%80%B2%E9%9A%8E%E6%8A%80%E5%B7%A7-3-%E7%A5%9E%E5%A5%87%E5%8F%88%E7%BE%8E%E5%A5%BD%E7%9A%84-decorator-%E5%97%B7%E5%97%9A-6559edc87bc0">這篇</a>。<br>官方API的解釋則在<a href="https://discordpy.readthedocs.io/en/stable/ext/commands/api.html#decorators">這裡</a>。</p>
+<p>看不懂也沒什麼關係，就當作一種固定語法。記得在你寫的函數前面加上對應的decorator就行。<br>像這邊就是因為要使用底下的<code>on_ready()</code>所以才會在上面加@bot.event的，可以看下<a href="https://discordpy.readthedocs.io/en/stable/ext/commands/api.html#discord.ext.commands.Bot.event">官方API</a></p>
+<p>另外如果點進去官方API的話可以發現他的例子是加了<code>@client.event</code>。<br>使用<code>discord.clinet</code>是另一種Discord機器人的寫法，client的語法基本上把<code>client</code>代換成<code>bot</code>都可用。<br>不過bot(<code>discord.ext.commands.Bot</code>)似乎功能比較多一點加上兩者不能混用所以我都用bot寫。<br>一言以蔽之，看到範例是用<code>clinet</code>就換成<code>bot</code>試試看吧。</p>
+<h3 id="async-def-on-ready"><a href="#async-def-on-ready" class="headerlink" title="async def on_ready():"></a>async def on_ready():</h3><p>這邊的<code>async</code>和<code>await</code>是python異步執行套件<code>asyncio</code>的語法。</p>
+<p>不過這邊難的地方都寫在discord套件底層了，<br>所以我們只要記得在函數前面加async跟在discord提供的方法前加await就行。</p>
+<p><code>on_ready()</code>這個方法，其功能是在機器人上線的那刻執行下列內容。<br>所以如果機器人成功運行了可以看到命令列有以下的輸出。<br><img data-src="/Discord-Bot-Basic-structure/20152706Sv659LuuVk.png"><br>這樣可以方便我們確定機器人是不是正常上線了。</p>
+<h3 id="bot-command-aliases-‘touch’"><a href="#bot-command-aliases-‘touch’" class="headerlink" title="@bot.command(aliases&#x3D;[‘touch’])"></a>@bot.command(aliases&#x3D;[‘touch’])</h3><p><code>@bot.command()</code>這個語法糖可以將下面的函數變成我們在頻道可以使用的指令。<br>預設指令名稱就是下面的函數名。以這個例子來說就是t</p>
+<p>括號中間的<code>aliases=[&#39;touch&#39;]</code>則是為這個函數添加更多指令名的。<br>所以結合我們在上面的<code>bot = commands.bot(&#39;%&#39;)</code>設定的前綴，<br>機器人上線後我們用<code>%touch</code>和<code>%t</code>都可以叫出一樣的指令。</p>
+<h3 id="async-def-t-message"><a href="#async-def-t-message" class="headerlink" title="async def t(message):"></a>async def t(message):</h3><p>如上所述，函數名就是你在頻道打的指令名。</p>
+<p>括號裡面的message基本上就是你在discord發的訊息。<br>但他不僅僅是文字，而是discord api一個’Message’類別的物件。</p>
+<p>裡面的功能相當的豐富，可以從中取出相當多的資訊，下面會做說明。</p>
+<h3 id="await-message-channel-send-‘请不要随意地触碰我！-十分感谢！’"><a href="#await-message-channel-send-‘请不要随意地触碰我！-十分感谢！’" class="headerlink" title="await message.channel.send(‘请不要随意地触碰我！ 十分感谢！’)"></a>await message.channel.send(‘请不要随意地触碰我！ 十分感谢！’)</h3><p>像這邊我們就從中取出了你發送指令的頻道並在那頻道發送了訊息。<br>具體而言看起來像這樣。<br><img data-src="/Discord-Bot-Basic-structure/20152706UMjauH0ZsL.png"></p>
+<p>其他更多的用法一樣可以詳閱<a href="https://discordpy.readthedocs.io/en/stable/api.html#discord.Message">官方API的公開說明書</a></p>
+<h3 id="if-name-“-main-“"><a href="#if-name-“-main-“" class="headerlink" title="if __name__ &#x3D;&#x3D; “__main__“:"></a>if __name__ &#x3D;&#x3D; “__main__“:</h3><p>這行就是確保你是直接執行了這檔案才會跑以下的指令。<br>bot.run()的括號中間輸入您昨天取得的token碼。</p>
+<hr>
+<p>接著就讓機器人上線並邀請你的機器人進自己的伺服器來玩玩吧。<br>也可以試著改一些設定，或甚至嘗試一些你在官方API找到的功能。<br>看不太懂上面和官方API到底在講什麼鬼的也沒關係，後面跟著做就會漸漸熟悉了。</p>
 ]]></content>
       <categories>
         <category>程式</category>
-        <category>爬蟲</category>
+        <category>Discord bot</category>
       </categories>
       <tags>
-        <tag>爬蟲</tag>
         <tag>程式</tag>
         <tag>python</tag>
+        <tag>Discord</tag>
       </tags>
   </entry>
   <entry>
@@ -175,46 +215,6 @@
 <p>而load回來的話可以發現指令有反應了，help中也看的到了。<br><img data-src="/Discord-Bot-Cogs/20152706uqPycyubVO.png"></p>
 <hr>
 <p>前述的的程式結構較簡單可能沒什麼感覺，但要是程式複雜到如下圖能夠先unload一塊調整完後再load回去還是挺方便的。<br><img data-src="/Discord-Bot-Cogs/20152706kGyb4P4XHd.png"></p>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>Discord bot</category>
-      </categories>
-      <tags>
-        <tag>程式</tag>
-        <tag>python</tag>
-        <tag>Discord</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Discord Bot-基本架構</title>
-    <url>/Discord-Bot-Basic-structure/</url>
-    <content><![CDATA[<p>首先先用一個最基本的機器人來示範。請打開一個python檔並鍵入以下內容:</p>
-<span id="more"></span>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands</span><br><span class="line"></span><br><span class="line">bot = commands.Bot(<span class="string">&#x27;%&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@bot.event</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">on_ready</span>():</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&#x27;不客气！&#x27;</span>)</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&#x27;感谢您使用Discord产品, 欢迎您继续咨询Discord社区！&#x27;</span>)</span><br><span class="line">	</span><br><span class="line"><span class="meta">@bot.command(<span class="params">aliases=[<span class="string">&#x27;touch&#x27;</span>]</span>)</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">t</span>(<span class="params">message</span>):</span><br><span class="line">	<span class="keyword">await</span> message.channel.send(<span class="string">&#x27;请不要随意地触碰我！ 十分感谢！&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">	bot.run(<span class="string">&#x27;在這裡輸入您的token&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>接下來分行解釋下。</p>
-<h3 id="bot-commands-bot-‘-’"><a href="#bot-commands-bot-‘-’" class="headerlink" title="bot &#x3D; commands.bot(‘%’)"></a>bot &#x3D; commands.bot(‘%’)</h3><p>造出一個bot的物件。而那個<code>&#39;%&#39;</code>就是呼叫機器人的前綴。<br>不一定要一個字，你要拿<code>&#39;peko&#39;</code>當前綴也是完全可以的。</p>
-<p>小補充，如果你也想要用標記機器人來呼叫機器人的話可以這樣寫:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bot = commands.bot(commands.when_mentioned_or(<span class="string">&#x27;%&#x27;</span>))</span><br></pre></td></tr></table></figure>
-<p>效果會像這樣:<br><img data-src="/Discord-Bot-Basic-structure/20152706nEGgzYWzSc.png"></p>
-<p>bot裡面詳細有什麼功能可以看一下<a href="https://discordpy.readthedocs.io/en/stable/ext/commands/api.html#bots">官方API的文件</a><br>看不懂也沒關係，後面會帶到一些常見的用法。</p>
-<h3 id="bot-event"><a href="#bot-event" class="headerlink" title="@bot.event"></a>@bot.event</h3><p>這個<code>@</code>叫<strong>decorator</strong>，是python的語法糖。<br>簡單來說這東西會把下面的函數丟到你@的函數裡面加工，詳細可以看一下<a href="https://medium.com/citycoddee/python%E9%80%B2%E9%9A%8E%E6%8A%80%E5%B7%A7-3-%E7%A5%9E%E5%A5%87%E5%8F%88%E7%BE%8E%E5%A5%BD%E7%9A%84-decorator-%E5%97%B7%E5%97%9A-6559edc87bc0">這篇</a>。<br>官方API的解釋則在<a href="https://discordpy.readthedocs.io/en/stable/ext/commands/api.html#decorators">這裡</a>。</p>
-<p>看不懂也沒什麼關係，就當作一種固定語法。記得在你寫的函數前面加上對應的decorator就行。<br>像這邊就是因為要使用底下的<code>on_ready()</code>所以才會在上面加@bot.event的，可以看下<a href="https://discordpy.readthedocs.io/en/stable/ext/commands/api.html#discord.ext.commands.Bot.event">官方API</a></p>
-<p>另外如果點進去官方API的話可以發現他的例子是加了<code>@client.event</code>。<br>使用<code>discord.clinet</code>是另一種Discord機器人的寫法，client的語法基本上把<code>client</code>代換成<code>bot</code>都可用。<br>不過bot(<code>discord.ext.commands.Bot</code>)似乎功能比較多一點加上兩者不能混用所以我都用bot寫。<br>一言以蔽之，看到範例是用<code>clinet</code>就換成<code>bot</code>試試看吧。</p>
-<h3 id="async-def-on-ready"><a href="#async-def-on-ready" class="headerlink" title="async def on_ready():"></a>async def on_ready():</h3><p>這邊的<code>async</code>和<code>await</code>是python異步執行套件<code>asyncio</code>的語法。</p>
-<p>不過這邊難的地方都寫在discord套件底層了，<br>所以我們只要記得在函數前面加async跟在discord提供的方法前加await就行。</p>
-<p><code>on_ready()</code>這個方法，其功能是在機器人上線的那刻執行下列內容。<br>所以如果機器人成功運行了可以看到命令列有以下的輸出。<br><img data-src="/Discord-Bot-Basic-structure/20152706Sv659LuuVk.png"><br>這樣可以方便我們確定機器人是不是正常上線了。</p>
-<h3 id="bot-command-aliases-‘touch’"><a href="#bot-command-aliases-‘touch’" class="headerlink" title="@bot.command(aliases&#x3D;[‘touch’])"></a>@bot.command(aliases&#x3D;[‘touch’])</h3><p><code>@bot.command()</code>這個語法糖可以將下面的函數變成我們在頻道可以使用的指令。<br>預設指令名稱就是下面的函數名。以這個例子來說就是t</p>
-<p>括號中間的<code>aliases=[&#39;touch&#39;]</code>則是為這個函數添加更多指令名的。<br>所以結合我們在上面的<code>bot = commands.bot(&#39;%&#39;)</code>設定的前綴，<br>機器人上線後我們用<code>%touch</code>和<code>%t</code>都可以叫出一樣的指令。</p>
-<h3 id="async-def-t-message"><a href="#async-def-t-message" class="headerlink" title="async def t(message):"></a>async def t(message):</h3><p>如上所述，函數名就是你在頻道打的指令名。</p>
-<p>括號裡面的message基本上就是你在discord發的訊息。<br>但他不僅僅是文字，而是discord api一個’Message’類別的物件。</p>
-<p>裡面的功能相當的豐富，可以從中取出相當多的資訊，下面會做說明。</p>
-<h3 id="await-message-channel-send-‘请不要随意地触碰我！-十分感谢！’"><a href="#await-message-channel-send-‘请不要随意地触碰我！-十分感谢！’" class="headerlink" title="await message.channel.send(‘请不要随意地触碰我！ 十分感谢！’)"></a>await message.channel.send(‘请不要随意地触碰我！ 十分感谢！’)</h3><p>像這邊我們就從中取出了你發送指令的頻道並在那頻道發送了訊息。<br>具體而言看起來像這樣。<br><img data-src="/Discord-Bot-Basic-structure/20152706UMjauH0ZsL.png"></p>
-<p>其他更多的用法一樣可以詳閱<a href="https://discordpy.readthedocs.io/en/stable/api.html#discord.Message">官方API的公開說明書</a></p>
-<h3 id="if-name-“-main-“"><a href="#if-name-“-main-“" class="headerlink" title="if __name__ &#x3D;&#x3D; “__main__“:"></a>if __name__ &#x3D;&#x3D; “__main__“:</h3><p>這行就是確保你是直接執行了這檔案才會跑以下的指令。<br>bot.run()的括號中間輸入您昨天取得的token碼。</p>
-<hr>
-<p>接著就讓機器人上線並邀請你的機器人進自己的伺服器來玩玩吧。<br>也可以試著改一些設定，或甚至嘗試一些你在官方API找到的功能。<br>看不太懂上面和官方API到底在講什麼鬼的也沒關係，後面跟著做就會漸漸熟悉了。</p>
 ]]></content>
       <categories>
         <category>程式</category>
@@ -328,34 +328,18 @@
       </tags>
   </entry>
   <entry>
-    <title>爬蟲基礎入門-XPath</title>
-    <url>/Scraping-Basics-XPath/</url>
-    <content><![CDATA[<p>我們在selenium時有講到幾個指令像是find_element_by的指令，<br>但如果我們的html沒有class或是id等節點的話，其實對我們爬蟲有點不太友善，<br>所以今天我們會教xpath的搜尋方法</p>
+    <title>爬蟲基礎入門-Selenium</title>
+    <url>/Scraping-Basics-Selenium/</url>
+    <content><![CDATA[<h3 id="Selenium前置設定"><a href="#Selenium前置設定" class="headerlink" title="Selenium前置設定"></a>Selenium前置設定</h3><p>首先如果要先使用selenium，我們要先下載webdriver在資料夾中給予selenium使用。<br><a href="http://">https://chromedriver.chromium.org/downloads</a><br>上述網址即為chrome的webdriver下載地點。<br>下載好webdriver後我們就可以把他的exe檔丟到code的資料夾中了，就像這樣。</p>
 <span id="more"></span>
-
-<h3 id="XPath"><a href="#XPath" class="headerlink" title="XPath"></a>XPath</h3><p>XML Path簡稱XPath，是一種可以用來確定一個東西在XML&#x2F;HTML檔案中的位置的語言&#x2F;工具<br>可以將一個HTML看成是一棵樹，或是更生活化一點，利用樹狀結構的目錄資料夾<br>像是檔案開頭的<code>&lt;html&gt;</code>包含了整個文件，而這個節點就是整個html的根節點<br>或者是如<code>&lt;head&gt;</code>或是<code>&lt;body&gt;</code>在html下一層，而這兩個節點就是html的子節點，<br>相反地，<code>&lt;html&gt;</code>也是<code>&lt;head&gt;</code>或是<code>&lt;body&gt;</code>的父節點<br>此外，<code>&lt;html&gt;</code>與<code>&lt;head&gt;</code>相互是兄弟節點<br>樹中有許多的節點代表不同元素，而我們就可以使用XPath去查詢這些節點</p>
-<p>在XPath中，我們有兩種方式去表現一個節點的位置</p>
-<ul>
-<li><strong>絕對路徑</strong><br>  絕對路徑以 <strong>&#x2F;</strong> 來代表，需要從html的根節點開始寫完整的路徑到目標的節點<br>  如:&#x2F;html[1]&#x2F;body[1]&#x2F;div[3]&#x2F;div[1]&#x2F;div[1]&#x2F;div[1]&#x2F;div[2]&#x2F;div[3]&#x2F;div[1]&#x2F;h2[1]，是我們在Day13網頁中標題的絕對路徑</li>
-<li><strong>相對路徑</strong><br>  相對路徑以 <strong>&#x2F;&#x2F;</strong> 來代表<br>  如:&#x2F;&#x2F;h2[contains(text(),’Day13、Selenium指令使用’)]來代表上面相同上面絕對路徑的相對路徑</li>
-</ul>
-<hr>
-<h3 id="find-element-by-xpath"><a href="#find-element-by-xpath" class="headerlink" title="find_element_by_xpath()"></a>find_element_by_xpath()</h3><p>利用上面絕對路徑或是相對路徑的方法，直接塞進function就好了，如:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&#x27;/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/h2[1]&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>常常在html中會看到在同個檔案不同個子樹下有相同的節點命名，當使用xpath的相對路徑時可能會有問題<br>這個時候可以透過index索引去找是哪一個節點，如:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&#x27;//p[0]&#x27;</span>)</span><br></pre></td></tr></table></figure>
-<p>或是利用attribute屬性去標註說我們現在要的是哪一個，如:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&#x27;title&#x27;</span>&gt;</span>I&#x27;m title<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&quot;//p[@class=&#x27;title&#x27;]&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>還有一些神奇的指令像是contains()，可以找出包含字串的節點，如:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&quot;//p[contains(text(), &#x27;title&#x27;)]&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>上面講了xpath的語法，但是其實你知道只需要有html樹狀的概念就好了嗎?<br>俗話說的好，不要重複造輪子，今天就介紹一個好用的工具可以自動產生xpath</p>
-<h3 id="ChroPath"><a href="#ChroPath" class="headerlink" title="ChroPath"></a>ChroPath</h3><p>ChroPath是一個Chrome的插件，可以在chrome的應用程式商店找到他<br>它是一個協助我們在chrome中定位想要的元素的插件<br>假如你想針對一個網頁的按鈕找出它的xpath去進行selenium控制的話，可以右鍵找到「檢查」的地方後點下去，會進入F12開發者模式，同時F12的html畫面也會同步到一樣的程式片段<br>在此時，我們在右邊開發者模式視窗的地方中間有一排選擇子視窗的地方去找一個叫做ChroPath的地方點開來<br>點開之後，插件就會告訴你路徑的絕對位置或相對位置囉!<br><img data-src="/Scraping-Basics-XPath/20152706sgIGrAITNx.png"></p>
-<p>XPath就是這麼簡單!</p>
+<p><img data-src="/Scraping-Basics-Selenium/20152706vGDAntGabq.png"></p>
+<p>接著我們就可以準備import了。<br><img data-src="/Scraping-Basics-Selenium/20152706yg28xxCq3g.png"><br>像這樣，其中webdriver就是引入我們剛剛載的webdriver，<br>Options則是selenium針對不同webdriver所納入的不同設定，<br>WebDriverWait跟EC則是在讓瀏覽器等待時會用到，像是我們可能會需要等到某網頁元素完整載入後才繼續程式，否則可能就會出錯，<br>最後By則是selenium中的內部語法，像是這樣，<br><img data-src="/Scraping-Basics-Selenium/20152706nZU06VhtHp.png"><br>這就表示著find_element這個函式將用XPath的方式定位元素。</p>
+<h3 id="Selenium的指令使用"><a href="#Selenium的指令使用" class="headerlink" title="Selenium的指令使用"></a>Selenium的指令使用</h3><p><img data-src="/Scraping-Basics-Selenium/01.png"><br><img data-src="/Scraping-Basics-Selenium/02.png"><br>首先我們先如上圖，套入webdriver的設定，讓程式載入我們先前載的chrome webdriver，接著再讓他導到我們想要的網址，這邊以youtube作範例。如果成功的話應該會如下圖這樣。<br><img data-src="/Scraping-Basics-Selenium/03.png"><br>阿記得開完網址後要time.sleep()一下，才不會直接跳掉。<br>其實在之後我們對selenium操控時，也必須要定時的time.sleep()或者是利用別的方法讓程式暫停，否則就會產生網頁還沒完全載入，我們就要找到他的元素等等的尷尬事情。</p>
+<p>開完網頁後，就來介紹第一個函式，find_element<br><img data-src="/Scraping-Basics-Selenium/04.png"><br>find_element可以讓selenium定位到特定網頁元素，這邊的例子就是yt的搜尋欄。<br>其實selenium可以透過非常多方式定位，像是html碼裡的id、name等等，或者是class、css等其他方法，那麼我們這邊就用xpath這種定位方式，較為直接準確。但其實這邊範例比較不好的一點是xpath採用了絕對位置來定位，事實上，我們可以利用xpath的相對位置來達到簡潔、準確、可變動的性質，則之後在提及xpath時會在講解。</p>
+<p>再來，既然我們定位到了網頁元素，則我們就要發揮selenium的強項了，就是模擬使用者對網頁的互動，這邊我們透過下圖講解兩個例子。<br><img data-src="/Scraping-Basics-Selenium/05.png"><br>這邊我們的目標是要進去yt，蒐集不同關鍵字搜尋後的影片，因此我們先建立一個list做作search_keys，裡面有著我們之後要輸入進搜尋欄的搜尋關鍵字。<br>則首先是element.send_keys()，我們先定位到搜尋欄位置後，將其命名為search_box，則search_box.send_keys()就能讓我們輸入關鍵字進去。<br>再來就是element.click()，在輸入進去後，我們還要再定位到yt網頁的搜尋按鈕上，在這裡，我們將其命名為search_box，則search_box.click()就能讓selenium模擬使用者對著搜尋按鈕按下滑鼠左鍵的這個動作。<br>就像這樣<br><img data-src="/Scraping-Basics-Selenium/06.png"><br>其實只要有這基本的動作，我們就能讓selenium動起來了，就像真人一樣互動，當然selenium還有更多的功能，像是WebDriverWait等等的功能，但這邊就不多做贅述了，我們明天會在講使用selenium常遇到的問題，其實很多都跟網頁載入時間有關。</p>
+<p>喔對了，突然想到的小補充，上圖的範例其實就是之後其中一個專題內容，目標正是要讓selenium幫我們整理出想要的影片並輸出到discord上，因此也可以預見之後的專題應該會出現很多vt剪輯。<br><img data-src="/Scraping-Basics-Selenium/07.png"></p>
+<h3 id="Selenium的常見Bug"><a href="#Selenium的常見Bug" class="headerlink" title="Selenium的常見Bug"></a>Selenium的常見Bug</h3><p>首先，第一個是版本問題，這其實是我前天在挖之前的程式出來跑時才發現的問題，<br><img data-src="/Scraping-Basics-Selenium/01-1.png"><br>這問題基本上是driver跟瀏覽器版本不支援，最簡單只要重新下載對應版本的webdriver就好。</p>
+<p>接著是這個，<br><img data-src="/Scraping-Basics-Selenium/02-1.png"><br>這代表著selenium無法找到你所指定的元素，一般來說，如果不是你定位位置錯誤，<br>八成就是網頁還沒有完整載入，就使selemium搜尋元素。<br>此時，我們可以試著使用簡單的方法，time.sleep()，使程式整體暫停n秒，也可以配合try except使用。<br>當然，selenium針對這個問題也有開發相關函式，首先是顯式等待，<br><img data-src="/Scraping-Basics-Selenium/03-1.png"><br>在這邊的意思是，我們針對所給予的元素，等待10秒，每0.2秒檢查是否出現，如果出現了就繼續，<br>如果10秒內還沒出現則報錯。<br>另外一種則是隱式等待，<br><img data-src="/Scraping-Basics-Selenium/04-1.png"><br>相對於顯式等待是針對個別元素是否生成，隱式等待則是針對整個頁面，以上圖為例，這邊就是讓整個程式暫停，<br>給予瀏覽器10秒的時間，如果10秒內”整個頁面都已經生成完成”(講得直白一點其實就是我們頁面左上角的圈圈不再轉動)，則繼續程式運行，如果10內還沒載完，則報錯，因此可以看的出來，相對於顯式等待，隱式等待跟強制等待可能會要花費更久的時間。</p>
 ]]></content>
       <categories>
         <category>程式</category>
@@ -398,30 +382,6 @@
       </tags>
   </entry>
   <entry>
-    <title>爬蟲基礎入門-Selenium</title>
-    <url>/Scraping-Basics-Selenium/</url>
-    <content><![CDATA[<h3 id="Selenium前置設定"><a href="#Selenium前置設定" class="headerlink" title="Selenium前置設定"></a>Selenium前置設定</h3><p>首先如果要先使用selenium，我們要先下載webdriver在資料夾中給予selenium使用。<br><a href="http://">https://chromedriver.chromium.org/downloads</a><br>上述網址即為chrome的webdriver下載地點。<br>下載好webdriver後我們就可以把他的exe檔丟到code的資料夾中了，就像這樣。</p>
-<span id="more"></span>
-<p><img data-src="/Scraping-Basics-Selenium/20152706vGDAntGabq.png"></p>
-<p>接著我們就可以準備import了。<br><img data-src="/Scraping-Basics-Selenium/20152706yg28xxCq3g.png"><br>像這樣，其中webdriver就是引入我們剛剛載的webdriver，<br>Options則是selenium針對不同webdriver所納入的不同設定，<br>WebDriverWait跟EC則是在讓瀏覽器等待時會用到，像是我們可能會需要等到某網頁元素完整載入後才繼續程式，否則可能就會出錯，<br>最後By則是selenium中的內部語法，像是這樣，<br><img data-src="/Scraping-Basics-Selenium/20152706nZU06VhtHp.png"><br>這就表示著find_element這個函式將用XPath的方式定位元素。</p>
-<h3 id="Selenium的指令使用"><a href="#Selenium的指令使用" class="headerlink" title="Selenium的指令使用"></a>Selenium的指令使用</h3><p><img data-src="/Scraping-Basics-Selenium/01.png"><br><img data-src="/Scraping-Basics-Selenium/02.png"><br>首先我們先如上圖，套入webdriver的設定，讓程式載入我們先前載的chrome webdriver，接著再讓他導到我們想要的網址，這邊以youtube作範例。如果成功的話應該會如下圖這樣。<br><img data-src="/Scraping-Basics-Selenium/03.png"><br>阿記得開完網址後要time.sleep()一下，才不會直接跳掉。<br>其實在之後我們對selenium操控時，也必須要定時的time.sleep()或者是利用別的方法讓程式暫停，否則就會產生網頁還沒完全載入，我們就要找到他的元素等等的尷尬事情。</p>
-<p>開完網頁後，就來介紹第一個函式，find_element<br><img data-src="/Scraping-Basics-Selenium/04.png"><br>find_element可以讓selenium定位到特定網頁元素，這邊的例子就是yt的搜尋欄。<br>其實selenium可以透過非常多方式定位，像是html碼裡的id、name等等，或者是class、css等其他方法，那麼我們這邊就用xpath這種定位方式，較為直接準確。但其實這邊範例比較不好的一點是xpath採用了絕對位置來定位，事實上，我們可以利用xpath的相對位置來達到簡潔、準確、可變動的性質，則之後在提及xpath時會在講解。</p>
-<p>再來，既然我們定位到了網頁元素，則我們就要發揮selenium的強項了，就是模擬使用者對網頁的互動，這邊我們透過下圖講解兩個例子。<br><img data-src="/Scraping-Basics-Selenium/05.png"><br>這邊我們的目標是要進去yt，蒐集不同關鍵字搜尋後的影片，因此我們先建立一個list做作search_keys，裡面有著我們之後要輸入進搜尋欄的搜尋關鍵字。<br>則首先是element.send_keys()，我們先定位到搜尋欄位置後，將其命名為search_box，則search_box.send_keys()就能讓我們輸入關鍵字進去。<br>再來就是element.click()，在輸入進去後，我們還要再定位到yt網頁的搜尋按鈕上，在這裡，我們將其命名為search_box，則search_box.click()就能讓selenium模擬使用者對著搜尋按鈕按下滑鼠左鍵的這個動作。<br>就像這樣<br><img data-src="/Scraping-Basics-Selenium/06.png"><br>其實只要有這基本的動作，我們就能讓selenium動起來了，就像真人一樣互動，當然selenium還有更多的功能，像是WebDriverWait等等的功能，但這邊就不多做贅述了，我們明天會在講使用selenium常遇到的問題，其實很多都跟網頁載入時間有關。</p>
-<p>喔對了，突然想到的小補充，上圖的範例其實就是之後其中一個專題內容，目標正是要讓selenium幫我們整理出想要的影片並輸出到discord上，因此也可以預見之後的專題應該會出現很多vt剪輯。<br><img data-src="/Scraping-Basics-Selenium/07.png"></p>
-<h3 id="Selenium的常見Bug"><a href="#Selenium的常見Bug" class="headerlink" title="Selenium的常見Bug"></a>Selenium的常見Bug</h3><p>首先，第一個是版本問題，這其實是我前天在挖之前的程式出來跑時才發現的問題，<br><img data-src="/Scraping-Basics-Selenium/01-1.png"><br>這問題基本上是driver跟瀏覽器版本不支援，最簡單只要重新下載對應版本的webdriver就好。</p>
-<p>接著是這個，<br><img data-src="/Scraping-Basics-Selenium/02-1.png"><br>這代表著selenium無法找到你所指定的元素，一般來說，如果不是你定位位置錯誤，<br>八成就是網頁還沒有完整載入，就使selemium搜尋元素。<br>此時，我們可以試著使用簡單的方法，time.sleep()，使程式整體暫停n秒，也可以配合try except使用。<br>當然，selenium針對這個問題也有開發相關函式，首先是顯式等待，<br><img data-src="/Scraping-Basics-Selenium/03-1.png"><br>在這邊的意思是，我們針對所給予的元素，等待10秒，每0.2秒檢查是否出現，如果出現了就繼續，<br>如果10秒內還沒出現則報錯。<br>另外一種則是隱式等待，<br><img data-src="/Scraping-Basics-Selenium/04-1.png"><br>相對於顯式等待是針對個別元素是否生成，隱式等待則是針對整個頁面，以上圖為例，這邊就是讓整個程式暫停，<br>給予瀏覽器10秒的時間，如果10秒內”整個頁面都已經生成完成”(講得直白一點其實就是我們頁面左上角的圈圈不再轉動)，則繼續程式運行，如果10內還沒載完，則報錯，因此可以看的出來，相對於顯式等待，隱式等待跟強制等待可能會要花費更久的時間。</p>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>爬蟲</category>
-      </categories>
-      <tags>
-        <tag>爬蟲</tag>
-        <tag>程式</tag>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>越式涼拌</title>
     <url>/Vietnamese-Cold-Salad/</url>
     <content><![CDATA[<h3 id="醬料"><a href="#醬料" class="headerlink" title="醬料"></a>醬料</h3><p>1.蒜頭、辣椒切碎<br>2.加入糖一匙<br>3.魚露兩匙<br>4.檸檬汁一顆的量<span id="more"></span><br>5.白胡椒粉一小匙<br>6.加入兩匙水、拌勻</p>
@@ -440,22 +400,43 @@
       </tags>
   </entry>
   <entry>
-    <title>地形考察報告</title>
-    <url>/Terrain-Survey-Report/</url>
-    <content><![CDATA[<div style="text-align:center">
-國立台北教育大學
-地形考察報告
-結報
-</div>
+    <title>爬蟲基礎入門-XPath</title>
+    <url>/Scraping-Basics-XPath/</url>
+    <content><![CDATA[<p>我們在selenium時有講到幾個指令像是find_element_by的指令，<br>但如果我們的html沒有class或是id等節點的話，其實對我們爬蟲有點不太友善，<br>所以今天我們會教xpath的搜尋方法</p>
 <span id="more"></span>
 
-<div class="pdf-container" data-target="/pdf/NTUE-Geo.pdf" data-height="700px"></div>]]></content>
+<h3 id="XPath"><a href="#XPath" class="headerlink" title="XPath"></a>XPath</h3><p>XML Path簡稱XPath，是一種可以用來確定一個東西在XML&#x2F;HTML檔案中的位置的語言&#x2F;工具<br>可以將一個HTML看成是一棵樹，或是更生活化一點，利用樹狀結構的目錄資料夾<br>像是檔案開頭的<code>&lt;html&gt;</code>包含了整個文件，而這個節點就是整個html的根節點<br>或者是如<code>&lt;head&gt;</code>或是<code>&lt;body&gt;</code>在html下一層，而這兩個節點就是html的子節點，<br>相反地，<code>&lt;html&gt;</code>也是<code>&lt;head&gt;</code>或是<code>&lt;body&gt;</code>的父節點<br>此外，<code>&lt;html&gt;</code>與<code>&lt;head&gt;</code>相互是兄弟節點<br>樹中有許多的節點代表不同元素，而我們就可以使用XPath去查詢這些節點</p>
+<p>在XPath中，我們有兩種方式去表現一個節點的位置</p>
+<ul>
+<li><strong>絕對路徑</strong><br>  絕對路徑以 <strong>&#x2F;</strong> 來代表，需要從html的根節點開始寫完整的路徑到目標的節點<br>  如:&#x2F;html[1]&#x2F;body[1]&#x2F;div[3]&#x2F;div[1]&#x2F;div[1]&#x2F;div[1]&#x2F;div[2]&#x2F;div[3]&#x2F;div[1]&#x2F;h2[1]，是我們在Day13網頁中標題的絕對路徑</li>
+<li><strong>相對路徑</strong><br>  相對路徑以 <strong>&#x2F;&#x2F;</strong> 來代表<br>  如:&#x2F;&#x2F;h2[contains(text(),’Day13、Selenium指令使用’)]來代表上面相同上面絕對路徑的相對路徑</li>
+</ul>
+<hr>
+<h3 id="find-element-by-xpath"><a href="#find-element-by-xpath" class="headerlink" title="find_element_by_xpath()"></a>find_element_by_xpath()</h3><p>利用上面絕對路徑或是相對路徑的方法，直接塞進function就好了，如:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&#x27;/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/h2[1]&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>常常在html中會看到在同個檔案不同個子樹下有相同的節點命名，當使用xpath的相對路徑時可能會有問題<br>這個時候可以透過index索引去找是哪一個節點，如:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&#x27;//p[0]&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>或是利用attribute屬性去標註說我們現在要的是哪一個，如:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&#x27;title&#x27;</span>&gt;</span>I&#x27;m title<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&quot;//p[@class=&#x27;title&#x27;]&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>還有一些神奇的指令像是contains()，可以找出包含字串的節點，如:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&quot;//p[contains(text(), &#x27;title&#x27;)]&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>上面講了xpath的語法，但是其實你知道只需要有html樹狀的概念就好了嗎?<br>俗話說的好，不要重複造輪子，今天就介紹一個好用的工具可以自動產生xpath</p>
+<h3 id="ChroPath"><a href="#ChroPath" class="headerlink" title="ChroPath"></a>ChroPath</h3><p>ChroPath是一個Chrome的插件，可以在chrome的應用程式商店找到他<br>它是一個協助我們在chrome中定位想要的元素的插件<br>假如你想針對一個網頁的按鈕找出它的xpath去進行selenium控制的話，可以右鍵找到「檢查」的地方後點下去，會進入F12開發者模式，同時F12的html畫面也會同步到一樣的程式片段<br>在此時，我們在右邊開發者模式視窗的地方中間有一排選擇子視窗的地方去找一個叫做ChroPath的地方點開來<br>點開之後，插件就會告訴你路徑的絕對位置或相對位置囉!<br><img data-src="/Scraping-Basics-XPath/20152706sgIGrAITNx.png"></p>
+<p>XPath就是這麼簡單!</p>
+]]></content>
       <categories>
-        <category>結報</category>
-        <category>國北教自</category>
+        <category>程式</category>
+        <category>爬蟲</category>
       </categories>
       <tags>
-        <tag>結報</tag>
+        <tag>爬蟲</tag>
+        <tag>程式</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -472,6 +453,25 @@
       <categories>
         <category>結報</category>
         <category>清大動機</category>
+      </categories>
+      <tags>
+        <tag>結報</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>地形考察報告</title>
+    <url>/Terrain-Survey-Report/</url>
+    <content><![CDATA[<div style="text-align:center">
+國立台北教育大學
+地形考察報告
+結報
+</div>
+<span id="more"></span>
+
+<div class="pdf-container" data-target="/pdf/NTUE-Geo.pdf" data-height="700px"></div>]]></content>
+      <categories>
+        <category>結報</category>
+        <category>國北教自</category>
       </categories>
       <tags>
         <tag>結報</tag>
