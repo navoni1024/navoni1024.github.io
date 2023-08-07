@@ -18,6 +18,35 @@
       </tags>
   </entry>
   <entry>
+    <title>爬蟲基礎入門: Beautiful Soup</title>
+    <url>/Scraping-Basics-Beautiful-Soup/</url>
+    <content><![CDATA[<h3 id="什麼是BeautifulSoup"><a href="#什麼是BeautifulSoup" class="headerlink" title="什麼是BeautifulSoup?"></a>什麼是BeautifulSoup?</h3><p>BeautifulSoup，又名美麗的湯，就如同魯迅所說過的，吃日料要喝味噌湯，到台南要喝牛肉湯，爬蟲的話就要用美麗的湯。(誤<br>BeautifulSoup4我們一般簡稱BS4，是用來做網站的html架構解析，如同前面所講的，html碼是以多層標籤作為架構，也因此我們可以利用BS4這個套件來建立其專屬class BeautifulSoup底下的物件，其就包含了原網站html碼的相關結構，像是標籤的父子、兄弟關係，更可以利用其中的搜尋功能找尋標籤名稱、內容或屬性，進而定位到我們感興趣的位置。</p>
+<span id="more"></span>
+
+<p>在經過基本的pip install後，我們就可以引入bs4了。<br><img data-src="/Scraping-Basics-Beautiful-Soup/20152706UAEuGzKBvW.png"></p>
+<p>之後我們就能像這樣，引入網址後，利用基本request取得html源碼，再利用BS4進行基本解析，建立出soup_m1的物件，之後便可以利用BS4的函式對其定位、分析。<br><img data-src="/Scraping-Basics-Beautiful-Soup/20152706L0rBAzgmoz.png"></p>
+<h3 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h3><p>昨天出現的這句</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">soup_m1 = BeautifulSoup(html_m1.text, <span class="string">&quot;html.parser&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>其中的<code>html.parser</code>便是使用的解析器，是python內建的。<br>除了這個外還能用html5lib和lxml但我也沒用過，詳細優缺點可能要google下。<br>哪天有試了再補充上來吧</p>
+<h3 id="解析方法"><a href="#解析方法" class="headerlink" title="解析方法"></a>解析方法</h3><p>比較常用到的是find()、find_all()和select()。</p>
+<ul>
+<li><p>find()、find_all()<br>兩個都是使用html的標籤進行搜尋的。<br>而這兩者的差別是find()只會回傳第一個符合的結果，find_all()則會回傳所有符合的結果</p>
+</li>
+<li><p>select()<br>使用CSS選擇器(CSS selectors)來進行搜尋。<br>CSS之前沒有提到，主要是用來把網站上色的。<br>其中會用到選擇器來指定特定範圍的HTML進行操作。<br>select()便是利用這東西的語法來爬的。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>爬蟲</category>
+      </categories>
+      <tags>
+        <tag>爬蟲</tag>
+        <tag>程式</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【B級調酒EP1】</title>
     <url>/B-class-bartending-EP1/</url>
     <content><![CDATA[<p>覺旅咖啡英式午餐茶+蘇格蘭威士忌 </p>
@@ -36,23 +65,30 @@
       </tags>
   </entry>
   <entry>
-    <title>爬蟲基礎入門: Beautiful Soup</title>
-    <url>/Scraping-Basics-Beautiful-Soup/</url>
-    <content><![CDATA[<h3 id="什麼是BeautifulSoup"><a href="#什麼是BeautifulSoup" class="headerlink" title="什麼是BeautifulSoup?"></a>什麼是BeautifulSoup?</h3><p>BeautifulSoup，又名美麗的湯，就如同魯迅所說過的，吃日料要喝味噌湯，到台南要喝牛肉湯，爬蟲的話就要用美麗的湯。(誤<br>BeautifulSoup4我們一般簡稱BS4，是用來做網站的html架構解析，如同前面所講的，html碼是以多層標籤作為架構，也因此我們可以利用BS4這個套件來建立其專屬class BeautifulSoup底下的物件，其就包含了原網站html碼的相關結構，像是標籤的父子、兄弟關係，更可以利用其中的搜尋功能找尋標籤名稱、內容或屬性，進而定位到我們感興趣的位置。</p>
+    <title> 爬蟲基礎入門: robots.txt &amp; header</title>
+    <url>/Scraping-Basics-robots-txt-header/</url>
+    <content><![CDATA[<p>今天要來介紹當我們在爬蟲前，應該要知道的一些技巧與規範</p>
+<hr>
+<h3 id="為甚麼需要知道這些爬蟲規範？"><a href="#為甚麼需要知道這些爬蟲規範？" class="headerlink" title="為甚麼需要知道這些爬蟲規範？"></a>為甚麼需要知道這些爬蟲規範？</h3><p>首先，我們必須知道過度的網路爬蟲可能是違法的，<br>如使用多執行緒進行對網站的大量拜訪，在沒有適當的存取時間間隔下，可能會造成一般人熟知的<strong>DDOS</strong>(Denial-Of-Service Attack)，進而造成其他使用者無法拜訪、甚至是主機癱瘓。<br>因此，某些網站有制定所謂的「規範」，讓爬蟲使用者能夠去遵守並避免存取到private data</p>
 <span id="more"></span>
-
-<p>在經過基本的pip install後，我們就可以引入bs4了。<br><img data-src="/Scraping-Basics-Beautiful-Soup/20152706UAEuGzKBvW.png"></p>
-<p>之後我們就能像這樣，引入網址後，利用基本request取得html源碼，再利用BS4進行基本解析，建立出soup_m1的物件，之後便可以利用BS4的函式對其定位、分析。<br><img data-src="/Scraping-Basics-Beautiful-Soup/20152706L0rBAzgmoz.png"></p>
-<h3 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h3><p>昨天出現的這句</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">soup_m1 = BeautifulSoup(html_m1.text, <span class="string">&quot;html.parser&quot;</span>)</span><br></pre></td></tr></table></figure>
-<p>其中的<code>html.parser</code>便是使用的解析器，是python內建的。<br>除了這個外還能用html5lib和lxml但我也沒用過，詳細優缺點可能要google下。<br>哪天有試了再補充上來吧</p>
-<h3 id="解析方法"><a href="#解析方法" class="headerlink" title="解析方法"></a>解析方法</h3><p>比較常用到的是find()、find_all()和select()。</p>
+<p>請注意這項規範並不具有強制力，並無法阻擋真正有心攻擊的爬蟲程式。</p>
+<h3 id="「規範」—-robots-txt"><a href="#「規範」—-robots-txt" class="headerlink" title="「規範」— robots.txt"></a>「規範」— robots.txt</h3><p>robots.txt是一個告訴爬蟲哪些內容是否可存取的文字檔。<br>這項檔案通常位於網頁根目錄下的robots.txt，<br>換句話說，在main-page下加個&#x2F;robots.txt就能檢視。</p>
+<p>舉個例子吧，我們先進到<a href="http://google.com/">google</a>的首頁</p>
+<p><img data-src="/Scraping-Basics-robots-txt-header/20152706kiMp9LoNrj.png"></p>
+<p>相當正常，不是嗎?<br>再來利用上面的方法去找robots.txt，<br>我們接著在.com後面接著&#x2F;robots.txt，<br>使網址成為<a href="https://www.google.com/robots.txt">https://www.google.com/robots.txt</a></p>
+<p><img data-src="/Scraping-Basics-robots-txt-header/20152706qRcQSJ2ABd.png"></p>
+<p>成功了！<br>可是密密麻麻的，打這麼多字誰他媽看得完?<br>但事實上，這份文字檔可以被拆分成幾個部分，<br>我們從第一行開始：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. User-Agent: *</span><br></pre></td></tr></table></figure>
+<p>User-Agent這一欄代表的是允許的爬蟲類型，而 <strong>*</strong> 則代表<strong>所有</strong>的意思，<br>所以第一行可以被解讀成，允許所有爬蟲拜訪。<br>此外有一些特別的程式只允許特定爬蟲拜訪網頁，如Googlebot、Applebot等，<br>如在最後幾行處，可以看到google的網頁允許Twitterbot能夠比一般使用者額外拜訪&#x2F;imgres的子目錄。</p>
+<p>再來我們繼續往下探討，大致上可以分為<strong>Allow</strong>開頭的，以及<strong>Disallow</strong>開頭的句子</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2. Disallow: /search</span><br></pre></td></tr></table></figure>
+<p>這句話代表著，拒絕網路爬蟲訪問search子目錄以及其子目錄下所有目錄，<br>而接下來的第三行，你們應該也就猜的到意思了，就是允許拜訪冒號後面的子目錄。</p>
+<h3 id="表頭headers"><a href="#表頭headers" class="headerlink" title="表頭headers"></a>表頭headers</h3><p>headers是對client端向server發出請求時的敘述資訊。<br>有一些網站會針對網路爬蟲進行阻擋，其中一項阻擋的手法就是針對headers，<br>當網頁收到非瀏覽器的headers發出的請求時，網頁就拒絕client的存取。</p>
+<p>解決手段非常的簡單粗暴，既然你拒絕非瀏覽器外的訪問，那我就成為瀏覽器就好了啊!?<br>那我們要怎麼成為瀏覽器呢?<br>這樣推薦一個作法：</p>
 <ul>
-<li><p>find()、find_all()<br>兩個都是使用html的標籤進行搜尋的。<br>而這兩者的差別是find()只會回傳第一個符合的結果，find_all()則會回傳所有符合的結果</p>
-</li>
-<li><p>select()<br>使用CSS選擇器(CSS selectors)來進行搜尋。<br>CSS之前沒有提到，主要是用來把網站上色的。<br>其中會用到選擇器來指定特定範圍的HTML進行操作。<br>select()便是利用這東西的語法來爬的。</p>
-</li>
+<li>開啟Chrome時按下F12鍵後，先按F5使其重整載入資源，點選其中一項被載入的資源，點選Network欄中的Header，複製其中的Uger-Agent</li>
 </ul>
+<p>如此一來就得到瀏覽器的header，將自己偽裝成瀏覽器了。<br>下一章在requests時，我們會介紹在requests.get()中可以帶入header參數，<br>在header參數中帶入我們剛剛取得的瀏覽器header，我們就可以成功偽裝了。</p>
 ]]></content>
       <categories>
         <category>程式</category>
@@ -91,42 +127,6 @@
 <h3 id="post"><a href="#post" class="headerlink" title="post"></a>post</h3><p>能夠丟字串或json檔上去，在需要給網站資訊時會用到。<br>舉例來說，投票機器人。<br>但一時之間想不到什麼很好的網站舉例。</p>
 <h3 id="session"><a href="#session" class="headerlink" title="session"></a>session</h3><p>能夠在多個請求中保持一些數據。<br>如果網站會用到cookie的話就需要使用這個。</p>
 <p>舉例來說你用session登入一個網站後，之後在用這個物件抓取該網站其他頁面也會默認你是登入的。<br>但一時之間想不到什麼很好的網站舉例。</p>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>爬蟲</category>
-      </categories>
-      <tags>
-        <tag>爬蟲</tag>
-        <tag>程式</tag>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title> 爬蟲基礎入門: robots.txt &amp; header</title>
-    <url>/Scraping-Basics-robots-txt-header/</url>
-    <content><![CDATA[<p>今天要來介紹當我們在爬蟲前，應該要知道的一些技巧與規範</p>
-<hr>
-<h3 id="為甚麼需要知道這些爬蟲規範？"><a href="#為甚麼需要知道這些爬蟲規範？" class="headerlink" title="為甚麼需要知道這些爬蟲規範？"></a>為甚麼需要知道這些爬蟲規範？</h3><p>首先，我們必須知道過度的網路爬蟲可能是違法的，<br>如使用多執行緒進行對網站的大量拜訪，在沒有適當的存取時間間隔下，可能會造成一般人熟知的<strong>DDOS</strong>(Denial-Of-Service Attack)，進而造成其他使用者無法拜訪、甚至是主機癱瘓。<br>因此，某些網站有制定所謂的「規範」，讓爬蟲使用者能夠去遵守並避免存取到private data</p>
-<span id="more"></span>
-<p>請注意這項規範並不具有強制力，並無法阻擋真正有心攻擊的爬蟲程式。</p>
-<h3 id="「規範」—-robots-txt"><a href="#「規範」—-robots-txt" class="headerlink" title="「規範」— robots.txt"></a>「規範」— robots.txt</h3><p>robots.txt是一個告訴爬蟲哪些內容是否可存取的文字檔。<br>這項檔案通常位於網頁根目錄下的robots.txt，<br>換句話說，在main-page下加個&#x2F;robots.txt就能檢視。</p>
-<p>舉個例子吧，我們先進到<a href="http://google.com/">google</a>的首頁</p>
-<p><img data-src="/Scraping-Basics-robots-txt-header/20152706kiMp9LoNrj.png"></p>
-<p>相當正常，不是嗎?<br>再來利用上面的方法去找robots.txt，<br>我們接著在.com後面接著&#x2F;robots.txt，<br>使網址成為<a href="https://www.google.com/robots.txt">https://www.google.com/robots.txt</a></p>
-<p><img data-src="/Scraping-Basics-robots-txt-header/20152706qRcQSJ2ABd.png"></p>
-<p>成功了！<br>可是密密麻麻的，打這麼多字誰他媽看得完?<br>但事實上，這份文字檔可以被拆分成幾個部分，<br>我們從第一行開始：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. User-Agent: *</span><br></pre></td></tr></table></figure>
-<p>User-Agent這一欄代表的是允許的爬蟲類型，而 <strong>*</strong> 則代表<strong>所有</strong>的意思，<br>所以第一行可以被解讀成，允許所有爬蟲拜訪。<br>此外有一些特別的程式只允許特定爬蟲拜訪網頁，如Googlebot、Applebot等，<br>如在最後幾行處，可以看到google的網頁允許Twitterbot能夠比一般使用者額外拜訪&#x2F;imgres的子目錄。</p>
-<p>再來我們繼續往下探討，大致上可以分為<strong>Allow</strong>開頭的，以及<strong>Disallow</strong>開頭的句子</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2. Disallow: /search</span><br></pre></td></tr></table></figure>
-<p>這句話代表著，拒絕網路爬蟲訪問search子目錄以及其子目錄下所有目錄，<br>而接下來的第三行，你們應該也就猜的到意思了，就是允許拜訪冒號後面的子目錄。</p>
-<h3 id="表頭headers"><a href="#表頭headers" class="headerlink" title="表頭headers"></a>表頭headers</h3><p>headers是對client端向server發出請求時的敘述資訊。<br>有一些網站會針對網路爬蟲進行阻擋，其中一項阻擋的手法就是針對headers，<br>當網頁收到非瀏覽器的headers發出的請求時，網頁就拒絕client的存取。</p>
-<p>解決手段非常的簡單粗暴，既然你拒絕非瀏覽器外的訪問，那我就成為瀏覽器就好了啊!?<br>那我們要怎麼成為瀏覽器呢?<br>這樣推薦一個作法：</p>
-<ul>
-<li>開啟Chrome時按下F12鍵後，先按F5使其重整載入資源，點選其中一項被載入的資源，點選Network欄中的Header，複製其中的Uger-Agent</li>
-</ul>
-<p>如此一來就得到瀏覽器的header，將自己偽裝成瀏覽器了。<br>下一章在requests時，我們會介紹在requests.get()中可以帶入header參數，<br>在header參數中帶入我們剛剛取得的瀏覽器header，我們就可以成功偽裝了。</p>
 ]]></content>
       <categories>
         <category>程式</category>
@@ -227,6 +227,25 @@
       </tags>
   </entry>
   <entry>
+    <title>最近的夜晚-Gin Fizz</title>
+    <url>/Gin-Fizz/</url>
+    <content><![CDATA[<p>最近晚上一直都是喝著gin fizz渡過的<br>琴酒+檸檬+糖漿攪拌或搖晃<br>最後加入氣泡水<br>清爽的口感加上琴酒的藥草香以及檸檬的酸和糖漿的甜<span id="more"></span><br>最後加入氣泡水增添的口感<br>同時也有效將琴酒的口味分層<br>不由得一杯接著一杯</p>
+<p>建議用可林杯與長冰調配<br>克林杯放入長冰冰杯<br>倒出融水後<br>將琴酒、半顆檸檬的檸檬汁、與糖漿倒入<br>攪拌均勻<br>隨後用氣泡水填滿<br>若剩下半顆檸檬<br>可切一片放杯緣<br>如此一來你便完成了一杯gin fizz</p>
+<p>如果想要提升味覺感受<br>可以從琴酒以及氣泡水下手</p>
+<p>最後<br>以上言論不代表本人立場</p>
+<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>酒</category>
+      </categories>
+      <tags>
+        <tag>調酒</tag>
+        <tag>酒譜</tag>
+        <tag>自製</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Discord Bot-創建一隻bot</title>
     <url>/Discord-Bot-create-a-bot/</url>
     <content><![CDATA[<p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
@@ -245,13 +264,17 @@
       </tags>
   </entry>
   <entry>
-    <title>最近的夜晚-Gin Fizz</title>
-    <url>/Gin-Fizz/</url>
-    <content><![CDATA[<p>最近晚上一直都是喝著gin fizz渡過的<br>琴酒+檸檬+糖漿攪拌或搖晃<br>最後加入氣泡水<br>清爽的口感加上琴酒的藥草香以及檸檬的酸和糖漿的甜<span id="more"></span><br>最後加入氣泡水增添的口感<br>同時也有效將琴酒的口味分層<br>不由得一杯接著一杯</p>
-<p>建議用可林杯與長冰調配<br>克林杯放入長冰冰杯<br>倒出融水後<br>將琴酒、半顆檸檬的檸檬汁、與糖漿倒入<br>攪拌均勻<br>隨後用氣泡水填滿<br>若剩下半顆檸檬<br>可切一片放杯緣<br>如此一來你便完成了一杯gin fizz</p>
-<p>如果想要提升味覺感受<br>可以從琴酒以及氣泡水下手</p>
-<p>最後<br>以上言論不代表本人立場</p>
-<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+    <title>Highball-嗨波</title>
+    <url>/Highball/</url>
+    <content><![CDATA[<p>最近放暑假，最舒服的就是中午起床弄個午餐，配杯highball搭著netflix或VT。<br>嗨波其實就是簡單的威士忌加氣泡水，而清爽的口感在夏日午後絕對是最好的享受。</p>
+<h3 id="製作方法"><a href="#製作方法" class="headerlink" title="製作方法"></a>製作方法</h3><p>首先在杯中加入大冰塊，接著根據你的錢包厚度還有你的心情加入45~60ml的威士忌。 <span id="more"></span><br><img data-src="/Highball/01.jpg"></p>
+<p>接著用吧叉匙攪拌10到15圈，冷卻杯內的威士忌。<br><img data-src="/Highball/02.jpg"></p>
+<p>之後再倒入氣泡水至8分滿，注意在倒入氣泡水時可以傾斜杯口倒入，而不要直接快速猛烈地把氣泡水倒在冰塊上，避免氣泡散失。<br><img data-src="/Highball/03.jpg"></p>
+<p>最後根據口味，擠上一片檸檬再丟進杯內，給予清爽的香氣跟層次。<br><img data-src="/Highball/04.jpg"></p>
+<hr>
+<p>把你的嗨波還有炒麵放到電腦前，配著自己喜歡的音樂、劇或VT，嗨波剛入口時帶有舒服的氣泡感，清涼的氣泡將威士忌的麥香與水果花香跟著帶了上來，保留威士忌的香味時也減去了過多的酒精感，直接丟入杯中的檸檬可以讓嗅覺上增添清香，入口時也可以多出微微的香氣跟層次，配上透明的老冰更是視覺上的絕配。<br><img data-src="/Highball/05.jpg"><br><img data-src="/Highball/06.jpg"></p>
+<hr>
+<p>上面可以發現嗨波真的是非常簡單的一杯酒，除了不用事先準備糖漿和檸檬汁外，也不需要shake和stir等技術，不過在調製時仍有一些小技巧跟事先準備的方法，而這些細節可以大幅改善你的品飲體驗跟準備工序，但這就留到下次再補充好了。</p>
 ]]></content>
       <categories>
         <category>飲食</category>
@@ -329,6 +352,36 @@
       </tags>
   </entry>
   <entry>
+    <title>清蒸鱸魚食譜</title>
+    <url>/Steamed-Bass-Recipe/</url>
+    <content><![CDATA[<h3 id="所需材料："><a href="#所需材料：" class="headerlink" title="所需材料："></a>所需材料：</h3><ul>
+<li>鱸魚一尾</li>
+<li>檸檬一顆</li>
+<li>辣椒兩根</li>
+<li>蒜頭三到五瓣<span id="more"></span></li>
+<li>蔥一枝</li>
+<li>洋蔥一顆</li>
+<li>豆芽菜一包</li>
+<li>糖</li>
+<li>白胡椒粉</li>
+<li>米酒</li>
+<li>水</li>
+<li>魚露</li>
+</ul>
+<h3 id="魚的處理："><a href="#魚的處理：" class="headerlink" title="魚的處理："></a>魚的處理：</h3><p>1.刮除鱗片、修魚鰭<br>2.剪開魚腹、刮除內臟並清洗乾淨<br>3.確認魚的乾淨並在表面劃刀痕<br>4.將洋蔥及豆芽菜洗淨<br>5.洋蔥切條與豆芽並行鋪於盤底<br><img data-src="/Steamed-Bass-Recipe/FISH.jpg" alt="處理完的魚和醬汁"></p>
+<h3 id="調料的處理："><a href="#調料的處理：" class="headerlink" title="調料的處理："></a>調料的處理：</h3><p>6.蒜頭、辣椒切碎<br>7.加入糖一匙<br>8.加入米酒兩匙<br>9.魚露兩匙<br>10.檸檬汁一顆的量<br>11.白胡椒粉一小匙<br>12.加入兩匙水、拌勻<br>13.將魚放入盤內、平均淋上調料<br>14.放入電鍋蒸<br>15.蔥切細絲放上出鍋後的料理<br>16.熱少許油至些許冒煙、淋上蔥絲即可出菜</p>
+<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>食譜</category>
+      </categories>
+      <tags>
+        <tag>自製</tag>
+        <tag>食譜</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>爬蟲基礎入門-XPath</title>
     <url>/Scraping-Basics-XPath/</url>
     <content><![CDATA[<p>我們在selenium時有講到幾個指令像是find_element_by的指令，<br>但如果我們的html沒有class或是id等節點的話，其實對我們爬蟲有點不太友善，<br>所以今天我們會教xpath的搜尋方法</p>
@@ -369,56 +422,37 @@
       </tags>
   </entry>
   <entry>
-    <title>清蒸鱸魚食譜</title>
-    <url>/Steamed-Bass-Recipe/</url>
-    <content><![CDATA[<h3 id="所需材料："><a href="#所需材料：" class="headerlink" title="所需材料："></a>所需材料：</h3><ul>
-<li>鱸魚一尾</li>
-<li>檸檬一顆</li>
-<li>辣椒兩根</li>
-<li>蒜頭三到五瓣<span id="more"></span></li>
-<li>蔥一枝</li>
-<li>洋蔥一顆</li>
-<li>豆芽菜一包</li>
-<li>糖</li>
-<li>白胡椒粉</li>
-<li>米酒</li>
-<li>水</li>
-<li>魚露</li>
-</ul>
-<h3 id="魚的處理："><a href="#魚的處理：" class="headerlink" title="魚的處理："></a>魚的處理：</h3><p>1.刮除鱗片、修魚鰭<br>2.剪開魚腹、刮除內臟並清洗乾淨<br>3.確認魚的乾淨並在表面劃刀痕<br>4.將洋蔥及豆芽菜洗淨<br>5.洋蔥切條與豆芽並行鋪於盤底<br><img data-src="/Steamed-Bass-Recipe/FISH.jpg" alt="處理完的魚和醬汁"></p>
-<h3 id="調料的處理："><a href="#調料的處理：" class="headerlink" title="調料的處理："></a>調料的處理：</h3><p>6.蒜頭、辣椒切碎<br>7.加入糖一匙<br>8.加入米酒兩匙<br>9.魚露兩匙<br>10.檸檬汁一顆的量<br>11.白胡椒粉一小匙<br>12.加入兩匙水、拌勻<br>13.將魚放入盤內、平均淋上調料<br>14.放入電鍋蒸<br>15.蔥切細絲放上出鍋後的料理<br>16.熱少許油至些許冒煙、淋上蔥絲即可出菜</p>
-<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
-]]></content>
+    <title>地形考察報告</title>
+    <url>/Terrain-Survey-Report/</url>
+    <content><![CDATA[<div style="text-align:center">
+國立台北教育大學
+地形考察報告
+結報
+</div>
+<span id="more"></span>
+
+<div class="pdf-container" data-target="/pdf/NTUE-Geo.pdf" data-height="700px"></div>]]></content>
       <categories>
-        <category>飲食</category>
-        <category>食譜</category>
+        <category>結報</category>
+        <category>國北教自</category>
       </categories>
       <tags>
-        <tag>自製</tag>
-        <tag>食譜</tag>
+        <tag>結報</tag>
       </tags>
   </entry>
   <entry>
-    <title>Highball-嗨波</title>
-    <url>/Highball/</url>
-    <content><![CDATA[<p>最近放暑假，最舒服的就是中午起床弄個午餐，配杯highball搭著netflix或VT。<br>嗨波其實就是簡單的威士忌加氣泡水，而清爽的口感在夏日午後絕對是最好的享受。</p>
-<h3 id="製作方法"><a href="#製作方法" class="headerlink" title="製作方法"></a>製作方法</h3><p>首先在杯中加入大冰塊，接著根據你的錢包厚度還有你的心情加入45~60ml的威士忌。 <span id="more"></span><br><img data-src="/Highball/01.jpg"></p>
-<p>接著用吧叉匙攪拌10到15圈，冷卻杯內的威士忌。<br><img data-src="/Highball/02.jpg"></p>
-<p>之後再倒入氣泡水至8分滿，注意在倒入氣泡水時可以傾斜杯口倒入，而不要直接快速猛烈地把氣泡水倒在冰塊上，避免氣泡散失。<br><img data-src="/Highball/03.jpg"></p>
-<p>最後根據口味，擠上一片檸檬再丟進杯內，給予清爽的香氣跟層次。<br><img data-src="/Highball/04.jpg"></p>
-<hr>
-<p>把你的嗨波還有炒麵放到電腦前，配著自己喜歡的音樂、劇或VT，嗨波剛入口時帶有舒服的氣泡感，清涼的氣泡將威士忌的麥香與水果花香跟著帶了上來，保留威士忌的香味時也減去了過多的酒精感，直接丟入杯中的檸檬可以讓嗅覺上增添清香，入口時也可以多出微微的香氣跟層次，配上透明的老冰更是視覺上的絕配。<br><img data-src="/Highball/05.jpg"><br><img data-src="/Highball/06.jpg"></p>
-<hr>
-<p>上面可以發現嗨波真的是非常簡單的一杯酒，除了不用事先準備糖漿和檸檬汁外，也不需要shake和stir等技術，不過在調製時仍有一些小技巧跟事先準備的方法，而這些細節可以大幅改善你的品飲體驗跟準備工序，但這就留到下次再補充好了。</p>
-]]></content>
+    <title>光電實驗(一) 雷射光的方向性</title>
+    <url>/1-Directionality-of-laser-light/</url>
+    <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
+<center>光電實驗(一) 雷射光的方向性 結報</center><span id="more"></span>
+
+<div class="pdf-container" data-target="/pdf/1-Directionality-of-laser-light.pdf" data-height="700px"></div>]]></content>
       <categories>
-        <category>飲食</category>
-        <category>酒</category>
+        <category>結報</category>
+        <category>成大光電</category>
       </categories>
       <tags>
-        <tag>調酒</tag>
-        <tag>酒譜</tag>
-        <tag>自製</tag>
+        <tag>結報</tag>
       </tags>
   </entry>
   <entry>
@@ -440,25 +474,6 @@
       </tags>
   </entry>
   <entry>
-    <title>地形考察報告</title>
-    <url>/Terrain-Survey-Report/</url>
-    <content><![CDATA[<div style="text-align:center">
-國立台北教育大學
-地形考察報告
-結報
-</div>
-<span id="more"></span>
-
-<div class="pdf-container" data-target="/pdf/NTUE-Geo.pdf" data-height="700px"></div>]]></content>
-      <categories>
-        <category>結報</category>
-        <category>國北教自</category>
-      </categories>
-      <tags>
-        <tag>結報</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>熱流實驗 風洞與流視 結報</title>
     <url>/Wind-Tunnel-and-Flow-Visualization-Report/</url>
     <content><![CDATA[<center>國立清華大學動力機械工程學系</center>
@@ -472,21 +487,6 @@
       <categories>
         <category>結報</category>
         <category>清大動機</category>
-      </categories>
-      <tags>
-        <tag>結報</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>光電實驗(一) 雷射光的方向性</title>
-    <url>/1-Directionality-of-laser-light/</url>
-    <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 雷射光的方向性 結報</center><span id="more"></span>
-
-<div class="pdf-container" data-target="/pdf/1-Directionality-of-laser-light.pdf" data-height="700px"></div>]]></content>
-      <categories>
-        <category>結報</category>
-        <category>成大光電</category>
       </categories>
       <tags>
         <tag>結報</tag>
