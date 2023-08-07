@@ -36,35 +36,6 @@
       </tags>
   </entry>
   <entry>
-    <title>爬蟲基礎入門: Beautiful Soup</title>
-    <url>/Scraping-Basics-Beautiful-Soup/</url>
-    <content><![CDATA[<h3 id="什麼是BeautifulSoup"><a href="#什麼是BeautifulSoup" class="headerlink" title="什麼是BeautifulSoup?"></a>什麼是BeautifulSoup?</h3><p>BeautifulSoup，又名美麗的湯，就如同魯迅所說過的，吃日料要喝味噌湯，到台南要喝牛肉湯，爬蟲的話就要用美麗的湯。(誤<br>BeautifulSoup4我們一般簡稱BS4，是用來做網站的html架構解析，如同前面所講的，html碼是以多層標籤作為架構，也因此我們可以利用BS4這個套件來建立其專屬class BeautifulSoup底下的物件，其就包含了原網站html碼的相關結構，像是標籤的父子、兄弟關係，更可以利用其中的搜尋功能找尋標籤名稱、內容或屬性，進而定位到我們感興趣的位置。</p>
-<span id="more"></span>
-
-<p>在經過基本的pip install後，我們就可以引入bs4了。<br><img data-src="/Scraping-Basics-Beautiful-Soup/20152706UAEuGzKBvW.png"></p>
-<p>之後我們就能像這樣，引入網址後，利用基本request取得html源碼，再利用BS4進行基本解析，建立出soup_m1的物件，之後便可以利用BS4的函式對其定位、分析。<br><img data-src="/Scraping-Basics-Beautiful-Soup/20152706L0rBAzgmoz.png"></p>
-<h3 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h3><p>昨天出現的這句</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">soup_m1 = BeautifulSoup(html_m1.text, <span class="string">&quot;html.parser&quot;</span>)</span><br></pre></td></tr></table></figure>
-<p>其中的<code>html.parser</code>便是使用的解析器，是python內建的。<br>除了這個外還能用html5lib和lxml但我也沒用過，詳細優缺點可能要google下。<br>哪天有試了再補充上來吧</p>
-<h3 id="解析方法"><a href="#解析方法" class="headerlink" title="解析方法"></a>解析方法</h3><p>比較常用到的是find()、find_all()和select()。</p>
-<ul>
-<li><p>find()、find_all()<br>兩個都是使用html的標籤進行搜尋的。<br>而這兩者的差別是find()只會回傳第一個符合的結果，find_all()則會回傳所有符合的結果</p>
-</li>
-<li><p>select()<br>使用CSS選擇器(CSS selectors)來進行搜尋。<br>CSS之前沒有提到，主要是用來把網站上色的。<br>其中會用到選擇器來指定特定範圍的HTML進行操作。<br>select()便是利用這東西的語法來爬的。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>爬蟲</category>
-      </categories>
-      <tags>
-        <tag>爬蟲</tag>
-        <tag>程式</tag>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title> 爬蟲基礎入門: Requests</title>
     <url>/Scraping-Basics-Requests/</url>
     <content><![CDATA[<p>本系列預設各位擁有基本的python能力，對各種資料結構、套件、模組等有一定概念就行了。<br>本文的範例都是在python 3.10下操作的。</p>
@@ -103,30 +74,23 @@
       </tags>
   </entry>
   <entry>
-    <title> 爬蟲基礎入門: robots.txt &amp; header</title>
-    <url>/Scraping-Basics-robots-txt-header/</url>
-    <content><![CDATA[<p>今天要來介紹當我們在爬蟲前，應該要知道的一些技巧與規範</p>
-<hr>
-<h3 id="為甚麼需要知道這些爬蟲規範？"><a href="#為甚麼需要知道這些爬蟲規範？" class="headerlink" title="為甚麼需要知道這些爬蟲規範？"></a>為甚麼需要知道這些爬蟲規範？</h3><p>首先，我們必須知道過度的網路爬蟲可能是違法的，<br>如使用多執行緒進行對網站的大量拜訪，在沒有適當的存取時間間隔下，可能會造成一般人熟知的<strong>DDOS</strong>(Denial-Of-Service Attack)，進而造成其他使用者無法拜訪、甚至是主機癱瘓。<br>因此，某些網站有制定所謂的「規範」，讓爬蟲使用者能夠去遵守並避免存取到private data</p>
+    <title>爬蟲基礎入門: Beautiful Soup</title>
+    <url>/Scraping-Basics-Beautiful-Soup/</url>
+    <content><![CDATA[<h3 id="什麼是BeautifulSoup"><a href="#什麼是BeautifulSoup" class="headerlink" title="什麼是BeautifulSoup?"></a>什麼是BeautifulSoup?</h3><p>BeautifulSoup，又名美麗的湯，就如同魯迅所說過的，吃日料要喝味噌湯，到台南要喝牛肉湯，爬蟲的話就要用美麗的湯。(誤<br>BeautifulSoup4我們一般簡稱BS4，是用來做網站的html架構解析，如同前面所講的，html碼是以多層標籤作為架構，也因此我們可以利用BS4這個套件來建立其專屬class BeautifulSoup底下的物件，其就包含了原網站html碼的相關結構，像是標籤的父子、兄弟關係，更可以利用其中的搜尋功能找尋標籤名稱、內容或屬性，進而定位到我們感興趣的位置。</p>
 <span id="more"></span>
-<p>請注意這項規範並不具有強制力，並無法阻擋真正有心攻擊的爬蟲程式。</p>
-<h3 id="「規範」—-robots-txt"><a href="#「規範」—-robots-txt" class="headerlink" title="「規範」— robots.txt"></a>「規範」— robots.txt</h3><p>robots.txt是一個告訴爬蟲哪些內容是否可存取的文字檔。<br>這項檔案通常位於網頁根目錄下的robots.txt，<br>換句話說，在main-page下加個&#x2F;robots.txt就能檢視。</p>
-<p>舉個例子吧，我們先進到<a href="http://google.com/">google</a>的首頁</p>
-<p><img data-src="/Scraping-Basics-robots-txt-header/20152706kiMp9LoNrj.png"></p>
-<p>相當正常，不是嗎?<br>再來利用上面的方法去找robots.txt，<br>我們接著在.com後面接著&#x2F;robots.txt，<br>使網址成為<a href="https://www.google.com/robots.txt">https://www.google.com/robots.txt</a></p>
-<p><img data-src="/Scraping-Basics-robots-txt-header/20152706qRcQSJ2ABd.png"></p>
-<p>成功了！<br>可是密密麻麻的，打這麼多字誰他媽看得完?<br>但事實上，這份文字檔可以被拆分成幾個部分，<br>我們從第一行開始：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. User-Agent: *</span><br></pre></td></tr></table></figure>
-<p>User-Agent這一欄代表的是允許的爬蟲類型，而 <strong>*</strong> 則代表<strong>所有</strong>的意思，<br>所以第一行可以被解讀成，允許所有爬蟲拜訪。<br>此外有一些特別的程式只允許特定爬蟲拜訪網頁，如Googlebot、Applebot等，<br>如在最後幾行處，可以看到google的網頁允許Twitterbot能夠比一般使用者額外拜訪&#x2F;imgres的子目錄。</p>
-<p>再來我們繼續往下探討，大致上可以分為<strong>Allow</strong>開頭的，以及<strong>Disallow</strong>開頭的句子</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2. Disallow: /search</span><br></pre></td></tr></table></figure>
-<p>這句話代表著，拒絕網路爬蟲訪問search子目錄以及其子目錄下所有目錄，<br>而接下來的第三行，你們應該也就猜的到意思了，就是允許拜訪冒號後面的子目錄。</p>
-<h3 id="表頭headers"><a href="#表頭headers" class="headerlink" title="表頭headers"></a>表頭headers</h3><p>headers是對client端向server發出請求時的敘述資訊。<br>有一些網站會針對網路爬蟲進行阻擋，其中一項阻擋的手法就是針對headers，<br>當網頁收到非瀏覽器的headers發出的請求時，網頁就拒絕client的存取。</p>
-<p>解決手段非常的簡單粗暴，既然你拒絕非瀏覽器外的訪問，那我就成為瀏覽器就好了啊!?<br>那我們要怎麼成為瀏覽器呢?<br>這樣推薦一個作法：</p>
+
+<p>在經過基本的pip install後，我們就可以引入bs4了。<br><img data-src="/Scraping-Basics-Beautiful-Soup/20152706UAEuGzKBvW.png"></p>
+<p>之後我們就能像這樣，引入網址後，利用基本request取得html源碼，再利用BS4進行基本解析，建立出soup_m1的物件，之後便可以利用BS4的函式對其定位、分析。<br><img data-src="/Scraping-Basics-Beautiful-Soup/20152706L0rBAzgmoz.png"></p>
+<h3 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h3><p>昨天出現的這句</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">soup_m1 = BeautifulSoup(html_m1.text, <span class="string">&quot;html.parser&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>其中的<code>html.parser</code>便是使用的解析器，是python內建的。<br>除了這個外還能用html5lib和lxml但我也沒用過，詳細優缺點可能要google下。<br>哪天有試了再補充上來吧</p>
+<h3 id="解析方法"><a href="#解析方法" class="headerlink" title="解析方法"></a>解析方法</h3><p>比較常用到的是find()、find_all()和select()。</p>
 <ul>
-<li>開啟Chrome時按下F12鍵後，先按F5使其重整載入資源，點選其中一項被載入的資源，點選Network欄中的Header，複製其中的Uger-Agent</li>
+<li><p>find()、find_all()<br>兩個都是使用html的標籤進行搜尋的。<br>而這兩者的差別是find()只會回傳第一個符合的結果，find_all()則會回傳所有符合的結果</p>
+</li>
+<li><p>select()<br>使用CSS選擇器(CSS selectors)來進行搜尋。<br>CSS之前沒有提到，主要是用來把網站上色的。<br>其中會用到選擇器來指定特定範圍的HTML進行操作。<br>select()便是利用這東西的語法來爬的。</p>
+</li>
 </ul>
-<p>如此一來就得到瀏覽器的header，將自己偽裝成瀏覽器了。<br>下一章在requests時，我們會介紹在requests.get()中可以帶入header參數，<br>在header參數中帶入我們剛剛取得的瀏覽器header，我們就可以成功偽裝了。</p>
 ]]></content>
       <categories>
         <category>程式</category>
@@ -245,13 +209,17 @@
       </tags>
   </entry>
   <entry>
-    <title>最近的夜晚-Gin Fizz</title>
-    <url>/Gin-Fizz/</url>
-    <content><![CDATA[<p>最近晚上一直都是喝著gin fizz渡過的<br>琴酒+檸檬+糖漿攪拌或搖晃<br>最後加入氣泡水<br>清爽的口感加上琴酒的藥草香以及檸檬的酸和糖漿的甜<span id="more"></span><br>最後加入氣泡水增添的口感<br>同時也有效將琴酒的口味分層<br>不由得一杯接著一杯</p>
-<p>建議用可林杯與長冰調配<br>克林杯放入長冰冰杯<br>倒出融水後<br>將琴酒、半顆檸檬的檸檬汁、與糖漿倒入<br>攪拌均勻<br>隨後用氣泡水填滿<br>若剩下半顆檸檬<br>可切一片放杯緣<br>如此一來你便完成了一杯gin fizz</p>
-<p>如果想要提升味覺感受<br>可以從琴酒以及氣泡水下手</p>
-<p>最後<br>以上言論不代表本人立場</p>
-<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+    <title>Highball-嗨波</title>
+    <url>/Highball/</url>
+    <content><![CDATA[<p>最近放暑假，最舒服的就是中午起床弄個午餐，配杯highball搭著netflix或VT。<br>嗨波其實就是簡單的威士忌加氣泡水，而清爽的口感在夏日午後絕對是最好的享受。</p>
+<h3 id="製作方法"><a href="#製作方法" class="headerlink" title="製作方法"></a>製作方法</h3><p>首先在杯中加入大冰塊，接著根據你的錢包厚度還有你的心情加入45~60ml的威士忌。 <span id="more"></span><br><img data-src="/Highball/01.jpg"></p>
+<p>接著用吧叉匙攪拌10到15圈，冷卻杯內的威士忌。<br><img data-src="/Highball/02.jpg"></p>
+<p>之後再倒入氣泡水至8分滿，注意在倒入氣泡水時可以傾斜杯口倒入，而不要直接快速猛烈地把氣泡水倒在冰塊上，避免氣泡散失。<br><img data-src="/Highball/03.jpg"></p>
+<p>最後根據口味，擠上一片檸檬再丟進杯內，給予清爽的香氣跟層次。<br><img data-src="/Highball/04.jpg"></p>
+<hr>
+<p>把你的嗨波還有炒麵放到電腦前，配著自己喜歡的音樂、劇或VT，嗨波剛入口時帶有舒服的氣泡感，清涼的氣泡將威士忌的麥香與水果花香跟著帶了上來，保留威士忌的香味時也減去了過多的酒精感，直接丟入杯中的檸檬可以讓嗅覺上增添清香，入口時也可以多出微微的香氣跟層次，配上透明的老冰更是視覺上的絕配。<br><img data-src="/Highball/05.jpg"><br><img data-src="/Highball/06.jpg"></p>
+<hr>
+<p>上面可以發現嗨波真的是非常簡單的一杯酒，除了不用事先準備糖漿和檸檬汁外，也不需要shake和stir等技術，不過在調製時仍有一些小技巧跟事先準備的方法，而這些細節可以大幅改善你的品飲體驗跟準備工序，但這就留到下次再補充好了。</p>
 ]]></content>
       <categories>
         <category>飲食</category>
@@ -264,17 +232,13 @@
       </tags>
   </entry>
   <entry>
-    <title>Highball-嗨波</title>
-    <url>/Highball/</url>
-    <content><![CDATA[<p>最近放暑假，最舒服的就是中午起床弄個午餐，配杯highball搭著netflix或VT。<br>嗨波其實就是簡單的威士忌加氣泡水，而清爽的口感在夏日午後絕對是最好的享受。</p>
-<h3 id="製作方法"><a href="#製作方法" class="headerlink" title="製作方法"></a>製作方法</h3><p>首先在杯中加入大冰塊，接著根據你的錢包厚度還有你的心情加入45~60ml的威士忌。 <span id="more"></span><br><img data-src="/Highball/01.jpg"></p>
-<p>接著用吧叉匙攪拌10到15圈，冷卻杯內的威士忌。<br><img data-src="/Highball/02.jpg"></p>
-<p>之後再倒入氣泡水至8分滿，注意在倒入氣泡水時可以傾斜杯口倒入，而不要直接快速猛烈地把氣泡水倒在冰塊上，避免氣泡散失。<br><img data-src="/Highball/03.jpg"></p>
-<p>最後根據口味，擠上一片檸檬再丟進杯內，給予清爽的香氣跟層次。<br><img data-src="/Highball/04.jpg"></p>
-<hr>
-<p>把你的嗨波還有炒麵放到電腦前，配著自己喜歡的音樂、劇或VT，嗨波剛入口時帶有舒服的氣泡感，清涼的氣泡將威士忌的麥香與水果花香跟著帶了上來，保留威士忌的香味時也減去了過多的酒精感，直接丟入杯中的檸檬可以讓嗅覺上增添清香，入口時也可以多出微微的香氣跟層次，配上透明的老冰更是視覺上的絕配。<br><img data-src="/Highball/05.jpg"><br><img data-src="/Highball/06.jpg"></p>
-<hr>
-<p>上面可以發現嗨波真的是非常簡單的一杯酒，除了不用事先準備糖漿和檸檬汁外，也不需要shake和stir等技術，不過在調製時仍有一些小技巧跟事先準備的方法，而這些細節可以大幅改善你的品飲體驗跟準備工序，但這就留到下次再補充好了。</p>
+    <title>最近的夜晚-Gin Fizz</title>
+    <url>/Gin-Fizz/</url>
+    <content><![CDATA[<p>最近晚上一直都是喝著gin fizz渡過的<br>琴酒+檸檬+糖漿攪拌或搖晃<br>最後加入氣泡水<br>清爽的口感加上琴酒的藥草香以及檸檬的酸和糖漿的甜<span id="more"></span><br>最後加入氣泡水增添的口感<br>同時也有效將琴酒的口味分層<br>不由得一杯接著一杯</p>
+<p>建議用可林杯與長冰調配<br>克林杯放入長冰冰杯<br>倒出融水後<br>將琴酒、半顆檸檬的檸檬汁、與糖漿倒入<br>攪拌均勻<br>隨後用氣泡水填滿<br>若剩下半顆檸檬<br>可切一片放杯緣<br>如此一來你便完成了一杯gin fizz</p>
+<p>如果想要提升味覺感受<br>可以從琴酒以及氣泡水下手</p>
+<p>最後<br>以上言論不代表本人立場</p>
+<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
 ]]></content>
       <categories>
         <category>飲食</category>
@@ -316,6 +280,46 @@
 <hr>
 <p>以loads&#x2F;dumps的話就會長得像下面這樣:</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span> (<span class="string">&#x27;ex.json&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> i:</span><br><span class="line">	t = i.read()        	<span class="comment">#以str格式讀取json的資料</span></span><br><span class="line">	jData = json.loads(t)	<span class="comment">#將str轉換成dictionary</span></span><br><span class="line"></span><br><span class="line">jData[<span class="string">&#x27;score&#x27;</span>] = <span class="number">100</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span> (<span class="string">&#x27;ex.json&#x27;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> i:</span><br><span class="line">	i.write(json.dumps(jData))   <span class="comment">#將dictionary轉換成符合json格式的字串並寫入原本的檔案 </span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>爬蟲</category>
+      </categories>
+      <tags>
+        <tag>爬蟲</tag>
+        <tag>程式</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爬蟲基礎入門-XPath</title>
+    <url>/Scraping-Basics-XPath/</url>
+    <content><![CDATA[<p>我們在selenium時有講到幾個指令像是find_element_by的指令，<br>但如果我們的html沒有class或是id等節點的話，其實對我們爬蟲有點不太友善，<br>所以今天我們會教xpath的搜尋方法</p>
+<span id="more"></span>
+
+<h3 id="XPath"><a href="#XPath" class="headerlink" title="XPath"></a>XPath</h3><p>XML Path簡稱XPath，是一種可以用來確定一個東西在XML&#x2F;HTML檔案中的位置的語言&#x2F;工具<br>可以將一個HTML看成是一棵樹，或是更生活化一點，利用樹狀結構的目錄資料夾<br>像是檔案開頭的<code>&lt;html&gt;</code>包含了整個文件，而這個節點就是整個html的根節點<br>或者是如<code>&lt;head&gt;</code>或是<code>&lt;body&gt;</code>在html下一層，而這兩個節點就是html的子節點，<br>相反地，<code>&lt;html&gt;</code>也是<code>&lt;head&gt;</code>或是<code>&lt;body&gt;</code>的父節點<br>此外，<code>&lt;html&gt;</code>與<code>&lt;head&gt;</code>相互是兄弟節點<br>樹中有許多的節點代表不同元素，而我們就可以使用XPath去查詢這些節點</p>
+<p>在XPath中，我們有兩種方式去表現一個節點的位置</p>
+<ul>
+<li><strong>絕對路徑</strong><br>  絕對路徑以 <strong>&#x2F;</strong> 來代表，需要從html的根節點開始寫完整的路徑到目標的節點<br>  如:&#x2F;html[1]&#x2F;body[1]&#x2F;div[3]&#x2F;div[1]&#x2F;div[1]&#x2F;div[1]&#x2F;div[2]&#x2F;div[3]&#x2F;div[1]&#x2F;h2[1]，是我們在Day13網頁中標題的絕對路徑</li>
+<li><strong>相對路徑</strong><br>  相對路徑以 <strong>&#x2F;&#x2F;</strong> 來代表<br>  如:&#x2F;&#x2F;h2[contains(text(),’Day13、Selenium指令使用’)]來代表上面相同上面絕對路徑的相對路徑</li>
+</ul>
+<hr>
+<h3 id="find-element-by-xpath"><a href="#find-element-by-xpath" class="headerlink" title="find_element_by_xpath()"></a>find_element_by_xpath()</h3><p>利用上面絕對路徑或是相對路徑的方法，直接塞進function就好了，如:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&#x27;/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/h2[1]&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>常常在html中會看到在同個檔案不同個子樹下有相同的節點命名，當使用xpath的相對路徑時可能會有問題<br>這個時候可以透過index索引去找是哪一個節點，如:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&#x27;//p[0]&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>或是利用attribute屬性去標註說我們現在要的是哪一個，如:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&#x27;title&#x27;</span>&gt;</span>I&#x27;m title<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&quot;//p[@class=&#x27;title&#x27;]&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>還有一些神奇的指令像是contains()，可以找出包含字串的節點，如:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&quot;//p[contains(text(), &#x27;title&#x27;)]&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>上面講了xpath的語法，但是其實你知道只需要有html樹狀的概念就好了嗎?<br>俗話說的好，不要重複造輪子，今天就介紹一個好用的工具可以自動產生xpath</p>
+<h3 id="ChroPath"><a href="#ChroPath" class="headerlink" title="ChroPath"></a>ChroPath</h3><p>ChroPath是一個Chrome的插件，可以在chrome的應用程式商店找到他<br>它是一個協助我們在chrome中定位想要的元素的插件<br>假如你想針對一個網頁的按鈕找出它的xpath去進行selenium控制的話，可以右鍵找到「檢查」的地方後點下去，會進入F12開發者模式，同時F12的html畫面也會同步到一樣的程式片段<br>在此時，我們在右邊開發者模式視窗的地方中間有一排選擇子視窗的地方去找一個叫做ChroPath的地方點開來<br>點開之後，插件就會告訴你路徑的絕對位置或相對位置囉!<br><img data-src="/Scraping-Basics-XPath/20152706sgIGrAITNx.png"></p>
+<p>XPath就是這麼簡單!</p>
 ]]></content>
       <categories>
         <category>程式</category>
@@ -382,64 +386,6 @@
       </tags>
   </entry>
   <entry>
-    <title>越式涼拌</title>
-    <url>/Vietnamese-Cold-Salad/</url>
-    <content><![CDATA[<h3 id="醬料"><a href="#醬料" class="headerlink" title="醬料"></a>醬料</h3><p>1.蒜頭、辣椒切碎<br>2.加入糖一匙<br>3.魚露兩匙<br>4.檸檬汁一顆的量<span id="more"></span><br>5.白胡椒粉一小匙<br>6.加入兩匙水、拌勻</p>
-<p>再切個青木瓜絲、紅蘿蔔絲、小黃瓜絲丟進去拌一拌，灑上一把鹹花生就完成了。</p>
-<div class="pdf-container" data-target="pdf/110033210.pdf" data-height="700px"></div>
-
-<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
-]]></content>
-      <categories>
-        <category>飲食</category>
-        <category>食譜</category>
-      </categories>
-      <tags>
-        <tag>自製</tag>
-        <tag>食譜</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>爬蟲基礎入門-XPath</title>
-    <url>/Scraping-Basics-XPath/</url>
-    <content><![CDATA[<p>我們在selenium時有講到幾個指令像是find_element_by的指令，<br>但如果我們的html沒有class或是id等節點的話，其實對我們爬蟲有點不太友善，<br>所以今天我們會教xpath的搜尋方法</p>
-<span id="more"></span>
-
-<h3 id="XPath"><a href="#XPath" class="headerlink" title="XPath"></a>XPath</h3><p>XML Path簡稱XPath，是一種可以用來確定一個東西在XML&#x2F;HTML檔案中的位置的語言&#x2F;工具<br>可以將一個HTML看成是一棵樹，或是更生活化一點，利用樹狀結構的目錄資料夾<br>像是檔案開頭的<code>&lt;html&gt;</code>包含了整個文件，而這個節點就是整個html的根節點<br>或者是如<code>&lt;head&gt;</code>或是<code>&lt;body&gt;</code>在html下一層，而這兩個節點就是html的子節點，<br>相反地，<code>&lt;html&gt;</code>也是<code>&lt;head&gt;</code>或是<code>&lt;body&gt;</code>的父節點<br>此外，<code>&lt;html&gt;</code>與<code>&lt;head&gt;</code>相互是兄弟節點<br>樹中有許多的節點代表不同元素，而我們就可以使用XPath去查詢這些節點</p>
-<p>在XPath中，我們有兩種方式去表現一個節點的位置</p>
-<ul>
-<li><strong>絕對路徑</strong><br>  絕對路徑以 <strong>&#x2F;</strong> 來代表，需要從html的根節點開始寫完整的路徑到目標的節點<br>  如:&#x2F;html[1]&#x2F;body[1]&#x2F;div[3]&#x2F;div[1]&#x2F;div[1]&#x2F;div[1]&#x2F;div[2]&#x2F;div[3]&#x2F;div[1]&#x2F;h2[1]，是我們在Day13網頁中標題的絕對路徑</li>
-<li><strong>相對路徑</strong><br>  相對路徑以 <strong>&#x2F;&#x2F;</strong> 來代表<br>  如:&#x2F;&#x2F;h2[contains(text(),’Day13、Selenium指令使用’)]來代表上面相同上面絕對路徑的相對路徑</li>
-</ul>
-<hr>
-<h3 id="find-element-by-xpath"><a href="#find-element-by-xpath" class="headerlink" title="find_element_by_xpath()"></a>find_element_by_xpath()</h3><p>利用上面絕對路徑或是相對路徑的方法，直接塞進function就好了，如:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&#x27;/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/h2[1]&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>常常在html中會看到在同個檔案不同個子樹下有相同的節點命名，當使用xpath的相對路徑時可能會有問題<br>這個時候可以透過index索引去找是哪一個節點，如:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&#x27;//p[0]&#x27;</span>)</span><br></pre></td></tr></table></figure>
-<p>或是利用attribute屬性去標註說我們現在要的是哪一個，如:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&#x27;title&#x27;</span>&gt;</span>I&#x27;m title<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&quot;//p[@class=&#x27;title&#x27;]&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>還有一些神奇的指令像是contains()，可以找出包含字串的節點，如:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&quot;//p[contains(text(), &#x27;title&#x27;)]&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>上面講了xpath的語法，但是其實你知道只需要有html樹狀的概念就好了嗎?<br>俗話說的好，不要重複造輪子，今天就介紹一個好用的工具可以自動產生xpath</p>
-<h3 id="ChroPath"><a href="#ChroPath" class="headerlink" title="ChroPath"></a>ChroPath</h3><p>ChroPath是一個Chrome的插件，可以在chrome的應用程式商店找到他<br>它是一個協助我們在chrome中定位想要的元素的插件<br>假如你想針對一個網頁的按鈕找出它的xpath去進行selenium控制的話，可以右鍵找到「檢查」的地方後點下去，會進入F12開發者模式，同時F12的html畫面也會同步到一樣的程式片段<br>在此時，我們在右邊開發者模式視窗的地方中間有一排選擇子視窗的地方去找一個叫做ChroPath的地方點開來<br>點開之後，插件就會告訴你路徑的絕對位置或相對位置囉!<br><img data-src="/Scraping-Basics-XPath/20152706sgIGrAITNx.png"></p>
-<p>XPath就是這麼簡單!</p>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>爬蟲</category>
-      </categories>
-      <tags>
-        <tag>爬蟲</tag>
-        <tag>程式</tag>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>熱流實驗 風洞與流視 結報</title>
     <url>/Wind-Tunnel-and-Flow-Visualization-Report/</url>
     <content><![CDATA[<center>國立清華大學動力機械工程學系</center>
@@ -456,6 +402,24 @@
       </categories>
       <tags>
         <tag>結報</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>越式涼拌</title>
+    <url>/Vietnamese-Cold-Salad/</url>
+    <content><![CDATA[<h3 id="醬料"><a href="#醬料" class="headerlink" title="醬料"></a>醬料</h3><p>1.蒜頭、辣椒切碎<br>2.加入糖一匙<br>3.魚露兩匙<br>4.檸檬汁一顆的量<span id="more"></span><br>5.白胡椒粉一小匙<br>6.加入兩匙水、拌勻</p>
+<p>再切個青木瓜絲、紅蘿蔔絲、小黃瓜絲丟進去拌一拌，灑上一把鹹花生就完成了。</p>
+<div class="pdf-container" data-target="pdf/110033210.pdf" data-height="700px"></div>
+
+<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>食譜</category>
+      </categories>
+      <tags>
+        <tag>自製</tag>
+        <tag>食譜</tag>
       </tags>
   </entry>
   <entry>
@@ -508,12 +472,12 @@
       </tags>
   </entry>
   <entry>
-    <title>光電實驗(一) 擴束與平行光束</title>
-    <url>/3-Expanded-Beam-and-Parallel-Beam/</url>
+    <title>光電實驗(一) 薄透鏡成像</title>
+    <url>/4-thin-lens-image/</url>
     <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 擴束與平行光束 結報</center><span id="more"></span>
+<center>光電實驗(一) 薄透鏡成像 結報</center><span id="more"></span>
 
-<div class="pdf-container" data-target="/pdf/3-Expanded-Beam-and-Parallel-Beam.pdf" data-height="700px"></div>]]></content>
+<div class="pdf-container" data-target="/pdf/4-thin-lens-image.pdf" data-height="700px"></div>]]></content>
       <categories>
         <category>結報</category>
         <category>成大光電</category>
@@ -523,12 +487,12 @@
       </tags>
   </entry>
   <entry>
-    <title>光電實驗(一) 薄透鏡成像</title>
-    <url>/4-thin-lens-image/</url>
+    <title>光電實驗(一) 擴束與平行光束</title>
+    <url>/3-Expanded-Beam-and-Parallel-Beam/</url>
     <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 薄透鏡成像 結報</center><span id="more"></span>
+<center>光電實驗(一) 擴束與平行光束 結報</center><span id="more"></span>
 
-<div class="pdf-container" data-target="/pdf/4-thin-lens-image.pdf" data-height="700px"></div>]]></content>
+<div class="pdf-container" data-target="/pdf/3-Expanded-Beam-and-Parallel-Beam.pdf" data-height="700px"></div>]]></content>
       <categories>
         <category>結報</category>
         <category>成大光電</category>
@@ -587,6 +551,42 @@
       <tags>
         <tag>自製</tag>
         <tag>食譜</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title> 爬蟲基礎入門: robots.txt &amp; header</title>
+    <url>/Scraping-Basics-robots-txt-header/</url>
+    <content><![CDATA[<p>今天要來介紹當我們在爬蟲前，應該要知道的一些技巧與規範</p>
+<hr>
+<h3 id="為甚麼需要知道這些爬蟲規範？"><a href="#為甚麼需要知道這些爬蟲規範？" class="headerlink" title="為甚麼需要知道這些爬蟲規範？"></a>為甚麼需要知道這些爬蟲規範？</h3><p>首先，我們必須知道過度的網路爬蟲可能是違法的，<br>如使用多執行緒進行對網站的大量拜訪，在沒有適當的存取時間間隔下，可能會造成一般人熟知的<strong>DDOS</strong>(Denial-Of-Service Attack)，進而造成其他使用者無法拜訪、甚至是主機癱瘓。<br>因此，某些網站有制定所謂的「規範」，讓爬蟲使用者能夠去遵守並避免存取到private data</p>
+<span id="more"></span>
+<p>請注意這項規範並不具有強制力，並無法阻擋真正有心攻擊的爬蟲程式。</p>
+<h3 id="「規範」—-robots-txt"><a href="#「規範」—-robots-txt" class="headerlink" title="「規範」— robots.txt"></a>「規範」— robots.txt</h3><p>robots.txt是一個告訴爬蟲哪些內容是否可存取的文字檔。<br>這項檔案通常位於網頁根目錄下的robots.txt，<br>換句話說，在main-page下加個&#x2F;robots.txt就能檢視。</p>
+<p>舉個例子吧，我們先進到<a href="http://google.com/">google</a>的首頁</p>
+<p><img data-src="/Scraping-Basics-robots-txt-header/20152706kiMp9LoNrj.png"></p>
+<p>相當正常，不是嗎?<br>再來利用上面的方法去找robots.txt，<br>我們接著在.com後面接著&#x2F;robots.txt，<br>使網址成為<a href="https://www.google.com/robots.txt">https://www.google.com/robots.txt</a></p>
+<p><img data-src="/Scraping-Basics-robots-txt-header/20152706qRcQSJ2ABd.png"></p>
+<p>成功了！<br>可是密密麻麻的，打這麼多字誰他媽看得完?<br>但事實上，這份文字檔可以被拆分成幾個部分，<br>我們從第一行開始：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. User-Agent: *</span><br></pre></td></tr></table></figure>
+<p>User-Agent這一欄代表的是允許的爬蟲類型，而 <strong>*</strong> 則代表<strong>所有</strong>的意思，<br>所以第一行可以被解讀成，允許所有爬蟲拜訪。<br>此外有一些特別的程式只允許特定爬蟲拜訪網頁，如Googlebot、Applebot等，<br>如在最後幾行處，可以看到google的網頁允許Twitterbot能夠比一般使用者額外拜訪&#x2F;imgres的子目錄。</p>
+<p>再來我們繼續往下探討，大致上可以分為<strong>Allow</strong>開頭的，以及<strong>Disallow</strong>開頭的句子</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2. Disallow: /search</span><br></pre></td></tr></table></figure>
+<p>這句話代表著，拒絕網路爬蟲訪問search子目錄以及其子目錄下所有目錄，<br>而接下來的第三行，你們應該也就猜的到意思了，就是允許拜訪冒號後面的子目錄。</p>
+<h3 id="表頭headers"><a href="#表頭headers" class="headerlink" title="表頭headers"></a>表頭headers</h3><p>headers是對client端向server發出請求時的敘述資訊。<br>有一些網站會針對網路爬蟲進行阻擋，其中一項阻擋的手法就是針對headers，<br>當網頁收到非瀏覽器的headers發出的請求時，網頁就拒絕client的存取。</p>
+<p>解決手段非常的簡單粗暴，既然你拒絕非瀏覽器外的訪問，那我就成為瀏覽器就好了啊!?<br>那我們要怎麼成為瀏覽器呢?<br>這樣推薦一個作法：</p>
+<ul>
+<li>開啟Chrome時按下F12鍵後，先按F5使其重整載入資源，點選其中一項被載入的資源，點選Network欄中的Header，複製其中的Uger-Agent</li>
+</ul>
+<p>如此一來就得到瀏覽器的header，將自己偽裝成瀏覽器了。<br>下一章在requests時，我們會介紹在requests.get()中可以帶入header參數，<br>在header參數中帶入我們剛剛取得的瀏覽器header，我們就可以成功偽裝了。</p>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>爬蟲</category>
+      </categories>
+      <tags>
+        <tag>爬蟲</tag>
+        <tag>程式</tag>
+        <tag>python</tag>
       </tags>
   </entry>
 </search>
