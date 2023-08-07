@@ -29,15 +29,6 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/Scraping-Basics-Requests/</loc>
-    
-    <lastmod>2023-08-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://navoni1024.github.io/Scraping-Basics-Beautiful-Soup/</loc>
     
     <lastmod>2023-08-01</lastmod>
@@ -47,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/Discord-Bot-Basic-structure/</loc>
+    <loc>http://navoni1024.github.io/Scraping-Basics-Requests/</loc>
     
     <lastmod>2023-08-01</lastmod>
     
@@ -57,6 +48,15 @@
   
   <url>
     <loc>http://navoni1024.github.io/Scraping-Basics-robots-txt-header/</loc>
+    
+    <lastmod>2023-08-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/Discord-Bot-Basic-structure/</loc>
     
     <lastmod>2023-08-01</lastmod>
     
@@ -83,15 +83,6 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/Highball/</loc>
-    
-    <lastmod>2023-08-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://navoni1024.github.io/Gin-Fizz/</loc>
     
     <lastmod>2023-08-01</lastmod>
@@ -102,6 +93,15 @@
   
   <url>
     <loc>http://navoni1024.github.io/Scraping-Basics-JSON/</loc>
+    
+    <lastmod>2023-08-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/Highball/</loc>
     
     <lastmod>2023-08-01</lastmod>
     
@@ -379,14 +379,14 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/coding/scraping/</loc>
+    <loc>http://navoni1024.github.io/categories/coding/Discord-bot/</loc>
     <lastmod>2023-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/coding/Discord-bot/</loc>
+    <loc>http://navoni1024.github.io/categories/coding/scraping/</loc>
     <lastmod>2023-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -407,14 +407,14 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/report/NTHU-PME/</loc>
+    <loc>http://navoni1024.github.io/categories/report/NTUE/</loc>
     <lastmod>2023-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/report/NTUE/</loc>
+    <loc>http://navoni1024.github.io/categories/report/NTHU-PME/</loc>
     <lastmod>2023-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
