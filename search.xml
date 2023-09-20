@@ -65,6 +65,46 @@
       </tags>
   </entry>
   <entry>
+    <title>Discord Bot-基本架構</title>
+    <url>/Discord-Bot-Basic-structure/</url>
+    <content><![CDATA[<p>首先先用一個最基本的機器人來示範。請打開一個python檔並鍵入以下內容:</p>
+<span id="more"></span>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands</span><br><span class="line"></span><br><span class="line">bot = commands.Bot(<span class="string">&#x27;%&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@bot.event</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">on_ready</span>():</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&#x27;不客气！&#x27;</span>)</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&#x27;感谢您使用Discord产品, 欢迎您继续咨询Discord社区！&#x27;</span>)</span><br><span class="line">	</span><br><span class="line"><span class="meta">@bot.command(<span class="params">aliases=[<span class="string">&#x27;touch&#x27;</span>]</span>)</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">t</span>(<span class="params">message</span>):</span><br><span class="line">	<span class="keyword">await</span> message.channel.send(<span class="string">&#x27;请不要随意地触碰我！ 十分感谢！&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">	bot.run(<span class="string">&#x27;在這裡輸入您的token&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>接下來分行解釋下。</p>
+<h3 id="bot-commands-bot-‘-’"><a href="#bot-commands-bot-‘-’" class="headerlink" title="bot &#x3D; commands.bot(‘%’)"></a>bot &#x3D; commands.bot(‘%’)</h3><p>造出一個bot的物件。而那個<code>&#39;%&#39;</code>就是呼叫機器人的前綴。<br>不一定要一個字，你要拿<code>&#39;peko&#39;</code>當前綴也是完全可以的。</p>
+<p>小補充，如果你也想要用標記機器人來呼叫機器人的話可以這樣寫:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bot = commands.bot(commands.when_mentioned_or(<span class="string">&#x27;%&#x27;</span>))</span><br></pre></td></tr></table></figure>
+<p>效果會像這樣:<br><img data-src="/Discord-Bot-Basic-structure/20152706nEGgzYWzSc.png"></p>
+<p>bot裡面詳細有什麼功能可以看一下<a href="https://discordpy.readthedocs.io/en/stable/ext/commands/api.html#bots">官方API的文件</a><br>看不懂也沒關係，後面會帶到一些常見的用法。</p>
+<h3 id="bot-event"><a href="#bot-event" class="headerlink" title="@bot.event"></a>@bot.event</h3><p>這個<code>@</code>叫<strong>decorator</strong>，是python的語法糖。<br>簡單來說這東西會把下面的函數丟到你@的函數裡面加工，詳細可以看一下<a href="https://medium.com/citycoddee/python%E9%80%B2%E9%9A%8E%E6%8A%80%E5%B7%A7-3-%E7%A5%9E%E5%A5%87%E5%8F%88%E7%BE%8E%E5%A5%BD%E7%9A%84-decorator-%E5%97%B7%E5%97%9A-6559edc87bc0">這篇</a>。<br>官方API的解釋則在<a href="https://discordpy.readthedocs.io/en/stable/ext/commands/api.html#decorators">這裡</a>。</p>
+<p>看不懂也沒什麼關係，就當作一種固定語法。記得在你寫的函數前面加上對應的decorator就行。<br>像這邊就是因為要使用底下的<code>on_ready()</code>所以才會在上面加@bot.event的，可以看下<a href="https://discordpy.readthedocs.io/en/stable/ext/commands/api.html#discord.ext.commands.Bot.event">官方API</a></p>
+<p>另外如果點進去官方API的話可以發現他的例子是加了<code>@client.event</code>。<br>使用<code>discord.clinet</code>是另一種Discord機器人的寫法，client的語法基本上把<code>client</code>代換成<code>bot</code>都可用。<br>不過bot(<code>discord.ext.commands.Bot</code>)似乎功能比較多一點加上兩者不能混用所以我都用bot寫。<br>一言以蔽之，看到範例是用<code>clinet</code>就換成<code>bot</code>試試看吧。</p>
+<h3 id="async-def-on-ready"><a href="#async-def-on-ready" class="headerlink" title="async def on_ready():"></a>async def on_ready():</h3><p>這邊的<code>async</code>和<code>await</code>是python異步執行套件<code>asyncio</code>的語法。</p>
+<p>不過這邊難的地方都寫在discord套件底層了，<br>所以我們只要記得在函數前面加async跟在discord提供的方法前加await就行。</p>
+<p><code>on_ready()</code>這個方法，其功能是在機器人上線的那刻執行下列內容。<br>所以如果機器人成功運行了可以看到命令列有以下的輸出。<br><img data-src="/Discord-Bot-Basic-structure/20152706Sv659LuuVk.png"><br>這樣可以方便我們確定機器人是不是正常上線了。</p>
+<h3 id="bot-command-aliases-‘touch’"><a href="#bot-command-aliases-‘touch’" class="headerlink" title="@bot.command(aliases&#x3D;[‘touch’])"></a>@bot.command(aliases&#x3D;[‘touch’])</h3><p><code>@bot.command()</code>這個語法糖可以將下面的函數變成我們在頻道可以使用的指令。<br>預設指令名稱就是下面的函數名。以這個例子來說就是t</p>
+<p>括號中間的<code>aliases=[&#39;touch&#39;]</code>則是為這個函數添加更多指令名的。<br>所以結合我們在上面的<code>bot = commands.bot(&#39;%&#39;)</code>設定的前綴，<br>機器人上線後我們用<code>%touch</code>和<code>%t</code>都可以叫出一樣的指令。</p>
+<h3 id="async-def-t-message"><a href="#async-def-t-message" class="headerlink" title="async def t(message):"></a>async def t(message):</h3><p>如上所述，函數名就是你在頻道打的指令名。</p>
+<p>括號裡面的message基本上就是你在discord發的訊息。<br>但他不僅僅是文字，而是discord api一個’Message’類別的物件。</p>
+<p>裡面的功能相當的豐富，可以從中取出相當多的資訊，下面會做說明。</p>
+<h3 id="await-message-channel-send-‘请不要随意地触碰我！-十分感谢！’"><a href="#await-message-channel-send-‘请不要随意地触碰我！-十分感谢！’" class="headerlink" title="await message.channel.send(‘请不要随意地触碰我！ 十分感谢！’)"></a>await message.channel.send(‘请不要随意地触碰我！ 十分感谢！’)</h3><p>像這邊我們就從中取出了你發送指令的頻道並在那頻道發送了訊息。<br>具體而言看起來像這樣。<br><img data-src="/Discord-Bot-Basic-structure/20152706UMjauH0ZsL.png"></p>
+<p>其他更多的用法一樣可以詳閱<a href="https://discordpy.readthedocs.io/en/stable/api.html#discord.Message">官方API的公開說明書</a></p>
+<h3 id="if-name-“-main-“"><a href="#if-name-“-main-“" class="headerlink" title="if __name__ &#x3D;&#x3D; “__main__“:"></a>if __name__ &#x3D;&#x3D; “__main__“:</h3><p>這行就是確保你是直接執行了這檔案才會跑以下的指令。<br>bot.run()的括號中間輸入您昨天取得的token碼。</p>
+<hr>
+<p>接著就讓機器人上線並邀請你的機器人進自己的伺服器來玩玩吧。<br>也可以試著改一些設定，或甚至嘗試一些你在官方API找到的功能。<br>看不太懂上面和官方API到底在講什麼鬼的也沒關係，後面跟著做就會漸漸熟悉了。</p>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>Discord bot</category>
+      </categories>
+      <tags>
+        <tag>程式</tag>
+        <tag>python</tag>
+        <tag>Discord</tag>
+      </tags>
+  </entry>
+  <entry>
     <title> 爬蟲基礎入門: Requests</title>
     <url>/Scraping-Basics-Requests/</url>
     <content><![CDATA[<p>本系列預設各位擁有基本的python能力，對各種資料結構、套件、模組等有一定概念就行了。<br>本文的範例都是在python 3.10下操作的。</p>
@@ -139,64 +179,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Discord Bot-基本架構</title>
-    <url>/Discord-Bot-Basic-structure/</url>
-    <content><![CDATA[<p>首先先用一個最基本的機器人來示範。請打開一個python檔並鍵入以下內容:</p>
-<span id="more"></span>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands</span><br><span class="line"></span><br><span class="line">bot = commands.Bot(<span class="string">&#x27;%&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@bot.event</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">on_ready</span>():</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&#x27;不客气！&#x27;</span>)</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&#x27;感谢您使用Discord产品, 欢迎您继续咨询Discord社区！&#x27;</span>)</span><br><span class="line">	</span><br><span class="line"><span class="meta">@bot.command(<span class="params">aliases=[<span class="string">&#x27;touch&#x27;</span>]</span>)</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">t</span>(<span class="params">message</span>):</span><br><span class="line">	<span class="keyword">await</span> message.channel.send(<span class="string">&#x27;请不要随意地触碰我！ 十分感谢！&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">	bot.run(<span class="string">&#x27;在這裡輸入您的token&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>接下來分行解釋下。</p>
-<h3 id="bot-commands-bot-‘-’"><a href="#bot-commands-bot-‘-’" class="headerlink" title="bot &#x3D; commands.bot(‘%’)"></a>bot &#x3D; commands.bot(‘%’)</h3><p>造出一個bot的物件。而那個<code>&#39;%&#39;</code>就是呼叫機器人的前綴。<br>不一定要一個字，你要拿<code>&#39;peko&#39;</code>當前綴也是完全可以的。</p>
-<p>小補充，如果你也想要用標記機器人來呼叫機器人的話可以這樣寫:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bot = commands.bot(commands.when_mentioned_or(<span class="string">&#x27;%&#x27;</span>))</span><br></pre></td></tr></table></figure>
-<p>效果會像這樣:<br><img data-src="/Discord-Bot-Basic-structure/20152706nEGgzYWzSc.png"></p>
-<p>bot裡面詳細有什麼功能可以看一下<a href="https://discordpy.readthedocs.io/en/stable/ext/commands/api.html#bots">官方API的文件</a><br>看不懂也沒關係，後面會帶到一些常見的用法。</p>
-<h3 id="bot-event"><a href="#bot-event" class="headerlink" title="@bot.event"></a>@bot.event</h3><p>這個<code>@</code>叫<strong>decorator</strong>，是python的語法糖。<br>簡單來說這東西會把下面的函數丟到你@的函數裡面加工，詳細可以看一下<a href="https://medium.com/citycoddee/python%E9%80%B2%E9%9A%8E%E6%8A%80%E5%B7%A7-3-%E7%A5%9E%E5%A5%87%E5%8F%88%E7%BE%8E%E5%A5%BD%E7%9A%84-decorator-%E5%97%B7%E5%97%9A-6559edc87bc0">這篇</a>。<br>官方API的解釋則在<a href="https://discordpy.readthedocs.io/en/stable/ext/commands/api.html#decorators">這裡</a>。</p>
-<p>看不懂也沒什麼關係，就當作一種固定語法。記得在你寫的函數前面加上對應的decorator就行。<br>像這邊就是因為要使用底下的<code>on_ready()</code>所以才會在上面加@bot.event的，可以看下<a href="https://discordpy.readthedocs.io/en/stable/ext/commands/api.html#discord.ext.commands.Bot.event">官方API</a></p>
-<p>另外如果點進去官方API的話可以發現他的例子是加了<code>@client.event</code>。<br>使用<code>discord.clinet</code>是另一種Discord機器人的寫法，client的語法基本上把<code>client</code>代換成<code>bot</code>都可用。<br>不過bot(<code>discord.ext.commands.Bot</code>)似乎功能比較多一點加上兩者不能混用所以我都用bot寫。<br>一言以蔽之，看到範例是用<code>clinet</code>就換成<code>bot</code>試試看吧。</p>
-<h3 id="async-def-on-ready"><a href="#async-def-on-ready" class="headerlink" title="async def on_ready():"></a>async def on_ready():</h3><p>這邊的<code>async</code>和<code>await</code>是python異步執行套件<code>asyncio</code>的語法。</p>
-<p>不過這邊難的地方都寫在discord套件底層了，<br>所以我們只要記得在函數前面加async跟在discord提供的方法前加await就行。</p>
-<p><code>on_ready()</code>這個方法，其功能是在機器人上線的那刻執行下列內容。<br>所以如果機器人成功運行了可以看到命令列有以下的輸出。<br><img data-src="/Discord-Bot-Basic-structure/20152706Sv659LuuVk.png"><br>這樣可以方便我們確定機器人是不是正常上線了。</p>
-<h3 id="bot-command-aliases-‘touch’"><a href="#bot-command-aliases-‘touch’" class="headerlink" title="@bot.command(aliases&#x3D;[‘touch’])"></a>@bot.command(aliases&#x3D;[‘touch’])</h3><p><code>@bot.command()</code>這個語法糖可以將下面的函數變成我們在頻道可以使用的指令。<br>預設指令名稱就是下面的函數名。以這個例子來說就是t</p>
-<p>括號中間的<code>aliases=[&#39;touch&#39;]</code>則是為這個函數添加更多指令名的。<br>所以結合我們在上面的<code>bot = commands.bot(&#39;%&#39;)</code>設定的前綴，<br>機器人上線後我們用<code>%touch</code>和<code>%t</code>都可以叫出一樣的指令。</p>
-<h3 id="async-def-t-message"><a href="#async-def-t-message" class="headerlink" title="async def t(message):"></a>async def t(message):</h3><p>如上所述，函數名就是你在頻道打的指令名。</p>
-<p>括號裡面的message基本上就是你在discord發的訊息。<br>但他不僅僅是文字，而是discord api一個’Message’類別的物件。</p>
-<p>裡面的功能相當的豐富，可以從中取出相當多的資訊，下面會做說明。</p>
-<h3 id="await-message-channel-send-‘请不要随意地触碰我！-十分感谢！’"><a href="#await-message-channel-send-‘请不要随意地触碰我！-十分感谢！’" class="headerlink" title="await message.channel.send(‘请不要随意地触碰我！ 十分感谢！’)"></a>await message.channel.send(‘请不要随意地触碰我！ 十分感谢！’)</h3><p>像這邊我們就從中取出了你發送指令的頻道並在那頻道發送了訊息。<br>具體而言看起來像這樣。<br><img data-src="/Discord-Bot-Basic-structure/20152706UMjauH0ZsL.png"></p>
-<p>其他更多的用法一樣可以詳閱<a href="https://discordpy.readthedocs.io/en/stable/api.html#discord.Message">官方API的公開說明書</a></p>
-<h3 id="if-name-“-main-“"><a href="#if-name-“-main-“" class="headerlink" title="if __name__ &#x3D;&#x3D; “__main__“:"></a>if __name__ &#x3D;&#x3D; “__main__“:</h3><p>這行就是確保你是直接執行了這檔案才會跑以下的指令。<br>bot.run()的括號中間輸入您昨天取得的token碼。</p>
-<hr>
-<p>接著就讓機器人上線並邀請你的機器人進自己的伺服器來玩玩吧。<br>也可以試著改一些設定，或甚至嘗試一些你在官方API找到的功能。<br>看不太懂上面和官方API到底在講什麼鬼的也沒關係，後面跟著做就會漸漸熟悉了。</p>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>Discord bot</category>
-      </categories>
-      <tags>
-        <tag>程式</tag>
-        <tag>python</tag>
-        <tag>Discord</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Discord Bot-創建一隻bot</title>
-    <url>/Discord-Bot-create-a-bot/</url>
-    <content><![CDATA[<p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
-<span id="more"></span>
-<p><img data-src="/Discord-Bot-create-a-bot/20152706MBGmHIhGdS.png"><br>大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。</p>
-<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img data-src="/Discord-Bot-create-a-bot/20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img data-src="/Discord-Bot-create-a-bot/20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img data-src="/Discord-Bot-create-a-bot/20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>Discord bot</category>
-      </categories>
-      <tags>
-        <tag>程式</tag>
-        <tag>python</tag>
-        <tag>Discord</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Discord Bot-Cogs</title>
     <url>/Discord-Bot-Cogs/</url>
     <content><![CDATA[<p>如果你的機器人功能多到一個程度，把全部的程式碼全部塞在一個文件裡顯然不是好辦法。<br>不但看起來雜亂，也難以維護，就算只是其中一個功能出問題也必須要把整個bot關掉。<br>這時候就可以使用<strong>Cogs</strong>的架構來寫，<br>可以將commands和listener等東西分堆塞在各自文件裡並方便我們裝卸。</p>
@@ -245,6 +227,24 @@
       </tags>
   </entry>
   <entry>
+    <title>Discord Bot-創建一隻bot</title>
+    <url>/Discord-Bot-create-a-bot/</url>
+    <content><![CDATA[<p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
+<span id="more"></span>
+<p><img data-src="/Discord-Bot-create-a-bot/20152706MBGmHIhGdS.png"><br>大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。</p>
+<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img data-src="/Discord-Bot-create-a-bot/20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img data-src="/Discord-Bot-create-a-bot/20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img data-src="/Discord-Bot-create-a-bot/20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>Discord bot</category>
+      </categories>
+      <tags>
+        <tag>程式</tag>
+        <tag>python</tag>
+        <tag>Discord</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>最近的夜晚-Gin Fizz</title>
     <url>/Gin-Fizz/</url>
     <content><![CDATA[<p>最近晚上一直都是喝著gin fizz渡過的<br>琴酒+檸檬+糖漿攪拌或搖晃<br>最後加入氣泡水<br>清爽的口感加上琴酒的藥草香以及檸檬的酸和糖漿的甜<span id="more"></span><br>最後加入氣泡水增添的口感<br>同時也有效將琴酒的口味分層<br>不由得一杯接著一杯</p>
@@ -252,6 +252,29 @@
 <p>如果想要提升味覺感受<br>可以從琴酒以及氣泡水下手</p>
 <p>最後<br>以上言論不代表本人立場</p>
 <p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>酒</category>
+      </categories>
+      <tags>
+        <tag>調酒</tag>
+        <tag>酒譜</tag>
+        <tag>自製</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Highball-嗨波</title>
+    <url>/Highball/</url>
+    <content><![CDATA[<p>最近放暑假，最舒服的就是中午起床弄個午餐，配杯highball搭著netflix或VT。<br>嗨波其實就是簡單的威士忌加氣泡水，而清爽的口感在夏日午後絕對是最好的享受。</p>
+<h3 id="製作方法"><a href="#製作方法" class="headerlink" title="製作方法"></a>製作方法</h3><p>首先在杯中加入大冰塊，接著根據你的錢包厚度還有你的心情加入45~60ml的威士忌。 <span id="more"></span><br><img data-src="/Highball/01.jpg"></p>
+<p>接著用吧叉匙攪拌10到15圈，冷卻杯內的威士忌。<br><img data-src="/Highball/02.jpg"></p>
+<p>之後再倒入氣泡水至8分滿，注意在倒入氣泡水時可以傾斜杯口倒入，而不要直接快速猛烈地把氣泡水倒在冰塊上，避免氣泡散失。<br><img data-src="/Highball/03.jpg"></p>
+<p>最後根據口味，擠上一片檸檬再丟進杯內，給予清爽的香氣跟層次。<br><img data-src="/Highball/04.jpg"></p>
+<hr>
+<p>把你的嗨波還有炒麵放到電腦前，配著自己喜歡的音樂、劇或VT，嗨波剛入口時帶有舒服的氣泡感，清涼的氣泡將威士忌的麥香與水果花香跟著帶了上來，保留威士忌的香味時也減去了過多的酒精感，直接丟入杯中的檸檬可以讓嗅覺上增添清香，入口時也可以多出微微的香氣跟層次，配上透明的老冰更是視覺上的絕配。<br><img data-src="/Highball/05.jpg"><br><img data-src="/Highball/06.jpg"></p>
+<hr>
+<p>上面可以發現嗨波真的是非常簡單的一杯酒，除了不用事先準備糖漿和檸檬汁外，也不需要shake和stir等技術，不過在調製時仍有一些小技巧跟事先準備的方法，而這些細節可以大幅改善你的品飲體驗跟準備工序，但這就留到下次再補充好了。</p>
 ]]></content>
       <categories>
         <category>飲食</category>
@@ -305,26 +328,27 @@
       </tags>
   </entry>
   <entry>
-    <title>Highball-嗨波</title>
-    <url>/Highball/</url>
-    <content><![CDATA[<p>最近放暑假，最舒服的就是中午起床弄個午餐，配杯highball搭著netflix或VT。<br>嗨波其實就是簡單的威士忌加氣泡水，而清爽的口感在夏日午後絕對是最好的享受。</p>
-<h3 id="製作方法"><a href="#製作方法" class="headerlink" title="製作方法"></a>製作方法</h3><p>首先在杯中加入大冰塊，接著根據你的錢包厚度還有你的心情加入45~60ml的威士忌。 <span id="more"></span><br><img data-src="/Highball/01.jpg"></p>
-<p>接著用吧叉匙攪拌10到15圈，冷卻杯內的威士忌。<br><img data-src="/Highball/02.jpg"></p>
-<p>之後再倒入氣泡水至8分滿，注意在倒入氣泡水時可以傾斜杯口倒入，而不要直接快速猛烈地把氣泡水倒在冰塊上，避免氣泡散失。<br><img data-src="/Highball/03.jpg"></p>
-<p>最後根據口味，擠上一片檸檬再丟進杯內，給予清爽的香氣跟層次。<br><img data-src="/Highball/04.jpg"></p>
-<hr>
-<p>把你的嗨波還有炒麵放到電腦前，配著自己喜歡的音樂、劇或VT，嗨波剛入口時帶有舒服的氣泡感，清涼的氣泡將威士忌的麥香與水果花香跟著帶了上來，保留威士忌的香味時也減去了過多的酒精感，直接丟入杯中的檸檬可以讓嗅覺上增添清香，入口時也可以多出微微的香氣跟層次，配上透明的老冰更是視覺上的絕配。<br><img data-src="/Highball/05.jpg"><br><img data-src="/Highball/06.jpg"></p>
-<hr>
-<p>上面可以發現嗨波真的是非常簡單的一杯酒，除了不用事先準備糖漿和檸檬汁外，也不需要shake和stir等技術，不過在調製時仍有一些小技巧跟事先準備的方法，而這些細節可以大幅改善你的品飲體驗跟準備工序，但這就留到下次再補充好了。</p>
+    <title>爬蟲基礎入門-Selenium</title>
+    <url>/Scraping-Basics-Selenium/</url>
+    <content><![CDATA[<h3 id="Selenium前置設定"><a href="#Selenium前置設定" class="headerlink" title="Selenium前置設定"></a>Selenium前置設定</h3><p>首先如果要先使用selenium，我們要先下載webdriver在資料夾中給予selenium使用。<br><a href="http://">https://chromedriver.chromium.org/downloads</a><br>上述網址即為chrome的webdriver下載地點。<br>下載好webdriver後我們就可以把他的exe檔丟到code的資料夾中了，就像這樣。</p>
+<span id="more"></span>
+<p><img data-src="/Scraping-Basics-Selenium/20152706vGDAntGabq.png"></p>
+<p>接著我們就可以準備import了。<br><img data-src="/Scraping-Basics-Selenium/20152706yg28xxCq3g.png"><br>像這樣，其中webdriver就是引入我們剛剛載的webdriver，<br>Options則是selenium針對不同webdriver所納入的不同設定，<br>WebDriverWait跟EC則是在讓瀏覽器等待時會用到，像是我們可能會需要等到某網頁元素完整載入後才繼續程式，否則可能就會出錯，<br>最後By則是selenium中的內部語法，像是這樣，<br><img data-src="/Scraping-Basics-Selenium/20152706nZU06VhtHp.png"><br>這就表示著find_element這個函式將用XPath的方式定位元素。</p>
+<h3 id="Selenium的指令使用"><a href="#Selenium的指令使用" class="headerlink" title="Selenium的指令使用"></a>Selenium的指令使用</h3><p><img data-src="/Scraping-Basics-Selenium/01.png"><br><img data-src="/Scraping-Basics-Selenium/02.png"><br>首先我們先如上圖，套入webdriver的設定，讓程式載入我們先前載的chrome webdriver，接著再讓他導到我們想要的網址，這邊以youtube作範例。如果成功的話應該會如下圖這樣。<br><img data-src="/Scraping-Basics-Selenium/03.png"><br>阿記得開完網址後要time.sleep()一下，才不會直接跳掉。<br>其實在之後我們對selenium操控時，也必須要定時的time.sleep()或者是利用別的方法讓程式暫停，否則就會產生網頁還沒完全載入，我們就要找到他的元素等等的尷尬事情。</p>
+<p>開完網頁後，就來介紹第一個函式，find_element<br><img data-src="/Scraping-Basics-Selenium/04.png"><br>find_element可以讓selenium定位到特定網頁元素，這邊的例子就是yt的搜尋欄。<br>其實selenium可以透過非常多方式定位，像是html碼裡的id、name等等，或者是class、css等其他方法，那麼我們這邊就用xpath這種定位方式，較為直接準確。但其實這邊範例比較不好的一點是xpath採用了絕對位置來定位，事實上，我們可以利用xpath的相對位置來達到簡潔、準確、可變動的性質，則之後在提及xpath時會在講解。</p>
+<p>再來，既然我們定位到了網頁元素，則我們就要發揮selenium的強項了，就是模擬使用者對網頁的互動，這邊我們透過下圖講解兩個例子。<br><img data-src="/Scraping-Basics-Selenium/05.png"><br>這邊我們的目標是要進去yt，蒐集不同關鍵字搜尋後的影片，因此我們先建立一個list做作search_keys，裡面有著我們之後要輸入進搜尋欄的搜尋關鍵字。<br>則首先是element.send_keys()，我們先定位到搜尋欄位置後，將其命名為search_box，則search_box.send_keys()就能讓我們輸入關鍵字進去。<br>再來就是element.click()，在輸入進去後，我們還要再定位到yt網頁的搜尋按鈕上，在這裡，我們將其命名為search_box，則search_box.click()就能讓selenium模擬使用者對著搜尋按鈕按下滑鼠左鍵的這個動作。<br>就像這樣<br><img data-src="/Scraping-Basics-Selenium/06.png"><br>其實只要有這基本的動作，我們就能讓selenium動起來了，就像真人一樣互動，當然selenium還有更多的功能，像是WebDriverWait等等的功能，但這邊就不多做贅述了，我們明天會在講使用selenium常遇到的問題，其實很多都跟網頁載入時間有關。</p>
+<p>喔對了，突然想到的小補充，上圖的範例其實就是之後其中一個專題內容，目標正是要讓selenium幫我們整理出想要的影片並輸出到discord上，因此也可以預見之後的專題應該會出現很多vt剪輯。<br><img data-src="/Scraping-Basics-Selenium/07.png"></p>
+<h3 id="Selenium的常見Bug"><a href="#Selenium的常見Bug" class="headerlink" title="Selenium的常見Bug"></a>Selenium的常見Bug</h3><p>首先，第一個是版本問題，這其實是我前天在挖之前的程式出來跑時才發現的問題，<br><img data-src="/Scraping-Basics-Selenium/01-1.png"><br>這問題基本上是driver跟瀏覽器版本不支援，最簡單只要重新下載對應版本的webdriver就好。</p>
+<p>接著是這個，<br><img data-src="/Scraping-Basics-Selenium/02-1.png"><br>這代表著selenium無法找到你所指定的元素，一般來說，如果不是你定位位置錯誤，<br>八成就是網頁還沒有完整載入，就使selemium搜尋元素。<br>此時，我們可以試著使用簡單的方法，time.sleep()，使程式整體暫停n秒，也可以配合try except使用。<br>當然，selenium針對這個問題也有開發相關函式，首先是顯式等待，<br><img data-src="/Scraping-Basics-Selenium/03-1.png"><br>在這邊的意思是，我們針對所給予的元素，等待10秒，每0.2秒檢查是否出現，如果出現了就繼續，<br>如果10秒內還沒出現則報錯。<br>另外一種則是隱式等待，<br><img data-src="/Scraping-Basics-Selenium/04-1.png"><br>相對於顯式等待是針對個別元素是否生成，隱式等待則是針對整個頁面，以上圖為例，這邊就是讓整個程式暫停，<br>給予瀏覽器10秒的時間，如果10秒內”整個頁面都已經生成完成”(講得直白一點其實就是我們頁面左上角的圈圈不再轉動)，則繼續程式運行，如果10內還沒載完，則報錯，因此可以看的出來，相對於顯式等待，隱式等待跟強制等待可能會要花費更久的時間。</p>
 ]]></content>
       <categories>
-        <category>飲食</category>
-        <category>酒</category>
+        <category>程式</category>
+        <category>爬蟲</category>
       </categories>
       <tags>
-        <tag>調酒</tag>
-        <tag>酒譜</tag>
-        <tag>自製</tag>
+        <tag>爬蟲</tag>
+        <tag>程式</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -368,30 +392,6 @@
       </tags>
   </entry>
   <entry>
-    <title>爬蟲基礎入門-Selenium</title>
-    <url>/Scraping-Basics-Selenium/</url>
-    <content><![CDATA[<h3 id="Selenium前置設定"><a href="#Selenium前置設定" class="headerlink" title="Selenium前置設定"></a>Selenium前置設定</h3><p>首先如果要先使用selenium，我們要先下載webdriver在資料夾中給予selenium使用。<br><a href="http://">https://chromedriver.chromium.org/downloads</a><br>上述網址即為chrome的webdriver下載地點。<br>下載好webdriver後我們就可以把他的exe檔丟到code的資料夾中了，就像這樣。</p>
-<span id="more"></span>
-<p><img data-src="/Scraping-Basics-Selenium/20152706vGDAntGabq.png"></p>
-<p>接著我們就可以準備import了。<br><img data-src="/Scraping-Basics-Selenium/20152706yg28xxCq3g.png"><br>像這樣，其中webdriver就是引入我們剛剛載的webdriver，<br>Options則是selenium針對不同webdriver所納入的不同設定，<br>WebDriverWait跟EC則是在讓瀏覽器等待時會用到，像是我們可能會需要等到某網頁元素完整載入後才繼續程式，否則可能就會出錯，<br>最後By則是selenium中的內部語法，像是這樣，<br><img data-src="/Scraping-Basics-Selenium/20152706nZU06VhtHp.png"><br>這就表示著find_element這個函式將用XPath的方式定位元素。</p>
-<h3 id="Selenium的指令使用"><a href="#Selenium的指令使用" class="headerlink" title="Selenium的指令使用"></a>Selenium的指令使用</h3><p><img data-src="/Scraping-Basics-Selenium/01.png"><br><img data-src="/Scraping-Basics-Selenium/02.png"><br>首先我們先如上圖，套入webdriver的設定，讓程式載入我們先前載的chrome webdriver，接著再讓他導到我們想要的網址，這邊以youtube作範例。如果成功的話應該會如下圖這樣。<br><img data-src="/Scraping-Basics-Selenium/03.png"><br>阿記得開完網址後要time.sleep()一下，才不會直接跳掉。<br>其實在之後我們對selenium操控時，也必須要定時的time.sleep()或者是利用別的方法讓程式暫停，否則就會產生網頁還沒完全載入，我們就要找到他的元素等等的尷尬事情。</p>
-<p>開完網頁後，就來介紹第一個函式，find_element<br><img data-src="/Scraping-Basics-Selenium/04.png"><br>find_element可以讓selenium定位到特定網頁元素，這邊的例子就是yt的搜尋欄。<br>其實selenium可以透過非常多方式定位，像是html碼裡的id、name等等，或者是class、css等其他方法，那麼我們這邊就用xpath這種定位方式，較為直接準確。但其實這邊範例比較不好的一點是xpath採用了絕對位置來定位，事實上，我們可以利用xpath的相對位置來達到簡潔、準確、可變動的性質，則之後在提及xpath時會在講解。</p>
-<p>再來，既然我們定位到了網頁元素，則我們就要發揮selenium的強項了，就是模擬使用者對網頁的互動，這邊我們透過下圖講解兩個例子。<br><img data-src="/Scraping-Basics-Selenium/05.png"><br>這邊我們的目標是要進去yt，蒐集不同關鍵字搜尋後的影片，因此我們先建立一個list做作search_keys，裡面有著我們之後要輸入進搜尋欄的搜尋關鍵字。<br>則首先是element.send_keys()，我們先定位到搜尋欄位置後，將其命名為search_box，則search_box.send_keys()就能讓我們輸入關鍵字進去。<br>再來就是element.click()，在輸入進去後，我們還要再定位到yt網頁的搜尋按鈕上，在這裡，我們將其命名為search_box，則search_box.click()就能讓selenium模擬使用者對著搜尋按鈕按下滑鼠左鍵的這個動作。<br>就像這樣<br><img data-src="/Scraping-Basics-Selenium/06.png"><br>其實只要有這基本的動作，我們就能讓selenium動起來了，就像真人一樣互動，當然selenium還有更多的功能，像是WebDriverWait等等的功能，但這邊就不多做贅述了，我們明天會在講使用selenium常遇到的問題，其實很多都跟網頁載入時間有關。</p>
-<p>喔對了，突然想到的小補充，上圖的範例其實就是之後其中一個專題內容，目標正是要讓selenium幫我們整理出想要的影片並輸出到discord上，因此也可以預見之後的專題應該會出現很多vt剪輯。<br><img data-src="/Scraping-Basics-Selenium/07.png"></p>
-<h3 id="Selenium的常見Bug"><a href="#Selenium的常見Bug" class="headerlink" title="Selenium的常見Bug"></a>Selenium的常見Bug</h3><p>首先，第一個是版本問題，這其實是我前天在挖之前的程式出來跑時才發現的問題，<br><img data-src="/Scraping-Basics-Selenium/01-1.png"><br>這問題基本上是driver跟瀏覽器版本不支援，最簡單只要重新下載對應版本的webdriver就好。</p>
-<p>接著是這個，<br><img data-src="/Scraping-Basics-Selenium/02-1.png"><br>這代表著selenium無法找到你所指定的元素，一般來說，如果不是你定位位置錯誤，<br>八成就是網頁還沒有完整載入，就使selemium搜尋元素。<br>此時，我們可以試著使用簡單的方法，time.sleep()，使程式整體暫停n秒，也可以配合try except使用。<br>當然，selenium針對這個問題也有開發相關函式，首先是顯式等待，<br><img data-src="/Scraping-Basics-Selenium/03-1.png"><br>在這邊的意思是，我們針對所給予的元素，等待10秒，每0.2秒檢查是否出現，如果出現了就繼續，<br>如果10秒內還沒出現則報錯。<br>另外一種則是隱式等待，<br><img data-src="/Scraping-Basics-Selenium/04-1.png"><br>相對於顯式等待是針對個別元素是否生成，隱式等待則是針對整個頁面，以上圖為例，這邊就是讓整個程式暫停，<br>給予瀏覽器10秒的時間，如果10秒內”整個頁面都已經生成完成”(講得直白一點其實就是我們頁面左上角的圈圈不再轉動)，則繼續程式運行，如果10內還沒載完，則報錯，因此可以看的出來，相對於顯式等待，隱式等待跟強制等待可能會要花費更久的時間。</p>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>爬蟲</category>
-      </categories>
-      <tags>
-        <tag>爬蟲</tag>
-        <tag>程式</tag>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>清蒸鱸魚食譜</title>
     <url>/Steamed-Bass-Recipe/</url>
     <content><![CDATA[<h3 id="所需材料："><a href="#所需材料：" class="headerlink" title="所需材料："></a>所需材料：</h3><ul>
@@ -419,25 +419,6 @@
       <tags>
         <tag>自製</tag>
         <tag>食譜</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>熱流實驗 風洞與流視 結報</title>
-    <url>/Wind-Tunnel-and-Flow-Visualization-Report/</url>
-    <content><![CDATA[<center>國立清華大學動力機械工程學系</center>
-<center>熱流實驗-風洞與流視</center>
-<center>結報</center>
-<span id="more"></span>
-
-<div class="pdf-container" data-target="/pdf/110033210.pdf" data-height="700px"></div>
-
-]]></content>
-      <categories>
-        <category>結報</category>
-        <category>清大動機</category>
-      </categories>
-      <tags>
-        <tag>結報</tag>
       </tags>
   </entry>
   <entry>
@@ -491,27 +472,31 @@
       </tags>
   </entry>
   <entry>
-    <title>光電實驗(一) 幾何光學基本定律</title>
-    <url>/2-Fundamental-Laws-of-Geometric-Optics/</url>
-    <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 幾何光學基本定律 結報</center><span id="more"></span>
+    <title>熱流實驗 風洞與流視 結報</title>
+    <url>/Wind-Tunnel-and-Flow-Visualization-Report/</url>
+    <content><![CDATA[<center>國立清華大學動力機械工程學系</center>
+<center>熱流實驗-風洞與流視</center>
+<center>結報</center>
+<span id="more"></span>
 
-<div class="pdf-container" data-target="/pdf/2-Fundamental-Laws-of-Geometric-Optics.pdf" data-height="700px"></div>]]></content>
+<div class="pdf-container" data-target="/pdf/110033210.pdf" data-height="700px"></div>
+
+]]></content>
       <categories>
         <category>結報</category>
-        <category>成大光電</category>
+        <category>清大動機</category>
       </categories>
       <tags>
         <tag>結報</tag>
       </tags>
   </entry>
   <entry>
-    <title>光電實驗(一) 擴束與平行光束</title>
-    <url>/3-Expanded-Beam-and-Parallel-Beam/</url>
+    <title>光電實驗(一) 幾何光學基本定律</title>
+    <url>/2-Fundamental-Laws-of-Geometric-Optics/</url>
     <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 擴束與平行光束 結報</center><span id="more"></span>
+<center>光電實驗(一) 幾何光學基本定律 結報</center><span id="more"></span>
 
-<div class="pdf-container" data-target="/pdf/3-Expanded-Beam-and-Parallel-Beam.pdf" data-height="700px"></div>]]></content>
+<div class="pdf-container" data-target="/pdf/2-Fundamental-Laws-of-Geometric-Optics.pdf" data-height="700px"></div>]]></content>
       <categories>
         <category>結報</category>
         <category>成大光電</category>
@@ -536,12 +521,42 @@
       </tags>
   </entry>
   <entry>
+    <title>光電實驗(一) 擴束與平行光束</title>
+    <url>/3-Expanded-Beam-and-Parallel-Beam/</url>
+    <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
+<center>光電實驗(一) 擴束與平行光束 結報</center><span id="more"></span>
+
+<div class="pdf-container" data-target="/pdf/3-Expanded-Beam-and-Parallel-Beam.pdf" data-height="700px"></div>]]></content>
+      <categories>
+        <category>結報</category>
+        <category>成大光電</category>
+      </categories>
+      <tags>
+        <tag>結報</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>光電實驗(一) 光的偏極化現象</title>
     <url>/5-polarization-of-light/</url>
     <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
 <center>光電實驗(一) 光的偏極化現象 結報</center><span id="more"></span>
 
 <div class="pdf-container" data-target="/pdf/5-polarization-of-light.pdf" data-height="700px"></div>]]></content>
+      <categories>
+        <category>結報</category>
+        <category>成大光電</category>
+      </categories>
+      <tags>
+        <tag>結報</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>光電實驗(一) 干涉與繞射</title>
+    <url>/6-Interference-and-Diffraction/</url>
+    <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
+<center>光電實驗(一) 干涉與繞射 結報</center><span id="more"></span>
+
+<div class="pdf-container" data-target="/pdf/6-Interference-and-Diffraction.pdf" data-height="700px"></div>]]></content>
       <categories>
         <category>結報</category>
         <category>成大光電</category>
@@ -573,21 +588,6 @@
       </tags>
   </entry>
   <entry>
-    <title>光電實驗(一) 干涉與繞射</title>
-    <url>/6-Interference-and-Diffraction/</url>
-    <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 干涉與繞射 結報</center><span id="more"></span>
-
-<div class="pdf-container" data-target="/pdf/6-Interference-and-Diffraction.pdf" data-height="700px"></div>]]></content>
-      <categories>
-        <category>結報</category>
-        <category>成大光電</category>
-      </categories>
-      <tags>
-        <tag>結報</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>好耶 酪梨</title>
     <url>/avocado-daisuki/</url>
     <content><![CDATA[<p>諸君 我是酪梨控。</p>
@@ -608,15 +608,22 @@
       </tags>
   </entry>
   <entry>
-    <title>Philosophy-Department-Daily-EP1</title>
+    <title>哲學系日常 EP1 - 貓貓攝影</title>
     <url>/Philosophy-Department-Daily-EP1/</url>
-    <content><![CDATA[<center><img data-src="./01.jpg" height=400>
+    <content><![CDATA[<span id="more"></span>
+<img data-src="01.jpg" height=400>
 淺田家的編排方式，不翻還不知道
 和我對群體肖像的感受差不多，看來路子是對的
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/./02.jpg" alt="image description"></div><div class="group-picture-column"><img data-src="/./03.jpg" alt="image description"></div><div class="group-picture-column"><img data-src="/./04.jpg" alt="image description"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/./05.jpg" alt="image description"></div></div></div>
-深瀬昌久<Sasuke>可愛貓貓，記錄愛貓sasuke的幼貓時期，捕捉到的都是幼貓的靈，構圖又充分具備攝影家的功力（也許是老派的
 
+<hr>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="02.jpg" height=200></div><div class="group-picture-column"><img data-src="03.jpg" height=200></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="04.jpg" height=200></div><div class="group-picture-column"><img data-src="05.jpg" height=200></div></div></div>
+<p>深瀬昌久<Sasuke>可愛貓貓，記錄愛貓sasuke的幼貓時期，捕捉到的都是幼貓的靈，構圖又充分具備攝影家的功力（也許是老派的</p>
+<hr>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="2-01.jpg" height=200></div><div class="group-picture-column"><img data-src="2-02.jpg" height=200></div></div></div>
 <p>和Sasuke 相對的，拍出成貓的寧靜，老貓與老人互動成趣，構圖相當中庸，攝影家強於的是情境的構築</p>
+<hr>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="3-01.jpg" height=200></div><div class="group-picture-column"><img data-src="3-02.jpg" height=200></div><div class="group-picture-column"><img data-src="3-03.jpg" height=200></div></div></div>
+
 <p>次方有趣，望照辦，只因錢包空空</p>
 ]]></content>
       <tags>
