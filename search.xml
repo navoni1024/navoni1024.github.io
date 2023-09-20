@@ -179,24 +179,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Discord Bot-創建一隻bot</title>
-    <url>/Discord-Bot-create-a-bot/</url>
-    <content><![CDATA[<p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
-<span id="more"></span>
-<p><img data-src="/Discord-Bot-create-a-bot/20152706MBGmHIhGdS.png"><br>大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。</p>
-<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img data-src="/Discord-Bot-create-a-bot/20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img data-src="/Discord-Bot-create-a-bot/20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img data-src="/Discord-Bot-create-a-bot/20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>Discord bot</category>
-      </categories>
-      <tags>
-        <tag>程式</tag>
-        <tag>python</tag>
-        <tag>Discord</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Discord Bot-Cogs</title>
     <url>/Discord-Bot-Cogs/</url>
     <content><![CDATA[<p>如果你的機器人功能多到一個程度，把全部的程式碼全部塞在一個文件裡顯然不是好辦法。<br>不但看起來雜亂，也難以維護，就算只是其中一個功能出問題也必須要把整個bot關掉。<br>這時候就可以使用<strong>Cogs</strong>的架構來寫，<br>可以將commands和listener等東西分堆塞在各自文件裡並方便我們裝卸。</p>
@@ -233,6 +215,24 @@
 <p>而load回來的話可以發現指令有反應了，help中也看的到了。<br><img data-src="/Discord-Bot-Cogs/20152706uqPycyubVO.png"></p>
 <hr>
 <p>前述的的程式結構較簡單可能沒什麼感覺，但要是程式複雜到如下圖能夠先unload一塊調整完後再load回去還是挺方便的。<br><img data-src="/Discord-Bot-Cogs/20152706kGyb4P4XHd.png"></p>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>Discord bot</category>
+      </categories>
+      <tags>
+        <tag>程式</tag>
+        <tag>python</tag>
+        <tag>Discord</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Discord Bot-創建一隻bot</title>
+    <url>/Discord-Bot-create-a-bot/</url>
+    <content><![CDATA[<p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
+<span id="more"></span>
+<p><img data-src="/Discord-Bot-create-a-bot/20152706MBGmHIhGdS.png"><br>大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。</p>
+<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img data-src="/Discord-Bot-create-a-bot/20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img data-src="/Discord-Bot-create-a-bot/20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img data-src="/Discord-Bot-create-a-bot/20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
 ]]></content>
       <categories>
         <category>程式</category>
@@ -392,6 +392,25 @@
       </tags>
   </entry>
   <entry>
+    <title>地形考察報告</title>
+    <url>/Terrain-Survey-Report/</url>
+    <content><![CDATA[<div style="text-align:center">
+國立台北教育大學
+地形考察報告
+結報
+</div>
+<span id="more"></span>
+
+<div class="pdf-container" data-target="/pdf/NTUE-Geo.pdf" data-height="700px"></div>]]></content>
+      <categories>
+        <category>結報</category>
+        <category>國北教自</category>
+      </categories>
+      <tags>
+        <tag>結報</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>清蒸鱸魚食譜</title>
     <url>/Steamed-Bass-Recipe/</url>
     <content><![CDATA[<h3 id="所需材料："><a href="#所需材料：" class="headerlink" title="所需材料："></a>所需材料：</h3><ul>
@@ -438,25 +457,6 @@
       </tags>
   </entry>
   <entry>
-    <title>地形考察報告</title>
-    <url>/Terrain-Survey-Report/</url>
-    <content><![CDATA[<div style="text-align:center">
-國立台北教育大學
-地形考察報告
-結報
-</div>
-<span id="more"></span>
-
-<div class="pdf-container" data-target="/pdf/NTUE-Geo.pdf" data-height="700px"></div>]]></content>
-      <categories>
-        <category>結報</category>
-        <category>國北教自</category>
-      </categories>
-      <tags>
-        <tag>結報</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>熱流實驗 風洞與流視 結報</title>
     <url>/Wind-Tunnel-and-Flow-Visualization-Report/</url>
     <content><![CDATA[<center>國立清華大學動力機械工程學系</center>
@@ -491,12 +491,12 @@
       </tags>
   </entry>
   <entry>
-    <title>光電實驗(一) 幾何光學基本定律</title>
-    <url>/2-Fundamental-Laws-of-Geometric-Optics/</url>
+    <title>光電實驗(一) 擴束與平行光束</title>
+    <url>/3-Expanded-Beam-and-Parallel-Beam/</url>
     <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 幾何光學基本定律 結報</center><span id="more"></span>
+<center>光電實驗(一) 擴束與平行光束 結報</center><span id="more"></span>
 
-<div class="pdf-container" data-target="/pdf/2-Fundamental-Laws-of-Geometric-Optics.pdf" data-height="700px"></div>]]></content>
+<div class="pdf-container" data-target="/pdf/3-Expanded-Beam-and-Parallel-Beam.pdf" data-height="700px"></div>]]></content>
       <categories>
         <category>結報</category>
         <category>成大光電</category>
@@ -506,12 +506,12 @@
       </tags>
   </entry>
   <entry>
-    <title>光電實驗(一) 擴束與平行光束</title>
-    <url>/3-Expanded-Beam-and-Parallel-Beam/</url>
+    <title>光電實驗(一) 幾何光學基本定律</title>
+    <url>/2-Fundamental-Laws-of-Geometric-Optics/</url>
     <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 擴束與平行光束 結報</center><span id="more"></span>
+<center>光電實驗(一) 幾何光學基本定律 結報</center><span id="more"></span>
 
-<div class="pdf-container" data-target="/pdf/3-Expanded-Beam-and-Parallel-Beam.pdf" data-height="700px"></div>]]></content>
+<div class="pdf-container" data-target="/pdf/2-Fundamental-Laws-of-Geometric-Optics.pdf" data-height="700px"></div>]]></content>
       <categories>
         <category>結報</category>
         <category>成大光電</category>
@@ -608,22 +608,6 @@
       </tags>
   </entry>
   <entry>
-    <title>馬克斯威波方程在GT下的非可變性證明</title>
-    <url>/Maxwell-Equations-Non-Invariance-Proof-in-GT/</url>
-    <content><![CDATA[<p>最近寫了近代物理，雖然這個是前面簡單的證明，但有鑑於直接找中文沒啥結果，找英文的也大多都影片，所以丟個筆記上來。</p>
-<span id="more"></span>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="01.jpg" height=200></div><div class="group-picture-column"><img data-src="02.jpg" height=200></div><div class="group-picture-column"><img data-src="03.jpg" height=200></div></div></div>
-
-]]></content>
-      <categories>
-        <category>結報</category>
-        <category>成大光電</category>
-      </categories>
-      <tags>
-        <tag>結報</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>BK樹跟Levenshtein</title>
     <url>/BK-tree-and-Levenshtein/</url>
     <content><![CDATA[<p>Levenshtein距離是兩個字串間，透過新增、更換、刪除下的最少操作次數，透過動態規劃解決。</p>
@@ -643,12 +627,13 @@
       </tags>
   </entry>
   <entry>
-    <title>速度與加速度在羅倫茲轉換(LT)下的轉換</title>
-    <url>/Velocity-and-Acceleration-Transformation-under-LT/</url>
-    <content><![CDATA[<p>這篇是假定已經推得LT下的產物，其實這篇的推導可能比較好找，但是從頭自己推到尾很爽，所以留個紀錄</p>
+    <title>馬克斯威波方程在伽利略轉換(GT)下的非可變性證明</title>
+    <url>/Maxwell-Equations-Non-Invariance-Proof-in-GT/</url>
+    <content><![CDATA[<p>最近寫了近代物理，雖然這個是前面簡單的證明，但有鑑於直接找中文沒啥結果，找英文的也大多都影片，所以丟個筆記上來。</p>
 <span id="more"></span>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="01.jpg" height=200></div><div class="group-picture-column"><img data-src="02.jpg" height=200></div><div class="group-picture-column"><img data-src="03.jpg" height=200></div></div></div>
 
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="01.jpg" height=200></div><div class="group-picture-column"><img data-src="02.jpg" height=200></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="03.jpg" height=200></div><div class="group-picture-column"><img data-src="04.jpg" height=200></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="05.jpg" height=200></div><div class="group-picture-column"><img data-src="06.jpg" height=200></div><div class="group-picture-column"><img data-src="07.jpg" height=200></div></div></div>]]></content>
+]]></content>
       <categories>
         <category>結報</category>
         <category>成大光電</category>
@@ -684,15 +669,19 @@
       </tags>
   </entry>
   <entry>
-    <title>媽我在這</title>
-    <url>/mom-Im-here/</url>
-    <content><![CDATA[<p>如題，有一天這個部落格會被更多人看到，為了到時候可能的報導及介紹，特此先把想說的話說一說。</p>
-<p>媽，我上電視了！</p>
-<p><strong>筆者：蔡銘揚</strong></p>
-]]></content>
+    <title>速度與加速度在羅倫茲轉換(LT)下的轉換</title>
+    <url>/Velocity-and-Acceleration-Transformation-under-LT/</url>
+    <content><![CDATA[<p>這篇是假定已經推得LT下的產物，其實這篇的推導可能比較好找，但是從頭自己推到尾很爽，所以留個紀錄</p>
+<span id="more"></span>
+
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="01.jpg" height=200></div><div class="group-picture-column"><img data-src="02.jpg" height=200></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="03.jpg" height=200></div><div class="group-picture-column"><img data-src="04.jpg" height=200></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="05.jpg" height=200></div><div class="group-picture-column"><img data-src="06.jpg" height=200></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="07.jpg" height=200></div><div class="group-picture-column"><img data-src="08.jpg" height=200></div></div></div>]]></content>
       <categories>
-        <category>日常廢文</category>
+        <category>結報</category>
+        <category>成大光電</category>
       </categories>
+      <tags>
+        <tag>結報</tag>
+      </tags>
   </entry>
   <entry>
     <title>北北基112-2學年度學測模擬考 作文第二題情意題&lt;魚說&gt; 寫作範例</title>
@@ -714,5 +703,17 @@
       <tags>
         <tag>結報</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>媽我在這</title>
+    <url>/mom-Im-here/</url>
+    <content><![CDATA[<p>如題，有一天這個部落格會被更多人看到，為了到時候可能的報導及介紹，特此先把想說的話說一說。</p>
+<p>媽，我上電視了！</p>
+<p><strong>筆者：蔡銘揚</strong></p>
+<p><del>現在魚說的閱讀次數在149，如此美妙的數字</del></p>
+]]></content>
+      <categories>
+        <category>日常廢文</category>
+      </categories>
   </entry>
 </search>
