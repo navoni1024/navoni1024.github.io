@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://navoni1024.github.io/Philosophy-Department-Daily-EP1/</loc>
+    
+    <lastmod>2023-09-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://navoni1024.github.io/fish-said-sample/</loc>
     
     <lastmod>2023-09-20</lastmod>
@@ -110,25 +119,16 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/Discord-Bot-Cogs/</loc>
-    
-    <lastmod>2023-08-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://navoni1024.github.io/Highball/</loc>
-    
-    <lastmod>2023-08-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://navoni1024.github.io/Discord-Bot-create-a-bot/</loc>
+    
+    <lastmod>2023-08-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/Discord-Bot-Cogs/</loc>
     
     <lastmod>2023-08-01</lastmod>
     
@@ -147,6 +147,15 @@
   
   <url>
     <loc>http://navoni1024.github.io/Scraping-Basics-JSON/</loc>
+    
+    <lastmod>2023-08-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/Highball/</loc>
     
     <lastmod>2023-08-01</lastmod>
     
@@ -288,27 +297,6 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/tags/bartending/</loc>
-    <lastmod>2023-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://navoni1024.github.io/tags/bartending-recipe/</loc>
-    <lastmod>2023-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://navoni1024.github.io/tags/%E5%9C%9F%E8%A3%BD/</loc>
-    <lastmod>2023-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://navoni1024.github.io/tags/scraping/</loc>
     <lastmod>2023-09-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -324,6 +312,27 @@
   
   <url>
     <loc>http://navoni1024.github.io/tags/python/</loc>
+    <lastmod>2023-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/tags/bartending/</loc>
+    <lastmod>2023-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/tags/bartending-recipe/</loc>
+    <lastmod>2023-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/tags/%E5%9C%9F%E8%A3%BD/</loc>
     <lastmod>2023-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -357,17 +366,17 @@
     <priority>0.2</priority>
   </url>
   
-
-  
   <url>
-    <loc>http://navoni1024.github.io/categories/shitpost/</loc>
+    <loc>http://navoni1024.github.io/tags/%E6%94%9D%E5%BD%B1/</loc>
     <lastmod>2023-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
+
+  
   <url>
-    <loc>http://navoni1024.github.io/categories/diet/</loc>
+    <loc>http://navoni1024.github.io/categories/shitpost/</loc>
     <lastmod>2023-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -381,7 +390,14 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/diet/wine/</loc>
+    <loc>http://navoni1024.github.io/categories/diet/</loc>
+    <lastmod>2023-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/categories/coding/Discord-bot/</loc>
     <lastmod>2023-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -395,7 +411,7 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/coding/Discord-bot/</loc>
+    <loc>http://navoni1024.github.io/categories/diet/wine/</loc>
     <lastmod>2023-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -416,7 +432,7 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/report/NCKU-DP/</loc>
+    <loc>http://navoni1024.github.io/categories/report/NTHU-PME/</loc>
     <lastmod>2023-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -430,7 +446,7 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/report/NTHU-PME/</loc>
+    <loc>http://navoni1024.github.io/categories/report/NCKU-DP/</loc>
     <lastmod>2023-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
