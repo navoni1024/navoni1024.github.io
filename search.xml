@@ -179,24 +179,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Discord Bot-創建一隻bot</title>
-    <url>/Discord-Bot-create-a-bot/</url>
-    <content><![CDATA[<p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
-<span id="more"></span>
-<p><img data-src="/Discord-Bot-create-a-bot/20152706MBGmHIhGdS.png"><br>大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。</p>
-<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img data-src="/Discord-Bot-create-a-bot/20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img data-src="/Discord-Bot-create-a-bot/20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img data-src="/Discord-Bot-create-a-bot/20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>Discord bot</category>
-      </categories>
-      <tags>
-        <tag>程式</tag>
-        <tag>python</tag>
-        <tag>Discord</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Discord Bot-Cogs</title>
     <url>/Discord-Bot-Cogs/</url>
     <content><![CDATA[<p>如果你的機器人功能多到一個程度，把全部的程式碼全部塞在一個文件裡顯然不是好辦法。<br>不但看起來雜亂，也難以維護，就算只是其中一個功能出問題也必須要把整個bot關掉。<br>這時候就可以使用<strong>Cogs</strong>的架構來寫，<br>可以將commands和listener等東西分堆塞在各自文件裡並方便我們裝卸。</p>
@@ -245,6 +227,25 @@
       </tags>
   </entry>
   <entry>
+    <title>最近的夜晚-Gin Fizz</title>
+    <url>/Gin-Fizz/</url>
+    <content><![CDATA[<p>最近晚上一直都是喝著gin fizz渡過的<br>琴酒+檸檬+糖漿攪拌或搖晃<br>最後加入氣泡水<br>清爽的口感加上琴酒的藥草香以及檸檬的酸和糖漿的甜<span id="more"></span><br>最後加入氣泡水增添的口感<br>同時也有效將琴酒的口味分層<br>不由得一杯接著一杯</p>
+<p>建議用可林杯與長冰調配<br>克林杯放入長冰冰杯<br>倒出融水後<br>將琴酒、半顆檸檬的檸檬汁、與糖漿倒入<br>攪拌均勻<br>隨後用氣泡水填滿<br>若剩下半顆檸檬<br>可切一片放杯緣<br>如此一來你便完成了一杯gin fizz</p>
+<p>如果想要提升味覺感受<br>可以從琴酒以及氣泡水下手</p>
+<p>最後<br>以上言論不代表本人立場</p>
+<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>酒</category>
+      </categories>
+      <tags>
+        <tag>調酒</tag>
+        <tag>酒譜</tag>
+        <tag>自製</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Highball-嗨波</title>
     <url>/Highball/</url>
     <content><![CDATA[<p>最近放暑假，最舒服的就是中午起床弄個午餐，配杯highball搭著netflix或VT。<br>嗨波其實就是簡單的威士忌加氣泡水，而清爽的口感在夏日午後絕對是最好的享受。</p>
@@ -268,22 +269,21 @@
       </tags>
   </entry>
   <entry>
-    <title>最近的夜晚-Gin Fizz</title>
-    <url>/Gin-Fizz/</url>
-    <content><![CDATA[<p>最近晚上一直都是喝著gin fizz渡過的<br>琴酒+檸檬+糖漿攪拌或搖晃<br>最後加入氣泡水<br>清爽的口感加上琴酒的藥草香以及檸檬的酸和糖漿的甜<span id="more"></span><br>最後加入氣泡水增添的口感<br>同時也有效將琴酒的口味分層<br>不由得一杯接著一杯</p>
-<p>建議用可林杯與長冰調配<br>克林杯放入長冰冰杯<br>倒出融水後<br>將琴酒、半顆檸檬的檸檬汁、與糖漿倒入<br>攪拌均勻<br>隨後用氣泡水填滿<br>若剩下半顆檸檬<br>可切一片放杯緣<br>如此一來你便完成了一杯gin fizz</p>
-<p>如果想要提升味覺感受<br>可以從琴酒以及氣泡水下手</p>
-<p>最後<br>以上言論不代表本人立場</p>
-<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+    <title>Discord Bot-創建一隻bot</title>
+    <url>/Discord-Bot-create-a-bot/</url>
+    <content><![CDATA[<p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
+<span id="more"></span>
+<p><img data-src="/Discord-Bot-create-a-bot/20152706MBGmHIhGdS.png"><br>大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。</p>
+<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img data-src="/Discord-Bot-create-a-bot/20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img data-src="/Discord-Bot-create-a-bot/20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img data-src="/Discord-Bot-create-a-bot/20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
 ]]></content>
       <categories>
-        <category>飲食</category>
-        <category>酒</category>
+        <category>程式</category>
+        <category>Discord bot</category>
       </categories>
       <tags>
-        <tag>調酒</tag>
-        <tag>酒譜</tag>
-        <tag>自製</tag>
+        <tag>程式</tag>
+        <tag>python</tag>
+        <tag>Discord</tag>
       </tags>
   </entry>
   <entry>
@@ -352,6 +352,36 @@
       </tags>
   </entry>
   <entry>
+    <title>清蒸鱸魚食譜</title>
+    <url>/Steamed-Bass-Recipe/</url>
+    <content><![CDATA[<h3 id="所需材料："><a href="#所需材料：" class="headerlink" title="所需材料："></a>所需材料：</h3><ul>
+<li>鱸魚一尾</li>
+<li>檸檬一顆</li>
+<li>辣椒兩根</li>
+<li>蒜頭三到五瓣<span id="more"></span></li>
+<li>蔥一枝</li>
+<li>洋蔥一顆</li>
+<li>豆芽菜一包</li>
+<li>糖</li>
+<li>白胡椒粉</li>
+<li>米酒</li>
+<li>水</li>
+<li>魚露</li>
+</ul>
+<h3 id="魚的處理："><a href="#魚的處理：" class="headerlink" title="魚的處理："></a>魚的處理：</h3><p>1.刮除鱗片、修魚鰭<br>2.剪開魚腹、刮除內臟並清洗乾淨<br>3.確認魚的乾淨並在表面劃刀痕<br>4.將洋蔥及豆芽菜洗淨<br>5.洋蔥切條與豆芽並行鋪於盤底<br><img data-src="/Steamed-Bass-Recipe/FISH.jpg" alt="處理完的魚和醬汁"></p>
+<h3 id="調料的處理："><a href="#調料的處理：" class="headerlink" title="調料的處理："></a>調料的處理：</h3><p>6.蒜頭、辣椒切碎<br>7.加入糖一匙<br>8.加入米酒兩匙<br>9.魚露兩匙<br>10.檸檬汁一顆的量<br>11.白胡椒粉一小匙<br>12.加入兩匙水、拌勻<br>13.將魚放入盤內、平均淋上調料<br>14.放入電鍋蒸<br>15.蔥切細絲放上出鍋後的料理<br>16.熱少許油至些許冒煙、淋上蔥絲即可出菜</p>
+<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>食譜</category>
+      </categories>
+      <tags>
+        <tag>自製</tag>
+        <tag>食譜</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>爬蟲基礎入門-XPath</title>
     <url>/Scraping-Basics-XPath/</url>
     <content><![CDATA[<p>我們在selenium時有講到幾個指令像是find_element_by的指令，<br>但如果我們的html沒有class或是id等節點的話，其實對我們爬蟲有點不太友善，<br>所以今天我們會教xpath的搜尋方法</p>
@@ -392,6 +422,22 @@
       </tags>
   </entry>
   <entry>
+    <title>越式涼拌</title>
+    <url>/Vietnamese-Cold-Salad/</url>
+    <content><![CDATA[<h3 id="醬料"><a href="#醬料" class="headerlink" title="醬料"></a>醬料</h3><p>1.蒜頭、辣椒切碎<br>2.加入糖一匙<br>3.魚露兩匙<br>4.檸檬汁一顆的量<span id="more"></span><br>5.白胡椒粉一小匙<br>6.加入兩匙水、拌勻</p>
+<p>再切個青木瓜絲、紅蘿蔔絲、小黃瓜絲丟進去拌一拌，灑上一把鹹花生就完成了。</p>
+<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>食譜</category>
+      </categories>
+      <tags>
+        <tag>自製</tag>
+        <tag>食譜</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>地形考察報告</title>
     <url>/Terrain-Survey-Report/</url>
     <content><![CDATA[<div style="text-align:center">
@@ -411,77 +457,12 @@
       </tags>
   </entry>
   <entry>
-    <title>熱流實驗 風洞與流視 結報</title>
-    <url>/Wind-Tunnel-and-Flow-Visualization-Report/</url>
-    <content><![CDATA[<center>國立清華大學動力機械工程學系</center>
-<center>熱流實驗-風洞與流視</center>
-<center>結報</center>
-<span id="more"></span>
-
-<center><a href="/pdf/110033210.pdf" target="_blank">
-   <font color="blue">新分頁開啟結報</font>
-</a></center>]]></content>
-      <categories>
-        <category>結報</category>
-        <category>清大動機</category>
-      </categories>
-      <tags>
-        <tag>結報</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>越式涼拌</title>
-    <url>/Vietnamese-Cold-Salad/</url>
-    <content><![CDATA[<h3 id="醬料"><a href="#醬料" class="headerlink" title="醬料"></a>醬料</h3><p>1.蒜頭、辣椒切碎<br>2.加入糖一匙<br>3.魚露兩匙<br>4.檸檬汁一顆的量<span id="more"></span><br>5.白胡椒粉一小匙<br>6.加入兩匙水、拌勻</p>
-<p>再切個青木瓜絲、紅蘿蔔絲、小黃瓜絲丟進去拌一拌，灑上一把鹹花生就完成了。</p>
-<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
-]]></content>
-      <categories>
-        <category>飲食</category>
-        <category>食譜</category>
-      </categories>
-      <tags>
-        <tag>自製</tag>
-        <tag>食譜</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>清蒸鱸魚食譜</title>
-    <url>/Steamed-Bass-Recipe/</url>
-    <content><![CDATA[<h3 id="所需材料："><a href="#所需材料：" class="headerlink" title="所需材料："></a>所需材料：</h3><ul>
-<li>鱸魚一尾</li>
-<li>檸檬一顆</li>
-<li>辣椒兩根</li>
-<li>蒜頭三到五瓣<span id="more"></span></li>
-<li>蔥一枝</li>
-<li>洋蔥一顆</li>
-<li>豆芽菜一包</li>
-<li>糖</li>
-<li>白胡椒粉</li>
-<li>米酒</li>
-<li>水</li>
-<li>魚露</li>
-</ul>
-<h3 id="魚的處理："><a href="#魚的處理：" class="headerlink" title="魚的處理："></a>魚的處理：</h3><p>1.刮除鱗片、修魚鰭<br>2.剪開魚腹、刮除內臟並清洗乾淨<br>3.確認魚的乾淨並在表面劃刀痕<br>4.將洋蔥及豆芽菜洗淨<br>5.洋蔥切條與豆芽並行鋪於盤底<br><img data-src="/Steamed-Bass-Recipe/FISH.jpg" alt="處理完的魚和醬汁"></p>
-<h3 id="調料的處理："><a href="#調料的處理：" class="headerlink" title="調料的處理："></a>調料的處理：</h3><p>6.蒜頭、辣椒切碎<br>7.加入糖一匙<br>8.加入米酒兩匙<br>9.魚露兩匙<br>10.檸檬汁一顆的量<br>11.白胡椒粉一小匙<br>12.加入兩匙水、拌勻<br>13.將魚放入盤內、平均淋上調料<br>14.放入電鍋蒸<br>15.蔥切細絲放上出鍋後的料理<br>16.熱少許油至些許冒煙、淋上蔥絲即可出菜</p>
-<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
-]]></content>
-      <categories>
-        <category>飲食</category>
-        <category>食譜</category>
-      </categories>
-      <tags>
-        <tag>自製</tag>
-        <tag>食譜</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>光電實驗(一) 幾何光學基本定律</title>
-    <url>/2-Fundamental-Laws-of-Geometric-Optics/</url>
+    <title>光電實驗(一) 雷射光的方向性</title>
+    <url>/1-Directionality-of-laser-light/</url>
     <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 幾何光學基本定律 結報</center><span id="more"></span>
+<center>光電實驗(一) 雷射光的方向性 結報</center><span id="more"></span>
 
-<div class="pdf-container" data-target="/pdf/2-Fundamental-Laws-of-Geometric-Optics.pdf" data-height="700px"></div>]]></content>
+<div class="pdf-container" data-target="/pdf/1-Directionality-of-laser-light.pdf" data-height="700px"></div>]]></content>
       <categories>
         <category>結報</category>
         <category>成大光電</category>
@@ -491,12 +472,34 @@
       </tags>
   </entry>
   <entry>
-    <title>光電實驗(一) 雷射光的方向性</title>
-    <url>/1-Directionality-of-laser-light/</url>
-    <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 雷射光的方向性 結報</center><span id="more"></span>
+    <title>熱流實驗 風洞與流視 結報</title>
+    <url>/Wind-Tunnel-and-Flow-Visualization-Report/</url>
+    <content><![CDATA[<center>國立清華大學動力機械工程學系</center>
+<center>熱流實驗-風洞與流視</center>
+<center>結報</center>
+<span id="more"></span>
 
-<div class="pdf-container" data-target="/pdf/1-Directionality-of-laser-light.pdf" data-height="700px"></div>]]></content>
+<center>
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/110033210.pdf">
+    <font color=blue> 新分頁開啟結報</font>
+</a>
+</center>
+]]></content>
+      <categories>
+        <category>結報</category>
+        <category>清大動機</category>
+      </categories>
+      <tags>
+        <tag>結報</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>光電實驗(一) 幾何光學基本定律</title>
+    <url>/2-Fundamental-Laws-of-Geometric-Optics/</url>
+    <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
+<center>光電實驗(一) 幾何光學基本定律 結報</center><span id="more"></span>
+
+<div class="pdf-container" data-target="/pdf/2-Fundamental-Laws-of-Geometric-Optics.pdf" data-height="700px"></div>]]></content>
       <categories>
         <category>結報</category>
         <category>成大光電</category>
@@ -566,17 +569,15 @@
       </tags>
   </entry>
   <entry>
-    <title>LK-99樣本合成製備</title>
-    <url>/LK-99-Sample-Synthesis-Preparation/</url>
-    <content><![CDATA[<h3 id="所需材料"><a href="#所需材料" class="headerlink" title="所需材料"></a>所需材料</h3><ul>
-<li>PbO</li>
-<li>PbSO4</li>
-<li>Cu</li>
-<li>P<span id="more"></span></li>
-</ul>
-<h3 id="第一步——製備-Lanarkite-Pb2SO5"><a href="#第一步——製備-Lanarkite-Pb2SO5" class="headerlink" title="第一步——製備 Lanarkite, Pb2SO5"></a>第一步——製備 Lanarkite, Pb2SO5</h3><p>PbO及PbSO4之粉末莫爾比1:1，以瑪瑙缽研磨混和均勻<br>接著將混和之粉末轉置進氧化鋁坩堝，放入爐內控溫725°C反應24小時<br>反應完成後應得到樣品為白色，隨後以缽將之磨成粉末</p>
-<h3 id="第二步——製備-磷化亞銅-Cu3P"><a href="#第二步——製備-磷化亞銅-Cu3P" class="headerlink" title="第二步——製備 磷化亞銅, Cu3P"></a>第二步——製備 磷化亞銅, Cu3P</h3><p>Cu及P之粉末以莫爾比3:1混和均勻，並轉置石英管內<br>以10^-5 Torr之真空封存，放入爐內控溫550°C反應48小時<br>反應完成後應得到樣品為灰黑色錠塊，隨後以缽將之磨成粉末</p>
-<h3 id="第三步——製備-LK-99"><a href="#第三步——製備-LK-99" class="headerlink" title="第三步——製備 LK-99"></a>第三步——製備 LK-99</h3><p>Lanarkite和Cu3P莫爾比1:1，瑪瑙缽研磨混和均勻後進行固相反應<br>樣品放進試管中以10^-5 Torr之真空封存，放入925°C之爐內反應10小時<br>反應結束後，將會得到灰黑色的錠塊，並將其切成小薄方片以便電導測定<br>至於其他之分析手法，皆會先磨成粉後再進行</p>
+    <title>好耶 酪梨</title>
+    <url>/avocado-daisuki/</url>
+    <content><![CDATA[<p>諸君 我是酪梨控。</p>
+<p>我喜歡酪梨。台灣的酪梨產季為五月至隔年三月，其中，六到八月的酪梨最為美味。本人日常於桃園市大湳市場買菜時，注意到最近的攤位開始擺放酪梨的比例上升了，價格也不貴，於是便趁著這個機會買了三顆酪梨，分享食譜給大家。 <span id="more"></span></p>
+<p>酪梨未成熟時呈現葉綠色，輕輕按壓會發現其肉質堅硬，此時搖晃酪梨感覺不太出來酪梨籽的晃動。而成熟的酪梨表皮呈現紫黑色，肉質柔軟易於按壓，且搖晃時能清楚感受到酪梨籽的晃動。若是表皮尚未發黑或搖晃感受不到籽的晃動，請以按壓的手感判斷成熟與否，食用時機不宜過軟。</p>
+<hr>
+<h3 id="酪梨籽茶"><a href="#酪梨籽茶" class="headerlink" title="酪梨籽茶"></a>酪梨籽茶</h3><p>酪梨籽洗淨去皮後擦乾切片，放入一大碗中加入800毫升的水。<br>放入電鍋中，外鍋加入半杯水蒸至自然跳停，靜置15分鐘後再蒸一次。<br>第二次跳停後取出加入水（或冰塊）稀釋至1200~1500毫升即可飲用。<br>口感清順不苦澀，帶有薄荷涼感，冰過更好喝。</p>
+<h3 id="酪梨牛奶"><a href="#酪梨牛奶" class="headerlink" title="酪梨牛奶"></a>酪梨牛奶</h3><p>酪梨洗淨對半切取出籽，用湯匙將酪梨中間的籽模刮除。<br>用湯匙挖出酪梨肉至一大碗中壓切成小塊及泥狀。<br>加入100毫升水、100毫升酪梨籽茶（或水）、一大匙蜂蜜、少許檸檬汁，並攪拌均勻。<br>倒入破壁機中攪拌至完全混合，之後可依照喜好調整口感，喜歡果肉感豐富一點的可以考慮不要將酪梨打太細，保留些許果肉。<br>倒出即可蓋保鮮膜放冰箱保存，飲用時現在杯中放入冰塊，接著酪梨與牛奶6：4攪拌均勻即可享用。</p>
+<p><em><strong>好吃到Xin chao&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
 ]]></content>
       <categories>
         <category>飲食</category>
@@ -588,15 +589,17 @@
       </tags>
   </entry>
   <entry>
-    <title>好耶 酪梨</title>
-    <url>/avocado-daisuki/</url>
-    <content><![CDATA[<p>諸君 我是酪梨控。</p>
-<p>我喜歡酪梨。台灣的酪梨產季為五月至隔年三月，其中，六到八月的酪梨最為美味。本人日常於桃園市大湳市場買菜時，注意到最近的攤位開始擺放酪梨的比例上升了，價格也不貴，於是便趁著這個機會買了三顆酪梨，分享食譜給大家。 <span id="more"></span></p>
-<p>酪梨未成熟時呈現葉綠色，輕輕按壓會發現其肉質堅硬，此時搖晃酪梨感覺不太出來酪梨籽的晃動。而成熟的酪梨表皮呈現紫黑色，肉質柔軟易於按壓，且搖晃時能清楚感受到酪梨籽的晃動。若是表皮尚未發黑或搖晃感受不到籽的晃動，請以按壓的手感判斷成熟與否，食用時機不宜過軟。</p>
-<hr>
-<h3 id="酪梨籽茶"><a href="#酪梨籽茶" class="headerlink" title="酪梨籽茶"></a>酪梨籽茶</h3><p>酪梨籽洗淨去皮後擦乾切片，放入一大碗中加入800毫升的水。<br>放入電鍋中，外鍋加入半杯水蒸至自然跳停，靜置15分鐘後再蒸一次。<br>第二次跳停後取出加入水（或冰塊）稀釋至1200~1500毫升即可飲用。<br>口感清順不苦澀，帶有薄荷涼感，冰過更好喝。</p>
-<h3 id="酪梨牛奶"><a href="#酪梨牛奶" class="headerlink" title="酪梨牛奶"></a>酪梨牛奶</h3><p>酪梨洗淨對半切取出籽，用湯匙將酪梨中間的籽模刮除。<br>用湯匙挖出酪梨肉至一大碗中壓切成小塊及泥狀。<br>加入100毫升水、100毫升酪梨籽茶（或水）、一大匙蜂蜜、少許檸檬汁，並攪拌均勻。<br>倒入破壁機中攪拌至完全混合，之後可依照喜好調整口感，喜歡果肉感豐富一點的可以考慮不要將酪梨打太細，保留些許果肉。<br>倒出即可蓋保鮮膜放冰箱保存，飲用時現在杯中放入冰塊，接著酪梨與牛奶6：4攪拌均勻即可享用。</p>
-<p><em><strong>好吃到Xin chao&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+    <title>LK-99樣本合成製備</title>
+    <url>/LK-99-Sample-Synthesis-Preparation/</url>
+    <content><![CDATA[<h3 id="所需材料"><a href="#所需材料" class="headerlink" title="所需材料"></a>所需材料</h3><ul>
+<li>PbO</li>
+<li>PbSO4</li>
+<li>Cu</li>
+<li>P<span id="more"></span></li>
+</ul>
+<h3 id="第一步——製備-Lanarkite-Pb2SO5"><a href="#第一步——製備-Lanarkite-Pb2SO5" class="headerlink" title="第一步——製備 Lanarkite, Pb2SO5"></a>第一步——製備 Lanarkite, Pb2SO5</h3><p>PbO及PbSO4之粉末莫爾比1:1，以瑪瑙缽研磨混和均勻<br>接著將混和之粉末轉置進氧化鋁坩堝，放入爐內控溫725°C反應24小時<br>反應完成後應得到樣品為白色，隨後以缽將之磨成粉末</p>
+<h3 id="第二步——製備-磷化亞銅-Cu3P"><a href="#第二步——製備-磷化亞銅-Cu3P" class="headerlink" title="第二步——製備 磷化亞銅, Cu3P"></a>第二步——製備 磷化亞銅, Cu3P</h3><p>Cu及P之粉末以莫爾比3:1混和均勻，並轉置石英管內<br>以10^-5 Torr之真空封存，放入爐內控溫550°C反應48小時<br>反應完成後應得到樣品為灰黑色錠塊，隨後以缽將之磨成粉末</p>
+<h3 id="第三步——製備-LK-99"><a href="#第三步——製備-LK-99" class="headerlink" title="第三步——製備 LK-99"></a>第三步——製備 LK-99</h3><p>Lanarkite和Cu3P莫爾比1:1，瑪瑙缽研磨混和均勻後進行固相反應<br>樣品放進試管中以10^-5 Torr之真空封存，放入925°C之爐內反應10小時<br>反應結束後，將會得到灰黑色的錠塊，並將其切成小薄方片以便電導測定<br>至於其他之分析手法，皆會先磨成粉後再進行</p>
 ]]></content>
       <categories>
         <category>飲食</category>

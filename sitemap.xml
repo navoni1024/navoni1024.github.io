@@ -164,7 +164,7 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/Discord-Bot-create-a-bot/</loc>
+    <loc>http://navoni1024.github.io/Discord-Bot-Cogs/</loc>
     
     <lastmod>2023-08-01</lastmod>
     
@@ -173,7 +173,7 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/Discord-Bot-Cogs/</loc>
+    <loc>http://navoni1024.github.io/Gin-Fizz/</loc>
     
     <lastmod>2023-08-01</lastmod>
     
@@ -191,7 +191,7 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/Gin-Fizz/</loc>
+    <loc>http://navoni1024.github.io/Discord-Bot-create-a-bot/</loc>
     
     <lastmod>2023-08-01</lastmod>
     
@@ -389,14 +389,14 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/tags/report/</loc>
+    <loc>http://navoni1024.github.io/tags/recipe/</loc>
     <lastmod>2023-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/tags/recipe/</loc>
+    <loc>http://navoni1024.github.io/tags/report/</loc>
     <lastmod>2023-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -447,13 +447,6 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/coding/Discord-bot/</loc>
-    <lastmod>2023-09-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://navoni1024.github.io/categories/coding/scraping/</loc>
     <lastmod>2023-09-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -461,7 +454,7 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/report/</loc>
+    <loc>http://navoni1024.github.io/categories/coding/Discord-bot/</loc>
     <lastmod>2023-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -475,6 +468,13 @@
   </url>
   
   <url>
+    <loc>http://navoni1024.github.io/categories/report/</loc>
+    <lastmod>2023-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://navoni1024.github.io/categories/report/NTUE/</loc>
     <lastmod>2023-09-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -482,14 +482,14 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/report/NTHU-PME/</loc>
+    <loc>http://navoni1024.github.io/categories/report/NCKU-DP/</loc>
     <lastmod>2023-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/report/NCKU-DP/</loc>
+    <loc>http://navoni1024.github.io/categories/report/NTHU-PME/</loc>
     <lastmod>2023-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
