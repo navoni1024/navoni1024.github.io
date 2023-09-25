@@ -2,6 +2,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://navoni1024.github.io/Terrain-Survey-Report/</loc>
+    
+    <lastmod>2023-09-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/3-Expanded-Beam-and-Parallel-Beam/</loc>
+    
+    <lastmod>2023-09-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/4-thin-lens-image/</loc>
+    
+    <lastmod>2023-09-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/6-Interference-and-Diffraction/</loc>
+    
+    <lastmod>2023-09-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/2-Fundamental-Laws-of-Geometric-Optics/</loc>
+    
+    <lastmod>2023-09-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/5-polarization-of-light/</loc>
+    
+    <lastmod>2023-09-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/1-Directionality-of-laser-light/</loc>
+    
+    <lastmod>2023-09-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://navoni1024.github.io/Wind-Tunnel-and-Flow-Visualization-Report/</loc>
     
     <lastmod>2023-09-25</lastmod>
@@ -173,6 +236,15 @@
   </url>
   
   <url>
+    <loc>http://navoni1024.github.io/Discord-Bot-create-a-bot/</loc>
+    
+    <lastmod>2023-08-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://navoni1024.github.io/Gin-Fizz/</loc>
     
     <lastmod>2023-08-01</lastmod>
@@ -183,15 +255,6 @@
   
   <url>
     <loc>http://navoni1024.github.io/Highball/</loc>
-    
-    <lastmod>2023-08-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://navoni1024.github.io/Discord-Bot-create-a-bot/</loc>
     
     <lastmod>2023-08-01</lastmod>
     
@@ -236,72 +299,9 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/1-Directionality-of-laser-light/</loc>
-    
-    <lastmod>2023-07-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://navoni1024.github.io/2-Fundamental-Laws-of-Geometric-Optics/</loc>
-    
-    <lastmod>2023-07-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://navoni1024.github.io/3-Expanded-Beam-and-Parallel-Beam/</loc>
-    
-    <lastmod>2023-07-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://navoni1024.github.io/4-thin-lens-image/</loc>
-    
-    <lastmod>2023-07-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://navoni1024.github.io/5-polarization-of-light/</loc>
-    
-    <lastmod>2023-07-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://navoni1024.github.io/6-Interference-and-Diffraction/</loc>
-    
-    <lastmod>2023-07-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://navoni1024.github.io/Scraping-Basics-XPath/</loc>
     
     <lastmod>2023-07-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://navoni1024.github.io/Terrain-Survey-Report/</loc>
-    
-    <lastmod>2023-07-28</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -333,27 +333,6 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/tags/bartending/</loc>
-    <lastmod>2023-09-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://navoni1024.github.io/tags/bartending-recipe/</loc>
-    <lastmod>2023-09-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://navoni1024.github.io/tags/%E5%9C%9F%E8%A3%BD/</loc>
-    <lastmod>2023-09-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://navoni1024.github.io/tags/scraping/</loc>
     <lastmod>2023-09-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -369,6 +348,27 @@
   
   <url>
     <loc>http://navoni1024.github.io/tags/python/</loc>
+    <lastmod>2023-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/tags/bartending/</loc>
+    <lastmod>2023-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/tags/bartending-recipe/</loc>
+    <lastmod>2023-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/tags/%E5%9C%9F%E8%A3%BD/</loc>
     <lastmod>2023-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -426,13 +426,6 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/diet/</loc>
-    <lastmod>2023-09-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://navoni1024.github.io/categories/coding/</loc>
     <lastmod>2023-09-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -440,7 +433,14 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/diet/wine/</loc>
+    <loc>http://navoni1024.github.io/categories/diet/</loc>
+    <lastmod>2023-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/categories/coding/Discord-bot/</loc>
     <lastmod>2023-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -454,7 +454,7 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/coding/Discord-bot/</loc>
+    <loc>http://navoni1024.github.io/categories/diet/wine/</loc>
     <lastmod>2023-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
