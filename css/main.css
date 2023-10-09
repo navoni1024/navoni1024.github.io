@@ -1424,12 +1424,12 @@ pre code {
 }
 @media (min-width: 1200px) {
   .footer-inner {
-    width: 1400px;
+    width: 85em;
   }
 }
 @media (min-width: 1600px) {
   .footer-inner {
-    width: 75%;
+    width: 85%;
   }
 }
 .use-motion .footer {
@@ -2305,12 +2305,12 @@ header.header {
 }
 @media (min-width: 1200px) {
   .main {
-    width: 1400px;
+    width: 85em;
   }
 }
 @media (min-width: 1600px) {
   .main {
-    width: 75%;
+    width: 85%;
   }
 }
 @media (max-width: 991px) {
