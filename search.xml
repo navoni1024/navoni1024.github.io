@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>哲學系發癲</title>
-    <url>/Philosophy-Department-Craziness/</url>
-    <content><![CDATA[<p>原來我開的笑話都指向空虛的所指<br>我還以為你是一個真實他者<br>沒想到是個大他者<br>我的能指只是傳達了純粹意識形態<br>我們的關係之間連一場遊戲都玩不成</p>
-<span id="more"></span>
-
-<center><img data-src="lulu00.jpg" height=400>
-
-<p><a href="https://www.pixiv.net/artworks/101402823/"><strong>圖源</strong></a></center></p>
-]]></content>
-      <categories>
-        <category>日常廢文</category>
-      </categories>
-      <tags>
-        <tag>哲學</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【B級調酒EP1】</title>
     <url>/B-class-bartending-EP1/</url>
     <content><![CDATA[<p>覺旅咖啡英式午餐茶+蘇格蘭威士忌 </p>
@@ -33,6 +16,23 @@
         <tag>調酒</tag>
         <tag>酒譜</tag>
         <tag>土製</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>哲學系發癲</title>
+    <url>/Philosophy-Department-Craziness/</url>
+    <content><![CDATA[<p>原來我開的笑話都指向空虛的所指<br>我還以為你是一個真實他者<br>沒想到是個大他者<br>我的能指只是傳達了純粹意識形態<br>我們的關係之間連一場遊戲都玩不成</p>
+<span id="more"></span>
+
+<center><img data-src="lulu00.jpg" height=400>
+
+<p><a href="https://www.pixiv.net/artworks/101402823/"><strong>圖源</strong></a></center></p>
+]]></content>
+      <categories>
+        <category>日常廢文</category>
+      </categories>
+      <tags>
+        <tag>哲學</tag>
       </tags>
   </entry>
   <entry>
@@ -264,6 +264,29 @@
       </tags>
   </entry>
   <entry>
+    <title>Highball-嗨波</title>
+    <url>/Highball/</url>
+    <content><![CDATA[<p>最近放暑假，最舒服的就是中午起床弄個午餐，配杯highball搭著netflix或VT。<br>嗨波其實就是簡單的威士忌加氣泡水，而清爽的口感在夏日午後絕對是最好的享受。</p>
+<h3 id="製作方法"><a href="#製作方法" class="headerlink" title="製作方法"></a>製作方法</h3><p>首先在杯中加入大冰塊，接著根據你的錢包厚度還有你的心情加入45~60ml的威士忌。 <span id="more"></span><br><img data-src="/Highball/01.jpg"></p>
+<p>接著用吧叉匙攪拌10到15圈，冷卻杯內的威士忌。<br><img data-src="/Highball/02.jpg"></p>
+<p>之後再倒入氣泡水至8分滿，注意在倒入氣泡水時可以傾斜杯口倒入，而不要直接快速猛烈地把氣泡水倒在冰塊上，避免氣泡散失。<br><img data-src="/Highball/03.jpg"></p>
+<p>最後根據口味，擠上一片檸檬再丟進杯內，給予清爽的香氣跟層次。<br><img data-src="/Highball/04.jpg"></p>
+<hr>
+<p>把你的嗨波還有炒麵放到電腦前，配著自己喜歡的音樂、劇或VT，嗨波剛入口時帶有舒服的氣泡感，清涼的氣泡將威士忌的麥香與水果花香跟著帶了上來，保留威士忌的香味時也減去了過多的酒精感，直接丟入杯中的檸檬可以讓嗅覺上增添清香，入口時也可以多出微微的香氣跟層次，配上透明的老冰更是視覺上的絕配。<br><img data-src="/Highball/05.jpg"><br><img data-src="/Highball/06.jpg"></p>
+<hr>
+<p>上面可以發現嗨波真的是非常簡單的一杯酒，除了不用事先準備糖漿和檸檬汁外，也不需要shake和stir等技術，不過在調製時仍有一些小技巧跟事先準備的方法，而這些細節可以大幅改善你的品飲體驗跟準備工序，但這就留到下次再補充好了。</p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>酒</category>
+      </categories>
+      <tags>
+        <tag>調酒</tag>
+        <tag>酒譜</tag>
+        <tag>自製</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>爬蟲基礎入門-JSON</title>
     <url>/Scraping-Basics-JSON/</url>
     <content><![CDATA[<p>Json又名為JavaScript Object Notation，一般應用在資料傳輸上，其實Json並不複雜，簡單來說，我們可以把它當作成是一種資料撰寫儲存的格式，就像這樣：</p>
@@ -302,29 +325,6 @@
         <tag>爬蟲</tag>
         <tag>程式</tag>
         <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Highball-嗨波</title>
-    <url>/Highball/</url>
-    <content><![CDATA[<p>最近放暑假，最舒服的就是中午起床弄個午餐，配杯highball搭著netflix或VT。<br>嗨波其實就是簡單的威士忌加氣泡水，而清爽的口感在夏日午後絕對是最好的享受。</p>
-<h3 id="製作方法"><a href="#製作方法" class="headerlink" title="製作方法"></a>製作方法</h3><p>首先在杯中加入大冰塊，接著根據你的錢包厚度還有你的心情加入45~60ml的威士忌。 <span id="more"></span><br><img data-src="/Highball/01.jpg"></p>
-<p>接著用吧叉匙攪拌10到15圈，冷卻杯內的威士忌。<br><img data-src="/Highball/02.jpg"></p>
-<p>之後再倒入氣泡水至8分滿，注意在倒入氣泡水時可以傾斜杯口倒入，而不要直接快速猛烈地把氣泡水倒在冰塊上，避免氣泡散失。<br><img data-src="/Highball/03.jpg"></p>
-<p>最後根據口味，擠上一片檸檬再丟進杯內，給予清爽的香氣跟層次。<br><img data-src="/Highball/04.jpg"></p>
-<hr>
-<p>把你的嗨波還有炒麵放到電腦前，配著自己喜歡的音樂、劇或VT，嗨波剛入口時帶有舒服的氣泡感，清涼的氣泡將威士忌的麥香與水果花香跟著帶了上來，保留威士忌的香味時也減去了過多的酒精感，直接丟入杯中的檸檬可以讓嗅覺上增添清香，入口時也可以多出微微的香氣跟層次，配上透明的老冰更是視覺上的絕配。<br><img data-src="/Highball/05.jpg"><br><img data-src="/Highball/06.jpg"></p>
-<hr>
-<p>上面可以發現嗨波真的是非常簡單的一杯酒，除了不用事先準備糖漿和檸檬汁外，也不需要shake和stir等技術，不過在調製時仍有一些小技巧跟事先準備的方法，而這些細節可以大幅改善你的品飲體驗跟準備工序，但這就留到下次再補充好了。</p>
-]]></content>
-      <categories>
-        <category>飲食</category>
-        <category>酒</category>
-      </categories>
-      <tags>
-        <tag>調酒</tag>
-        <tag>酒譜</tag>
-        <tag>自製</tag>
       </tags>
   </entry>
   <entry>
@@ -392,22 +392,6 @@
       </tags>
   </entry>
   <entry>
-    <title>越式涼拌</title>
-    <url>/Vietnamese-Cold-Salad/</url>
-    <content><![CDATA[<h3 id="醬料"><a href="#醬料" class="headerlink" title="醬料"></a>醬料</h3><p>1.蒜頭、辣椒切碎<br>2.加入糖一匙<br>3.魚露兩匙<br>4.檸檬汁一顆的量<span id="more"></span><br>5.白胡椒粉一小匙<br>6.加入兩匙水、拌勻</p>
-<p>再切個青木瓜絲、紅蘿蔔絲、小黃瓜絲丟進去拌一拌，灑上一把鹹花生就完成了。</p>
-<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
-]]></content>
-      <categories>
-        <category>飲食</category>
-        <category>食譜</category>
-      </categories>
-      <tags>
-        <tag>自製</tag>
-        <tag>食譜</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>清蒸鱸魚食譜</title>
     <url>/Steamed-Bass-Recipe/</url>
     <content><![CDATA[<h3 id="所需材料："><a href="#所需材料：" class="headerlink" title="所需材料："></a>所需材料：</h3><ul>
@@ -438,29 +422,6 @@
       </tags>
   </entry>
   <entry>
-    <title>地形考察報告</title>
-    <url>/Terrain-Survey-Report/</url>
-    <content><![CDATA[<div style="text-align:center">
-國立台北教育大學
-地形考察報告
-結報
-</div>
-<span id="more"></span>
-
-<center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/NTUE-Geo.pdf">
-    <font color=blue> 新分頁開啟結報</font>
-</a>
-</center>]]></content>
-      <categories>
-        <category>結報</category>
-        <category>國北教自</category>
-      </categories>
-      <tags>
-        <tag>結報</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>熱流實驗 風洞與流視 結報</title>
     <url>/Wind-Tunnel-and-Flow-Visualization-Report/</url>
     <content><![CDATA[<center>國立清華大學動力機械工程學系</center>
@@ -483,6 +444,22 @@
       </tags>
   </entry>
   <entry>
+    <title>越式涼拌</title>
+    <url>/Vietnamese-Cold-Salad/</url>
+    <content><![CDATA[<h3 id="醬料"><a href="#醬料" class="headerlink" title="醬料"></a>醬料</h3><p>1.蒜頭、辣椒切碎<br>2.加入糖一匙<br>3.魚露兩匙<br>4.檸檬汁一顆的量<span id="more"></span><br>5.白胡椒粉一小匙<br>6.加入兩匙水、拌勻</p>
+<p>再切個青木瓜絲、紅蘿蔔絲、小黃瓜絲丟進去拌一拌，灑上一把鹹花生就完成了。</p>
+<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>食譜</category>
+      </categories>
+      <tags>
+        <tag>自製</tag>
+        <tag>食譜</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>光電實驗(一) 雷射光的方向性</title>
     <url>/1-Directionality-of-laser-light/</url>
     <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
@@ -493,27 +470,6 @@
     <font color=blue> 新分頁開啟結報</font>
 </a>
 </center>]]></content>
-      <categories>
-        <category>結報</category>
-        <category>成大光電</category>
-      </categories>
-      <tags>
-        <tag>結報</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>光電實驗(一) 薄透鏡成像</title>
-    <url>/4-thin-lens-image/</url>
-    <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 薄透鏡成像 結報</center><span id="more"></span>
-
-<center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/4-thin-lens-image.pdf">
-    <font color=blue> 新分頁開啟結報</font>
-</a>
-</center>
-
-]]></content>
       <categories>
         <category>結報</category>
         <category>成大光電</category>
@@ -561,16 +517,18 @@
       </tags>
   </entry>
   <entry>
-    <title>光電實驗(一) 光的偏極化現象</title>
-    <url>/5-polarization-of-light/</url>
+    <title>光電實驗(一) 薄透鏡成像</title>
+    <url>/4-thin-lens-image/</url>
     <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 光的偏極化現象 結報</center><span id="more"></span>
+<center>光電實驗(一) 薄透鏡成像 結報</center><span id="more"></span>
 
 <center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/5-polarization-of-light.pdf">
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/4-thin-lens-image.pdf">
     <font color=blue> 新分頁開啟結報</font>
 </a>
-</center>]]></content>
+</center>
+
+]]></content>
       <categories>
         <category>結報</category>
         <category>成大光電</category>
@@ -580,13 +538,13 @@
       </tags>
   </entry>
   <entry>
-    <title>光電實驗(一) 干涉與繞射</title>
-    <url>/6-Interference-and-Diffraction/</url>
+    <title>光電實驗(一) 光的偏極化現象</title>
+    <url>/5-polarization-of-light/</url>
     <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 干涉與繞射 結報</center><span id="more"></span>
+<center>光電實驗(一) 光的偏極化現象 結報</center><span id="more"></span>
 
 <center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/6-Interference-and-Diffraction.pdf">
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/5-polarization-of-light.pdf">
     <font color=blue> 新分頁開啟結報</font>
 </a>
 </center>]]></content>
@@ -621,6 +579,25 @@
       </tags>
   </entry>
   <entry>
+    <title>光電實驗(一) 干涉與繞射</title>
+    <url>/6-Interference-and-Diffraction/</url>
+    <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
+<center>光電實驗(一) 干涉與繞射 結報</center><span id="more"></span>
+
+<center>
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/6-Interference-and-Diffraction.pdf">
+    <font color=blue> 新分頁開啟結報</font>
+</a>
+</center>]]></content>
+      <categories>
+        <category>結報</category>
+        <category>成大光電</category>
+      </categories>
+      <tags>
+        <tag>結報</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>好耶 酪梨</title>
     <url>/avocado-daisuki/</url>
     <content><![CDATA[<p>諸君 我是酪梨控。</p>
@@ -638,25 +615,6 @@
       <tags>
         <tag>自製</tag>
         <tag>食譜</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>BK樹跟Levenshtein</title>
-    <url>/BK-tree-and-Levenshtein/</url>
-    <content><![CDATA[<p>Levenshtein距離是兩個字串間，透過新增、更換、刪除下的最少操作次數，透過動態規劃解決。</p>
-<p>BK Tree 是基於 Levenshtein distance 的樹資料結構。節點為詞，線的權重為編輯距離，即透過Levenshtein distance得到的值。</p>
-<span id="more"></span>
-<p>插入時，對於根節點編輯距離重複的點會碰撞，因此，新加入的點會以碰撞點為父節點進行插入，並且編輯距離變成與該碰撞節點的編輯距離。</p>
-<p><img data-src="/BK-tree-and-Levenshtein/01.png" alt="例圖"></p>
-<p>對於搜尋最接近的正確單字，我們需要設置一個容錯值(Tolerance)，以及計算目前的字與root間的距離，稱dist，然後我們就可以去迭代[dist-tolerance, dist+tolerance]間距離的所有單字，以降低暴力搜尋所有節點的複雜度。針對每一個在距離內的節點，將其加入可能列表中，並對該點進行遞迴再判斷，藉以達成所以相近字詞搜尋。</p>
-<p><strong>筆者: NTUST So Hard</strong></p>
-]]></content>
-      <categories>
-        <category>程式</category>
-      </categories>
-      <tags>
-        <tag>程式</tag>
-        <tag>演算法</tag>
       </tags>
   </entry>
   <entry>
@@ -688,6 +646,25 @@
       </categories>
       <tags>
         <tag>結報</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>BK樹跟Levenshtein</title>
+    <url>/BK-tree-and-Levenshtein/</url>
+    <content><![CDATA[<p>Levenshtein距離是兩個字串間，透過新增、更換、刪除下的最少操作次數，透過動態規劃解決。</p>
+<p>BK Tree 是基於 Levenshtein distance 的樹資料結構。節點為詞，線的權重為編輯距離，即透過Levenshtein distance得到的值。</p>
+<span id="more"></span>
+<p>插入時，對於根節點編輯距離重複的點會碰撞，因此，新加入的點會以碰撞點為父節點進行插入，並且編輯距離變成與該碰撞節點的編輯距離。</p>
+<p><img data-src="/BK-tree-and-Levenshtein/01.png" alt="例圖"></p>
+<p>對於搜尋最接近的正確單字，我們需要設置一個容錯值(Tolerance)，以及計算目前的字與root間的距離，稱dist，然後我們就可以去迭代[dist-tolerance, dist+tolerance]間距離的所有單字，以降低暴力搜尋所有節點的複雜度。針對每一個在距離內的節點，將其加入可能列表中，並對該點進行遞迴再判斷，藉以達成所以相近字詞搜尋。</p>
+<p><strong>筆者: NTUST So Hard</strong></p>
+]]></content>
+      <categories>
+        <category>程式</category>
+      </categories>
+      <tags>
+        <tag>程式</tag>
+        <tag>演算法</tag>
       </tags>
   </entry>
   <entry>
@@ -738,26 +715,9 @@
       </tags>
   </entry>
   <entry>
-    <title>媽我在這</title>
-    <url>/mom-Im-here/</url>
-    <content><![CDATA[<p>如題，有一天這個部落格會被更多人看到，為了到時候可能的報導及介紹，特此先把想說的話說一說。</p>
-<p>媽，我上電視了！</p>
-<p><strong>筆者：蔡銘揚</strong></p>
-<span id="more"></span>
-<p><del>現在魚說的閱讀次數在149，如此美妙的數字</del></p>
-]]></content>
-      <categories>
-        <category>日常廢文</category>
-      </categories>
-  </entry>
-  <entry>
     <title>【B級調酒EP2】無酒精琴啤酒</title>
     <url>/B-class-bartending-EP2/</url>
-    <content><![CDATA[<p>雖然不知道為什麼，琴啤酒的存在一直不受到重視。但自從在BiliBili發現這種喝法後，一試便愛上了。</p>
-<span id="more"></span>
-<p>個人認為琴啤酒的特點在於啤酒的清爽，和加入的烈酒會決定啤酒的走向，若加入較多酒感濃烈，少量摻入則有類似於精釀的體驗。對於酒量不好或窮鬼來說相當友善。筆者淺見是清爽的程度不下於gin tonic，材料則更易取得</p>
-<p>將啤酒垂直倒入杯中，讓氣泡經由撞擊排空，加入適量琴酒，不須太多，5-10ml即可，杯子隨意</p>
-<p>這次用了即期品商店的10元無酒精啤酒，簡單的搭配gorden 或是較貴的monkey 47，都有不錯的風味表現</p>
+    <content><![CDATA[<p>. 雖然不知道為什麼，琴啤酒的存在一直不受到重視。但自從在BiliBili發現這種喝法後，一試便愛上了。個人認為琴啤酒的特點在於啤酒的清爽，和加入的烈酒會決定啤酒的走向，若加入較多酒感濃烈，少量摻入則有類似於精釀的體驗。對於酒量不好或窮鬼來說相當友善。筆者淺見是清爽的程度不下於gin tonic，材料則更易取得<br>. <span id="more"></span><br>. 將啤酒垂直倒入杯中，讓氣泡經由撞擊排空，加入適量琴酒，不須太多，5-10ml即可，杯子隨意<br>.<br>. 這次用了即期品商店的10元無酒精啤酒，簡單的搭配gorden 或是較貴的monkey 47，都有不錯的風味表現<br>.</p>
 <p><strong>推薦指數：★★★★★（懶人必備）</strong></p>
 ]]></content>
       <categories>
@@ -769,6 +729,19 @@
         <tag>酒譜</tag>
         <tag>土製</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>媽我在這</title>
+    <url>/mom-Im-here/</url>
+    <content><![CDATA[<p>如題，有一天這個部落格會被更多人看到，為了到時候可能的報導及介紹，特此先把想說的話說一說。</p>
+<p>媽，我上電視了！</p>
+<p><strong>筆者：蔡銘揚</strong></p>
+<span id="more"></span>
+<p><del>現在魚說的閱讀次數在149，如此美妙的數字</del></p>
+]]></content>
+      <categories>
+        <category>日常廢文</category>
+      </categories>
   </entry>
   <entry>
     <title>NTUST遊記EP1-二重疏洪道</title>
@@ -797,5 +770,28 @@
       <categories>
         <category>日常廢文</category>
       </categories>
+  </entry>
+  <entry>
+    <title>地形考察報告</title>
+    <url>/Terrain-Survey-Report/</url>
+    <content><![CDATA[<div style="text-align:center">
+國立台北教育大學
+地形考察報告
+結報
+</div>
+<span id="more"></span>
+
+<center>
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/NTUE-Geo.pdf">
+    <font color=blue> 新分頁開啟結報</font>
+</a>
+</center>]]></content>
+      <categories>
+        <category>結報</category>
+        <category>國北教自</category>
+      </categories>
+      <tags>
+        <tag>結報</tag>
+      </tags>
   </entry>
 </search>
