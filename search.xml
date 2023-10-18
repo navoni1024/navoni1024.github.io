@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>【B級調酒EP1】</title>
-    <url>/B-class-bartending-EP1/</url>
-    <content><![CDATA[<p>覺旅咖啡英式午餐茶+蘇格蘭威士忌 </p>
-<h3 id="酒譜"><a href="#酒譜" class="headerlink" title="酒譜"></a>酒譜</h3><p>520ml紅茶<br>15ml 威士忌</p>
-<span id="more"></span>
-<h3 id="短評"><a href="#短評" class="headerlink" title="短評"></a>短評</h3><p>大概連ddffg都喝不下去</p>
-<center><img data-src="coffee_something.jpg" height=400></center>]]></content>
-      <categories>
-        <category>飲食</category>
-        <category>酒</category>
-      </categories>
-      <tags>
-        <tag>調酒</tag>
-        <tag>酒譜</tag>
-        <tag>土製</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>哲學系發癲</title>
     <url>/Philosophy-Department-Craziness/</url>
     <content><![CDATA[<p>原來我開的笑話都指向空虛的所指<br>我還以為你是一個真實他者<br>沒想到是個大他者<br>我的能指只是傳達了純粹意識形態<br>我們的關係之間連一場遊戲都玩不成</p>
@@ -33,35 +15,6 @@
       </categories>
       <tags>
         <tag>哲學</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>爬蟲基礎入門: Beautiful Soup</title>
-    <url>/Scraping-Basics-Beautiful-Soup/</url>
-    <content><![CDATA[<h3 id="什麼是BeautifulSoup"><a href="#什麼是BeautifulSoup" class="headerlink" title="什麼是BeautifulSoup?"></a>什麼是BeautifulSoup?</h3><p>BeautifulSoup，又名美麗的湯，就如同魯迅所說過的，吃日料要喝味噌湯，到台南要喝牛肉湯，爬蟲的話就要用美麗的湯。(誤<br>BeautifulSoup4我們一般簡稱BS4，是用來做網站的html架構解析，如同前面所講的，html碼是以多層標籤作為架構，也因此我們可以利用BS4這個套件來建立其專屬class BeautifulSoup底下的物件，其就包含了原網站html碼的相關結構，像是標籤的父子、兄弟關係，更可以利用其中的搜尋功能找尋標籤名稱、內容或屬性，進而定位到我們感興趣的位置。</p>
-<span id="more"></span>
-
-<p>在經過基本的pip install後，我們就可以引入bs4了。<br><img data-src="/Scraping-Basics-Beautiful-Soup/20152706UAEuGzKBvW.png"></p>
-<p>之後我們就能像這樣，引入網址後，利用基本request取得html源碼，再利用BS4進行基本解析，建立出soup_m1的物件，之後便可以利用BS4的函式對其定位、分析。<br><img data-src="/Scraping-Basics-Beautiful-Soup/20152706L0rBAzgmoz.png"></p>
-<h3 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h3><p>昨天出現的這句</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">soup_m1 = BeautifulSoup(html_m1.text, <span class="string">&quot;html.parser&quot;</span>)</span><br></pre></td></tr></table></figure>
-<p>其中的<code>html.parser</code>便是使用的解析器，是python內建的。<br>除了這個外還能用html5lib和lxml但我也沒用過，詳細優缺點可能要google下。<br>哪天有試了再補充上來吧</p>
-<h3 id="解析方法"><a href="#解析方法" class="headerlink" title="解析方法"></a>解析方法</h3><p>比較常用到的是find()、find_all()和select()。</p>
-<ul>
-<li><p>find()、find_all()<br>兩個都是使用html的標籤進行搜尋的。<br>而這兩者的差別是find()只會回傳第一個符合的結果，find_all()則會回傳所有符合的結果</p>
-</li>
-<li><p>select()<br>使用CSS選擇器(CSS selectors)來進行搜尋。<br>CSS之前沒有提到，主要是用來把網站上色的。<br>其中會用到選擇器來指定特定範圍的HTML進行操作。<br>select()便是利用這東西的語法來爬的。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>爬蟲</category>
-      </categories>
-      <tags>
-        <tag>爬蟲</tag>
-        <tag>程式</tag>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -100,6 +53,119 @@
         <tag>爬蟲</tag>
         <tag>程式</tag>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【B級調酒EP1】</title>
+    <url>/B-class-bartending-EP1/</url>
+    <content><![CDATA[<p>覺旅咖啡英式午餐茶+蘇格蘭威士忌 </p>
+<h3 id="酒譜"><a href="#酒譜" class="headerlink" title="酒譜"></a>酒譜</h3><p>520ml紅茶<br>15ml 威士忌</p>
+<span id="more"></span>
+<h3 id="短評"><a href="#短評" class="headerlink" title="短評"></a>短評</h3><p>大概連ddffg都喝不下去</p>
+<center><img data-src="coffee_something.jpg" height=400></center>]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>酒</category>
+      </categories>
+      <tags>
+        <tag>調酒</tag>
+        <tag>酒譜</tag>
+        <tag>土製</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爬蟲基礎入門: Beautiful Soup</title>
+    <url>/Scraping-Basics-Beautiful-Soup/</url>
+    <content><![CDATA[<h3 id="什麼是BeautifulSoup"><a href="#什麼是BeautifulSoup" class="headerlink" title="什麼是BeautifulSoup?"></a>什麼是BeautifulSoup?</h3><p>BeautifulSoup，又名美麗的湯，就如同魯迅所說過的，吃日料要喝味噌湯，到台南要喝牛肉湯，爬蟲的話就要用美麗的湯。(誤<br>BeautifulSoup4我們一般簡稱BS4，是用來做網站的html架構解析，如同前面所講的，html碼是以多層標籤作為架構，也因此我們可以利用BS4這個套件來建立其專屬class BeautifulSoup底下的物件，其就包含了原網站html碼的相關結構，像是標籤的父子、兄弟關係，更可以利用其中的搜尋功能找尋標籤名稱、內容或屬性，進而定位到我們感興趣的位置。</p>
+<span id="more"></span>
+
+<p>在經過基本的pip install後，我們就可以引入bs4了。<br><img data-src="/Scraping-Basics-Beautiful-Soup/20152706UAEuGzKBvW.png"></p>
+<p>之後我們就能像這樣，引入網址後，利用基本request取得html源碼，再利用BS4進行基本解析，建立出soup_m1的物件，之後便可以利用BS4的函式對其定位、分析。<br><img data-src="/Scraping-Basics-Beautiful-Soup/20152706L0rBAzgmoz.png"></p>
+<h3 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h3><p>昨天出現的這句</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">soup_m1 = BeautifulSoup(html_m1.text, <span class="string">&quot;html.parser&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>其中的<code>html.parser</code>便是使用的解析器，是python內建的。<br>除了這個外還能用html5lib和lxml但我也沒用過，詳細優缺點可能要google下。<br>哪天有試了再補充上來吧</p>
+<h3 id="解析方法"><a href="#解析方法" class="headerlink" title="解析方法"></a>解析方法</h3><p>比較常用到的是find()、find_all()和select()。</p>
+<ul>
+<li><p>find()、find_all()<br>兩個都是使用html的標籤進行搜尋的。<br>而這兩者的差別是find()只會回傳第一個符合的結果，find_all()則會回傳所有符合的結果</p>
+</li>
+<li><p>select()<br>使用CSS選擇器(CSS selectors)來進行搜尋。<br>CSS之前沒有提到，主要是用來把網站上色的。<br>其中會用到選擇器來指定特定範圍的HTML進行操作。<br>select()便是利用這東西的語法來爬的。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>爬蟲</category>
+      </categories>
+      <tags>
+        <tag>爬蟲</tag>
+        <tag>程式</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Discord Bot-創建一隻bot</title>
+    <url>/Discord-Bot-create-a-bot/</url>
+    <content><![CDATA[<p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
+<span id="more"></span>
+<p><img data-src="/Discord-Bot-create-a-bot/20152706MBGmHIhGdS.png"><br>大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。</p>
+<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img data-src="/Discord-Bot-create-a-bot/20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img data-src="/Discord-Bot-create-a-bot/20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img data-src="/Discord-Bot-create-a-bot/20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>Discord bot</category>
+      </categories>
+      <tags>
+        <tag>程式</tag>
+        <tag>python</tag>
+        <tag>Discord</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Discord Bot-Cogs</title>
+    <url>/Discord-Bot-Cogs/</url>
+    <content><![CDATA[<p>如果你的機器人功能多到一個程度，把全部的程式碼全部塞在一個文件裡顯然不是好辦法。<br>不但看起來雜亂，也難以維護，就算只是其中一個功能出問題也必須要把整個bot關掉。<br>這時候就可以使用<strong>Cogs</strong>的架構來寫，<br>可以將commands和listener等東西分堆塞在各自文件裡並方便我們裝卸。</p>
+<span id="more"></span>
+<p>照<a href="https://discordpy.readthedocs.io/en/stable/ext/commands/cogs.html">官方文件</a>的說法，比較重要的有這幾點:</p>
+<ul>
+<li>每個cogs都是<code>commands.Cog</code>的子類別</li>
+<li>每個command要前加<code>@commands.command()</code></li>
+<li>每個listener要前加<code>@commands.Cog.listener()</code></li>
+<li>Cogs可以用<code>Bot.add_cog()</code>來註冊</li>
+<li>Cogs可以用<code>Bot.remove_cog()</code>來卸載</li>
+<li>通常會跟<a href="https://discordpy.readthedocs.io/en/stable/ext/commands/extensions.html#ext-commands-extensions">Extension</a>功能配合</li>
+</ul>
+<p>當然單純這樣條列出來是看不懂的，底下來看實例。<br>其檔案架構通常會長下面這樣<br><img data-src="/Discord-Bot-Cogs/20152706EJhEPhiYQA.png"></p>
+<p>cogs資料夾是拿來放各個cogs的<br>core資料夾是拿來放一些你cogs可能會常用到的函數。<br>main.py是拿來運行的檔案，裡面也包含了載入和裝卸cogs的程式碼，會長的類似下面這樣:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">bot = commands.Bot(<span class="string">&#x27;prefix&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#下面這塊從cogs資料夾中取出所有.py結尾的檔案並用load_extension載入cogs</span></span><br><span class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> os.listdir(<span class="string">&#x27;./cogs&#x27;</span>):</span><br><span class="line">	<span class="keyword">if</span> filename.endswith(<span class="string">&#x27;.py&#x27;</span>):</span><br><span class="line">		bot.load_extension(<span class="string">f&#x27;cogs.<span class="subst">&#123;filename[:-<span class="number">3</span>]&#125;</span>&#x27;</span>) </span><br><span class="line"></span><br><span class="line"><span class="meta">@bot.event</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">on_ready</span>():</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&#x27;Test begin...&#x27;</span>) </span><br><span class="line">	</span><br><span class="line"><span class="comment">#這裡建個指令讓你可以載入Cog</span></span><br><span class="line"><span class="meta">@bot.command()</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">load</span>(<span class="params">ctx, cog_name</span>):</span><br><span class="line">	<span class="keyword">try</span>:</span><br><span class="line">		bot.load_extension(<span class="string">f&#x27;cogs.<span class="subst">&#123;cog_name&#125;</span>&#x27;</span>)</span><br><span class="line">	<span class="keyword">except</span>:</span><br><span class="line">		<span class="keyword">await</span> ctx.send(<span class="string">&#x27;Failed.&#x27;</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	<span class="keyword">await</span> ctx.send(<span class="string">&#x27;load success!&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#這裡建個指令讓你可以卸載Cog</span></span><br><span class="line"><span class="meta">@bot.command()</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">unload</span>(<span class="params">ctx, cog_name</span>):</span><br><span class="line">	<span class="keyword">try</span>:</span><br><span class="line">		bot.unload_extension(<span class="string">f&#x27;cogs.<span class="subst">&#123;cog_name&#125;</span>&#x27;</span>)</span><br><span class="line">	<span class="keyword">except</span>:</span><br><span class="line">		<span class="keyword">await</span> ctx.send(<span class="string">&#x27;Failed.&#x27;</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	<span class="keyword">await</span> ctx.send(<span class="string">&#x27;unload success!&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#這裡建個指令讓你可以重新載入Cog</span></span><br><span class="line"><span class="meta">@bot.command()</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">reload</span>(<span class="params">ctx, cog_name</span>):</span><br><span class="line">	<span class="keyword">try</span>:</span><br><span class="line">		bot.reload_extension(<span class="string">f&#x27;cogs.<span class="subst">&#123;cog_name&#125;</span>&#x27;</span>)</span><br><span class="line">	<span class="keyword">except</span>:</span><br><span class="line">		<span class="keyword">await</span> ctx.send(<span class="string">&#x27;Failed.&#x27;</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	<span class="keyword">await</span> ctx.send(<span class="string">&#x27;reload success!&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">	bot.run(<span class="string">&#x27;TOKEN&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>接著在core底下加一個文檔，這裡我叫他init.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> discord</span><br><span class="line"><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Cog_Extension</span>(commands.Cog):</span><br><span class="line">	<span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, bot</span>):</span><br><span class="line">		self.bot = bot</span><br></pre></td></tr></table></figure>
+
+
+<p>接著來把一個指令用成cogs。<br>就拿上篇那個<a href="https://navoni1024.github.io/Discord-Bot-Basic-structure/">请不要随意地触碰我！ 十分感谢！</a>來舉例<br>他原本的程式區塊大概長這樣:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">@bot.command(<span class="params">aliases=[<span class="string">&#x27;touch&#x27;</span>]</span>)</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">t</span>(<span class="params">message</span>):</span><br><span class="line">	<span class="keyword">await</span> message.channel.send(<span class="string">&#x27;请不要随意地触碰我！ 十分感谢！&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>把他用成cogs的話會需要把它塞進Class並加上我們剛剛寫的東西，所以會長得像這樣</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands</span><br><span class="line"><span class="keyword">from</span> core.init <span class="keyword">import</span> Cog_Extension</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">touch</span>(<span class="title class_ inherited__">Cog_Extension</span>):        <span class="comment">#建議class名稱跟檔案名稱一樣</span></span><br><span class="line"><span class="meta">@commands.command(<span class="params">aliases=[<span class="string">&#x27;touch&#x27;</span>]</span>)    </span></span><br><span class="line">	<span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">t</span>(<span class="params">self, message</span>):    <span class="comment">#記得在參數列最前面加上self</span></span><br><span class="line">		<span class="keyword">await</span> message.channel.send(<span class="string">&#x27;请不要随意地触碰我！ 十分感谢！&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>記得要import需要的套件</p>
+<p>接著在下面加上setup的函數</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands</span><br><span class="line"><span class="keyword">from</span> core.init <span class="keyword">import</span> Cog_Extension</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">touch</span>(<span class="title class_ inherited__">Cog_Extension</span>):</span><br><span class="line"><span class="meta">	@commands.command(<span class="params">aliases=[<span class="string">&#x27;touch&#x27;</span>]</span>)</span></span><br><span class="line">	<span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">t</span>(<span class="params">self, message</span>):</span><br><span class="line">		<span class="keyword">await</span> message.channel.send(<span class="string">&#x27;请不要随意地触碰我！ 十分感谢！&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">setup</span>(<span class="params">bot</span>):</span><br><span class="line">	bot.add_cog(touch(bot))</span><br><span class="line"><span class="comment">#這裡的bot.add_cog(touch(bot))中的(bot)前面填上你class的名子</span></span><br></pre></td></tr></table></figure>
+
+<p>這樣運行後給機器人預設的help指令後就能看到結構了。<br><img data-src="/Discord-Bot-Cogs/20152706dMFbDgmc8p.png"></p>
+<p>像這邊unload掉touch後可以發現輸t他也沒反應了，輸help也看不見了。<br><img data-src="/Discord-Bot-Cogs/20152706NNRA2I8xr8.png"></p>
+<p>而load回來的話可以發現指令有反應了，help中也看的到了。<br><img data-src="/Discord-Bot-Cogs/20152706uqPycyubVO.png"></p>
+<hr>
+<p>前述的的程式結構較簡單可能沒什麼感覺，但要是程式複雜到如下圖能夠先unload一塊調整完後再load回去還是挺方便的。<br><img data-src="/Discord-Bot-Cogs/20152706kGyb4P4XHd.png"></p>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>Discord bot</category>
+      </categories>
+      <tags>
+        <tag>程式</tag>
+        <tag>python</tag>
+        <tag>Discord</tag>
       </tags>
   </entry>
   <entry>
@@ -167,72 +233,6 @@
 <h3 id="if-name-“-main-“"><a href="#if-name-“-main-“" class="headerlink" title="if __name__ &#x3D;&#x3D; “__main__“:"></a>if __name__ &#x3D;&#x3D; “__main__“:</h3><p>這行就是確保你是直接執行了這檔案才會跑以下的指令。<br>bot.run()的括號中間輸入您昨天取得的token碼。</p>
 <hr>
 <p>接著就讓機器人上線並邀請你的機器人進自己的伺服器來玩玩吧。<br>也可以試著改一些設定，或甚至嘗試一些你在官方API找到的功能。<br>看不太懂上面和官方API到底在講什麼鬼的也沒關係，後面跟著做就會漸漸熟悉了。</p>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>Discord bot</category>
-      </categories>
-      <tags>
-        <tag>程式</tag>
-        <tag>python</tag>
-        <tag>Discord</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Discord Bot-Cogs</title>
-    <url>/Discord-Bot-Cogs/</url>
-    <content><![CDATA[<p>如果你的機器人功能多到一個程度，把全部的程式碼全部塞在一個文件裡顯然不是好辦法。<br>不但看起來雜亂，也難以維護，就算只是其中一個功能出問題也必須要把整個bot關掉。<br>這時候就可以使用<strong>Cogs</strong>的架構來寫，<br>可以將commands和listener等東西分堆塞在各自文件裡並方便我們裝卸。</p>
-<span id="more"></span>
-<p>照<a href="https://discordpy.readthedocs.io/en/stable/ext/commands/cogs.html">官方文件</a>的說法，比較重要的有這幾點:</p>
-<ul>
-<li>每個cogs都是<code>commands.Cog</code>的子類別</li>
-<li>每個command要前加<code>@commands.command()</code></li>
-<li>每個listener要前加<code>@commands.Cog.listener()</code></li>
-<li>Cogs可以用<code>Bot.add_cog()</code>來註冊</li>
-<li>Cogs可以用<code>Bot.remove_cog()</code>來卸載</li>
-<li>通常會跟<a href="https://discordpy.readthedocs.io/en/stable/ext/commands/extensions.html#ext-commands-extensions">Extension</a>功能配合</li>
-</ul>
-<p>當然單純這樣條列出來是看不懂的，底下來看實例。<br>其檔案架構通常會長下面這樣<br><img data-src="/Discord-Bot-Cogs/20152706EJhEPhiYQA.png"></p>
-<p>cogs資料夾是拿來放各個cogs的<br>core資料夾是拿來放一些你cogs可能會常用到的函數。<br>main.py是拿來運行的檔案，裡面也包含了載入和裝卸cogs的程式碼，會長的類似下面這樣:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">bot = commands.Bot(<span class="string">&#x27;prefix&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#下面這塊從cogs資料夾中取出所有.py結尾的檔案並用load_extension載入cogs</span></span><br><span class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> os.listdir(<span class="string">&#x27;./cogs&#x27;</span>):</span><br><span class="line">	<span class="keyword">if</span> filename.endswith(<span class="string">&#x27;.py&#x27;</span>):</span><br><span class="line">		bot.load_extension(<span class="string">f&#x27;cogs.<span class="subst">&#123;filename[:-<span class="number">3</span>]&#125;</span>&#x27;</span>) </span><br><span class="line"></span><br><span class="line"><span class="meta">@bot.event</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">on_ready</span>():</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&#x27;Test begin...&#x27;</span>) </span><br><span class="line">	</span><br><span class="line"><span class="comment">#這裡建個指令讓你可以載入Cog</span></span><br><span class="line"><span class="meta">@bot.command()</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">load</span>(<span class="params">ctx, cog_name</span>):</span><br><span class="line">	<span class="keyword">try</span>:</span><br><span class="line">		bot.load_extension(<span class="string">f&#x27;cogs.<span class="subst">&#123;cog_name&#125;</span>&#x27;</span>)</span><br><span class="line">	<span class="keyword">except</span>:</span><br><span class="line">		<span class="keyword">await</span> ctx.send(<span class="string">&#x27;Failed.&#x27;</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	<span class="keyword">await</span> ctx.send(<span class="string">&#x27;load success!&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#這裡建個指令讓你可以卸載Cog</span></span><br><span class="line"><span class="meta">@bot.command()</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">unload</span>(<span class="params">ctx, cog_name</span>):</span><br><span class="line">	<span class="keyword">try</span>:</span><br><span class="line">		bot.unload_extension(<span class="string">f&#x27;cogs.<span class="subst">&#123;cog_name&#125;</span>&#x27;</span>)</span><br><span class="line">	<span class="keyword">except</span>:</span><br><span class="line">		<span class="keyword">await</span> ctx.send(<span class="string">&#x27;Failed.&#x27;</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	<span class="keyword">await</span> ctx.send(<span class="string">&#x27;unload success!&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#這裡建個指令讓你可以重新載入Cog</span></span><br><span class="line"><span class="meta">@bot.command()</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">reload</span>(<span class="params">ctx, cog_name</span>):</span><br><span class="line">	<span class="keyword">try</span>:</span><br><span class="line">		bot.reload_extension(<span class="string">f&#x27;cogs.<span class="subst">&#123;cog_name&#125;</span>&#x27;</span>)</span><br><span class="line">	<span class="keyword">except</span>:</span><br><span class="line">		<span class="keyword">await</span> ctx.send(<span class="string">&#x27;Failed.&#x27;</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	<span class="keyword">await</span> ctx.send(<span class="string">&#x27;reload success!&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">	bot.run(<span class="string">&#x27;TOKEN&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-<p>接著在core底下加一個文檔，這裡我叫他init.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> discord</span><br><span class="line"><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Cog_Extension</span>(commands.Cog):</span><br><span class="line">	<span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, bot</span>):</span><br><span class="line">		self.bot = bot</span><br></pre></td></tr></table></figure>
-
-
-<p>接著來把一個指令用成cogs。<br>就拿上篇那個<a href="https://navoni1024.github.io/Discord-Bot-Basic-structure/">请不要随意地触碰我！ 十分感谢！</a>來舉例<br>他原本的程式區塊大概長這樣:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">@bot.command(<span class="params">aliases=[<span class="string">&#x27;touch&#x27;</span>]</span>)</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">t</span>(<span class="params">message</span>):</span><br><span class="line">	<span class="keyword">await</span> message.channel.send(<span class="string">&#x27;请不要随意地触碰我！ 十分感谢！&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>把他用成cogs的話會需要把它塞進Class並加上我們剛剛寫的東西，所以會長得像這樣</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands</span><br><span class="line"><span class="keyword">from</span> core.init <span class="keyword">import</span> Cog_Extension</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">touch</span>(<span class="title class_ inherited__">Cog_Extension</span>):        <span class="comment">#建議class名稱跟檔案名稱一樣</span></span><br><span class="line"><span class="meta">@commands.command(<span class="params">aliases=[<span class="string">&#x27;touch&#x27;</span>]</span>)    </span></span><br><span class="line">	<span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">t</span>(<span class="params">self, message</span>):    <span class="comment">#記得在參數列最前面加上self</span></span><br><span class="line">		<span class="keyword">await</span> message.channel.send(<span class="string">&#x27;请不要随意地触碰我！ 十分感谢！&#x27;</span>)</span><br></pre></td></tr></table></figure>
-<p>記得要import需要的套件</p>
-<p>接著在下面加上setup的函數</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands</span><br><span class="line"><span class="keyword">from</span> core.init <span class="keyword">import</span> Cog_Extension</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">touch</span>(<span class="title class_ inherited__">Cog_Extension</span>):</span><br><span class="line"><span class="meta">	@commands.command(<span class="params">aliases=[<span class="string">&#x27;touch&#x27;</span>]</span>)</span></span><br><span class="line">	<span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">t</span>(<span class="params">self, message</span>):</span><br><span class="line">		<span class="keyword">await</span> message.channel.send(<span class="string">&#x27;请不要随意地触碰我！ 十分感谢！&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">setup</span>(<span class="params">bot</span>):</span><br><span class="line">	bot.add_cog(touch(bot))</span><br><span class="line"><span class="comment">#這裡的bot.add_cog(touch(bot))中的(bot)前面填上你class的名子</span></span><br></pre></td></tr></table></figure>
-
-<p>這樣運行後給機器人預設的help指令後就能看到結構了。<br><img data-src="/Discord-Bot-Cogs/20152706dMFbDgmc8p.png"></p>
-<p>像這邊unload掉touch後可以發現輸t他也沒反應了，輸help也看不見了。<br><img data-src="/Discord-Bot-Cogs/20152706NNRA2I8xr8.png"></p>
-<p>而load回來的話可以發現指令有反應了，help中也看的到了。<br><img data-src="/Discord-Bot-Cogs/20152706uqPycyubVO.png"></p>
-<hr>
-<p>前述的的程式結構較簡單可能沒什麼感覺，但要是程式複雜到如下圖能夠先unload一塊調整完後再load回去還是挺方便的。<br><img data-src="/Discord-Bot-Cogs/20152706kGyb4P4XHd.png"></p>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>Discord bot</category>
-      </categories>
-      <tags>
-        <tag>程式</tag>
-        <tag>python</tag>
-        <tag>Discord</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Discord Bot-創建一隻bot</title>
-    <url>/Discord-Bot-create-a-bot/</url>
-    <content><![CDATA[<p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
-<span id="more"></span>
-<p><img data-src="/Discord-Bot-create-a-bot/20152706MBGmHIhGdS.png"><br>大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。</p>
-<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img data-src="/Discord-Bot-create-a-bot/20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img data-src="/Discord-Bot-create-a-bot/20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img data-src="/Discord-Bot-create-a-bot/20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
 ]]></content>
       <categories>
         <category>程式</category>
@@ -352,6 +352,52 @@
       </tags>
   </entry>
   <entry>
+    <title>越式涼拌</title>
+    <url>/Vietnamese-Cold-Salad/</url>
+    <content><![CDATA[<h3 id="醬料"><a href="#醬料" class="headerlink" title="醬料"></a>醬料</h3><p>1.蒜頭、辣椒切碎<br>2.加入糖一匙<br>3.魚露兩匙<br>4.檸檬汁一顆的量<span id="more"></span><br>5.白胡椒粉一小匙<br>6.加入兩匙水、拌勻</p>
+<p>再切個青木瓜絲、紅蘿蔔絲、小黃瓜絲丟進去拌一拌，灑上一把鹹花生就完成了。</p>
+<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>食譜</category>
+      </categories>
+      <tags>
+        <tag>自製</tag>
+        <tag>食譜</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>清蒸鱸魚食譜</title>
+    <url>/Steamed-Bass-Recipe/</url>
+    <content><![CDATA[<h3 id="所需材料："><a href="#所需材料：" class="headerlink" title="所需材料："></a>所需材料：</h3><ul>
+<li>鱸魚一尾</li>
+<li>檸檬一顆</li>
+<li>辣椒兩根</li>
+<li>蒜頭三到五瓣<span id="more"></span></li>
+<li>蔥一枝</li>
+<li>洋蔥一顆</li>
+<li>豆芽菜一包</li>
+<li>糖</li>
+<li>白胡椒粉</li>
+<li>米酒</li>
+<li>水</li>
+<li>魚露</li>
+</ul>
+<h3 id="魚的處理："><a href="#魚的處理：" class="headerlink" title="魚的處理："></a>魚的處理：</h3><p>1.刮除鱗片、修魚鰭<br>2.剪開魚腹、刮除內臟並清洗乾淨<br>3.確認魚的乾淨並在表面劃刀痕<br>4.將洋蔥及豆芽菜洗淨<br>5.洋蔥切條與豆芽並行鋪於盤底<br><img data-src="/Steamed-Bass-Recipe/FISH.jpg" alt="處理完的魚和醬汁"></p>
+<h3 id="調料的處理："><a href="#調料的處理：" class="headerlink" title="調料的處理："></a>調料的處理：</h3><p>6.蒜頭、辣椒切碎<br>7.加入糖一匙<br>8.加入米酒兩匙<br>9.魚露兩匙<br>10.檸檬汁一顆的量<br>11.白胡椒粉一小匙<br>12.加入兩匙水、拌勻<br>13.將魚放入盤內、平均淋上調料<br>14.放入電鍋蒸<br>15.蔥切細絲放上出鍋後的料理<br>16.熱少許油至些許冒煙、淋上蔥絲即可出菜</p>
+<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>食譜</category>
+      </categories>
+      <tags>
+        <tag>自製</tag>
+        <tag>食譜</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>爬蟲基礎入門-XPath</title>
     <url>/Scraping-Basics-XPath/</url>
     <content><![CDATA[<p>我們在selenium時有講到幾個指令像是find_element_by的指令，<br>但如果我們的html沒有class或是id等節點的話，其實對我們爬蟲有點不太友善，<br>所以今天我們會教xpath的搜尋方法</p>
@@ -392,71 +438,26 @@
       </tags>
   </entry>
   <entry>
-    <title>清蒸鱸魚食譜</title>
-    <url>/Steamed-Bass-Recipe/</url>
-    <content><![CDATA[<h3 id="所需材料："><a href="#所需材料：" class="headerlink" title="所需材料："></a>所需材料：</h3><ul>
-<li>鱸魚一尾</li>
-<li>檸檬一顆</li>
-<li>辣椒兩根</li>
-<li>蒜頭三到五瓣<span id="more"></span></li>
-<li>蔥一枝</li>
-<li>洋蔥一顆</li>
-<li>豆芽菜一包</li>
-<li>糖</li>
-<li>白胡椒粉</li>
-<li>米酒</li>
-<li>水</li>
-<li>魚露</li>
-</ul>
-<h3 id="魚的處理："><a href="#魚的處理：" class="headerlink" title="魚的處理："></a>魚的處理：</h3><p>1.刮除鱗片、修魚鰭<br>2.剪開魚腹、刮除內臟並清洗乾淨<br>3.確認魚的乾淨並在表面劃刀痕<br>4.將洋蔥及豆芽菜洗淨<br>5.洋蔥切條與豆芽並行鋪於盤底<br><img data-src="/Steamed-Bass-Recipe/FISH.jpg" alt="處理完的魚和醬汁"></p>
-<h3 id="調料的處理："><a href="#調料的處理：" class="headerlink" title="調料的處理："></a>調料的處理：</h3><p>6.蒜頭、辣椒切碎<br>7.加入糖一匙<br>8.加入米酒兩匙<br>9.魚露兩匙<br>10.檸檬汁一顆的量<br>11.白胡椒粉一小匙<br>12.加入兩匙水、拌勻<br>13.將魚放入盤內、平均淋上調料<br>14.放入電鍋蒸<br>15.蔥切細絲放上出鍋後的料理<br>16.熱少許油至些許冒煙、淋上蔥絲即可出菜</p>
-<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
-]]></content>
-      <categories>
-        <category>飲食</category>
-        <category>食譜</category>
-      </categories>
-      <tags>
-        <tag>自製</tag>
-        <tag>食譜</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>熱流實驗 風洞與流視 結報</title>
-    <url>/Wind-Tunnel-and-Flow-Visualization-Report/</url>
-    <content><![CDATA[<center>國立清華大學動力機械工程學系</center>
-<center>熱流實驗-風洞與流視</center>
-<center>結報</center>
+    <title>地形考察報告</title>
+    <url>/Terrain-Survey-Report/</url>
+    <content><![CDATA[<div style="text-align:center">
+國立台北教育大學
+地形考察報告
+結報
+</div>
 <span id="more"></span>
 
 <center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/110033210.pdf">
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/NTUE-Geo.pdf">
     <font color=blue> 新分頁開啟結報</font>
 </a>
-</center>
-]]></content>
+</center>]]></content>
       <categories>
         <category>結報</category>
-        <category>清大動機</category>
+        <category>國北教自</category>
       </categories>
       <tags>
         <tag>結報</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>越式涼拌</title>
-    <url>/Vietnamese-Cold-Salad/</url>
-    <content><![CDATA[<h3 id="醬料"><a href="#醬料" class="headerlink" title="醬料"></a>醬料</h3><p>1.蒜頭、辣椒切碎<br>2.加入糖一匙<br>3.魚露兩匙<br>4.檸檬汁一顆的量<span id="more"></span><br>5.白胡椒粉一小匙<br>6.加入兩匙水、拌勻</p>
-<p>再切個青木瓜絲、紅蘿蔔絲、小黃瓜絲丟進去拌一拌，灑上一把鹹花生就完成了。</p>
-<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
-]]></content>
-      <categories>
-        <category>飲食</category>
-        <category>食譜</category>
-      </categories>
-      <tags>
-        <tag>自製</tag>
-        <tag>食譜</tag>
       </tags>
   </entry>
   <entry>
@@ -479,19 +480,22 @@
       </tags>
   </entry>
   <entry>
-    <title>光電實驗(一) 幾何光學基本定律</title>
-    <url>/2-Fundamental-Laws-of-Geometric-Optics/</url>
-    <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 幾何光學基本定律 結報</center><span id="more"></span>
+    <title>熱流實驗 風洞與流視 結報</title>
+    <url>/Wind-Tunnel-and-Flow-Visualization-Report/</url>
+    <content><![CDATA[<center>國立清華大學動力機械工程學系</center>
+<center>熱流實驗-風洞與流視</center>
+<center>結報</center>
+<span id="more"></span>
 
 <center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/2-Fundamental-Laws-of-Geometric-Optics.pdf">
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/110033210.pdf">
     <font color=blue> 新分頁開啟結報</font>
 </a>
-</center>]]></content>
+</center>
+]]></content>
       <categories>
         <category>結報</category>
-        <category>成大光電</category>
+        <category>清大動機</category>
       </categories>
       <tags>
         <tag>結報</tag>
@@ -557,6 +561,44 @@
       </tags>
   </entry>
   <entry>
+    <title>光電實驗(一) 干涉與繞射</title>
+    <url>/6-Interference-and-Diffraction/</url>
+    <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
+<center>光電實驗(一) 干涉與繞射 結報</center><span id="more"></span>
+
+<center>
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/6-Interference-and-Diffraction.pdf">
+    <font color=blue> 新分頁開啟結報</font>
+</a>
+</center>]]></content>
+      <categories>
+        <category>結報</category>
+        <category>成大光電</category>
+      </categories>
+      <tags>
+        <tag>結報</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>光電實驗(一) 幾何光學基本定律</title>
+    <url>/2-Fundamental-Laws-of-Geometric-Optics/</url>
+    <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
+<center>光電實驗(一) 幾何光學基本定律 結報</center><span id="more"></span>
+
+<center>
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/2-Fundamental-Laws-of-Geometric-Optics.pdf">
+    <font color=blue> 新分頁開啟結報</font>
+</a>
+</center>]]></content>
+      <categories>
+        <category>結報</category>
+        <category>成大光電</category>
+      </categories>
+      <tags>
+        <tag>結報</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LK-99樣本合成製備</title>
     <url>/LK-99-Sample-Synthesis-Preparation/</url>
     <content><![CDATA[<h3 id="所需材料"><a href="#所需材料" class="headerlink" title="所需材料"></a>所需材料</h3><ul>
@@ -579,22 +621,22 @@
       </tags>
   </entry>
   <entry>
-    <title>光電實驗(一) 干涉與繞射</title>
-    <url>/6-Interference-and-Diffraction/</url>
-    <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 干涉與繞射 結報</center><span id="more"></span>
-
-<center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/6-Interference-and-Diffraction.pdf">
-    <font color=blue> 新分頁開啟結報</font>
-</a>
-</center>]]></content>
+    <title>BK樹跟Levenshtein</title>
+    <url>/BK-tree-and-Levenshtein/</url>
+    <content><![CDATA[<p>Levenshtein距離是兩個字串間，透過新增、更換、刪除下的最少操作次數，透過動態規劃解決。</p>
+<p>BK Tree 是基於 Levenshtein distance 的樹資料結構。節點為詞，線的權重為編輯距離，即透過Levenshtein distance得到的值。</p>
+<span id="more"></span>
+<p>插入時，對於根節點編輯距離重複的點會碰撞，因此，新加入的點會以碰撞點為父節點進行插入，並且編輯距離變成與該碰撞節點的編輯距離。</p>
+<p><img data-src="/BK-tree-and-Levenshtein/01.png" alt="例圖"></p>
+<p>對於搜尋最接近的正確單字，我們需要設置一個容錯值(Tolerance)，以及計算目前的字與root間的距離，稱dist，然後我們就可以去迭代[dist-tolerance, dist+tolerance]間距離的所有單字，以降低暴力搜尋所有節點的複雜度。針對每一個在距離內的節點，將其加入可能列表中，並對該點進行遞迴再判斷，藉以達成所以相近字詞搜尋。</p>
+<p><strong>筆者: NTUST So Hard</strong></p>
+]]></content>
       <categories>
-        <category>結報</category>
-        <category>成大光電</category>
+        <category>程式</category>
       </categories>
       <tags>
-        <tag>結報</tag>
+        <tag>程式</tag>
+        <tag>演算法</tag>
       </tags>
   </entry>
   <entry>
@@ -649,25 +691,6 @@
       </tags>
   </entry>
   <entry>
-    <title>BK樹跟Levenshtein</title>
-    <url>/BK-tree-and-Levenshtein/</url>
-    <content><![CDATA[<p>Levenshtein距離是兩個字串間，透過新增、更換、刪除下的最少操作次數，透過動態規劃解決。</p>
-<p>BK Tree 是基於 Levenshtein distance 的樹資料結構。節點為詞，線的權重為編輯距離，即透過Levenshtein distance得到的值。</p>
-<span id="more"></span>
-<p>插入時，對於根節點編輯距離重複的點會碰撞，因此，新加入的點會以碰撞點為父節點進行插入，並且編輯距離變成與該碰撞節點的編輯距離。</p>
-<p><img data-src="/BK-tree-and-Levenshtein/01.png" alt="例圖"></p>
-<p>對於搜尋最接近的正確單字，我們需要設置一個容錯值(Tolerance)，以及計算目前的字與root間的距離，稱dist，然後我們就可以去迭代[dist-tolerance, dist+tolerance]間距離的所有單字，以降低暴力搜尋所有節點的複雜度。針對每一個在距離內的節點，將其加入可能列表中，並對該點進行遞迴再判斷，藉以達成所以相近字詞搜尋。</p>
-<p><strong>筆者: NTUST So Hard</strong></p>
-]]></content>
-      <categories>
-        <category>程式</category>
-      </categories>
-      <tags>
-        <tag>程式</tag>
-        <tag>演算法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>哲學系日常 EP1 - 貓貓攝影</title>
     <url>/Philosophy-Department-Daily-EP1/</url>
     <content><![CDATA[<p>逛書店看到的一些攝影集</p>
@@ -691,27 +714,6 @@
 ]]></content>
       <tags>
         <tag>攝影</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>北北基112-2學年度學測模擬考 作文第二題情意題&lt;魚說&gt; 寫作範例</title>
-    <url>/fish-said-sample/</url>
-    <content><![CDATA[<p>魚說：「一年準備、二年反攻、三年掃蕩、五年成功。」</p>
-<span id="more"></span>
-<p>第一段講述魚剛出生時遭遇颱風、溪水暴漲，河岸邊的一戶眷村人家小孩頭戴國軍膠盔、手拿報紙不慎落水。魚兒在翻滾的水流中看見了報紙上寫著「一年準備、二年反攻、三年掃蕩、五年成功」，魚兒明白了小男孩最大的願望就是看到中華民國解救大陸同胞於水深火熱之中。魚兒翻滾著想要打撈男孩並極力想要將男孩拖往岸邊但仍無能為力。</p>
-<p>第二段講述一位母親在第一時間奔往河岸呼喊孩子但面對的只有滔滔江水，這位母親哭了一天一夜最終脫力被鄉親們扛著回去，此時小魚兒明白了什麼是母愛如江水般延綿不絕，正如同國家之於人民，此時的小魚兒便萌生了將男孩這份保家衛國的精神傳承下去的信念，他魚兒含淚告別了失去意識的母親向著下游游去。</p>
-<p>第三段寫在三天之後的河川游一名無名的屍體被沖刷上了岸，那是一名小孩子的浮屍，頭上戴著膠盔。沒錯，經過三天三夜的翻滾沖刷拍打敲擊後，這頂膠盔仍堅定的保衛這男孩的頭部免受重創，男孩緊緊握著的手中攢著的報紙殘片無不說明男孩對於從軍的嚮往。世人只知男孩的犧牲，卻不知在不遠處逐漸遠去的一條精壯的魚兒，正是這魚兒將男孩托上了岸。也只有他明白男孩的決心。</p>
-<p>第四段的魚兒如願以償地抵達了下游，面對數以千計的同類卻只有他一心只想報效國家，他感到無比心寒。魚兒逢人就說「一年準備、二年反攻、三年掃蕩、五年成功」，希望有人能明白他的意志。啵啵啵，只是氣泡，沒有人聽見。魚哭了，透明的眼淚溶進透明的河，沒有人看見。沒有人明白他奉獻為國的決心。這條河有許多魚，但這條魚，只有一條河。他要保衛的，是這片他生長的淨土、是他充滿回憶的家鄉、是民眾安居樂業的日常、是那天那個孩子最純粹的夢想。但是，沒有人聽見。 </p>
-<p>第五段的魚兒依舊在岸邊、依舊在向來去的遊客、釣客、觀光客闡述著他的理想——「一年準備、二年反攻、三年掃蕩、五年成功。」但是，啵啵啵，依舊沒有人聽見。魚兒悲愴地吶喊，喊得聲嘶力竭，依舊沒有人多看他一眼。此時一位年邁的釣客吸引了魚兒的注意，那名釣客他瘦削但精實、老態的容貌下目光依舊炯炯有神、周圍的人接連撒網捕魚，只有他仍遵守不濫捕濫殺的道義吃多少釣多少。正如同中華民國國軍般屹立不搖、剛正不阿。魚兒遊近那名長者，最後一次向他吐露心聲。啵啵啵，老人注意到了魚兒，對魚兒微微一笑，雖然老者並不了解魚兒想說什麼。魚兒早已冷卻的五臟六腑再一次地感到滿腔的熱血在這之中奔馳，他明白就是這個老人，他頓悟了自己的使命，沒錯，正如同那個男孩將夢想帶給他，如今他也要將這份意志傳承下去。魚兒眼含熱淚，縱身一躍躍入老者的釣簍。老者望向那條大魚，精瘦而不瘦削、皮下堅實的肌肉富有彈性，銀白色的魚鱗閃耀著太陽的光輝，鮮紅、青藍與在這之上的耀眼的白，令老者想起了那年國父教誨的自由、平等、博愛。老者覺得就是他了、就是這條魚，他將其他普通的魚放回河川，將那尾大魚帶回家。</p>
-<p>第六段的老者回到了位於眷村中的家，此時日正當中，他吩咐妻子將那尾大魚宰殺鹽漬。原來，老者的兒子今天要從部隊久違的回家吃飯，老者才去河邊釣的魚。那名老者是一名前海軍陸戰隊隊員，而兒子也不負眾望跟隨著父親的步伐加入了中華民國海軍陸戰隊，成為保家衛國、守護家園的第一線力量。兒子於晚餐前回到了家，身著軍服的孩子是多麼的迷人。母親將菜品一一端出，其中不乏被作成鹹魚的、那尾一心只想奉獻為國的大魚。啊！如果他還活著，想必會流出欣慰的淚水吧！他的肉體化作一股股能量流進孩子體內，讓他可以挺直腰桿、握緊雙拳保衛國家，魚兒也算把這份對國家的愛傳承下去了吧！沒錯！鹹魚尚可以翻面，平凡如你我也可以翻身！<strong>立即拿起你手邊的電話，撥打0800-000-050國軍招募專線加入國軍！成為中華民國國軍，鍛鍊自身、榮耀父母、羨煞鄰里、保衛國家！國家以你為榮！</strong></p>
-<p><strong>成功高中畢業學長教你如何寫好大考作文( • ̀ω•́ )b</strong><br><strong>筆者：蔡銘揚</strong></p>
-]]></content>
-      <categories>
-        <category>結報</category>
-        <category>國北教自</category>
-      </categories>
-      <tags>
-        <tag>結報</tag>
       </tags>
   </entry>
   <entry>
@@ -744,6 +746,40 @@
       </categories>
   </entry>
   <entry>
+    <title>北北基112-2學年度學測模擬考 作文第二題情意題&lt;魚說&gt; 寫作範例</title>
+    <url>/fish-said-sample/</url>
+    <content><![CDATA[<p>魚說：「一年準備、二年反攻、三年掃蕩、五年成功。」</p>
+<span id="more"></span>
+<p>第一段講述魚剛出生時遭遇颱風、溪水暴漲，河岸邊的一戶眷村人家小孩頭戴國軍膠盔、手拿報紙不慎落水。魚兒在翻滾的水流中看見了報紙上寫著「一年準備、二年反攻、三年掃蕩、五年成功」，魚兒明白了小男孩最大的願望就是看到中華民國解救大陸同胞於水深火熱之中。魚兒翻滾著想要打撈男孩並極力想要將男孩拖往岸邊但仍無能為力。</p>
+<p>第二段講述一位母親在第一時間奔往河岸呼喊孩子但面對的只有滔滔江水，這位母親哭了一天一夜最終脫力被鄉親們扛著回去，此時小魚兒明白了什麼是母愛如江水般延綿不絕，正如同國家之於人民，此時的小魚兒便萌生了將男孩這份保家衛國的精神傳承下去的信念，他魚兒含淚告別了失去意識的母親向著下游游去。</p>
+<p>第三段寫在三天之後的河川游一名無名的屍體被沖刷上了岸，那是一名小孩子的浮屍，頭上戴著膠盔。沒錯，經過三天三夜的翻滾沖刷拍打敲擊後，這頂膠盔仍堅定的保衛這男孩的頭部免受重創，男孩緊緊握著的手中攢著的報紙殘片無不說明男孩對於從軍的嚮往。世人只知男孩的犧牲，卻不知在不遠處逐漸遠去的一條精壯的魚兒，正是這魚兒將男孩托上了岸。也只有他明白男孩的決心。</p>
+<p>第四段的魚兒如願以償地抵達了下游，面對數以千計的同類卻只有他一心只想報效國家，他感到無比心寒。魚兒逢人就說「一年準備、二年反攻、三年掃蕩、五年成功」，希望有人能明白他的意志。啵啵啵，只是氣泡，沒有人聽見。魚哭了，透明的眼淚溶進透明的河，沒有人看見。沒有人明白他奉獻為國的決心。這條河有許多魚，但這條魚，只有一條河。他要保衛的，是這片他生長的淨土、是他充滿回憶的家鄉、是民眾安居樂業的日常、是那天那個孩子最純粹的夢想。但是，沒有人聽見。 </p>
+<p>第五段的魚兒依舊在岸邊、依舊在向來去的遊客、釣客、觀光客闡述著他的理想——「一年準備、二年反攻、三年掃蕩、五年成功。」但是，啵啵啵，依舊沒有人聽見。魚兒悲愴地吶喊，喊得聲嘶力竭，依舊沒有人多看他一眼。此時一位年邁的釣客吸引了魚兒的注意，那名釣客他瘦削但精實、老態的容貌下目光依舊炯炯有神、周圍的人接連撒網捕魚，只有他仍遵守不濫捕濫殺的道義吃多少釣多少。正如同中華民國國軍般屹立不搖、剛正不阿。魚兒遊近那名長者，最後一次向他吐露心聲。啵啵啵，老人注意到了魚兒，對魚兒微微一笑，雖然老者並不了解魚兒想說什麼。魚兒早已冷卻的五臟六腑再一次地感到滿腔的熱血在這之中奔馳，他明白就是這個老人，他頓悟了自己的使命，沒錯，正如同那個男孩將夢想帶給他，如今他也要將這份意志傳承下去。魚兒眼含熱淚，縱身一躍躍入老者的釣簍。老者望向那條大魚，精瘦而不瘦削、皮下堅實的肌肉富有彈性，銀白色的魚鱗閃耀著太陽的光輝，鮮紅、青藍與在這之上的耀眼的白，令老者想起了那年國父教誨的自由、平等、博愛。老者覺得就是他了、就是這條魚，他將其他普通的魚放回河川，將那尾大魚帶回家。</p>
+<p>第六段的老者回到了位於眷村中的家，此時日正當中，他吩咐妻子將那尾大魚宰殺鹽漬。原來，老者的兒子今天要從部隊久違的回家吃飯，老者才去河邊釣的魚。那名老者是一名前海軍陸戰隊隊員，而兒子也不負眾望跟隨著父親的步伐加入了中華民國海軍陸戰隊，成為保家衛國、守護家園的第一線力量。兒子於晚餐前回到了家，身著軍服的孩子是多麼的迷人。母親將菜品一一端出，其中不乏被作成鹹魚的、那尾一心只想奉獻為國的大魚。啊！如果他還活著，想必會流出欣慰的淚水吧！他的肉體化作一股股能量流進孩子體內，讓他可以挺直腰桿、握緊雙拳保衛國家，魚兒也算把這份對國家的愛傳承下去了吧！沒錯！鹹魚尚可以翻面，平凡如你我也可以翻身！<strong>立即拿起你手邊的電話，撥打0800-000-050國軍招募專線加入國軍！成為中華民國國軍，鍛鍊自身、榮耀父母、羨煞鄰里、保衛國家！國家以你為榮！</strong></p>
+<p><strong>成功高中畢業學長教你如何寫好大考作文( • ̀ω•́ )b</strong><br><strong>筆者：蔡銘揚</strong></p>
+]]></content>
+      <categories>
+        <category>結報</category>
+        <category>國北教自</category>
+      </categories>
+      <tags>
+        <tag>結報</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>哲學系發癲EP2 帥割比較會賺錢</title>
+    <url>/Philosophy-Department-Craziness-EP2/</url>
+    <content><![CDATA[<p>. 台大經濟系教授吳聰敏，近期出版著作&lt;台灣經濟四百年&gt;內提到美國顧問團水準精湛，報告對台灣經濟掌握非常完善，但多數成員都難以找到其經歷<br>.<br>. 吳聰敏作為自由派學者，這番結論堪稱頭號美吹，讓人不經感到懷疑可靠性<br>.<br>. 對此，有一個研究可以提供反駁。上海交通大學高級金融學院的兩位研究員，上週發表研究，結果表明長相比較好看的經理平均投資表現是顯著比較差的(最不好看的經理比最好看的經理每個月投資報酬率高0.17%)。<br>.<br>. 而吳聰敏並不太帥，應該可以相信<br><img data-src="/Philosophy-Department-Craziness-EP2/01.png" alt="其實蠻帥ㄉ，五官很對稱，應該可以被AI認證很帥"><br>（其實蠻帥ㄉ，五官很對稱，應該可以被AI認證很帥 </p>
+<p><a href="https://www.facebook.com/photo/?fbid=10168480199465694&set=a.10150632405965694">credit</a></p>
+]]></content>
+      <categories>
+        <category>日常廢文</category>
+      </categories>
+      <tags>
+        <tag>哲學</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>NTUST遊記EP1-二重疏洪道</title>
     <url>/NTUST-travel-notes-EP1/</url>
     <content><![CDATA[<img data-src="01.jpg" alt="" height="400"/>
@@ -770,28 +806,5 @@
       <categories>
         <category>日常廢文</category>
       </categories>
-  </entry>
-  <entry>
-    <title>地形考察報告</title>
-    <url>/Terrain-Survey-Report/</url>
-    <content><![CDATA[<div style="text-align:center">
-國立台北教育大學
-地形考察報告
-結報
-</div>
-<span id="more"></span>
-
-<center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/NTUE-Geo.pdf">
-    <font color=blue> 新分頁開啟結報</font>
-</a>
-</center>]]></content>
-      <categories>
-        <category>結報</category>
-        <category>國北教自</category>
-      </categories>
-      <tags>
-        <tag>結報</tag>
-      </tags>
   </entry>
 </search>
