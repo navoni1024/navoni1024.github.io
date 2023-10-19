@@ -845,7 +845,12 @@
 </center>
 <center>
 <a onclick="window.open(this.href,'_blank');return false;" href="/pdf/wave.pdf">
-    <font color=blue> 新分頁開啟</font>
+    <font color=blue> 新分頁開啟逐字稿</font>
+</a>
+</center>
+<center>
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/111012009_.pdf">
+    <font color=blue> 新分頁開啟簡報</font>
 </a>
 </center>
 ]]></content>
