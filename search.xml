@@ -65,42 +65,6 @@
       </tags>
   </entry>
   <entry>
-    <title> 爬蟲基礎入門: robots.txt &amp; header</title>
-    <url>/Scraping-Basics-robots-txt-header/</url>
-    <content><![CDATA[<p>今天要來介紹當我們在爬蟲前，應該要知道的一些技巧與規範</p>
-<hr>
-<h3 id="為甚麼需要知道這些爬蟲規範？"><a href="#為甚麼需要知道這些爬蟲規範？" class="headerlink" title="為甚麼需要知道這些爬蟲規範？"></a>為甚麼需要知道這些爬蟲規範？</h3><p>首先，我們必須知道過度的網路爬蟲可能是違法的，<br>如使用多執行緒進行對網站的大量拜訪，在沒有適當的存取時間間隔下，可能會造成一般人熟知的<strong>DDOS</strong>(Denial-Of-Service Attack)，進而造成其他使用者無法拜訪、甚至是主機癱瘓。<br>因此，某些網站有制定所謂的「規範」，讓爬蟲使用者能夠去遵守並避免存取到private data</p>
-<span id="more"></span>
-<p>請注意這項規範並不具有強制力，並無法阻擋真正有心攻擊的爬蟲程式。</p>
-<h3 id="「規範」—-robots-txt"><a href="#「規範」—-robots-txt" class="headerlink" title="「規範」— robots.txt"></a>「規範」— robots.txt</h3><p>robots.txt是一個告訴爬蟲哪些內容是否可存取的文字檔。<br>這項檔案通常位於網頁根目錄下的robots.txt，<br>換句話說，在main-page下加個&#x2F;robots.txt就能檢視。</p>
-<p>舉個例子吧，我們先進到<a href="http://google.com/">google</a>的首頁</p>
-<p><img data-src="/Scraping-Basics-robots-txt-header/20152706kiMp9LoNrj.png"></p>
-<p>相當正常，不是嗎?<br>再來利用上面的方法去找robots.txt，<br>我們接著在.com後面接著&#x2F;robots.txt，<br>使網址成為<a href="https://www.google.com/robots.txt">https://www.google.com/robots.txt</a></p>
-<p><img data-src="/Scraping-Basics-robots-txt-header/20152706qRcQSJ2ABd.png"></p>
-<p>成功了！<br>可是密密麻麻的，打這麼多字誰他媽看得完?<br>但事實上，這份文字檔可以被拆分成幾個部分，<br>我們從第一行開始：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. User-Agent: *</span><br></pre></td></tr></table></figure>
-<p>User-Agent這一欄代表的是允許的爬蟲類型，而 <strong>*</strong> 則代表<strong>所有</strong>的意思，<br>所以第一行可以被解讀成，允許所有爬蟲拜訪。<br>此外有一些特別的程式只允許特定爬蟲拜訪網頁，如Googlebot、Applebot等，<br>如在最後幾行處，可以看到google的網頁允許Twitterbot能夠比一般使用者額外拜訪&#x2F;imgres的子目錄。</p>
-<p>再來我們繼續往下探討，大致上可以分為<strong>Allow</strong>開頭的，以及<strong>Disallow</strong>開頭的句子</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2. Disallow: /search</span><br></pre></td></tr></table></figure>
-<p>這句話代表著，拒絕網路爬蟲訪問search子目錄以及其子目錄下所有目錄，<br>而接下來的第三行，你們應該也就猜的到意思了，就是允許拜訪冒號後面的子目錄。</p>
-<h3 id="表頭headers"><a href="#表頭headers" class="headerlink" title="表頭headers"></a>表頭headers</h3><p>headers是對client端向server發出請求時的敘述資訊。<br>有一些網站會針對網路爬蟲進行阻擋，其中一項阻擋的手法就是針對headers，<br>當網頁收到非瀏覽器的headers發出的請求時，網頁就拒絕client的存取。</p>
-<p>解決手段非常的簡單粗暴，既然你拒絕非瀏覽器外的訪問，那我就成為瀏覽器就好了啊!?<br>那我們要怎麼成為瀏覽器呢?<br>這樣推薦一個作法：</p>
-<ul>
-<li>開啟Chrome時按下F12鍵後，先按F5使其重整載入資源，點選其中一項被載入的資源，點選Network欄中的Header，複製其中的Uger-Agent</li>
-</ul>
-<p>如此一來就得到瀏覽器的header，將自己偽裝成瀏覽器了。<br>下一章在requests時，我們會介紹在requests.get()中可以帶入header參數，<br>在header參數中帶入我們剛剛取得的瀏覽器header，我們就可以成功偽裝了。</p>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>爬蟲</category>
-      </categories>
-      <tags>
-        <tag>爬蟲</tag>
-        <tag>程式</tag>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title> 爬蟲基礎入門: Requests</title>
     <url>/Scraping-Basics-Requests/</url>
     <content><![CDATA[<p>本系列預設各位擁有基本的python能力，對各種資料結構、套件、模組等有一定概念就行了。<br>本文的範例都是在python 3.10下操作的。</p>
@@ -139,21 +103,39 @@
       </tags>
   </entry>
   <entry>
-    <title>Discord Bot-創建一隻bot</title>
-    <url>/Discord-Bot-create-a-bot/</url>
-    <content><![CDATA[<p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
+    <title> 爬蟲基礎入門: robots.txt &amp; header</title>
+    <url>/Scraping-Basics-robots-txt-header/</url>
+    <content><![CDATA[<p>今天要來介紹當我們在爬蟲前，應該要知道的一些技巧與規範</p>
+<hr>
+<h3 id="為甚麼需要知道這些爬蟲規範？"><a href="#為甚麼需要知道這些爬蟲規範？" class="headerlink" title="為甚麼需要知道這些爬蟲規範？"></a>為甚麼需要知道這些爬蟲規範？</h3><p>首先，我們必須知道過度的網路爬蟲可能是違法的，<br>如使用多執行緒進行對網站的大量拜訪，在沒有適當的存取時間間隔下，可能會造成一般人熟知的<strong>DDOS</strong>(Denial-Of-Service Attack)，進而造成其他使用者無法拜訪、甚至是主機癱瘓。<br>因此，某些網站有制定所謂的「規範」，讓爬蟲使用者能夠去遵守並避免存取到private data</p>
 <span id="more"></span>
-<p><img data-src="/Discord-Bot-create-a-bot/20152706MBGmHIhGdS.png"><br>大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。</p>
-<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img data-src="/Discord-Bot-create-a-bot/20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img data-src="/Discord-Bot-create-a-bot/20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img data-src="/Discord-Bot-create-a-bot/20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
+<p>請注意這項規範並不具有強制力，並無法阻擋真正有心攻擊的爬蟲程式。</p>
+<h3 id="「規範」—-robots-txt"><a href="#「規範」—-robots-txt" class="headerlink" title="「規範」— robots.txt"></a>「規範」— robots.txt</h3><p>robots.txt是一個告訴爬蟲哪些內容是否可存取的文字檔。<br>這項檔案通常位於網頁根目錄下的robots.txt，<br>換句話說，在main-page下加個&#x2F;robots.txt就能檢視。</p>
+<p>舉個例子吧，我們先進到<a href="http://google.com/">google</a>的首頁</p>
+<p><img data-src="/Scraping-Basics-robots-txt-header/20152706kiMp9LoNrj.png"></p>
+<p>相當正常，不是嗎?<br>再來利用上面的方法去找robots.txt，<br>我們接著在.com後面接著&#x2F;robots.txt，<br>使網址成為<a href="https://www.google.com/robots.txt">https://www.google.com/robots.txt</a></p>
+<p><img data-src="/Scraping-Basics-robots-txt-header/20152706qRcQSJ2ABd.png"></p>
+<p>成功了！<br>可是密密麻麻的，打這麼多字誰他媽看得完?<br>但事實上，這份文字檔可以被拆分成幾個部分，<br>我們從第一行開始：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. User-Agent: *</span><br></pre></td></tr></table></figure>
+<p>User-Agent這一欄代表的是允許的爬蟲類型，而 <strong>*</strong> 則代表<strong>所有</strong>的意思，<br>所以第一行可以被解讀成，允許所有爬蟲拜訪。<br>此外有一些特別的程式只允許特定爬蟲拜訪網頁，如Googlebot、Applebot等，<br>如在最後幾行處，可以看到google的網頁允許Twitterbot能夠比一般使用者額外拜訪&#x2F;imgres的子目錄。</p>
+<p>再來我們繼續往下探討，大致上可以分為<strong>Allow</strong>開頭的，以及<strong>Disallow</strong>開頭的句子</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2. Disallow: /search</span><br></pre></td></tr></table></figure>
+<p>這句話代表著，拒絕網路爬蟲訪問search子目錄以及其子目錄下所有目錄，<br>而接下來的第三行，你們應該也就猜的到意思了，就是允許拜訪冒號後面的子目錄。</p>
+<h3 id="表頭headers"><a href="#表頭headers" class="headerlink" title="表頭headers"></a>表頭headers</h3><p>headers是對client端向server發出請求時的敘述資訊。<br>有一些網站會針對網路爬蟲進行阻擋，其中一項阻擋的手法就是針對headers，<br>當網頁收到非瀏覽器的headers發出的請求時，網頁就拒絕client的存取。</p>
+<p>解決手段非常的簡單粗暴，既然你拒絕非瀏覽器外的訪問，那我就成為瀏覽器就好了啊!?<br>那我們要怎麼成為瀏覽器呢?<br>這樣推薦一個作法：</p>
+<ul>
+<li>開啟Chrome時按下F12鍵後，先按F5使其重整載入資源，點選其中一項被載入的資源，點選Network欄中的Header，複製其中的Uger-Agent</li>
+</ul>
+<p>如此一來就得到瀏覽器的header，將自己偽裝成瀏覽器了。<br>下一章在requests時，我們會介紹在requests.get()中可以帶入header參數，<br>在header參數中帶入我們剛剛取得的瀏覽器header，我們就可以成功偽裝了。</p>
 ]]></content>
       <categories>
         <category>程式</category>
-        <category>Discord bot</category>
+        <category>爬蟲</category>
       </categories>
       <tags>
+        <tag>爬蟲</tag>
         <tag>程式</tag>
         <tag>python</tag>
-        <tag>Discord</tag>
       </tags>
   </entry>
   <entry>
@@ -185,6 +167,24 @@
 <h3 id="if-name-“-main-“"><a href="#if-name-“-main-“" class="headerlink" title="if __name__ &#x3D;&#x3D; “__main__“:"></a>if __name__ &#x3D;&#x3D; “__main__“:</h3><p>這行就是確保你是直接執行了這檔案才會跑以下的指令。<br>bot.run()的括號中間輸入您昨天取得的token碼。</p>
 <hr>
 <p>接著就讓機器人上線並邀請你的機器人進自己的伺服器來玩玩吧。<br>也可以試著改一些設定，或甚至嘗試一些你在官方API找到的功能。<br>看不太懂上面和官方API到底在講什麼鬼的也沒關係，後面跟著做就會漸漸熟悉了。</p>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>Discord bot</category>
+      </categories>
+      <tags>
+        <tag>程式</tag>
+        <tag>python</tag>
+        <tag>Discord</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Discord Bot-創建一隻bot</title>
+    <url>/Discord-Bot-create-a-bot/</url>
+    <content><![CDATA[<p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
+<span id="more"></span>
+<p><img data-src="/Discord-Bot-create-a-bot/20152706MBGmHIhGdS.png"><br>大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。</p>
+<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img data-src="/Discord-Bot-create-a-bot/20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img data-src="/Discord-Bot-create-a-bot/20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img data-src="/Discord-Bot-create-a-bot/20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
 ]]></content>
       <categories>
         <category>程式</category>
@@ -245,25 +245,6 @@
       </tags>
   </entry>
   <entry>
-    <title>最近的夜晚-Gin Fizz</title>
-    <url>/Gin-Fizz/</url>
-    <content><![CDATA[<p>最近晚上一直都是喝著gin fizz渡過的<br>琴酒+檸檬+糖漿攪拌或搖晃<br>最後加入氣泡水<br>清爽的口感加上琴酒的藥草香以及檸檬的酸和糖漿的甜<span id="more"></span><br>最後加入氣泡水增添的口感<br>同時也有效將琴酒的口味分層<br>不由得一杯接著一杯</p>
-<p>建議用可林杯與長冰調配<br>克林杯放入長冰冰杯<br>倒出融水後<br>將琴酒、半顆檸檬的檸檬汁、與糖漿倒入<br>攪拌均勻<br>隨後用氣泡水填滿<br>若剩下半顆檸檬<br>可切一片放杯緣<br>如此一來你便完成了一杯gin fizz</p>
-<p>如果想要提升味覺感受<br>可以從琴酒以及氣泡水下手</p>
-<p>最後<br>以上言論不代表本人立場</p>
-<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
-]]></content>
-      <categories>
-        <category>飲食</category>
-        <category>酒</category>
-      </categories>
-      <tags>
-        <tag>調酒</tag>
-        <tag>酒譜</tag>
-        <tag>自製</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Highball-嗨波</title>
     <url>/Highball/</url>
     <content><![CDATA[<p>最近放暑假，最舒服的就是中午起床弄個午餐，配杯highball搭著netflix或VT。<br>嗨波其實就是簡單的威士忌加氣泡水，而清爽的口感在夏日午後絕對是最好的享受。</p>
@@ -284,60 +265,6 @@
         <tag>調酒</tag>
         <tag>酒譜</tag>
         <tag>自製</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>爬蟲基礎入門-Selenium</title>
-    <url>/Scraping-Basics-Selenium/</url>
-    <content><![CDATA[<h3 id="Selenium前置設定"><a href="#Selenium前置設定" class="headerlink" title="Selenium前置設定"></a>Selenium前置設定</h3><p>首先如果要先使用selenium，我們要先下載webdriver在資料夾中給予selenium使用。<br><a href="http://">https://chromedriver.chromium.org/downloads</a><br>上述網址即為chrome的webdriver下載地點。<br>下載好webdriver後我們就可以把他的exe檔丟到code的資料夾中了，就像這樣。</p>
-<span id="more"></span>
-<p><img data-src="/Scraping-Basics-Selenium/20152706vGDAntGabq.png"></p>
-<p>接著我們就可以準備import了。<br><img data-src="/Scraping-Basics-Selenium/20152706yg28xxCq3g.png"><br>像這樣，其中webdriver就是引入我們剛剛載的webdriver，<br>Options則是selenium針對不同webdriver所納入的不同設定，<br>WebDriverWait跟EC則是在讓瀏覽器等待時會用到，像是我們可能會需要等到某網頁元素完整載入後才繼續程式，否則可能就會出錯，<br>最後By則是selenium中的內部語法，像是這樣，<br><img data-src="/Scraping-Basics-Selenium/20152706nZU06VhtHp.png"><br>這就表示著find_element這個函式將用XPath的方式定位元素。</p>
-<h3 id="Selenium的指令使用"><a href="#Selenium的指令使用" class="headerlink" title="Selenium的指令使用"></a>Selenium的指令使用</h3><p><img data-src="/Scraping-Basics-Selenium/01.png"><br><img data-src="/Scraping-Basics-Selenium/02.png"><br>首先我們先如上圖，套入webdriver的設定，讓程式載入我們先前載的chrome webdriver，接著再讓他導到我們想要的網址，這邊以youtube作範例。如果成功的話應該會如下圖這樣。<br><img data-src="/Scraping-Basics-Selenium/03.png"><br>阿記得開完網址後要time.sleep()一下，才不會直接跳掉。<br>其實在之後我們對selenium操控時，也必須要定時的time.sleep()或者是利用別的方法讓程式暫停，否則就會產生網頁還沒完全載入，我們就要找到他的元素等等的尷尬事情。</p>
-<p>開完網頁後，就來介紹第一個函式，find_element<br><img data-src="/Scraping-Basics-Selenium/04.png"><br>find_element可以讓selenium定位到特定網頁元素，這邊的例子就是yt的搜尋欄。<br>其實selenium可以透過非常多方式定位，像是html碼裡的id、name等等，或者是class、css等其他方法，那麼我們這邊就用xpath這種定位方式，較為直接準確。但其實這邊範例比較不好的一點是xpath採用了絕對位置來定位，事實上，我們可以利用xpath的相對位置來達到簡潔、準確、可變動的性質，則之後在提及xpath時會在講解。</p>
-<p>再來，既然我們定位到了網頁元素，則我們就要發揮selenium的強項了，就是模擬使用者對網頁的互動，這邊我們透過下圖講解兩個例子。<br><img data-src="/Scraping-Basics-Selenium/05.png"><br>這邊我們的目標是要進去yt，蒐集不同關鍵字搜尋後的影片，因此我們先建立一個list做作search_keys，裡面有著我們之後要輸入進搜尋欄的搜尋關鍵字。<br>則首先是element.send_keys()，我們先定位到搜尋欄位置後，將其命名為search_box，則search_box.send_keys()就能讓我們輸入關鍵字進去。<br>再來就是element.click()，在輸入進去後，我們還要再定位到yt網頁的搜尋按鈕上，在這裡，我們將其命名為search_box，則search_box.click()就能讓selenium模擬使用者對著搜尋按鈕按下滑鼠左鍵的這個動作。<br>就像這樣<br><img data-src="/Scraping-Basics-Selenium/06.png"><br>其實只要有這基本的動作，我們就能讓selenium動起來了，就像真人一樣互動，當然selenium還有更多的功能，像是WebDriverWait等等的功能，但這邊就不多做贅述了，我們明天會在講使用selenium常遇到的問題，其實很多都跟網頁載入時間有關。</p>
-<p>喔對了，突然想到的小補充，上圖的範例其實就是之後其中一個專題內容，目標正是要讓selenium幫我們整理出想要的影片並輸出到discord上，因此也可以預見之後的專題應該會出現很多vt剪輯。<br><img data-src="/Scraping-Basics-Selenium/07.png"></p>
-<h3 id="Selenium的常見Bug"><a href="#Selenium的常見Bug" class="headerlink" title="Selenium的常見Bug"></a>Selenium的常見Bug</h3><p>首先，第一個是版本問題，這其實是我前天在挖之前的程式出來跑時才發現的問題，<br><img data-src="/Scraping-Basics-Selenium/01-1.png"><br>這問題基本上是driver跟瀏覽器版本不支援，最簡單只要重新下載對應版本的webdriver就好。</p>
-<p>接著是這個，<br><img data-src="/Scraping-Basics-Selenium/02-1.png"><br>這代表著selenium無法找到你所指定的元素，一般來說，如果不是你定位位置錯誤，<br>八成就是網頁還沒有完整載入，就使selemium搜尋元素。<br>此時，我們可以試著使用簡單的方法，time.sleep()，使程式整體暫停n秒，也可以配合try except使用。<br>當然，selenium針對這個問題也有開發相關函式，首先是顯式等待，<br><img data-src="/Scraping-Basics-Selenium/03-1.png"><br>在這邊的意思是，我們針對所給予的元素，等待10秒，每0.2秒檢查是否出現，如果出現了就繼續，<br>如果10秒內還沒出現則報錯。<br>另外一種則是隱式等待，<br><img data-src="/Scraping-Basics-Selenium/04-1.png"><br>相對於顯式等待是針對個別元素是否生成，隱式等待則是針對整個頁面，以上圖為例，這邊就是讓整個程式暫停，<br>給予瀏覽器10秒的時間，如果10秒內”整個頁面都已經生成完成”(講得直白一點其實就是我們頁面左上角的圈圈不再轉動)，則繼續程式運行，如果10內還沒載完，則報錯，因此可以看的出來，相對於顯式等待，隱式等待跟強制等待可能會要花費更久的時間。</p>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>爬蟲</category>
-      </categories>
-      <tags>
-        <tag>爬蟲</tag>
-        <tag>程式</tag>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>清蒸鱸魚食譜</title>
-    <url>/Steamed-Bass-Recipe/</url>
-    <content><![CDATA[<h3 id="所需材料："><a href="#所需材料：" class="headerlink" title="所需材料："></a>所需材料：</h3><ul>
-<li>鱸魚一尾</li>
-<li>檸檬一顆</li>
-<li>辣椒兩根</li>
-<li>蒜頭三到五瓣<span id="more"></span></li>
-<li>蔥一枝</li>
-<li>洋蔥一顆</li>
-<li>豆芽菜一包</li>
-<li>糖</li>
-<li>白胡椒粉</li>
-<li>米酒</li>
-<li>水</li>
-<li>魚露</li>
-</ul>
-<h3 id="魚的處理："><a href="#魚的處理：" class="headerlink" title="魚的處理："></a>魚的處理：</h3><p>1.刮除鱗片、修魚鰭<br>2.剪開魚腹、刮除內臟並清洗乾淨<br>3.確認魚的乾淨並在表面劃刀痕<br>4.將洋蔥及豆芽菜洗淨<br>5.洋蔥切條與豆芽並行鋪於盤底<br><img data-src="/Steamed-Bass-Recipe/FISH.jpg" alt="處理完的魚和醬汁"></p>
-<h3 id="調料的處理："><a href="#調料的處理：" class="headerlink" title="調料的處理："></a>調料的處理：</h3><p>6.蒜頭、辣椒切碎<br>7.加入糖一匙<br>8.加入米酒兩匙<br>9.魚露兩匙<br>10.檸檬汁一顆的量<br>11.白胡椒粉一小匙<br>12.加入兩匙水、拌勻<br>13.將魚放入盤內、平均淋上調料<br>14.放入電鍋蒸<br>15.蔥切細絲放上出鍋後的料理<br>16.熱少許油至些許冒煙、淋上蔥絲即可出菜</p>
-<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
-]]></content>
-      <categories>
-        <category>飲食</category>
-        <category>食譜</category>
-      </categories>
-      <tags>
-        <tag>自製</tag>
-        <tag>食譜</tag>
       </tags>
   </entry>
   <entry>
@@ -370,6 +297,49 @@
 <hr>
 <p>以loads&#x2F;dumps的話就會長得像下面這樣:</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span> (<span class="string">&#x27;ex.json&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> i:</span><br><span class="line">	t = i.read()        	<span class="comment">#以str格式讀取json的資料</span></span><br><span class="line">	jData = json.loads(t)	<span class="comment">#將str轉換成dictionary</span></span><br><span class="line"></span><br><span class="line">jData[<span class="string">&#x27;score&#x27;</span>] = <span class="number">100</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span> (<span class="string">&#x27;ex.json&#x27;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> i:</span><br><span class="line">	i.write(json.dumps(jData))   <span class="comment">#將dictionary轉換成符合json格式的字串並寫入原本的檔案 </span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>爬蟲</category>
+      </categories>
+      <tags>
+        <tag>爬蟲</tag>
+        <tag>程式</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>最近的夜晚-Gin Fizz</title>
+    <url>/Gin-Fizz/</url>
+    <content><![CDATA[<p>最近晚上一直都是喝著gin fizz渡過的<br>琴酒+檸檬+糖漿攪拌或搖晃<br>最後加入氣泡水<br>清爽的口感加上琴酒的藥草香以及檸檬的酸和糖漿的甜<span id="more"></span><br>最後加入氣泡水增添的口感<br>同時也有效將琴酒的口味分層<br>不由得一杯接著一杯</p>
+<p>建議用可林杯與長冰調配<br>克林杯放入長冰冰杯<br>倒出融水後<br>將琴酒、半顆檸檬的檸檬汁、與糖漿倒入<br>攪拌均勻<br>隨後用氣泡水填滿<br>若剩下半顆檸檬<br>可切一片放杯緣<br>如此一來你便完成了一杯gin fizz</p>
+<p>如果想要提升味覺感受<br>可以從琴酒以及氣泡水下手</p>
+<p>最後<br>以上言論不代表本人立場</p>
+<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>酒</category>
+      </categories>
+      <tags>
+        <tag>調酒</tag>
+        <tag>酒譜</tag>
+        <tag>自製</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爬蟲基礎入門-Selenium</title>
+    <url>/Scraping-Basics-Selenium/</url>
+    <content><![CDATA[<h3 id="Selenium前置設定"><a href="#Selenium前置設定" class="headerlink" title="Selenium前置設定"></a>Selenium前置設定</h3><p>首先如果要先使用selenium，我們要先下載webdriver在資料夾中給予selenium使用。<br><a href="http://">https://chromedriver.chromium.org/downloads</a><br>上述網址即為chrome的webdriver下載地點。<br>下載好webdriver後我們就可以把他的exe檔丟到code的資料夾中了，就像這樣。</p>
+<span id="more"></span>
+<p><img data-src="/Scraping-Basics-Selenium/20152706vGDAntGabq.png"></p>
+<p>接著我們就可以準備import了。<br><img data-src="/Scraping-Basics-Selenium/20152706yg28xxCq3g.png"><br>像這樣，其中webdriver就是引入我們剛剛載的webdriver，<br>Options則是selenium針對不同webdriver所納入的不同設定，<br>WebDriverWait跟EC則是在讓瀏覽器等待時會用到，像是我們可能會需要等到某網頁元素完整載入後才繼續程式，否則可能就會出錯，<br>最後By則是selenium中的內部語法，像是這樣，<br><img data-src="/Scraping-Basics-Selenium/20152706nZU06VhtHp.png"><br>這就表示著find_element這個函式將用XPath的方式定位元素。</p>
+<h3 id="Selenium的指令使用"><a href="#Selenium的指令使用" class="headerlink" title="Selenium的指令使用"></a>Selenium的指令使用</h3><p><img data-src="/Scraping-Basics-Selenium/01.png"><br><img data-src="/Scraping-Basics-Selenium/02.png"><br>首先我們先如上圖，套入webdriver的設定，讓程式載入我們先前載的chrome webdriver，接著再讓他導到我們想要的網址，這邊以youtube作範例。如果成功的話應該會如下圖這樣。<br><img data-src="/Scraping-Basics-Selenium/03.png"><br>阿記得開完網址後要time.sleep()一下，才不會直接跳掉。<br>其實在之後我們對selenium操控時，也必須要定時的time.sleep()或者是利用別的方法讓程式暫停，否則就會產生網頁還沒完全載入，我們就要找到他的元素等等的尷尬事情。</p>
+<p>開完網頁後，就來介紹第一個函式，find_element<br><img data-src="/Scraping-Basics-Selenium/04.png"><br>find_element可以讓selenium定位到特定網頁元素，這邊的例子就是yt的搜尋欄。<br>其實selenium可以透過非常多方式定位，像是html碼裡的id、name等等，或者是class、css等其他方法，那麼我們這邊就用xpath這種定位方式，較為直接準確。但其實這邊範例比較不好的一點是xpath採用了絕對位置來定位，事實上，我們可以利用xpath的相對位置來達到簡潔、準確、可變動的性質，則之後在提及xpath時會在講解。</p>
+<p>再來，既然我們定位到了網頁元素，則我們就要發揮selenium的強項了，就是模擬使用者對網頁的互動，這邊我們透過下圖講解兩個例子。<br><img data-src="/Scraping-Basics-Selenium/05.png"><br>這邊我們的目標是要進去yt，蒐集不同關鍵字搜尋後的影片，因此我們先建立一個list做作search_keys，裡面有著我們之後要輸入進搜尋欄的搜尋關鍵字。<br>則首先是element.send_keys()，我們先定位到搜尋欄位置後，將其命名為search_box，則search_box.send_keys()就能讓我們輸入關鍵字進去。<br>再來就是element.click()，在輸入進去後，我們還要再定位到yt網頁的搜尋按鈕上，在這裡，我們將其命名為search_box，則search_box.click()就能讓selenium模擬使用者對著搜尋按鈕按下滑鼠左鍵的這個動作。<br>就像這樣<br><img data-src="/Scraping-Basics-Selenium/06.png"><br>其實只要有這基本的動作，我們就能讓selenium動起來了，就像真人一樣互動，當然selenium還有更多的功能，像是WebDriverWait等等的功能，但這邊就不多做贅述了，我們明天會在講使用selenium常遇到的問題，其實很多都跟網頁載入時間有關。</p>
+<p>喔對了，突然想到的小補充，上圖的範例其實就是之後其中一個專題內容，目標正是要讓selenium幫我們整理出想要的影片並輸出到discord上，因此也可以預見之後的專題應該會出現很多vt剪輯。<br><img data-src="/Scraping-Basics-Selenium/07.png"></p>
+<h3 id="Selenium的常見Bug"><a href="#Selenium的常見Bug" class="headerlink" title="Selenium的常見Bug"></a>Selenium的常見Bug</h3><p>首先，第一個是版本問題，這其實是我前天在挖之前的程式出來跑時才發現的問題，<br><img data-src="/Scraping-Basics-Selenium/01-1.png"><br>這問題基本上是driver跟瀏覽器版本不支援，最簡單只要重新下載對應版本的webdriver就好。</p>
+<p>接著是這個，<br><img data-src="/Scraping-Basics-Selenium/02-1.png"><br>這代表著selenium無法找到你所指定的元素，一般來說，如果不是你定位位置錯誤，<br>八成就是網頁還沒有完整載入，就使selemium搜尋元素。<br>此時，我們可以試著使用簡單的方法，time.sleep()，使程式整體暫停n秒，也可以配合try except使用。<br>當然，selenium針對這個問題也有開發相關函式，首先是顯式等待，<br><img data-src="/Scraping-Basics-Selenium/03-1.png"><br>在這邊的意思是，我們針對所給予的元素，等待10秒，每0.2秒檢查是否出現，如果出現了就繼續，<br>如果10秒內還沒出現則報錯。<br>另外一種則是隱式等待，<br><img data-src="/Scraping-Basics-Selenium/04-1.png"><br>相對於顯式等待是針對個別元素是否生成，隱式等待則是針對整個頁面，以上圖為例，這邊就是讓整個程式暫停，<br>給予瀏覽器10秒的時間，如果10秒內”整個頁面都已經生成完成”(講得直白一點其實就是我們頁面左上角的圈圈不再轉動)，則繼續程式運行，如果10內還沒載完，則報錯，因此可以看的出來，相對於顯式等待，隱式等待跟強制等待可能會要花費更久的時間。</p>
 ]]></content>
       <categories>
         <category>程式</category>
@@ -422,6 +392,22 @@
       </tags>
   </entry>
   <entry>
+    <title>越式涼拌</title>
+    <url>/Vietnamese-Cold-Salad/</url>
+    <content><![CDATA[<h3 id="醬料"><a href="#醬料" class="headerlink" title="醬料"></a>醬料</h3><p>1.蒜頭、辣椒切碎<br>2.加入糖一匙<br>3.魚露兩匙<br>4.檸檬汁一顆的量<span id="more"></span><br>5.白胡椒粉一小匙<br>6.加入兩匙水、拌勻</p>
+<p>再切個青木瓜絲、紅蘿蔔絲、小黃瓜絲丟進去拌一拌，灑上一把鹹花生就完成了。</p>
+<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>食譜</category>
+      </categories>
+      <tags>
+        <tag>自製</tag>
+        <tag>食譜</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>熱流實驗 風洞與流視 結報</title>
     <url>/Wind-Tunnel-and-Flow-Visualization-Report/</url>
     <content><![CDATA[<center>國立清華大學動力機械工程學系</center>
@@ -444,10 +430,24 @@
       </tags>
   </entry>
   <entry>
-    <title>越式涼拌</title>
-    <url>/Vietnamese-Cold-Salad/</url>
-    <content><![CDATA[<h3 id="醬料"><a href="#醬料" class="headerlink" title="醬料"></a>醬料</h3><p>1.蒜頭、辣椒切碎<br>2.加入糖一匙<br>3.魚露兩匙<br>4.檸檬汁一顆的量<span id="more"></span><br>5.白胡椒粉一小匙<br>6.加入兩匙水、拌勻</p>
-<p>再切個青木瓜絲、紅蘿蔔絲、小黃瓜絲丟進去拌一拌，灑上一把鹹花生就完成了。</p>
+    <title>清蒸鱸魚食譜</title>
+    <url>/Steamed-Bass-Recipe/</url>
+    <content><![CDATA[<h3 id="所需材料："><a href="#所需材料：" class="headerlink" title="所需材料："></a>所需材料：</h3><ul>
+<li>鱸魚一尾</li>
+<li>檸檬一顆</li>
+<li>辣椒兩根</li>
+<li>蒜頭三到五瓣<span id="more"></span></li>
+<li>蔥一枝</li>
+<li>洋蔥一顆</li>
+<li>豆芽菜一包</li>
+<li>糖</li>
+<li>白胡椒粉</li>
+<li>米酒</li>
+<li>水</li>
+<li>魚露</li>
+</ul>
+<h3 id="魚的處理："><a href="#魚的處理：" class="headerlink" title="魚的處理："></a>魚的處理：</h3><p>1.刮除鱗片、修魚鰭<br>2.剪開魚腹、刮除內臟並清洗乾淨<br>3.確認魚的乾淨並在表面劃刀痕<br>4.將洋蔥及豆芽菜洗淨<br>5.洋蔥切條與豆芽並行鋪於盤底<br><img data-src="/Steamed-Bass-Recipe/FISH.jpg" alt="處理完的魚和醬汁"></p>
+<h3 id="調料的處理："><a href="#調料的處理：" class="headerlink" title="調料的處理："></a>調料的處理：</h3><p>6.蒜頭、辣椒切碎<br>7.加入糖一匙<br>8.加入米酒兩匙<br>9.魚露兩匙<br>10.檸檬汁一顆的量<br>11.白胡椒粉一小匙<br>12.加入兩匙水、拌勻<br>13.將魚放入盤內、平均淋上調料<br>14.放入電鍋蒸<br>15.蔥切細絲放上出鍋後的料理<br>16.熱少許油至些許冒煙、淋上蔥絲即可出菜</p>
 <p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
 ]]></content>
       <categories>
@@ -457,25 +457,6 @@
       <tags>
         <tag>自製</tag>
         <tag>食譜</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>光電實驗(一) 雷射光的方向性</title>
-    <url>/1-Directionality-of-laser-light/</url>
-    <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 雷射光的方向性 結報</center><span id="more"></span>
-
-<center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/1-Directionality-of-laser-light.pdf">
-    <font color=blue> 新分頁開啟結報</font>
-</a>
-</center>]]></content>
-      <categories>
-        <category>結報</category>
-        <category>成大光電</category>
-      </categories>
-      <tags>
-        <tag>結報</tag>
       </tags>
   </entry>
   <entry>
@@ -502,13 +483,13 @@
       </tags>
   </entry>
   <entry>
-    <title>光電實驗(一) 擴束與平行光束</title>
-    <url>/3-Expanded-Beam-and-Parallel-Beam/</url>
+    <title>光電實驗(一) 雷射光的方向性</title>
+    <url>/1-Directionality-of-laser-light/</url>
     <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 擴束與平行光束 結報</center><span id="more"></span>
+<center>光電實驗(一) 雷射光的方向性 結報</center><span id="more"></span>
 
 <center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/3-Expanded-Beam-and-Parallel-Beam.pdf">
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/1-Directionality-of-laser-light.pdf">
     <font color=blue> 新分頁開啟結報</font>
 </a>
 </center>]]></content>
@@ -561,23 +542,22 @@
       </tags>
   </entry>
   <entry>
-    <title>好耶 酪梨</title>
-    <url>/avocado-daisuki/</url>
-    <content><![CDATA[<p>諸君 我是酪梨控。</p>
-<p>我喜歡酪梨。台灣的酪梨產季為五月至隔年三月，其中，六到八月的酪梨最為美味。本人日常於桃園市大湳市場買菜時，注意到最近的攤位開始擺放酪梨的比例上升了，價格也不貴，於是便趁著這個機會買了三顆酪梨，分享食譜給大家。 <span id="more"></span></p>
-<p>酪梨未成熟時呈現葉綠色，輕輕按壓會發現其肉質堅硬，此時搖晃酪梨感覺不太出來酪梨籽的晃動。而成熟的酪梨表皮呈現紫黑色，肉質柔軟易於按壓，且搖晃時能清楚感受到酪梨籽的晃動。若是表皮尚未發黑或搖晃感受不到籽的晃動，請以按壓的手感判斷成熟與否，食用時機不宜過軟。</p>
-<hr>
-<h3 id="酪梨籽茶"><a href="#酪梨籽茶" class="headerlink" title="酪梨籽茶"></a>酪梨籽茶</h3><p>酪梨籽洗淨去皮後擦乾切片，放入一大碗中加入800毫升的水。<br>放入電鍋中，外鍋加入半杯水蒸至自然跳停，靜置15分鐘後再蒸一次。<br>第二次跳停後取出加入水（或冰塊）稀釋至1200~1500毫升即可飲用。<br>口感清順不苦澀，帶有薄荷涼感，冰過更好喝。</p>
-<h3 id="酪梨牛奶"><a href="#酪梨牛奶" class="headerlink" title="酪梨牛奶"></a>酪梨牛奶</h3><p>酪梨洗淨對半切取出籽，用湯匙將酪梨中間的籽模刮除。<br>用湯匙挖出酪梨肉至一大碗中壓切成小塊及泥狀。<br>加入100毫升水、100毫升酪梨籽茶（或水）、一大匙蜂蜜、少許檸檬汁，並攪拌均勻。<br>倒入破壁機中攪拌至完全混合，之後可依照喜好調整口感，喜歡果肉感豐富一點的可以考慮不要將酪梨打太細，保留些許果肉。<br>倒出即可蓋保鮮膜放冰箱保存，飲用時現在杯中放入冰塊，接著酪梨與牛奶6：4攪拌均勻即可享用。</p>
-<p><em><strong>好吃到Xin chao&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
-]]></content>
+    <title>光電實驗(一) 擴束與平行光束</title>
+    <url>/3-Expanded-Beam-and-Parallel-Beam/</url>
+    <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
+<center>光電實驗(一) 擴束與平行光束 結報</center><span id="more"></span>
+
+<center>
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/3-Expanded-Beam-and-Parallel-Beam.pdf">
+    <font color=blue> 新分頁開啟結報</font>
+</a>
+</center>]]></content>
       <categories>
-        <category>飲食</category>
-        <category>食譜</category>
+        <category>結報</category>
+        <category>成大光電</category>
       </categories>
       <tags>
-        <tag>自製</tag>
-        <tag>食譜</tag>
+        <tag>結報</tag>
       </tags>
   </entry>
   <entry>
@@ -641,22 +621,6 @@
       </tags>
   </entry>
   <entry>
-    <title>馬克斯威波方程在伽利略轉換(GT)下的非可變性證明</title>
-    <url>/Maxwell-Equations-Non-Invariance-Proof-in-GT/</url>
-    <content><![CDATA[<p>最近寫了近代物理，雖然這個是前面簡單的證明，但有鑑於直接找中文沒啥結果，找英文的也大多都影片，所以丟個筆記上來。</p>
-<span id="more"></span>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="01.jpg" height=200></div><div class="group-picture-column"><img data-src="02.jpg" height=200></div><div class="group-picture-column"><img data-src="03.jpg" height=200></div></div></div>
-
-]]></content>
-      <categories>
-        <category>結報</category>
-        <category>成大光電</category>
-      </categories>
-      <tags>
-        <tag>結報</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>BK樹跟Levenshtein</title>
     <url>/BK-tree-and-Levenshtein/</url>
     <content><![CDATA[<p>Levenshtein距離是兩個字串間，透過新增、更換、刪除下的最少操作次數，透過動態規劃解決。</p>
@@ -673,6 +637,68 @@
       <tags>
         <tag>程式</tag>
         <tag>演算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>好耶 酪梨</title>
+    <url>/avocado-daisuki/</url>
+    <content><![CDATA[<p>諸君 我是酪梨控。</p>
+<p>我喜歡酪梨。台灣的酪梨產季為五月至隔年三月，其中，六到八月的酪梨最為美味。本人日常於桃園市大湳市場買菜時，注意到最近的攤位開始擺放酪梨的比例上升了，價格也不貴，於是便趁著這個機會買了三顆酪梨，分享食譜給大家。 <span id="more"></span></p>
+<p>酪梨未成熟時呈現葉綠色，輕輕按壓會發現其肉質堅硬，此時搖晃酪梨感覺不太出來酪梨籽的晃動。而成熟的酪梨表皮呈現紫黑色，肉質柔軟易於按壓，且搖晃時能清楚感受到酪梨籽的晃動。若是表皮尚未發黑或搖晃感受不到籽的晃動，請以按壓的手感判斷成熟與否，食用時機不宜過軟。</p>
+<hr>
+<h3 id="酪梨籽茶"><a href="#酪梨籽茶" class="headerlink" title="酪梨籽茶"></a>酪梨籽茶</h3><p>酪梨籽洗淨去皮後擦乾切片，放入一大碗中加入800毫升的水。<br>放入電鍋中，外鍋加入半杯水蒸至自然跳停，靜置15分鐘後再蒸一次。<br>第二次跳停後取出加入水（或冰塊）稀釋至1200~1500毫升即可飲用。<br>口感清順不苦澀，帶有薄荷涼感，冰過更好喝。</p>
+<h3 id="酪梨牛奶"><a href="#酪梨牛奶" class="headerlink" title="酪梨牛奶"></a>酪梨牛奶</h3><p>酪梨洗淨對半切取出籽，用湯匙將酪梨中間的籽模刮除。<br>用湯匙挖出酪梨肉至一大碗中壓切成小塊及泥狀。<br>加入100毫升水、100毫升酪梨籽茶（或水）、一大匙蜂蜜、少許檸檬汁，並攪拌均勻。<br>倒入破壁機中攪拌至完全混合，之後可依照喜好調整口感，喜歡果肉感豐富一點的可以考慮不要將酪梨打太細，保留些許果肉。<br>倒出即可蓋保鮮膜放冰箱保存，飲用時現在杯中放入冰塊，接著酪梨與牛奶6：4攪拌均勻即可享用。</p>
+<p><em><strong>好吃到Xin chao&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>食譜</category>
+      </categories>
+      <tags>
+        <tag>自製</tag>
+        <tag>食譜</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>馬克斯威波方程在伽利略轉換(GT)下的非可變性證明</title>
+    <url>/Maxwell-Equations-Non-Invariance-Proof-in-GT/</url>
+    <content><![CDATA[<p>最近寫了近代物理，雖然這個是前面簡單的證明，但有鑑於直接找中文沒啥結果，找英文的也大多都影片，所以丟個筆記上來。</p>
+<span id="more"></span>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="01.jpg" height=200></div><div class="group-picture-column"><img data-src="02.jpg" height=200></div><div class="group-picture-column"><img data-src="03.jpg" height=200></div></div></div>
+
+]]></content>
+      <categories>
+        <category>結報</category>
+        <category>成大光電</category>
+      </categories>
+      <tags>
+        <tag>結報</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>哲學系日常EP1 貓貓攝影</title>
+    <url>/Philosophy-Department-Daily-EP1/</url>
+    <content><![CDATA[<p>逛書店看到的一些攝影集</p>
+<span id="more"></span>
+
+<hr>
+<img data-src="01.jpg" height=400>
+淺田家的編排方式，不翻還不知道
+和我對群體肖像的感受差不多，看來路子是對的
+
+<hr>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="02.jpg" height=200></div><div class="group-picture-column"><img data-src="03.jpg" height=200></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="04.jpg" height=200></div><div class="group-picture-column"><img data-src="05.jpg" height=200></div></div></div>
+<p>深瀬昌久<Sasuke>可愛貓貓，記錄愛貓sasuke的幼貓時期，捕捉到的都是幼貓的靈，構圖又充分具備攝影家的功力（也許是老派的</p>
+<hr>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="2-01.jpg" height=200></div><div class="group-picture-column"><img data-src="2-02.jpg" height=200></div></div></div>
+<p>和Sasuke 相對的，拍出成貓的寧靜，老貓與老人互動成趣，構圖相當中庸，攝影家強於的是情境的構築</p>
+<hr>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="3-01.jpg" height=200></div><div class="group-picture-column"><img data-src="3-02.jpg" height=200></div><div class="group-picture-column"><img data-src="3-03.jpg" height=200></div></div></div>
+
+<p>次方有趣，望照辦，只因錢包空空</p>
+]]></content>
+      <tags>
+        <tag>攝影</tag>
       </tags>
   </entry>
   <entry>
@@ -704,29 +730,24 @@
       </categories>
   </entry>
   <entry>
-    <title>哲學系日常EP1 貓貓攝影</title>
-    <url>/Philosophy-Department-Daily-EP1/</url>
-    <content><![CDATA[<p>逛書店看到的一些攝影集</p>
+    <title>北北基112-2學年度學測模擬考 作文第二題情意題&lt;魚說&gt; 寫作範例</title>
+    <url>/fish-said-sample/</url>
+    <content><![CDATA[<p>魚說：「一年準備、二年反攻、三年掃蕩、五年成功。」</p>
 <span id="more"></span>
-
-<hr>
-<img data-src="01.jpg" height=400>
-淺田家的編排方式，不翻還不知道
-和我對群體肖像的感受差不多，看來路子是對的
-
-<hr>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="02.jpg" height=200></div><div class="group-picture-column"><img data-src="03.jpg" height=200></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="04.jpg" height=200></div><div class="group-picture-column"><img data-src="05.jpg" height=200></div></div></div>
-<p>深瀬昌久<Sasuke>可愛貓貓，記錄愛貓sasuke的幼貓時期，捕捉到的都是幼貓的靈，構圖又充分具備攝影家的功力（也許是老派的</p>
-<hr>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="2-01.jpg" height=200></div><div class="group-picture-column"><img data-src="2-02.jpg" height=200></div></div></div>
-<p>和Sasuke 相對的，拍出成貓的寧靜，老貓與老人互動成趣，構圖相當中庸，攝影家強於的是情境的構築</p>
-<hr>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="3-01.jpg" height=200></div><div class="group-picture-column"><img data-src="3-02.jpg" height=200></div><div class="group-picture-column"><img data-src="3-03.jpg" height=200></div></div></div>
-
-<p>次方有趣，望照辦，只因錢包空空</p>
+<p>第一段講述魚剛出生時遭遇颱風、溪水暴漲，河岸邊的一戶眷村人家小孩頭戴國軍膠盔、手拿報紙不慎落水。魚兒在翻滾的水流中看見了報紙上寫著「一年準備、二年反攻、三年掃蕩、五年成功」，魚兒明白了小男孩最大的願望就是看到中華民國解救大陸同胞於水深火熱之中。魚兒翻滾著想要打撈男孩並極力想要將男孩拖往岸邊但仍無能為力。</p>
+<p>第二段講述一位母親在第一時間奔往河岸呼喊孩子但面對的只有滔滔江水，這位母親哭了一天一夜最終脫力被鄉親們扛著回去，此時小魚兒明白了什麼是母愛如江水般延綿不絕，正如同國家之於人民，此時的小魚兒便萌生了將男孩這份保家衛國的精神傳承下去的信念，他魚兒含淚告別了失去意識的母親向著下游游去。</p>
+<p>第三段寫在三天之後的河川游一名無名的屍體被沖刷上了岸，那是一名小孩子的浮屍，頭上戴著膠盔。沒錯，經過三天三夜的翻滾沖刷拍打敲擊後，這頂膠盔仍堅定的保衛這男孩的頭部免受重創，男孩緊緊握著的手中攢著的報紙殘片無不說明男孩對於從軍的嚮往。世人只知男孩的犧牲，卻不知在不遠處逐漸遠去的一條精壯的魚兒，正是這魚兒將男孩托上了岸。也只有他明白男孩的決心。</p>
+<p>第四段的魚兒如願以償地抵達了下游，面對數以千計的同類卻只有他一心只想報效國家，他感到無比心寒。魚兒逢人就說「一年準備、二年反攻、三年掃蕩、五年成功」，希望有人能明白他的意志。啵啵啵，只是氣泡，沒有人聽見。魚哭了，透明的眼淚溶進透明的河，沒有人看見。沒有人明白他奉獻為國的決心。這條河有許多魚，但這條魚，只有一條河。他要保衛的，是這片他生長的淨土、是他充滿回憶的家鄉、是民眾安居樂業的日常、是那天那個孩子最純粹的夢想。但是，沒有人聽見。 </p>
+<p>第五段的魚兒依舊在岸邊、依舊在向來去的遊客、釣客、觀光客闡述著他的理想——「一年準備、二年反攻、三年掃蕩、五年成功。」但是，啵啵啵，依舊沒有人聽見。魚兒悲愴地吶喊，喊得聲嘶力竭，依舊沒有人多看他一眼。此時一位年邁的釣客吸引了魚兒的注意，那名釣客他瘦削但精實、老態的容貌下目光依舊炯炯有神、周圍的人接連撒網捕魚，只有他仍遵守不濫捕濫殺的道義吃多少釣多少。正如同中華民國國軍般屹立不搖、剛正不阿。魚兒遊近那名長者，最後一次向他吐露心聲。啵啵啵，老人注意到了魚兒，對魚兒微微一笑，雖然老者並不了解魚兒想說什麼。魚兒早已冷卻的五臟六腑再一次地感到滿腔的熱血在這之中奔馳，他明白就是這個老人，他頓悟了自己的使命，沒錯，正如同那個男孩將夢想帶給他，如今他也要將這份意志傳承下去。魚兒眼含熱淚，縱身一躍躍入老者的釣簍。老者望向那條大魚，精瘦而不瘦削、皮下堅實的肌肉富有彈性，銀白色的魚鱗閃耀著太陽的光輝，鮮紅、青藍與在這之上的耀眼的白，令老者想起了那年國父教誨的自由、平等、博愛。老者覺得就是他了、就是這條魚，他將其他普通的魚放回河川，將那尾大魚帶回家。</p>
+<p>第六段的老者回到了位於眷村中的家，此時日正當中，他吩咐妻子將那尾大魚宰殺鹽漬。原來，老者的兒子今天要從部隊久違的回家吃飯，老者才去河邊釣的魚。那名老者是一名前海軍陸戰隊隊員，而兒子也不負眾望跟隨著父親的步伐加入了中華民國海軍陸戰隊，成為保家衛國、守護家園的第一線力量。兒子於晚餐前回到了家，身著軍服的孩子是多麼的迷人。母親將菜品一一端出，其中不乏被作成鹹魚的、那尾一心只想奉獻為國的大魚。啊！如果他還活著，想必會流出欣慰的淚水吧！他的肉體化作一股股能量流進孩子體內，讓他可以挺直腰桿、握緊雙拳保衛國家，魚兒也算把這份對國家的愛傳承下去了吧！沒錯！鹹魚尚可以翻面，平凡如你我也可以翻身！<strong>立即拿起你手邊的電話，撥打0800-000-050國軍招募專線加入國軍！成為中華民國國軍，鍛鍊自身、榮耀父母、羨煞鄰里、保衛國家！國家以你為榮！</strong></p>
+<p><strong>成功高中畢業學長教你如何寫好大考作文( • ̀ω•́ )b</strong><br><strong>筆者：蔡銘揚</strong></p>
 ]]></content>
+      <categories>
+        <category>結報</category>
+        <category>國北教自</category>
+      </categories>
       <tags>
-        <tag>攝影</tag>
+        <tag>結報</tag>
       </tags>
   </entry>
   <entry>
@@ -774,17 +795,22 @@
       </tags>
   </entry>
   <entry>
-    <title>北北基112-2學年度學測模擬考 作文第二題情意題&lt;魚說&gt; 寫作範例</title>
-    <url>/fish-said-sample/</url>
-    <content><![CDATA[<p>魚說：「一年準備、二年反攻、三年掃蕩、五年成功。」</p>
+    <title>十分鐘一堂雙語自然課~小學生也能聽得懂的近代物理（大概）</title>
+    <url>/10-minute-phy-lesson/</url>
+    <content><![CDATA[<center>
+雙語教學的簡報和逐字稿
 <span id="more"></span>
-<p>第一段講述魚剛出生時遭遇颱風、溪水暴漲，河岸邊的一戶眷村人家小孩頭戴國軍膠盔、手拿報紙不慎落水。魚兒在翻滾的水流中看見了報紙上寫著「一年準備、二年反攻、三年掃蕩、五年成功」，魚兒明白了小男孩最大的願望就是看到中華民國解救大陸同胞於水深火熱之中。魚兒翻滾著想要打撈男孩並極力想要將男孩拖往岸邊但仍無能為力。</p>
-<p>第二段講述一位母親在第一時間奔往河岸呼喊孩子但面對的只有滔滔江水，這位母親哭了一天一夜最終脫力被鄉親們扛著回去，此時小魚兒明白了什麼是母愛如江水般延綿不絕，正如同國家之於人民，此時的小魚兒便萌生了將男孩這份保家衛國的精神傳承下去的信念，他魚兒含淚告別了失去意識的母親向著下游游去。</p>
-<p>第三段寫在三天之後的河川游一名無名的屍體被沖刷上了岸，那是一名小孩子的浮屍，頭上戴著膠盔。沒錯，經過三天三夜的翻滾沖刷拍打敲擊後，這頂膠盔仍堅定的保衛這男孩的頭部免受重創，男孩緊緊握著的手中攢著的報紙殘片無不說明男孩對於從軍的嚮往。世人只知男孩的犧牲，卻不知在不遠處逐漸遠去的一條精壯的魚兒，正是這魚兒將男孩托上了岸。也只有他明白男孩的決心。</p>
-<p>第四段的魚兒如願以償地抵達了下游，面對數以千計的同類卻只有他一心只想報效國家，他感到無比心寒。魚兒逢人就說「一年準備、二年反攻、三年掃蕩、五年成功」，希望有人能明白他的意志。啵啵啵，只是氣泡，沒有人聽見。魚哭了，透明的眼淚溶進透明的河，沒有人看見。沒有人明白他奉獻為國的決心。這條河有許多魚，但這條魚，只有一條河。他要保衛的，是這片他生長的淨土、是他充滿回憶的家鄉、是民眾安居樂業的日常、是那天那個孩子最純粹的夢想。但是，沒有人聽見。 </p>
-<p>第五段的魚兒依舊在岸邊、依舊在向來去的遊客、釣客、觀光客闡述著他的理想——「一年準備、二年反攻、三年掃蕩、五年成功。」但是，啵啵啵，依舊沒有人聽見。魚兒悲愴地吶喊，喊得聲嘶力竭，依舊沒有人多看他一眼。此時一位年邁的釣客吸引了魚兒的注意，那名釣客他瘦削但精實、老態的容貌下目光依舊炯炯有神、周圍的人接連撒網捕魚，只有他仍遵守不濫捕濫殺的道義吃多少釣多少。正如同中華民國國軍般屹立不搖、剛正不阿。魚兒遊近那名長者，最後一次向他吐露心聲。啵啵啵，老人注意到了魚兒，對魚兒微微一笑，雖然老者並不了解魚兒想說什麼。魚兒早已冷卻的五臟六腑再一次地感到滿腔的熱血在這之中奔馳，他明白就是這個老人，他頓悟了自己的使命，沒錯，正如同那個男孩將夢想帶給他，如今他也要將這份意志傳承下去。魚兒眼含熱淚，縱身一躍躍入老者的釣簍。老者望向那條大魚，精瘦而不瘦削、皮下堅實的肌肉富有彈性，銀白色的魚鱗閃耀著太陽的光輝，鮮紅、青藍與在這之上的耀眼的白，令老者想起了那年國父教誨的自由、平等、博愛。老者覺得就是他了、就是這條魚，他將其他普通的魚放回河川，將那尾大魚帶回家。</p>
-<p>第六段的老者回到了位於眷村中的家，此時日正當中，他吩咐妻子將那尾大魚宰殺鹽漬。原來，老者的兒子今天要從部隊久違的回家吃飯，老者才去河邊釣的魚。那名老者是一名前海軍陸戰隊隊員，而兒子也不負眾望跟隨著父親的步伐加入了中華民國海軍陸戰隊，成為保家衛國、守護家園的第一線力量。兒子於晚餐前回到了家，身著軍服的孩子是多麼的迷人。母親將菜品一一端出，其中不乏被作成鹹魚的、那尾一心只想奉獻為國的大魚。啊！如果他還活著，想必會流出欣慰的淚水吧！他的肉體化作一股股能量流進孩子體內，讓他可以挺直腰桿、握緊雙拳保衛國家，魚兒也算把這份對國家的愛傳承下去了吧！沒錯！鹹魚尚可以翻面，平凡如你我也可以翻身！<strong>立即拿起你手邊的電話，撥打0800-000-050國軍招募專線加入國軍！成為中華民國國軍，鍛鍊自身、榮耀父母、羨煞鄰里、保衛國家！國家以你為榮！</strong></p>
-<p><strong>成功高中畢業學長教你如何寫好大考作文( • ̀ω•́ )b</strong><br><strong>筆者：蔡銘揚</strong></p>
+</center>
+<center>
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/wave.pdf">
+    <font color=blue> 新分頁開啟逐字稿</font>
+</a>
+</center>
+<center>
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/111012009_.pdf">
+    <font color=blue> 新分頁開啟簡報</font>
+</a>
+</center>
 ]]></content>
       <categories>
         <category>結報</category>
@@ -824,29 +850,16 @@
       </categories>
   </entry>
   <entry>
-    <title>十分鐘一堂雙語自然課~小學生也能聽得懂的近代物理（大概）</title>
-    <url>/10-minute-phy-lesson/</url>
-    <content><![CDATA[<center>
-雙語教學的簡報和逐字稿
-<span id="more"></span>
-</center>
-<center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/wave.pdf">
-    <font color=blue> 新分頁開啟逐字稿</font>
-</a>
-</center>
-<center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/111012009_.pdf">
-    <font color=blue> 新分頁開啟簡報</font>
-</a>
-</center>
+    <title>哲學系發癲EP2 帥割比較會賺錢</title>
+    <url>/Philosophy-Department-Craziness-EP2/</url>
+    <content><![CDATA[<p>. 台大經濟系教授吳聰敏，近期出版著作&lt;台灣經濟四百年&gt;內提到美國顧問團水準精湛，報告對台灣經濟掌握非常完善，但多數成員都難以找到其經歷<br>. <span id="more"></span><br>. 吳聰敏作為自由派學者，這番結論堪稱頭號美吹，讓人不經感到懷疑可靠性<br>.<br>. 對此，有一個研究可以提供反駁。上海交通大學高級金融學院的兩位研究員，上週發表研究，結果表明長相比較好看的經理平均投資表現是顯著比較差的(最不好看的經理比最好看的經理每個月投資報酬率高0.17%)。<br>.<br>. 而吳聰敏並不太帥，應該可以相信<br><img data-src="/Philosophy-Department-Craziness-EP2/01.png" alt="其實蠻帥ㄉ，五官很對稱，應該可以被AI認證很帥"><br>（其實蠻帥ㄉ，五官很對稱，應該可以被AI認證很帥 </p>
+<p><a href="https://www.facebook.com/photo/?fbid=10168480199465694&set=a.10150632405965694"><strong>credit</strong></a></p>
 ]]></content>
       <categories>
-        <category>結報</category>
-        <category>國北教自</category>
+        <category>日常廢文</category>
       </categories>
       <tags>
-        <tag>結報</tag>
+        <tag>哲學</tag>
       </tags>
   </entry>
   <entry>
@@ -859,19 +872,6 @@
       <categories>
         <category>日常廢文</category>
       </categories>
-  </entry>
-  <entry>
-    <title>哲學系發癲EP2 帥割比較會賺錢</title>
-    <url>/Philosophy-Department-Craziness-EP2/</url>
-    <content><![CDATA[<p>. 台大經濟系教授吳聰敏，近期出版著作&lt;台灣經濟四百年&gt;內提到美國顧問團水準精湛，報告對台灣經濟掌握非常完善，但多數成員都難以找到其經歷<br>. <span id="more"></span><br>. 吳聰敏作為自由派學者，這番結論堪稱頭號美吹，讓人不經感到懷疑可靠性<br>.<br>. 對此，有一個研究可以提供反駁。上海交通大學高級金融學院的兩位研究員，上週發表研究，結果表明長相比較好看的經理平均投資表現是顯著比較差的(最不好看的經理比最好看的經理每個月投資報酬率高0.17%)。<br>.<br>. 而吳聰敏並不太帥，應該可以相信<br><img data-src="/Philosophy-Department-Craziness-EP2/01.png" alt="其實蠻帥ㄉ，五官很對稱，應該可以被AI認證很帥"><br>（其實蠻帥ㄉ，五官很對稱，應該可以被AI認證很帥 </p>
-<p><a href="https://www.facebook.com/photo/?fbid=10168480199465694&set=a.10150632405965694"><strong>credit</strong></a></p>
-]]></content>
-      <categories>
-        <category>日常廢文</category>
-      </categories>
-      <tags>
-        <tag>哲學</tag>
-      </tags>
   </entry>
   <entry>
     <title>鰲鼓溼地觀察紀錄</title>
