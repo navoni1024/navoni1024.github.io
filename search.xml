@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>哲學系發癲 EP1</title>
+    <url>/Philosophy-Department-Craziness/</url>
+    <content><![CDATA[<p>原來我開的笑話都指向空虛的所指<br>我還以為你是一個真實他者</p>
+<span id="more"></span>
+<p>沒想到是個大他者<br>我的能指只是傳達了純粹意識形態<br>我們的關係之間連一場遊戲都玩不成</p>
+<center><img data-src="lulu00.jpg" height=400>
+
+<p><a href="https://www.pixiv.net/artworks/101402823/"><strong>圖源</strong></a></center></p>
+]]></content>
+      <categories>
+        <category>日常廢文</category>
+      </categories>
+      <tags>
+        <tag>哲學</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【B級調酒EP1】</title>
     <url>/B-class-bartending-EP1/</url>
     <content><![CDATA[<p>覺旅咖啡英式午餐茶+蘇格蘭威士忌 </p>
@@ -16,23 +33,6 @@
         <tag>調酒</tag>
         <tag>酒譜</tag>
         <tag>土製</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>哲學系發癲 EP1</title>
-    <url>/Philosophy-Department-Craziness/</url>
-    <content><![CDATA[<p>原來我開的笑話都指向空虛的所指<br>我還以為你是一個真實他者<br>沒想到是個大他者<br>我的能指只是傳達了純粹意識形態<br>我們的關係之間連一場遊戲都玩不成</p>
-<span id="more"></span>
-
-<center><img data-src="lulu00.jpg" height=400>
-
-<p><a href="https://www.pixiv.net/artworks/101402823/"><strong>圖源</strong></a></center></p>
-]]></content>
-      <categories>
-        <category>日常廢文</category>
-      </categories>
-      <tags>
-        <tag>哲學</tag>
       </tags>
   </entry>
   <entry>
@@ -179,24 +179,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Discord Bot-創建一隻bot</title>
-    <url>/Discord-Bot-create-a-bot/</url>
-    <content><![CDATA[<p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
-<span id="more"></span>
-<p><img data-src="/Discord-Bot-create-a-bot/20152706MBGmHIhGdS.png"><br>大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。</p>
-<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img data-src="/Discord-Bot-create-a-bot/20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img data-src="/Discord-Bot-create-a-bot/20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img data-src="/Discord-Bot-create-a-bot/20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>Discord bot</category>
-      </categories>
-      <tags>
-        <tag>程式</tag>
-        <tag>python</tag>
-        <tag>Discord</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Discord Bot-Cogs</title>
     <url>/Discord-Bot-Cogs/</url>
     <content><![CDATA[<p>如果你的機器人功能多到一個程度，把全部的程式碼全部塞在一個文件裡顯然不是好辦法。<br>不但看起來雜亂，也難以維護，就算只是其中一個功能出問題也必須要把整個bot關掉。<br>這時候就可以使用<strong>Cogs</strong>的架構來寫，<br>可以將commands和listener等東西分堆塞在各自文件裡並方便我們裝卸。</p>
@@ -233,6 +215,43 @@
 <p>而load回來的話可以發現指令有反應了，help中也看的到了。<br><img data-src="/Discord-Bot-Cogs/20152706uqPycyubVO.png"></p>
 <hr>
 <p>前述的的程式結構較簡單可能沒什麼感覺，但要是程式複雜到如下圖能夠先unload一塊調整完後再load回去還是挺方便的。<br><img data-src="/Discord-Bot-Cogs/20152706kGyb4P4XHd.png"></p>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>Discord bot</category>
+      </categories>
+      <tags>
+        <tag>程式</tag>
+        <tag>python</tag>
+        <tag>Discord</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>最近的夜晚-Gin Fizz</title>
+    <url>/Gin-Fizz/</url>
+    <content><![CDATA[<p>最近晚上一直都是喝著gin fizz渡過的<br>琴酒+檸檬+糖漿攪拌或搖晃<br>最後加入氣泡水<br>清爽的口感加上琴酒的藥草香以及檸檬的酸和糖漿的甜<span id="more"></span><br>最後加入氣泡水增添的口感<br>同時也有效將琴酒的口味分層<br>不由得一杯接著一杯</p>
+<p>建議用可林杯與長冰調配<br>克林杯放入長冰冰杯<br>倒出融水後<br>將琴酒、半顆檸檬的檸檬汁、與糖漿倒入<br>攪拌均勻<br>隨後用氣泡水填滿<br>若剩下半顆檸檬<br>可切一片放杯緣<br>如此一來你便完成了一杯gin fizz</p>
+<p>如果想要提升味覺感受<br>可以從琴酒以及氣泡水下手</p>
+<p>最後<br>以上言論不代表本人立場</p>
+<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>酒</category>
+      </categories>
+      <tags>
+        <tag>調酒</tag>
+        <tag>酒譜</tag>
+        <tag>自製</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Discord Bot-創建一隻bot</title>
+    <url>/Discord-Bot-create-a-bot/</url>
+    <content><![CDATA[<p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
+<span id="more"></span>
+<p><img data-src="/Discord-Bot-create-a-bot/20152706MBGmHIhGdS.png"><br>大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。</p>
+<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img data-src="/Discord-Bot-create-a-bot/20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img data-src="/Discord-Bot-create-a-bot/20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img data-src="/Discord-Bot-create-a-bot/20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
 ]]></content>
       <categories>
         <category>程式</category>
@@ -306,25 +325,6 @@
         <tag>爬蟲</tag>
         <tag>程式</tag>
         <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>最近的夜晚-Gin Fizz</title>
-    <url>/Gin-Fizz/</url>
-    <content><![CDATA[<p>最近晚上一直都是喝著gin fizz渡過的<br>琴酒+檸檬+糖漿攪拌或搖晃<br>最後加入氣泡水<br>清爽的口感加上琴酒的藥草香以及檸檬的酸和糖漿的甜<span id="more"></span><br>最後加入氣泡水增添的口感<br>同時也有效將琴酒的口味分層<br>不由得一杯接著一杯</p>
-<p>建議用可林杯與長冰調配<br>克林杯放入長冰冰杯<br>倒出融水後<br>將琴酒、半顆檸檬的檸檬汁、與糖漿倒入<br>攪拌均勻<br>隨後用氣泡水填滿<br>若剩下半顆檸檬<br>可切一片放杯緣<br>如此一來你便完成了一杯gin fizz</p>
-<p>如果想要提升味覺感受<br>可以從琴酒以及氣泡水下手</p>
-<p>最後<br>以上言論不代表本人立場</p>
-<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
-]]></content>
-      <categories>
-        <category>飲食</category>
-        <category>酒</category>
-      </categories>
-      <tags>
-        <tag>調酒</tag>
-        <tag>酒譜</tag>
-        <tag>自製</tag>
       </tags>
   </entry>
   <entry>
@@ -408,28 +408,6 @@
       </tags>
   </entry>
   <entry>
-    <title>熱流實驗 風洞與流視 結報</title>
-    <url>/Wind-Tunnel-and-Flow-Visualization-Report/</url>
-    <content><![CDATA[<center>國立清華大學動力機械工程學系</center>
-<center>熱流實驗-風洞與流視</center>
-<center>結報</center>
-<span id="more"></span>
-
-<center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/110033210.pdf">
-    <font color=blue> 新分頁開啟結報</font>
-</a>
-</center>
-]]></content>
-      <categories>
-        <category>結報</category>
-        <category>清大動機</category>
-      </categories>
-      <tags>
-        <tag>結報</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>清蒸鱸魚食譜</title>
     <url>/Steamed-Bass-Recipe/</url>
     <content><![CDATA[<h3 id="所需材料："><a href="#所需材料：" class="headerlink" title="所需材料："></a>所需材料：</h3><ul>
@@ -502,21 +480,22 @@
       </tags>
   </entry>
   <entry>
-    <title>光電實驗(一) 薄透鏡成像</title>
-    <url>/4-thin-lens-image/</url>
-    <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 薄透鏡成像 結報</center><span id="more"></span>
+    <title>熱流實驗 風洞與流視 結報</title>
+    <url>/Wind-Tunnel-and-Flow-Visualization-Report/</url>
+    <content><![CDATA[<center>國立清華大學動力機械工程學系</center>
+<center>熱流實驗-風洞與流視</center>
+<center>結報</center>
+<span id="more"></span>
 
 <center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/4-thin-lens-image.pdf">
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/110033210.pdf">
     <font color=blue> 新分頁開啟結報</font>
 </a>
 </center>
-
 ]]></content>
       <categories>
         <category>結報</category>
-        <category>成大光電</category>
+        <category>清大動機</category>
       </categories>
       <tags>
         <tag>結報</tag>
@@ -580,6 +559,27 @@
       </tags>
   </entry>
   <entry>
+    <title>光電實驗(一) 薄透鏡成像</title>
+    <url>/4-thin-lens-image/</url>
+    <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
+<center>光電實驗(一) 薄透鏡成像 結報</center><span id="more"></span>
+
+<center>
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/4-thin-lens-image.pdf">
+    <font color=blue> 新分頁開啟結報</font>
+</a>
+</center>
+
+]]></content>
+      <categories>
+        <category>結報</category>
+        <category>成大光電</category>
+      </categories>
+      <tags>
+        <tag>結報</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>光電實驗(一) 干涉與繞射</title>
     <url>/6-Interference-and-Diffraction/</url>
     <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
@@ -618,25 +618,6 @@
       <tags>
         <tag>自製</tag>
         <tag>食譜</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>BK樹跟Levenshtein</title>
-    <url>/BK-tree-and-Levenshtein/</url>
-    <content><![CDATA[<p>Levenshtein距離是兩個字串間，透過新增、更換、刪除下的最少操作次數，透過動態規劃解決。</p>
-<p>BK Tree 是基於 Levenshtein distance 的樹資料結構。節點為詞，線的權重為編輯距離，即透過Levenshtein distance得到的值。</p>
-<span id="more"></span>
-<p>插入時，對於根節點編輯距離重複的點會碰撞，因此，新加入的點會以碰撞點為父節點進行插入，並且編輯距離變成與該碰撞節點的編輯距離。</p>
-<p><img data-src="/BK-tree-and-Levenshtein/01.png" alt="例圖"></p>
-<p>對於搜尋最接近的正確單字，我們需要設置一個容錯值(Tolerance)，以及計算目前的字與root間的距離，稱dist，然後我們就可以去迭代[dist-tolerance, dist+tolerance]間距離的所有單字，以降低暴力搜尋所有節點的複雜度。針對每一個在距離內的節點，將其加入可能列表中，並對該點進行遞迴再判斷，藉以達成所以相近字詞搜尋。</p>
-<p><strong>筆者: NTUST So Hard</strong></p>
-]]></content>
-      <categories>
-        <category>程式</category>
-      </categories>
-      <tags>
-        <tag>程式</tag>
-        <tag>演算法</tag>
       </tags>
   </entry>
   <entry>
@@ -702,6 +683,46 @@
       </tags>
   </entry>
   <entry>
+    <title>BK樹跟Levenshtein</title>
+    <url>/BK-tree-and-Levenshtein/</url>
+    <content><![CDATA[<p>Levenshtein距離是兩個字串間，透過新增、更換、刪除下的最少操作次數，透過動態規劃解決。</p>
+<p>BK Tree 是基於 Levenshtein distance 的樹資料結構。節點為詞，線的權重為編輯距離，即透過Levenshtein distance得到的值。</p>
+<span id="more"></span>
+<p>插入時，對於根節點編輯距離重複的點會碰撞，因此，新加入的點會以碰撞點為父節點進行插入，並且編輯距離變成與該碰撞節點的編輯距離。</p>
+<p><img data-src="/BK-tree-and-Levenshtein/01.png" alt="例圖"></p>
+<p>對於搜尋最接近的正確單字，我們需要設置一個容錯值(Tolerance)，以及計算目前的字與root間的距離，稱dist，然後我們就可以去迭代[dist-tolerance, dist+tolerance]間距離的所有單字，以降低暴力搜尋所有節點的複雜度。針對每一個在距離內的節點，將其加入可能列表中，並對該點進行遞迴再判斷，藉以達成所以相近字詞搜尋。</p>
+<p><strong>筆者: NTUST So Hard</strong></p>
+]]></content>
+      <categories>
+        <category>程式</category>
+      </categories>
+      <tags>
+        <tag>程式</tag>
+        <tag>演算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>北北基112-2學年度學測模擬考 作文第二題情意題&lt;魚說&gt; 寫作範例</title>
+    <url>/fish-said-sample/</url>
+    <content><![CDATA[<p>魚說：「一年準備、二年反攻、三年掃蕩、五年成功。」</p>
+<span id="more"></span>
+<p>第一段講述魚剛出生時遭遇颱風、溪水暴漲，河岸邊的一戶眷村人家小孩頭戴國軍膠盔、手拿報紙不慎落水。魚兒在翻滾的水流中看見了報紙上寫著「一年準備、二年反攻、三年掃蕩、五年成功」，魚兒明白了小男孩最大的願望就是看到中華民國解救大陸同胞於水深火熱之中。魚兒翻滾著想要打撈男孩並極力想要將男孩拖往岸邊但仍無能為力。</p>
+<p>第二段講述一位母親在第一時間奔往河岸呼喊孩子但面對的只有滔滔江水，這位母親哭了一天一夜最終脫力被鄉親們扛著回去，此時小魚兒明白了什麼是母愛如江水般延綿不絕，正如同國家之於人民，此時的小魚兒便萌生了將男孩這份保家衛國的精神傳承下去的信念，他魚兒含淚告別了失去意識的母親向著下游游去。</p>
+<p>第三段寫在三天之後的河川游一名無名的屍體被沖刷上了岸，那是一名小孩子的浮屍，頭上戴著膠盔。沒錯，經過三天三夜的翻滾沖刷拍打敲擊後，這頂膠盔仍堅定的保衛這男孩的頭部免受重創，男孩緊緊握著的手中攢著的報紙殘片無不說明男孩對於從軍的嚮往。世人只知男孩的犧牲，卻不知在不遠處逐漸遠去的一條精壯的魚兒，正是這魚兒將男孩托上了岸。也只有他明白男孩的決心。</p>
+<p>第四段的魚兒如願以償地抵達了下游，面對數以千計的同類卻只有他一心只想報效國家，他感到無比心寒。魚兒逢人就說「一年準備、二年反攻、三年掃蕩、五年成功」，希望有人能明白他的意志。啵啵啵，只是氣泡，沒有人聽見。魚哭了，透明的眼淚溶進透明的河，沒有人看見。沒有人明白他奉獻為國的決心。這條河有許多魚，但這條魚，只有一條河。他要保衛的，是這片他生長的淨土、是他充滿回憶的家鄉、是民眾安居樂業的日常、是那天那個孩子最純粹的夢想。但是，沒有人聽見。 </p>
+<p>第五段的魚兒依舊在岸邊、依舊在向來去的遊客、釣客、觀光客闡述著他的理想——「一年準備、二年反攻、三年掃蕩、五年成功。」但是，啵啵啵，依舊沒有人聽見。魚兒悲愴地吶喊，喊得聲嘶力竭，依舊沒有人多看他一眼。此時一位年邁的釣客吸引了魚兒的注意，那名釣客他瘦削但精實、老態的容貌下目光依舊炯炯有神、周圍的人接連撒網捕魚，只有他仍遵守不濫捕濫殺的道義吃多少釣多少。正如同中華民國國軍般屹立不搖、剛正不阿。魚兒遊近那名長者，最後一次向他吐露心聲。啵啵啵，老人注意到了魚兒，對魚兒微微一笑，雖然老者並不了解魚兒想說什麼。魚兒早已冷卻的五臟六腑再一次地感到滿腔的熱血在這之中奔馳，他明白就是這個老人，他頓悟了自己的使命，沒錯，正如同那個男孩將夢想帶給他，如今他也要將這份意志傳承下去。魚兒眼含熱淚，縱身一躍躍入老者的釣簍。老者望向那條大魚，精瘦而不瘦削、皮下堅實的肌肉富有彈性，銀白色的魚鱗閃耀著太陽的光輝，鮮紅、青藍與在這之上的耀眼的白，令老者想起了那年國父教誨的自由、平等、博愛。老者覺得就是他了、就是這條魚，他將其他普通的魚放回河川，將那尾大魚帶回家。</p>
+<p>第六段的老者回到了位於眷村中的家，此時日正當中，他吩咐妻子將那尾大魚宰殺鹽漬。原來，老者的兒子今天要從部隊久違的回家吃飯，老者才去河邊釣的魚。那名老者是一名前海軍陸戰隊隊員，而兒子也不負眾望跟隨著父親的步伐加入了中華民國海軍陸戰隊，成為保家衛國、守護家園的第一線力量。兒子於晚餐前回到了家，身著軍服的孩子是多麼的迷人。母親將菜品一一端出，其中不乏被作成鹹魚的、那尾一心只想奉獻為國的大魚。啊！如果他還活著，想必會流出欣慰的淚水吧！他的肉體化作一股股能量流進孩子體內，讓他可以挺直腰桿、握緊雙拳保衛國家，魚兒也算把這份對國家的愛傳承下去了吧！沒錯！鹹魚尚可以翻面，平凡如你我也可以翻身！<strong>立即拿起你手邊的電話，撥打0800-000-050國軍招募專線加入國軍！成為中華民國國軍，鍛鍊自身、榮耀父母、羨煞鄰里、保衛國家！國家以你為榮！</strong></p>
+<p><strong>成功高中畢業學長教你如何寫好大考作文( • ̀ω•́ )b</strong><br><strong>筆者：蔡銘揚</strong></p>
+]]></content>
+      <categories>
+        <category>結報</category>
+        <category>國北教自</category>
+      </categories>
+      <tags>
+        <tag>結報</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>速度與加速度在羅倫茲轉換(LT)下的轉換</title>
     <url>/Velocity-and-Acceleration-Transformation-under-LT/</url>
     <content><![CDATA[<p>這篇是假定已經推得LT下的產物，其實這篇的推導可能比較好找，但是從頭自己推到尾很爽，所以留個紀錄</p>
@@ -730,24 +751,19 @@
       </categories>
   </entry>
   <entry>
-    <title>北北基112-2學年度學測模擬考 作文第二題情意題&lt;魚說&gt; 寫作範例</title>
-    <url>/fish-said-sample/</url>
-    <content><![CDATA[<p>魚說：「一年準備、二年反攻、三年掃蕩、五年成功。」</p>
-<span id="more"></span>
-<p>第一段講述魚剛出生時遭遇颱風、溪水暴漲，河岸邊的一戶眷村人家小孩頭戴國軍膠盔、手拿報紙不慎落水。魚兒在翻滾的水流中看見了報紙上寫著「一年準備、二年反攻、三年掃蕩、五年成功」，魚兒明白了小男孩最大的願望就是看到中華民國解救大陸同胞於水深火熱之中。魚兒翻滾著想要打撈男孩並極力想要將男孩拖往岸邊但仍無能為力。</p>
-<p>第二段講述一位母親在第一時間奔往河岸呼喊孩子但面對的只有滔滔江水，這位母親哭了一天一夜最終脫力被鄉親們扛著回去，此時小魚兒明白了什麼是母愛如江水般延綿不絕，正如同國家之於人民，此時的小魚兒便萌生了將男孩這份保家衛國的精神傳承下去的信念，他魚兒含淚告別了失去意識的母親向著下游游去。</p>
-<p>第三段寫在三天之後的河川游一名無名的屍體被沖刷上了岸，那是一名小孩子的浮屍，頭上戴著膠盔。沒錯，經過三天三夜的翻滾沖刷拍打敲擊後，這頂膠盔仍堅定的保衛這男孩的頭部免受重創，男孩緊緊握著的手中攢著的報紙殘片無不說明男孩對於從軍的嚮往。世人只知男孩的犧牲，卻不知在不遠處逐漸遠去的一條精壯的魚兒，正是這魚兒將男孩托上了岸。也只有他明白男孩的決心。</p>
-<p>第四段的魚兒如願以償地抵達了下游，面對數以千計的同類卻只有他一心只想報效國家，他感到無比心寒。魚兒逢人就說「一年準備、二年反攻、三年掃蕩、五年成功」，希望有人能明白他的意志。啵啵啵，只是氣泡，沒有人聽見。魚哭了，透明的眼淚溶進透明的河，沒有人看見。沒有人明白他奉獻為國的決心。這條河有許多魚，但這條魚，只有一條河。他要保衛的，是這片他生長的淨土、是他充滿回憶的家鄉、是民眾安居樂業的日常、是那天那個孩子最純粹的夢想。但是，沒有人聽見。 </p>
-<p>第五段的魚兒依舊在岸邊、依舊在向來去的遊客、釣客、觀光客闡述著他的理想——「一年準備、二年反攻、三年掃蕩、五年成功。」但是，啵啵啵，依舊沒有人聽見。魚兒悲愴地吶喊，喊得聲嘶力竭，依舊沒有人多看他一眼。此時一位年邁的釣客吸引了魚兒的注意，那名釣客他瘦削但精實、老態的容貌下目光依舊炯炯有神、周圍的人接連撒網捕魚，只有他仍遵守不濫捕濫殺的道義吃多少釣多少。正如同中華民國國軍般屹立不搖、剛正不阿。魚兒遊近那名長者，最後一次向他吐露心聲。啵啵啵，老人注意到了魚兒，對魚兒微微一笑，雖然老者並不了解魚兒想說什麼。魚兒早已冷卻的五臟六腑再一次地感到滿腔的熱血在這之中奔馳，他明白就是這個老人，他頓悟了自己的使命，沒錯，正如同那個男孩將夢想帶給他，如今他也要將這份意志傳承下去。魚兒眼含熱淚，縱身一躍躍入老者的釣簍。老者望向那條大魚，精瘦而不瘦削、皮下堅實的肌肉富有彈性，銀白色的魚鱗閃耀著太陽的光輝，鮮紅、青藍與在這之上的耀眼的白，令老者想起了那年國父教誨的自由、平等、博愛。老者覺得就是他了、就是這條魚，他將其他普通的魚放回河川，將那尾大魚帶回家。</p>
-<p>第六段的老者回到了位於眷村中的家，此時日正當中，他吩咐妻子將那尾大魚宰殺鹽漬。原來，老者的兒子今天要從部隊久違的回家吃飯，老者才去河邊釣的魚。那名老者是一名前海軍陸戰隊隊員，而兒子也不負眾望跟隨著父親的步伐加入了中華民國海軍陸戰隊，成為保家衛國、守護家園的第一線力量。兒子於晚餐前回到了家，身著軍服的孩子是多麼的迷人。母親將菜品一一端出，其中不乏被作成鹹魚的、那尾一心只想奉獻為國的大魚。啊！如果他還活著，想必會流出欣慰的淚水吧！他的肉體化作一股股能量流進孩子體內，讓他可以挺直腰桿、握緊雙拳保衛國家，魚兒也算把這份對國家的愛傳承下去了吧！沒錯！鹹魚尚可以翻面，平凡如你我也可以翻身！<strong>立即拿起你手邊的電話，撥打0800-000-050國軍招募專線加入國軍！成為中華民國國軍，鍛鍊自身、榮耀父母、羨煞鄰里、保衛國家！國家以你為榮！</strong></p>
-<p><strong>成功高中畢業學長教你如何寫好大考作文( • ̀ω•́ )b</strong><br><strong>筆者：蔡銘揚</strong></p>
+    <title>【B級調酒EP2】無酒精琴啤酒</title>
+    <url>/B-class-bartending-EP2/</url>
+    <content><![CDATA[<p>. 雖然不知道為什麼，琴啤酒的存在一直不受到重視。但自從在BiliBili發現這種喝法後，一試便愛上了。個人認為琴啤酒的特點在於啤酒的清爽，和加入的烈酒會決定啤酒的走向，若加入較多酒感濃烈，少量摻入則有類似於精釀的體驗。對於酒量不好或窮鬼來說相當友善。筆者淺見是清爽的程度不下於gin tonic，材料則更易取得<br>. <span id="more"></span><br>. 將啤酒垂直倒入杯中，讓氣泡經由撞擊排空，加入適量琴酒，不須太多，5-10ml即可，杯子隨意<br>.<br>. 這次用了即期品商店的10元無酒精啤酒，簡單的搭配gorden 或是較貴的monkey 47，都有不錯的風味表現<br>.</p>
+<p><strong>推薦指數：★★★★★（懶人必備）</strong></p>
 ]]></content>
       <categories>
-        <category>結報</category>
-        <category>國北教自</category>
+        <category>飲食</category>
+        <category>酒</category>
       </categories>
       <tags>
-        <tag>結報</tag>
+        <tag>調酒</tag>
+        <tag>酒譜</tag>
+        <tag>土製</tag>
       </tags>
   </entry>
   <entry>
@@ -779,45 +795,16 @@
       </categories>
   </entry>
   <entry>
-    <title>【B級調酒EP2】無酒精琴啤酒</title>
-    <url>/B-class-bartending-EP2/</url>
-    <content><![CDATA[<p>. 雖然不知道為什麼，琴啤酒的存在一直不受到重視。但自從在BiliBili發現這種喝法後，一試便愛上了。個人認為琴啤酒的特點在於啤酒的清爽，和加入的烈酒會決定啤酒的走向，若加入較多酒感濃烈，少量摻入則有類似於精釀的體驗。對於酒量不好或窮鬼來說相當友善。筆者淺見是清爽的程度不下於gin tonic，材料則更易取得<br>. <span id="more"></span><br>. 將啤酒垂直倒入杯中，讓氣泡經由撞擊排空，加入適量琴酒，不須太多，5-10ml即可，杯子隨意<br>.<br>. 這次用了即期品商店的10元無酒精啤酒，簡單的搭配gorden 或是較貴的monkey 47，都有不錯的風味表現<br>.</p>
-<p><strong>推薦指數：★★★★★（懶人必備）</strong></p>
+    <title>哲學系發癲EP2 帥割比較會賺錢</title>
+    <url>/Philosophy-Department-Craziness-EP2/</url>
+    <content><![CDATA[<p>. 台大經濟系教授吳聰敏，近期出版著作&lt;台灣經濟四百年&gt;內提到美國顧問團水準精湛，報告對台灣經濟掌握非常完善，但多數成員都難以找到其經歷<br>. <span id="more"></span><br>. 吳聰敏作為自由派學者，這番結論堪稱頭號美吹，讓人不經感到懷疑可靠性<br>.<br>. 對此，有一個研究可以提供反駁。上海交通大學高級金融學院的兩位研究員，上週發表研究，結果表明長相比較好看的經理平均投資表現是顯著比較差的(最不好看的經理比最好看的經理每個月投資報酬率高0.17%)。<br>.<br>. 而吳聰敏並不太帥，應該可以相信<br><img data-src="/Philosophy-Department-Craziness-EP2/01.png" alt="其實蠻帥ㄉ，五官很對稱，應該可以被AI認證很帥"><br>（其實蠻帥ㄉ，五官很對稱，應該可以被AI認證很帥 </p>
+<p><a href="https://www.facebook.com/photo/?fbid=10168480199465694&set=a.10150632405965694"><strong>credit</strong></a></p>
 ]]></content>
       <categories>
-        <category>飲食</category>
-        <category>酒</category>
+        <category>日常廢文</category>
       </categories>
       <tags>
-        <tag>調酒</tag>
-        <tag>酒譜</tag>
-        <tag>土製</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>十分鐘一堂雙語自然課~小學生也能聽得懂的近代物理（大概）</title>
-    <url>/10-minute-phy-lesson/</url>
-    <content><![CDATA[<center>
-雙語教學的簡報和逐字稿
-<span id="more"></span>
-</center>
-<center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/wave.pdf">
-    <font color=blue> 新分頁開啟逐字稿</font>
-</a>
-</center>
-<center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/111012009_.pdf">
-    <font color=blue> 新分頁開啟簡報</font>
-</a>
-</center>
-]]></content>
-      <categories>
-        <category>結報</category>
-        <category>國北教自</category>
-      </categories>
-      <tags>
-        <tag>結報</tag>
+        <tag>哲學</tag>
       </tags>
   </entry>
   <entry>
@@ -848,19 +835,6 @@
       <categories>
         <category>日常廢文</category>
       </categories>
-  </entry>
-  <entry>
-    <title>哲學系發癲EP2 帥割比較會賺錢</title>
-    <url>/Philosophy-Department-Craziness-EP2/</url>
-    <content><![CDATA[<p>. 台大經濟系教授吳聰敏，近期出版著作&lt;台灣經濟四百年&gt;內提到美國顧問團水準精湛，報告對台灣經濟掌握非常完善，但多數成員都難以找到其經歷<br>. <span id="more"></span><br>. 吳聰敏作為自由派學者，這番結論堪稱頭號美吹，讓人不經感到懷疑可靠性<br>.<br>. 對此，有一個研究可以提供反駁。上海交通大學高級金融學院的兩位研究員，上週發表研究，結果表明長相比較好看的經理平均投資表現是顯著比較差的(最不好看的經理比最好看的經理每個月投資報酬率高0.17%)。<br>.<br>. 而吳聰敏並不太帥，應該可以相信<br><img data-src="/Philosophy-Department-Craziness-EP2/01.png" alt="其實蠻帥ㄉ，五官很對稱，應該可以被AI認證很帥"><br>（其實蠻帥ㄉ，五官很對稱，應該可以被AI認證很帥 </p>
-<p><a href="https://www.facebook.com/photo/?fbid=10168480199465694&set=a.10150632405965694"><strong>credit</strong></a></p>
-]]></content>
-      <categories>
-        <category>日常廢文</category>
-      </categories>
-      <tags>
-        <tag>哲學</tag>
-      </tags>
   </entry>
   <entry>
     <title>光電系隨筆EP1-BAD APPLE!</title>
@@ -904,6 +878,32 @@
       </categories>
   </entry>
   <entry>
+    <title>十分鐘一堂雙語自然課~小學生也能聽得懂的近代物理（大概）</title>
+    <url>/10-minute-phy-lesson/</url>
+    <content><![CDATA[<center>
+雙語教學的簡報和逐字稿
+<span id="more"></span>
+</center>
+<center>
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/wave.pdf">
+    <font color=blue> 新分頁開啟逐字稿</font>
+</a>
+</center>
+<center>
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/111012009_.pdf">
+    <font color=blue> 新分頁開啟簡報</font>
+</a>
+</center>
+]]></content>
+      <categories>
+        <category>結報</category>
+        <category>國北教自</category>
+      </categories>
+      <tags>
+        <tag>結報</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>獨居蜂旅館(Solitary bee hotel)演講紀錄暨心得</title>
     <url>/Solitary-bee-hotel/</url>
     <content><![CDATA[<center>
@@ -922,5 +922,45 @@
       <tags>
         <tag>結報</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>嘉義舊監獄</title>
+    <url>/Chiayi-Old-Prison/</url>
+    <content><![CDATA[<h2 id="大門"><a href="#大門" class="headerlink" title="大門"></a>大門</h2><p><img data-src="https://hackmd.io/_uploads/rJgASqJHT.jpg" alt="A7306659-2"></p>
+<ul>
+<li>帶有古典風格的大門，1919年修建時為磚造，昭和大地震使嘉義監獄受損嚴重，大門也不例外<ul>
+<li><img data-src="https://hackmd.io/_uploads/H1QeUqyBT.png" alt="image"><br>取自<a href="https://cyop.mjac.moj.gov.tw/1281199/1283948/1291469/1298916/post">建築構造-RC構造-建築特色-國定古蹟嘉義舊監獄 (moj.gov.tw)</a></li>
+<li>1919年修建的大門，中央拱門更高，更加凸顯ABA的羅馬建築特色</li>
+<li><img data-src="https://hackmd.io/_uploads/BkDZL91Hp.png" alt="image"><br>取自<a href="https://zhuanlan.zhihu.com/p/346513367">带你深度解析古罗马君士坦丁凯旋门的艺术价值 - 知乎 (zhihu.com)</a></li>
+<li><img data-src="https://hackmd.io/_uploads/SyMGUckH6.jpg" alt="A7306662-2"><br>符合磚造大拱門尺寸的舊大門，一直使用至今，由整片的阿里山千年檜木製成，(大概是舊監獄最有錢的部分，當時嘉義由於阿里山鐵路通車，幾乎所有位於嘉義的建築都使用了檜木</li>
+</ul>
+</li>
+<li><img data-src="https://hackmd.io/_uploads/rysGU5kHT.jpg" alt="A7306663-2"><br>並未用油漆保護住的紅磚結構</li>
+<li><img data-src="https://hackmd.io/_uploads/SyDX8qJr6.jpg" alt="A7306666-2"><br><img data-src="https://hackmd.io/_uploads/H1PQIqJSp.jpg" alt="A7306664-2"><br>配重式拉窗</li>
+</ul>
+<h2 id="中央台"><a href="#中央台" class="headerlink" title="中央台"></a>中央台</h2><ul>
+<li><img data-src="https://hackmd.io/_uploads/H1XVUcJra.jpg" alt="A7306669-2"><br>展示竹編牆的結構，首先是編織的竹篾，然後用黏土、混合當地有益於牆體的材料，比如台灣的建物普遍會混合糯米</li>
+<li><img data-src="https://hackmd.io/_uploads/rJ_NIckSa.jpg" alt="A7306705-2"><br>中央台向大門處望去，上方為神龕，由於嘉義監獄供奉的天照大神，在嘉義新監獄建成時拒絕遷往新監(天照大神入鄉隨俗的透過擲筊表示的)，於是仍舊由舊監獄供奉</li>
+<li>嘉義監獄是當時流行的維吉尼亞式監獄</li>
+</ul>
+<h2 id="囚室"><a href="#囚室" class="headerlink" title="囚室"></a>囚室</h2><ul>
+<li><img data-src="https://hackmd.io/_uploads/H1Gr8cJrp.jpg" alt="A7306672-2"><br>在囚室上方的空間用於提供獄警行走、監視，被稱為貓道、空中行走道</li>
+<li>早期有開放，但現在並沒有</li>
+<li><img data-src="https://hackmd.io/_uploads/BkvSI5JHp.jpg" alt="A7306674-2"><br>送食口，可以看到監獄極厚的牆體，位於正常人胸口高度</li>
+<li><img data-src="https://hackmd.io/_uploads/S1iHUqkBT.jpg" alt="A7306676-2"><br>民國時期修建的水池，由當時關押的犯人製作，該兩塔的原型是高雄龍虎塔，隱含了犯人的思鄉情懷</li>
+<li><img data-src="https://hackmd.io/_uploads/ByQIL91rT.jpg" alt="A7306680-2"><br>為在水池右側的水牢</li>
+<li><img data-src="https://hackmd.io/_uploads/r1_ILcySp.jpg" alt="A7306683-2"><br>犯人的工廠雨淋板</li>
+<li><img data-src="https://hackmd.io/_uploads/SJEv85JBa.jpg" alt="A7306689-2"><br>廁所中馬桶的朝向為向外，顯示毫不介意犯人隱私的設計思路，側面回應當時觀念對於犯人應該給予懲治，而非感化</li>
+<li><img data-src="https://hackmd.io/_uploads/S1cPI5JHa.jpg" alt="A7306690-2"><br>監獄藝術作品，明顯描繪了死刑犯人，右側的腳鐐綁了一千元鈔票，用於感謝行刑者，而行刑者則需要將錢花完，不能存入銀行。死刑犯的腳鐐在當時相當受犯人青睞，並不避忌死人，而是奉行”人不能死兩次”的觀念，期待配戴以行刑犯人的腳鐐</li>
+<li><img data-src="https://hackmd.io/_uploads/B1Ed89Jra.jpg" alt="A7306691-2"><br>犯人的洗浴地方，直到民國才開始在冬天有限的提供熱水。<img data-src="https://hackmd.io/_uploads/SJ9_UqJra.jpg" alt="A7306693-2"><br>香菇</li>
+</ul>
+<h2 id="女子宿舍"><a href="#女子宿舍" class="headerlink" title="女子宿舍"></a>女子宿舍</h2><ul>
+<li><img data-src="https://hackmd.io/_uploads/BygYL9kSp.jpg" alt="A7306696-2"><br>放飯口位於地上，顯示當時男女尊卑</li>
+<li><img data-src="https://hackmd.io/_uploads/rJHKU91rp.jpg" alt="A7306698-2"><br>育嬰用品，懷孕女犯人被允許在獄中撫養小孩直到小孩三歲</li>
+</ul>
+]]></content>
+      <categories>
+        <category>日常廢文</category>
+      </categories>
   </entry>
 </search>

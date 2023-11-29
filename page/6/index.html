@@ -12,7 +12,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
@@ -153,7 +153,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-count">40</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -181,6 +181,126 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://navoni1024.github.io/Scraping-Basics-robots-txt-header/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/vichy.gif">
+      <meta itemprop="name" content="navoni1024">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="皇家維修熱線">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 皇家維修熱線">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Scraping-Basics-robots-txt-header/" class="post-title-link" itemprop="url"> 爬蟲基礎入門: robots.txt & header</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2023-07-25 23:51:41" itemprop="dateCreated datePublished" datetime="2023-07-25T23:51:41+08:00">2023-07-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2023-08-02 00:24:22" itemprop="dateModified" datetime="2023-08-02T00:24:22+08:00">2023-08-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/coding/" itemprop="url" rel="index"><span itemprop="name">程式</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/coding/scraping/" itemprop="url" rel="index"><span itemprop="name">爬蟲</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/Scraping-Basics-robots-txt-header/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/Scraping-Basics-robots-txt-header/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-item" title="閱讀次數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">閱讀次數：</span>
+      <span class="waline-pageview-count" data-path="/Scraping-Basics-robots-txt-header/"></span>
+    </span>
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>今天要來介紹當我們在爬蟲前，應該要知道的一些技巧與規範</p>
+<hr>
+<h3 id="為甚麼需要知道這些爬蟲規範？"><a href="#為甚麼需要知道這些爬蟲規範？" class="headerlink" title="為甚麼需要知道這些爬蟲規範？"></a>為甚麼需要知道這些爬蟲規範？</h3><p>首先，我們必須知道過度的網路爬蟲可能是違法的，<br>如使用多執行緒進行對網站的大量拜訪，在沒有適當的存取時間間隔下，可能會造成一般人熟知的<strong>DDOS</strong>(Denial-Of-Service Attack)，進而造成其他使用者無法拜訪、甚至是主機癱瘓。<br>因此，某些網站有制定所謂的「規範」，讓爬蟲使用者能夠去遵守並避免存取到private data</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/Scraping-Basics-robots-txt-header/" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -548,7 +668,12 @@
 
 <div class="post-block">
   
-  
+  <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+    
+    <div class="post-gallery-image">
+      <img src="/images/Kanna_phil.png" itemprop="contentUrl">
+    </div>
+    </div>
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://navoni1024.github.io/Philosophy-Department-Craziness/">
@@ -587,7 +712,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-11-22 16:45:26" itemprop="dateModified" datetime="2023-11-22T16:45:26+08:00">2023-11-22</time>
+      <time title="修改時間：2023-11-29 16:13:35" itemprop="dateModified" datetime="2023-11-29T16:13:35+08:00">2023-11-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -631,7 +756,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>原來我開的笑話都指向空虛的所指<br>我還以為你是一個真實他者<br>沒想到是個大他者<br>我的能指只是傳達了純粹意識形態<br>我們的關係之間連一場遊戲都玩不成</p>
+          <p>原來我開的笑話都指向空虛的所指<br>我還以為你是一個真實他者</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/Philosophy-Department-Craziness/" rel="contents">
