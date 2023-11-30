@@ -2618,3 +2618,24 @@ body {
 .archive .collection-title {
   display: none !important;
 }
+.index .post-title {
+  text-align: left;
+}
+.index .post-meta {
+  justify-content: left;
+}
+.posts-expand .post-title {
+  font-weight: 700;
+}
+.posts-expand .post-header {
+  margin-bottom: 20px;
+}
+.posts-expand .post-gallery {
+  margin-bottom: 10px;
+}
+.post-gallery .post-gallery-image img {
+  max-height: 10em; /* 最大高度 */
+  min-height: 10em;
+  transform: scale(1, 1);
+  transition: all 0.5s cubic-bezier(0.1, 0, 0, 1.15);
+}
