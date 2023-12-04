@@ -2633,9 +2633,16 @@ body {
 .posts-expand .post-gallery {
   margin-bottom: 10px;
 }
+.post-gallery {
+  display: flex;
+  min-height: 150px;
+}
 .post-gallery .post-gallery-image img {
   max-height: 10em; /* 最大高度 */
   min-height: 10em;
   transform: scale(1, 1);
   transition: all 0.5s cubic-bezier(0.1, 0, 0, 1.15);
+}
+.index .post-body {
+  text-align: left;
 }
