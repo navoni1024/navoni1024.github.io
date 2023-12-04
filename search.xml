@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>【B級調酒EP1】</title>
-    <url>/B-class-bartending-EP1/</url>
-    <content><![CDATA[<p>覺旅咖啡英式午餐茶+蘇格蘭威士忌 </p>
-<h3 id="酒譜"><a href="#酒譜" class="headerlink" title="酒譜"></a>酒譜</h3><p>520ml紅茶<br>15ml 威士忌</p>
-<span id="more"></span>
-<h3 id="短評"><a href="#短評" class="headerlink" title="短評"></a>短評</h3><p>大概連ddffg都喝不下去</p>
-<center><img data-src="coffee_something.jpg" height=400></center>]]></content>
-      <categories>
-        <category>飲食</category>
-        <category>酒</category>
-      </categories>
-      <tags>
-        <tag>調酒</tag>
-        <tag>酒譜</tag>
-        <tag>土製</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>哲學系發癲 EP1</title>
     <url>/Philosophy-Department-Craziness/</url>
     <content><![CDATA[<p>原來我開的笑話都指向空虛的所指<br>我還以為你是一個真實他者</p>
@@ -36,41 +18,21 @@
       </tags>
   </entry>
   <entry>
-    <title> 爬蟲基礎入門: Requests</title>
-    <url>/Scraping-Basics-Requests/</url>
-    <content><![CDATA[<p>本系列預設各位擁有基本的python能力，對各種資料結構、套件、模組等有一定概念就行了。<br>本文的範例都是在python 3.10下操作的。</p>
-<h3 id="requests是什麼"><a href="#requests是什麼" class="headerlink" title="requests是什麼?"></a>requests是什麼?</h3><p>簡單來說就是能讓你抓取整個網頁的東西，也能夠丟上去一些東西。<br>比較常用到的有下列功能。</p>
-<ul>
-<li>get</li>
-<li>post</li>
-<li>session</li>
-</ul>
+    <title>【B級調酒EP1】</title>
+    <url>/B-class-bartending-EP1/</url>
+    <content><![CDATA[<p>覺旅咖啡英式午餐茶+蘇格蘭威士忌 </p>
+<h3 id="酒譜"><a href="#酒譜" class="headerlink" title="酒譜"></a>酒譜</h3><p>520ml紅茶<br>15ml 威士忌</p>
 <span id="more"></span>
-
-<p>python預設並沒有安裝，所以要先用pip安裝下。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
-
-<p>安裝完後在寫程式前也記得先import</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br></pre></td></tr></table></figure>
-
-<h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><p>基本上就是抓下網頁。在抓取網頁時加上昨天提到的header比較不會被擋下來。</p>
-<p>舉例來說:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">	<span class="string">&#x27;Users-agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (X11; Ubuntu; Linux x86 64; rv:91.0) Gecko/20100101 Firefox/91.0&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">&#x27;你想爬的網站&#x27;</span></span><br><span class="line">r = requests.get(url, headers = headers)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(r.text)</span><br></pre></td></tr></table></figure>
-
-<p>上述的程式應該會把網頁的html印在終端機，<br>可以填入各種網址試試看這樣的程式會印出什麼。<br>當然單純只做這樣被擋下來而只會顯示<code>respone&lt;XXX&gt;</code>的機率也不低就是。<br>也可以試試看換個header看網頁會不會有差異。</p>
-<p>總之抓下來的單純html當然是沒什麼用，要解析html並取出其中有用的資訊的話就要靠後面幾天會提到的bs4跟lxml了。</p>
-<h3 id="post"><a href="#post" class="headerlink" title="post"></a>post</h3><p>能夠丟字串或json檔上去，在需要給網站資訊時會用到。<br>舉例來說，投票機器人。<br>但一時之間想不到什麼很好的網站舉例。</p>
-<h3 id="session"><a href="#session" class="headerlink" title="session"></a>session</h3><p>能夠在多個請求中保持一些數據。<br>如果網站會用到cookie的話就需要使用這個。</p>
-<p>舉例來說你用session登入一個網站後，之後在用這個物件抓取該網站其他頁面也會默認你是登入的。<br>但一時之間想不到什麼很好的網站舉例。</p>
-]]></content>
+<h3 id="短評"><a href="#短評" class="headerlink" title="短評"></a>短評</h3><p>大概連ddffg都喝不下去</p>
+<center><img data-src="coffee_something.jpg" height=400></center>]]></content>
       <categories>
-        <category>程式</category>
-        <category>爬蟲</category>
+        <category>飲食</category>
+        <category>酒</category>
       </categories>
       <tags>
-        <tag>爬蟲</tag>
-        <tag>程式</tag>
-        <tag>python</tag>
+        <tag>調酒</tag>
+        <tag>酒譜</tag>
+        <tag>土製</tag>
       </tags>
   </entry>
   <entry>
@@ -139,6 +101,44 @@
       </tags>
   </entry>
   <entry>
+    <title> 爬蟲基礎入門: Requests</title>
+    <url>/Scraping-Basics-Requests/</url>
+    <content><![CDATA[<p>本系列預設各位擁有基本的python能力，對各種資料結構、套件、模組等有一定概念就行了。<br>本文的範例都是在python 3.10下操作的。</p>
+<h3 id="requests是什麼"><a href="#requests是什麼" class="headerlink" title="requests是什麼?"></a>requests是什麼?</h3><p>簡單來說就是能讓你抓取整個網頁的東西，也能夠丟上去一些東西。<br>比較常用到的有下列功能。</p>
+<ul>
+<li>get</li>
+<li>post</li>
+<li>session</li>
+</ul>
+<span id="more"></span>
+
+<p>python預設並沒有安裝，所以要先用pip安裝下。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
+
+<p>安裝完後在寫程式前也記得先import</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br></pre></td></tr></table></figure>
+
+<h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><p>基本上就是抓下網頁。在抓取網頁時加上昨天提到的header比較不會被擋下來。</p>
+<p>舉例來說:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">	<span class="string">&#x27;Users-agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (X11; Ubuntu; Linux x86 64; rv:91.0) Gecko/20100101 Firefox/91.0&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">&#x27;你想爬的網站&#x27;</span></span><br><span class="line">r = requests.get(url, headers = headers)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(r.text)</span><br></pre></td></tr></table></figure>
+
+<p>上述的程式應該會把網頁的html印在終端機，<br>可以填入各種網址試試看這樣的程式會印出什麼。<br>當然單純只做這樣被擋下來而只會顯示<code>respone&lt;XXX&gt;</code>的機率也不低就是。<br>也可以試試看換個header看網頁會不會有差異。</p>
+<p>總之抓下來的單純html當然是沒什麼用，要解析html並取出其中有用的資訊的話就要靠後面幾天會提到的bs4跟lxml了。</p>
+<h3 id="post"><a href="#post" class="headerlink" title="post"></a>post</h3><p>能夠丟字串或json檔上去，在需要給網站資訊時會用到。<br>舉例來說，投票機器人。<br>但一時之間想不到什麼很好的網站舉例。</p>
+<h3 id="session"><a href="#session" class="headerlink" title="session"></a>session</h3><p>能夠在多個請求中保持一些數據。<br>如果網站會用到cookie的話就需要使用這個。</p>
+<p>舉例來說你用session登入一個網站後，之後在用這個物件抓取該網站其他頁面也會默認你是登入的。<br>但一時之間想不到什麼很好的網站舉例。</p>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>爬蟲</category>
+      </categories>
+      <tags>
+        <tag>爬蟲</tag>
+        <tag>程式</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Discord Bot-基本架構</title>
     <url>/Discord-Bot-Basic-structure/</url>
     <content><![CDATA[<p>首先先用一個最基本的機器人來示範。請打開一個python檔並鍵入以下內容:</p>
@@ -167,6 +167,24 @@
 <h3 id="if-name-“-main-“"><a href="#if-name-“-main-“" class="headerlink" title="if __name__ &#x3D;&#x3D; “__main__“:"></a>if __name__ &#x3D;&#x3D; “__main__“:</h3><p>這行就是確保你是直接執行了這檔案才會跑以下的指令。<br>bot.run()的括號中間輸入您昨天取得的token碼。</p>
 <hr>
 <p>接著就讓機器人上線並邀請你的機器人進自己的伺服器來玩玩吧。<br>也可以試著改一些設定，或甚至嘗試一些你在官方API找到的功能。<br>看不太懂上面和官方API到底在講什麼鬼的也沒關係，後面跟著做就會漸漸熟悉了。</p>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>Discord bot</category>
+      </categories>
+      <tags>
+        <tag>程式</tag>
+        <tag>python</tag>
+        <tag>Discord</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Discord Bot-創建一隻bot</title>
+    <url>/Discord-Bot-create-a-bot/</url>
+    <content><![CDATA[<p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
+<span id="more"></span>
+<p><img data-src="/Discord-Bot-create-a-bot/20152706MBGmHIhGdS.png"><br>大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。</p>
+<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img data-src="/Discord-Bot-create-a-bot/20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img data-src="/Discord-Bot-create-a-bot/20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img data-src="/Discord-Bot-create-a-bot/20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
 ]]></content>
       <categories>
         <category>程式</category>
@@ -246,24 +264,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Discord Bot-創建一隻bot</title>
-    <url>/Discord-Bot-create-a-bot/</url>
-    <content><![CDATA[<p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
-<span id="more"></span>
-<p><img data-src="/Discord-Bot-create-a-bot/20152706MBGmHIhGdS.png"><br>大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。</p>
-<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img data-src="/Discord-Bot-create-a-bot/20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img data-src="/Discord-Bot-create-a-bot/20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img data-src="/Discord-Bot-create-a-bot/20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>Discord bot</category>
-      </categories>
-      <tags>
-        <tag>程式</tag>
-        <tag>python</tag>
-        <tag>Discord</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Highball-嗨波</title>
     <url>/Highball/</url>
     <content><![CDATA[<p>最近放暑假，最舒服的就是中午起床弄個午餐，配杯highball搭著netflix或VT。<br>嗨波其實就是簡單的威士忌加氣泡水，而清爽的口感在夏日午後絕對是最好的享受。</p>
@@ -284,30 +284,6 @@
         <tag>調酒</tag>
         <tag>酒譜</tag>
         <tag>自製</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>爬蟲基礎入門-Selenium</title>
-    <url>/Scraping-Basics-Selenium/</url>
-    <content><![CDATA[<h3 id="Selenium前置設定"><a href="#Selenium前置設定" class="headerlink" title="Selenium前置設定"></a>Selenium前置設定</h3><p>首先如果要先使用selenium，我們要先下載webdriver在資料夾中給予selenium使用。<br><a href="http://">https://chromedriver.chromium.org/downloads</a><br>上述網址即為chrome的webdriver下載地點。<br>下載好webdriver後我們就可以把他的exe檔丟到code的資料夾中了，就像這樣。</p>
-<span id="more"></span>
-<p><img data-src="/Scraping-Basics-Selenium/20152706vGDAntGabq.png"></p>
-<p>接著我們就可以準備import了。<br><img data-src="/Scraping-Basics-Selenium/20152706yg28xxCq3g.png"><br>像這樣，其中webdriver就是引入我們剛剛載的webdriver，<br>Options則是selenium針對不同webdriver所納入的不同設定，<br>WebDriverWait跟EC則是在讓瀏覽器等待時會用到，像是我們可能會需要等到某網頁元素完整載入後才繼續程式，否則可能就會出錯，<br>最後By則是selenium中的內部語法，像是這樣，<br><img data-src="/Scraping-Basics-Selenium/20152706nZU06VhtHp.png"><br>這就表示著find_element這個函式將用XPath的方式定位元素。</p>
-<h3 id="Selenium的指令使用"><a href="#Selenium的指令使用" class="headerlink" title="Selenium的指令使用"></a>Selenium的指令使用</h3><p><img data-src="/Scraping-Basics-Selenium/01.png"><br><img data-src="/Scraping-Basics-Selenium/02.png"><br>首先我們先如上圖，套入webdriver的設定，讓程式載入我們先前載的chrome webdriver，接著再讓他導到我們想要的網址，這邊以youtube作範例。如果成功的話應該會如下圖這樣。<br><img data-src="/Scraping-Basics-Selenium/03.png"><br>阿記得開完網址後要time.sleep()一下，才不會直接跳掉。<br>其實在之後我們對selenium操控時，也必須要定時的time.sleep()或者是利用別的方法讓程式暫停，否則就會產生網頁還沒完全載入，我們就要找到他的元素等等的尷尬事情。</p>
-<p>開完網頁後，就來介紹第一個函式，find_element<br><img data-src="/Scraping-Basics-Selenium/04.png"><br>find_element可以讓selenium定位到特定網頁元素，這邊的例子就是yt的搜尋欄。<br>其實selenium可以透過非常多方式定位，像是html碼裡的id、name等等，或者是class、css等其他方法，那麼我們這邊就用xpath這種定位方式，較為直接準確。但其實這邊範例比較不好的一點是xpath採用了絕對位置來定位，事實上，我們可以利用xpath的相對位置來達到簡潔、準確、可變動的性質，則之後在提及xpath時會在講解。</p>
-<p>再來，既然我們定位到了網頁元素，則我們就要發揮selenium的強項了，就是模擬使用者對網頁的互動，這邊我們透過下圖講解兩個例子。<br><img data-src="/Scraping-Basics-Selenium/05.png"><br>這邊我們的目標是要進去yt，蒐集不同關鍵字搜尋後的影片，因此我們先建立一個list做作search_keys，裡面有著我們之後要輸入進搜尋欄的搜尋關鍵字。<br>則首先是element.send_keys()，我們先定位到搜尋欄位置後，將其命名為search_box，則search_box.send_keys()就能讓我們輸入關鍵字進去。<br>再來就是element.click()，在輸入進去後，我們還要再定位到yt網頁的搜尋按鈕上，在這裡，我們將其命名為search_box，則search_box.click()就能讓selenium模擬使用者對著搜尋按鈕按下滑鼠左鍵的這個動作。<br>就像這樣<br><img data-src="/Scraping-Basics-Selenium/06.png"><br>其實只要有這基本的動作，我們就能讓selenium動起來了，就像真人一樣互動，當然selenium還有更多的功能，像是WebDriverWait等等的功能，但這邊就不多做贅述了，我們明天會在講使用selenium常遇到的問題，其實很多都跟網頁載入時間有關。</p>
-<p>喔對了，突然想到的小補充，上圖的範例其實就是之後其中一個專題內容，目標正是要讓selenium幫我們整理出想要的影片並輸出到discord上，因此也可以預見之後的專題應該會出現很多vt剪輯。<br><img data-src="/Scraping-Basics-Selenium/07.png"></p>
-<h3 id="Selenium的常見Bug"><a href="#Selenium的常見Bug" class="headerlink" title="Selenium的常見Bug"></a>Selenium的常見Bug</h3><p>首先，第一個是版本問題，這其實是我前天在挖之前的程式出來跑時才發現的問題，<br><img data-src="/Scraping-Basics-Selenium/01-1.png"><br>這問題基本上是driver跟瀏覽器版本不支援，最簡單只要重新下載對應版本的webdriver就好。</p>
-<p>接著是這個，<br><img data-src="/Scraping-Basics-Selenium/02-1.png"><br>這代表著selenium無法找到你所指定的元素，一般來說，如果不是你定位位置錯誤，<br>八成就是網頁還沒有完整載入，就使selemium搜尋元素。<br>此時，我們可以試著使用簡單的方法，time.sleep()，使程式整體暫停n秒，也可以配合try except使用。<br>當然，selenium針對這個問題也有開發相關函式，首先是顯式等待，<br><img data-src="/Scraping-Basics-Selenium/03-1.png"><br>在這邊的意思是，我們針對所給予的元素，等待10秒，每0.2秒檢查是否出現，如果出現了就繼續，<br>如果10秒內還沒出現則報錯。<br>另外一種則是隱式等待，<br><img data-src="/Scraping-Basics-Selenium/04-1.png"><br>相對於顯式等待是針對個別元素是否生成，隱式等待則是針對整個頁面，以上圖為例，這邊就是讓整個程式暫停，<br>給予瀏覽器10秒的時間，如果10秒內”整個頁面都已經生成完成”(講得直白一點其實就是我們頁面左上角的圈圈不再轉動)，則繼續程式運行，如果10內還沒載完，則報錯，因此可以看的出來，相對於顯式等待，隱式等待跟強制等待可能會要花費更久的時間。</p>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>爬蟲</category>
-      </categories>
-      <tags>
-        <tag>爬蟲</tag>
-        <tag>程式</tag>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -340,6 +316,30 @@
 <hr>
 <p>以loads&#x2F;dumps的話就會長得像下面這樣:</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span> (<span class="string">&#x27;ex.json&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> i:</span><br><span class="line">	t = i.read()        	<span class="comment">#以str格式讀取json的資料</span></span><br><span class="line">	jData = json.loads(t)	<span class="comment">#將str轉換成dictionary</span></span><br><span class="line"></span><br><span class="line">jData[<span class="string">&#x27;score&#x27;</span>] = <span class="number">100</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span> (<span class="string">&#x27;ex.json&#x27;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> i:</span><br><span class="line">	i.write(json.dumps(jData))   <span class="comment">#將dictionary轉換成符合json格式的字串並寫入原本的檔案 </span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>爬蟲</category>
+      </categories>
+      <tags>
+        <tag>爬蟲</tag>
+        <tag>程式</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爬蟲基礎入門-Selenium</title>
+    <url>/Scraping-Basics-Selenium/</url>
+    <content><![CDATA[<h3 id="Selenium前置設定"><a href="#Selenium前置設定" class="headerlink" title="Selenium前置設定"></a>Selenium前置設定</h3><p>首先如果要先使用selenium，我們要先下載webdriver在資料夾中給予selenium使用。<br><a href="http://">https://chromedriver.chromium.org/downloads</a><br>上述網址即為chrome的webdriver下載地點。<br>下載好webdriver後我們就可以把他的exe檔丟到code的資料夾中了，就像這樣。</p>
+<span id="more"></span>
+<p><img data-src="/Scraping-Basics-Selenium/20152706vGDAntGabq.png"></p>
+<p>接著我們就可以準備import了。<br><img data-src="/Scraping-Basics-Selenium/20152706yg28xxCq3g.png"><br>像這樣，其中webdriver就是引入我們剛剛載的webdriver，<br>Options則是selenium針對不同webdriver所納入的不同設定，<br>WebDriverWait跟EC則是在讓瀏覽器等待時會用到，像是我們可能會需要等到某網頁元素完整載入後才繼續程式，否則可能就會出錯，<br>最後By則是selenium中的內部語法，像是這樣，<br><img data-src="/Scraping-Basics-Selenium/20152706nZU06VhtHp.png"><br>這就表示著find_element這個函式將用XPath的方式定位元素。</p>
+<h3 id="Selenium的指令使用"><a href="#Selenium的指令使用" class="headerlink" title="Selenium的指令使用"></a>Selenium的指令使用</h3><p><img data-src="/Scraping-Basics-Selenium/01.png"><br><img data-src="/Scraping-Basics-Selenium/02.png"><br>首先我們先如上圖，套入webdriver的設定，讓程式載入我們先前載的chrome webdriver，接著再讓他導到我們想要的網址，這邊以youtube作範例。如果成功的話應該會如下圖這樣。<br><img data-src="/Scraping-Basics-Selenium/03.png"><br>阿記得開完網址後要time.sleep()一下，才不會直接跳掉。<br>其實在之後我們對selenium操控時，也必須要定時的time.sleep()或者是利用別的方法讓程式暫停，否則就會產生網頁還沒完全載入，我們就要找到他的元素等等的尷尬事情。</p>
+<p>開完網頁後，就來介紹第一個函式，find_element<br><img data-src="/Scraping-Basics-Selenium/04.png"><br>find_element可以讓selenium定位到特定網頁元素，這邊的例子就是yt的搜尋欄。<br>其實selenium可以透過非常多方式定位，像是html碼裡的id、name等等，或者是class、css等其他方法，那麼我們這邊就用xpath這種定位方式，較為直接準確。但其實這邊範例比較不好的一點是xpath採用了絕對位置來定位，事實上，我們可以利用xpath的相對位置來達到簡潔、準確、可變動的性質，則之後在提及xpath時會在講解。</p>
+<p>再來，既然我們定位到了網頁元素，則我們就要發揮selenium的強項了，就是模擬使用者對網頁的互動，這邊我們透過下圖講解兩個例子。<br><img data-src="/Scraping-Basics-Selenium/05.png"><br>這邊我們的目標是要進去yt，蒐集不同關鍵字搜尋後的影片，因此我們先建立一個list做作search_keys，裡面有著我們之後要輸入進搜尋欄的搜尋關鍵字。<br>則首先是element.send_keys()，我們先定位到搜尋欄位置後，將其命名為search_box，則search_box.send_keys()就能讓我們輸入關鍵字進去。<br>再來就是element.click()，在輸入進去後，我們還要再定位到yt網頁的搜尋按鈕上，在這裡，我們將其命名為search_box，則search_box.click()就能讓selenium模擬使用者對著搜尋按鈕按下滑鼠左鍵的這個動作。<br>就像這樣<br><img data-src="/Scraping-Basics-Selenium/06.png"><br>其實只要有這基本的動作，我們就能讓selenium動起來了，就像真人一樣互動，當然selenium還有更多的功能，像是WebDriverWait等等的功能，但這邊就不多做贅述了，我們明天會在講使用selenium常遇到的問題，其實很多都跟網頁載入時間有關。</p>
+<p>喔對了，突然想到的小補充，上圖的範例其實就是之後其中一個專題內容，目標正是要讓selenium幫我們整理出想要的影片並輸出到discord上，因此也可以預見之後的專題應該會出現很多vt剪輯。<br><img data-src="/Scraping-Basics-Selenium/07.png"></p>
+<h3 id="Selenium的常見Bug"><a href="#Selenium的常見Bug" class="headerlink" title="Selenium的常見Bug"></a>Selenium的常見Bug</h3><p>首先，第一個是版本問題，這其實是我前天在挖之前的程式出來跑時才發現的問題，<br><img data-src="/Scraping-Basics-Selenium/01-1.png"><br>這問題基本上是driver跟瀏覽器版本不支援，最簡單只要重新下載對應版本的webdriver就好。</p>
+<p>接著是這個，<br><img data-src="/Scraping-Basics-Selenium/02-1.png"><br>這代表著selenium無法找到你所指定的元素，一般來說，如果不是你定位位置錯誤，<br>八成就是網頁還沒有完整載入，就使selemium搜尋元素。<br>此時，我們可以試著使用簡單的方法，time.sleep()，使程式整體暫停n秒，也可以配合try except使用。<br>當然，selenium針對這個問題也有開發相關函式，首先是顯式等待，<br><img data-src="/Scraping-Basics-Selenium/03-1.png"><br>在這邊的意思是，我們針對所給予的元素，等待10秒，每0.2秒檢查是否出現，如果出現了就繼續，<br>如果10秒內還沒出現則報錯。<br>另外一種則是隱式等待，<br><img data-src="/Scraping-Basics-Selenium/04-1.png"><br>相對於顯式等待是針對個別元素是否生成，隱式等待則是針對整個頁面，以上圖為例，這邊就是讓整個程式暫停，<br>給予瀏覽器10秒的時間，如果10秒內”整個頁面都已經生成完成”(講得直白一點其實就是我們頁面左上角的圈圈不再轉動)，則繼續程式運行，如果10內還沒載完，則報錯，因此可以看的出來，相對於顯式等待，隱式等待跟強制等待可能會要花費更久的時間。</p>
 ]]></content>
       <categories>
         <category>程式</category>
@@ -392,22 +392,6 @@
       </tags>
   </entry>
   <entry>
-    <title>越式涼拌</title>
-    <url>/Vietnamese-Cold-Salad/</url>
-    <content><![CDATA[<h3 id="醬料"><a href="#醬料" class="headerlink" title="醬料"></a>醬料</h3><p>1.蒜頭、辣椒切碎<br>2.加入糖一匙<br>3.魚露兩匙<br>4.檸檬汁一顆的量<span id="more"></span><br>5.白胡椒粉一小匙<br>6.加入兩匙水、拌勻</p>
-<p>再切個青木瓜絲、紅蘿蔔絲、小黃瓜絲丟進去拌一拌，灑上一把鹹花生就完成了。</p>
-<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
-]]></content>
-      <categories>
-        <category>飲食</category>
-        <category>食譜</category>
-      </categories>
-      <tags>
-        <tag>自製</tag>
-        <tag>食譜</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>清蒸鱸魚食譜</title>
     <url>/Steamed-Bass-Recipe/</url>
     <content><![CDATA[<h3 id="所需材料："><a href="#所需材料：" class="headerlink" title="所需材料："></a>所需材料：</h3><ul>
@@ -426,6 +410,22 @@
 </ul>
 <h3 id="魚的處理："><a href="#魚的處理：" class="headerlink" title="魚的處理："></a>魚的處理：</h3><p>1.刮除鱗片、修魚鰭<br>2.剪開魚腹、刮除內臟並清洗乾淨<br>3.確認魚的乾淨並在表面劃刀痕<br>4.將洋蔥及豆芽菜洗淨<br>5.洋蔥切條與豆芽並行鋪於盤底<br><img data-src="/Steamed-Bass-Recipe/FISH.jpg" alt="處理完的魚和醬汁"></p>
 <h3 id="調料的處理："><a href="#調料的處理：" class="headerlink" title="調料的處理："></a>調料的處理：</h3><p>6.蒜頭、辣椒切碎<br>7.加入糖一匙<br>8.加入米酒兩匙<br>9.魚露兩匙<br>10.檸檬汁一顆的量<br>11.白胡椒粉一小匙<br>12.加入兩匙水、拌勻<br>13.將魚放入盤內、平均淋上調料<br>14.放入電鍋蒸<br>15.蔥切細絲放上出鍋後的料理<br>16.熱少許油至些許冒煙、淋上蔥絲即可出菜</p>
+<p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>食譜</category>
+      </categories>
+      <tags>
+        <tag>自製</tag>
+        <tag>食譜</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>越式涼拌</title>
+    <url>/Vietnamese-Cold-Salad/</url>
+    <content><![CDATA[<h3 id="醬料"><a href="#醬料" class="headerlink" title="醬料"></a>醬料</h3><p>1.蒜頭、辣椒切碎<br>2.加入糖一匙<br>3.魚露兩匙<br>4.檸檬汁一顆的量<span id="more"></span><br>5.白胡椒粉一小匙<br>6.加入兩匙水、拌勻</p>
+<p>再切個青木瓜絲、紅蘿蔔絲、小黃瓜絲丟進去拌一拌，灑上一把鹹花生就完成了。</p>
 <p><em><strong>好吃到Xin chào&trade;</strong></em><br><strong>筆者：蔡銘揚</strong></p>
 ]]></content>
       <categories>
@@ -561,13 +561,13 @@
       </tags>
   </entry>
   <entry>
-    <title>光電實驗(一) 干涉與繞射</title>
-    <url>/6-Interference-and-Diffraction/</url>
+    <title>光電實驗(一) 光的偏極化現象</title>
+    <url>/5-polarization-of-light/</url>
     <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 干涉與繞射 結報</center><span id="more"></span>
+<center>光電實驗(一) 光的偏極化現象 結報</center><span id="more"></span>
 
 <center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/6-Interference-and-Diffraction.pdf">
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/5-polarization-of-light.pdf">
     <font color=blue> 新分頁開啟結報</font>
 </a>
 </center>]]></content>
@@ -580,13 +580,35 @@
       </tags>
   </entry>
   <entry>
-    <title>光電實驗(一) 光的偏極化現象</title>
-    <url>/5-polarization-of-light/</url>
+    <title>LK-99樣本合成製備</title>
+    <url>/LK-99-Sample-Synthesis-Preparation/</url>
+    <content><![CDATA[<h3 id="所需材料"><a href="#所需材料" class="headerlink" title="所需材料"></a>所需材料</h3><ul>
+<li>PbO</li>
+<li>PbSO4</li>
+<li>Cu</li>
+<li>P<span id="more"></span></li>
+</ul>
+<h3 id="第一步——製備-Lanarkite-Pb2SO5"><a href="#第一步——製備-Lanarkite-Pb2SO5" class="headerlink" title="第一步——製備 Lanarkite, Pb2SO5"></a>第一步——製備 Lanarkite, Pb2SO5</h3><p>PbO及PbSO4之粉末莫爾比1:1，以瑪瑙缽研磨混和均勻<br>接著將混和之粉末轉置進氧化鋁坩堝，放入爐內控溫725°C反應24小時<br>反應完成後應得到樣品為白色，隨後以缽將之磨成粉末</p>
+<h3 id="第二步——製備-磷化亞銅-Cu3P"><a href="#第二步——製備-磷化亞銅-Cu3P" class="headerlink" title="第二步——製備 磷化亞銅, Cu3P"></a>第二步——製備 磷化亞銅, Cu3P</h3><p>Cu及P之粉末以莫爾比3:1混和均勻，並轉置石英管內<br>以10^-5 Torr之真空封存，放入爐內控溫550°C反應48小時<br>反應完成後應得到樣品為灰黑色錠塊，隨後以缽將之磨成粉末</p>
+<h3 id="第三步——製備-LK-99"><a href="#第三步——製備-LK-99" class="headerlink" title="第三步——製備 LK-99"></a>第三步——製備 LK-99</h3><p>Lanarkite和Cu3P莫爾比1:1，瑪瑙缽研磨混和均勻後進行固相反應<br>樣品放進試管中以10^-5 Torr之真空封存，放入925°C之爐內反應10小時<br>反應結束後，將會得到灰黑色的錠塊，並將其切成小薄方片以便電導測定<br>至於其他之分析手法，皆會先磨成粉後再進行</p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>食譜</category>
+      </categories>
+      <tags>
+        <tag>自製</tag>
+        <tag>食譜</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>光電實驗(一) 干涉與繞射</title>
+    <url>/6-Interference-and-Diffraction/</url>
     <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 光的偏極化現象 結報</center><span id="more"></span>
+<center>光電實驗(一) 干涉與繞射 結報</center><span id="more"></span>
 
 <center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/5-polarization-of-light.pdf">
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/6-Interference-and-Diffraction.pdf">
     <font color=blue> 新分頁開啟結報</font>
 </a>
 </center>]]></content>
@@ -619,28 +641,6 @@
       </tags>
   </entry>
   <entry>
-    <title>LK-99樣本合成製備</title>
-    <url>/LK-99-Sample-Synthesis-Preparation/</url>
-    <content><![CDATA[<h3 id="所需材料"><a href="#所需材料" class="headerlink" title="所需材料"></a>所需材料</h3><ul>
-<li>PbO</li>
-<li>PbSO4</li>
-<li>Cu</li>
-<li>P<span id="more"></span></li>
-</ul>
-<h3 id="第一步——製備-Lanarkite-Pb2SO5"><a href="#第一步——製備-Lanarkite-Pb2SO5" class="headerlink" title="第一步——製備 Lanarkite, Pb2SO5"></a>第一步——製備 Lanarkite, Pb2SO5</h3><p>PbO及PbSO4之粉末莫爾比1:1，以瑪瑙缽研磨混和均勻<br>接著將混和之粉末轉置進氧化鋁坩堝，放入爐內控溫725°C反應24小時<br>反應完成後應得到樣品為白色，隨後以缽將之磨成粉末</p>
-<h3 id="第二步——製備-磷化亞銅-Cu3P"><a href="#第二步——製備-磷化亞銅-Cu3P" class="headerlink" title="第二步——製備 磷化亞銅, Cu3P"></a>第二步——製備 磷化亞銅, Cu3P</h3><p>Cu及P之粉末以莫爾比3:1混和均勻，並轉置石英管內<br>以10^-5 Torr之真空封存，放入爐內控溫550°C反應48小時<br>反應完成後應得到樣品為灰黑色錠塊，隨後以缽將之磨成粉末</p>
-<h3 id="第三步——製備-LK-99"><a href="#第三步——製備-LK-99" class="headerlink" title="第三步——製備 LK-99"></a>第三步——製備 LK-99</h3><p>Lanarkite和Cu3P莫爾比1:1，瑪瑙缽研磨混和均勻後進行固相反應<br>樣品放進試管中以10^-5 Torr之真空封存，放入925°C之爐內反應10小時<br>反應結束後，將會得到灰黑色的錠塊，並將其切成小薄方片以便電導測定<br>至於其他之分析手法，皆會先磨成粉後再進行</p>
-]]></content>
-      <categories>
-        <category>飲食</category>
-        <category>食譜</category>
-      </categories>
-      <tags>
-        <tag>自製</tag>
-        <tag>食譜</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>BK樹跟Levenshtein</title>
     <url>/BK-tree-and-Levenshtein/</url>
     <content><![CDATA[<p>Levenshtein距離是兩個字串間，透過新增、更換、刪除下的最少操作次數，透過動態規劃解決。</p>
@@ -657,32 +657,6 @@
       <tags>
         <tag>程式</tag>
         <tag>演算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>哲學系日常EP1 貓貓攝影</title>
-    <url>/Philosophy-Department-Daily-EP1/</url>
-    <content><![CDATA[<p>逛書店看到的一些攝影集</p>
-<span id="more"></span>
-
-<hr>
-<img data-src="01.jpg" height=400>
-淺田家的編排方式，不翻還不知道
-和我對群體肖像的感受差不多，看來路子是對的
-
-<hr>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="02.jpg" height=200></div><div class="group-picture-column"><img data-src="03.jpg" height=200></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="04.jpg" height=200></div><div class="group-picture-column"><img data-src="05.jpg" height=200></div></div></div>
-<p>深瀬昌久<Sasuke>可愛貓貓，記錄愛貓sasuke的幼貓時期，捕捉到的都是幼貓的靈，構圖又充分具備攝影家的功力（也許是老派的</p>
-<hr>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="2-01.jpg" height=200></div><div class="group-picture-column"><img data-src="2-02.jpg" height=200></div></div></div>
-<p>和Sasuke 相對的，拍出成貓的寧靜，老貓與老人互動成趣，構圖相當中庸，攝影家強於的是情境的構築</p>
-<hr>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="3-01.jpg" height=200></div><div class="group-picture-column"><img data-src="3-02.jpg" height=200></div><div class="group-picture-column"><img data-src="3-03.jpg" height=200></div></div></div>
-
-<p>次方有趣，望照辦，只因錢包空空</p>
-]]></content>
-      <tags>
-        <tag>攝影</tag>
       </tags>
   </entry>
   <entry>
@@ -714,6 +688,32 @@
       </categories>
       <tags>
         <tag>結報</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>哲學系日常EP1 貓貓攝影</title>
+    <url>/Philosophy-Department-Daily-EP1/</url>
+    <content><![CDATA[<p>逛書店看到的一些攝影集</p>
+<span id="more"></span>
+
+<hr>
+<img data-src="01.jpg" height=400>
+淺田家的編排方式，不翻還不知道
+和我對群體肖像的感受差不多，看來路子是對的
+
+<hr>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="02.jpg" height=200></div><div class="group-picture-column"><img data-src="03.jpg" height=200></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="04.jpg" height=200></div><div class="group-picture-column"><img data-src="05.jpg" height=200></div></div></div>
+<p>深瀬昌久<Sasuke>可愛貓貓，記錄愛貓sasuke的幼貓時期，捕捉到的都是幼貓的靈，構圖又充分具備攝影家的功力（也許是老派的</p>
+<hr>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="2-01.jpg" height=200></div><div class="group-picture-column"><img data-src="2-02.jpg" height=200></div></div></div>
+<p>和Sasuke 相對的，拍出成貓的寧靜，老貓與老人互動成趣，構圖相當中庸，攝影家強於的是情境的構築</p>
+<hr>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="3-01.jpg" height=200></div><div class="group-picture-column"><img data-src="3-02.jpg" height=200></div><div class="group-picture-column"><img data-src="3-03.jpg" height=200></div></div></div>
+
+<p>次方有趣，望照辦，只因錢包空空</p>
+]]></content>
+      <tags>
+        <tag>攝影</tag>
       </tags>
   </entry>
   <entry>
@@ -749,6 +749,50 @@
       <categories>
         <category>日常廢文</category>
       </categories>
+  </entry>
+  <entry>
+    <title>NTUST遊記EP1-二重疏洪道</title>
+    <url>/NTUST-travel-notes-EP1/</url>
+    <content><![CDATA[<img data-src="01.jpg" alt="" height="400"/>
+<span id="more"></span>
+
+<p>每次經過都看到有人在這邊釣魚<br>我不太確定是死池塘還是有水流經的<br>感覺跟minecraft只有一格水也能釣一樣</p>
+<p>笑死 有人在疏洪道飛空拍機<br>會被罰錢的欸</p>
+<img data-src="02.jpg" alt="" height="400"/>
+
+<p>不少人在種 但面積很小<br>種身體健康的</p>
+<img data-src="03.jpg" alt="" height="400"/>
+
+<p>喔幹這間Qburger好大<br>但我覺得Qburger沒什麼特色<br>比較貴的連鎖美而美</p>
+<img data-src="04.jpg" alt="" height="400"/>
+
+<p>三重稅捐處豆花<br>雖然沒特別好吃 但經過還是會買</p>
+<img data-src="05.jpg" alt="看起來像要求明牌" height="400"/>
+
+<p>萬善公<br>我爸說以前那邊在大家樂的時候都在報明牌、還有夜市。</p>
+<hr>
+<p>剛剛發現二重疏洪道有一塊區域開放給民眾種菜，要抽籤的<br>但感覺不是很好種，那邊颱風來就全部泡水了</p>
+<p><strong>筆者: NTUST So Hard</strong></p>
+]]></content>
+      <categories>
+        <category>日常廢文</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【B級調酒EP2】無酒精琴啤酒</title>
+    <url>/B-class-bartending-EP2/</url>
+    <content><![CDATA[<p>. 雖然不知道為什麼，琴啤酒的存在一直不受到重視。但自從在BiliBili發現這種喝法後，一試便愛上了。個人認為琴啤酒的特點在於啤酒的清爽，和加入的烈酒會決定啤酒的走向，若加入較多酒感濃烈，少量摻入則有類似於精釀的體驗。對於酒量不好或窮鬼來說相當友善。筆者淺見是清爽的程度不下於gin tonic，材料則更易取得<br>. <span id="more"></span><br>. 將啤酒垂直倒入杯中，讓氣泡經由撞擊排空，加入適量琴酒，不須太多，5-10ml即可，杯子隨意<br>.<br>. 這次用了即期品商店的10元無酒精啤酒，簡單的搭配gorden 或是較貴的monkey 47，都有不錯的風味表現<br>.</p>
+<p><strong>推薦指數：★★★★★（懶人必備）</strong></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>酒</category>
+      </categories>
+      <tags>
+        <tag>調酒</tag>
+        <tag>酒譜</tag>
+        <tag>土製</tag>
+      </tags>
   </entry>
   <entry>
     <title>NTUST遊記EP2-樂山雷達站附近</title>
@@ -793,50 +837,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【B級調酒EP2】無酒精琴啤酒</title>
-    <url>/B-class-bartending-EP2/</url>
-    <content><![CDATA[<p>. 雖然不知道為什麼，琴啤酒的存在一直不受到重視。但自從在BiliBili發現這種喝法後，一試便愛上了。個人認為琴啤酒的特點在於啤酒的清爽，和加入的烈酒會決定啤酒的走向，若加入較多酒感濃烈，少量摻入則有類似於精釀的體驗。對於酒量不好或窮鬼來說相當友善。筆者淺見是清爽的程度不下於gin tonic，材料則更易取得<br>. <span id="more"></span><br>. 將啤酒垂直倒入杯中，讓氣泡經由撞擊排空，加入適量琴酒，不須太多，5-10ml即可，杯子隨意<br>.<br>. 這次用了即期品商店的10元無酒精啤酒，簡單的搭配gorden 或是較貴的monkey 47，都有不錯的風味表現<br>.</p>
-<p><strong>推薦指數：★★★★★（懶人必備）</strong></p>
-]]></content>
-      <categories>
-        <category>飲食</category>
-        <category>酒</category>
-      </categories>
-      <tags>
-        <tag>調酒</tag>
-        <tag>酒譜</tag>
-        <tag>土製</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NTUST遊記EP1-二重疏洪道</title>
-    <url>/NTUST-travel-notes-EP1/</url>
-    <content><![CDATA[<img data-src="01.jpg" alt="" height="400"/>
-<span id="more"></span>
-
-<p>每次經過都看到有人在這邊釣魚<br>我不太確定是死池塘還是有水流經的<br>感覺跟minecraft只有一格水也能釣一樣</p>
-<p>笑死 有人在疏洪道飛空拍機<br>會被罰錢的欸</p>
-<img data-src="02.jpg" alt="" height="400"/>
-
-<p>不少人在種 但面積很小<br>種身體健康的</p>
-<img data-src="03.jpg" alt="" height="400"/>
-
-<p>喔幹這間Qburger好大<br>但我覺得Qburger沒什麼特色<br>比較貴的連鎖美而美</p>
-<img data-src="04.jpg" alt="" height="400"/>
-
-<p>三重稅捐處豆花<br>雖然沒特別好吃 但經過還是會買</p>
-<img data-src="05.jpg" alt="看起來像要求明牌" height="400"/>
-
-<p>萬善公<br>我爸說以前那邊在大家樂的時候都在報明牌、還有夜市。</p>
-<hr>
-<p>剛剛發現二重疏洪道有一塊區域開放給民眾種菜，要抽籤的<br>但感覺不是很好種，那邊颱風來就全部泡水了</p>
-<p><strong>筆者: NTUST So Hard</strong></p>
-]]></content>
-      <categories>
-        <category>日常廢文</category>
-      </categories>
-  </entry>
-  <entry>
     <title>光電系隨筆EP1-BAD APPLE!</title>
     <url>/Optoelectronics-Department-Essay-EP1/</url>
     <content><![CDATA[<p>幹，剛才yt又推給我bad apple的二創，是用3D列印機做出bad apple的連續動畫。</p>
@@ -865,6 +865,26 @@
 </a>
 </center>
 ]]></content>
+      <categories>
+        <category>結報</category>
+        <category>國北教自</category>
+      </categories>
+      <tags>
+        <tag>結報</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>獨居蜂旅館(Solitary bee hotel)演講紀錄暨心得</title>
+    <url>/Solitary-bee-hotel/</url>
+    <content><![CDATA[<center>
+獨居蜂旅館(Solitary bee hotel)演講紀錄暨心得
+<span id="more"></span>
+</center>
+<center>
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/Solitary_bee_hotel_111012009.pdf">
+    <font color=blue> 新分頁開啟</font>
+</a>
+</center>]]></content>
       <categories>
         <category>結報</category>
         <category>國北教自</category>
@@ -904,59 +924,26 @@
       </categories>
   </entry>
   <entry>
-    <title>獨居蜂旅館(Solitary bee hotel)演講紀錄暨心得</title>
-    <url>/Solitary-bee-hotel/</url>
-    <content><![CDATA[<center>
-獨居蜂旅館(Solitary bee hotel)演講紀錄暨心得
-<span id="more"></span>
-</center>
-<center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/Solitary_bee_hotel_111012009.pdf">
-    <font color=blue> 新分頁開啟</font>
-</a>
-</center>]]></content>
-      <categories>
-        <category>結報</category>
-        <category>國北教自</category>
-      </categories>
-      <tags>
-        <tag>結報</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>嘉義舊監獄</title>
+    <title>嘉義舊監獄參訪</title>
     <url>/Chiayi-Old-Prison/</url>
-    <content><![CDATA[<h2 id="大門"><a href="#大門" class="headerlink" title="大門"></a>大門</h2><p><img data-src="https://hackmd.io/_uploads/rJgASqJHT.jpg" alt="A7306659-2"></p>
+    <content><![CDATA[<h2 id="大門"><a href="#大門" class="headerlink" title="大門"></a>大門</h2><p><img data-src="https://hackmd.io/_uploads/rJgASqJHT.jpg" alt="A7306659-2"><br>嘉義舊監獄的大門帶有古典的風格但今日所見已非最初的模樣，使建於1919年，時為磚造，為嘉義支所<a href="https://zh.wikipedia.org/zh-tw/%E5%98%89%E7%BE%A9%E8%88%8A%E7%9B%A3%E7%8D%84">1</a>。昭和大地震(1927-1930的三次強震)使嘉義監獄建築受損嚴重，舊監獄大門也不例外未能幸免於難。<br>    - <img data-src="https://hackmd.io/_uploads/H1QeUqyBT.png" alt="image"><br>1919年修建的大門，中央拱門更高，更加凸顯ABA的羅馬凱旋門的特徵。取自<a href="https://cyop.mjac.moj.gov.tw/1281199/1283948/1291469/1298916/post">嘉義舊監獄官網</a><br> <img data-src="https://hackmd.io/_uploads/BkDZL91Hp.png" alt="image"><br>近似於羅馬凱旋門的樣式，到了新古典時期也能看見這種建築類型的重新運用，並且功能變為承擔較輕度的防衛用途<a href="%E8%B3%87%E6%96%99%E4%BE%86%E6%BA%90%EF%BC%9A%E6%87%89%E8%A9%B2%E7%82%BA%E8%B2%A2%E5%B8%83%E9%87%8C%E5%A5%87%E3%80%8A%E8%97%9D%E8%A1%93%E7%9A%84%E6%95%85%E4%BA%8B%E3%80%8B">2</a>。<br>    取自<a href="https://zhuanlan.zhihu.com/p/346513367">带你深度解析古罗马君士坦丁凯旋门的艺术价值 - 知乎 (zhihu.com)</a></p>
+<h3 id="大門內部"><a href="#大門內部" class="headerlink" title="大門內部"></a>大門內部</h3><p><img data-src="https://hackmd.io/_uploads/SyMGUckH6.jpg" alt="A7306662-2"><br>符合磚造大拱門(1919年建造)尺寸的舊大門，一直使用至今，由整片的阿里山千年檜木製成，當時嘉義由於阿里山鐵路通車，幾乎所有位於嘉義的建築都使用了檜木(大概是舊監獄最有錢的部分了)。</p>
+<h2 id="建築主體-官署、中央台與囚室"><a href="#建築主體-官署、中央台與囚室" class="headerlink" title="建築主體(官署、中央台與囚室)"></a>建築主體(官署、中央台與囚室)</h2><p><img data-src="https://hackmd.io/_uploads/rysGU5kHT.jpg" alt="A7306663-2"><br>並未用油漆保護住的紅磚結構<br> <img data-src="https://hackmd.io/_uploads/SyDX8qJr6.jpg" alt="A7306666-2"><br><img data-src="https://hackmd.io/_uploads/H1PQIqJSp.jpg" alt="A7306664-2"><br>配重式的拉窗，窗框內裝有與玻璃窗戶等重的配重，窗戶可以自由的上下推拉，並任意停放</p>
+<h3 id="中央台"><a href="#中央台" class="headerlink" title="中央台"></a>中央台</h3><p><img data-src="https://hackmd.io/_uploads/rJ_NIckSa.jpg" alt="A7306705-2"><br>中央台向大門處望去，上方為神龕，由於嘉義監獄供奉的天照大神，在嘉義新監獄建成時拒絕遷往新監(天照大神入鄉隨俗的透過擲筊表示的)，於是仍舊由舊監獄供奉<br><img data-src="https://hackmd.io/_uploads/H1XVUcJra.jpg" alt="A7306669-2"><br>在中央台右側上方展示了竹編牆的結構，竹編牆是早期建築常見的牆體類型，廣泛可見於日本19-20世紀所建造的民間建築。施工流程首先是編織的竹篾，然後用黏土、混合當地有益於牆體的材料，比如台灣的建物普遍會混合糯米</p>
+<h3 id="囚室"><a href="#囚室" class="headerlink" title="囚室"></a>囚室</h3><p>嘉義監獄是當時流行的賓州式監獄，又稱為放射型管理建築，是一種特殊的監獄設計，其特點是將囚室沿著中央監控塔放射狀分佈，使獄警可以從中央塔上監控所有囚室。這種設計在當時非常流行，並被廣泛應用於各地的監獄建設。嘉義舊監獄就是這種設計的一個典型例子，並且是目前全台唯一保存的日治時期監獄建築，其餘地方皆因為地段精華，基於經濟因素未能保留<br> <img data-src="https://hackmd.io/_uploads/H1Gr8cJrp.jpg" alt="A7306672-2"><br>在囚室上方的空間用於提供獄警行走、監視，被稱為貓道、空中行走道</p>
 <ul>
-<li>帶有古典風格的大門，1919年修建時為磚造，昭和大地震使嘉義監獄受損嚴重，大門也不例外<ul>
-<li><img data-src="https://hackmd.io/_uploads/H1QeUqyBT.png" alt="image"><br>取自<a href="https://cyop.mjac.moj.gov.tw/1281199/1283948/1291469/1298916/post">建築構造-RC構造-建築特色-國定古蹟嘉義舊監獄 (moj.gov.tw)</a></li>
-<li>1919年修建的大門，中央拱門更高，更加凸顯ABA的羅馬建築特色</li>
-<li><img data-src="https://hackmd.io/_uploads/BkDZL91Hp.png" alt="image"><br>取自<a href="https://zhuanlan.zhihu.com/p/346513367">带你深度解析古罗马君士坦丁凯旋门的艺术价值 - 知乎 (zhihu.com)</a></li>
-<li><img data-src="https://hackmd.io/_uploads/SyMGUckH6.jpg" alt="A7306662-2"><br>符合磚造大拱門尺寸的舊大門，一直使用至今，由整片的阿里山千年檜木製成，(大概是舊監獄最有錢的部分，當時嘉義由於阿里山鐵路通車，幾乎所有位於嘉義的建築都使用了檜木</li>
+<li>早期有開放遊客上到貓道體驗，但現在並沒有</li>
 </ul>
-</li>
-<li><img data-src="https://hackmd.io/_uploads/rysGU5kHT.jpg" alt="A7306663-2"><br>並未用油漆保護住的紅磚結構</li>
-<li><img data-src="https://hackmd.io/_uploads/SyDX8qJr6.jpg" alt="A7306666-2"><br><img data-src="https://hackmd.io/_uploads/H1PQIqJSp.jpg" alt="A7306664-2"><br>配重式拉窗</li>
-</ul>
-<h2 id="中央台"><a href="#中央台" class="headerlink" title="中央台"></a>中央台</h2><ul>
-<li><img data-src="https://hackmd.io/_uploads/H1XVUcJra.jpg" alt="A7306669-2"><br>展示竹編牆的結構，首先是編織的竹篾，然後用黏土、混合當地有益於牆體的材料，比如台灣的建物普遍會混合糯米</li>
-<li><img data-src="https://hackmd.io/_uploads/rJ_NIckSa.jpg" alt="A7306705-2"><br>中央台向大門處望去，上方為神龕，由於嘉義監獄供奉的天照大神，在嘉義新監獄建成時拒絕遷往新監(天照大神入鄉隨俗的透過擲筊表示的)，於是仍舊由舊監獄供奉</li>
-<li>嘉義監獄是當時流行的維吉尼亞式監獄</li>
-</ul>
-<h2 id="囚室"><a href="#囚室" class="headerlink" title="囚室"></a>囚室</h2><ul>
-<li><img data-src="https://hackmd.io/_uploads/H1Gr8cJrp.jpg" alt="A7306672-2"><br>在囚室上方的空間用於提供獄警行走、監視，被稱為貓道、空中行走道</li>
-<li>早期有開放，但現在並沒有</li>
-<li><img data-src="https://hackmd.io/_uploads/BkvSI5JHp.jpg" alt="A7306674-2"><br>送食口，可以看到監獄極厚的牆體，位於正常人胸口高度</li>
-<li><img data-src="https://hackmd.io/_uploads/S1iHUqkBT.jpg" alt="A7306676-2"><br>民國時期修建的水池，由當時關押的犯人製作，該兩塔的原型是高雄龍虎塔，隱含了犯人的思鄉情懷</li>
-<li><img data-src="https://hackmd.io/_uploads/ByQIL91rT.jpg" alt="A7306680-2"><br>為在水池右側的水牢</li>
-<li><img data-src="https://hackmd.io/_uploads/r1_ILcySp.jpg" alt="A7306683-2"><br>犯人的工廠雨淋板</li>
-<li><img data-src="https://hackmd.io/_uploads/SJEv85JBa.jpg" alt="A7306689-2"><br>廁所中馬桶的朝向為向外，顯示毫不介意犯人隱私的設計思路，側面回應當時觀念對於犯人應該給予懲治，而非感化</li>
-<li><img data-src="https://hackmd.io/_uploads/S1cPI5JHa.jpg" alt="A7306690-2"><br>監獄藝術作品，明顯描繪了死刑犯人，右側的腳鐐綁了一千元鈔票，用於感謝行刑者，而行刑者則需要將錢花完，不能存入銀行。死刑犯的腳鐐在當時相當受犯人青睞，並不避忌死人，而是奉行”人不能死兩次”的觀念，期待配戴以行刑犯人的腳鐐</li>
-<li><img data-src="https://hackmd.io/_uploads/B1Ed89Jra.jpg" alt="A7306691-2"><br>犯人的洗浴地方，直到民國才開始在冬天有限的提供熱水。<img data-src="https://hackmd.io/_uploads/SJ9_UqJra.jpg" alt="A7306693-2"><br>香菇</li>
+<p> <img data-src="https://hackmd.io/_uploads/BkvSI5JHp.jpg" alt="A7306674-2"><br>送食口，可以看到監獄極厚的牆體，該送食口位於正常成年人胸口高度</p>
+<h2 id="花園"><a href="#花園" class="headerlink" title="花園"></a>花園</h2><p><img data-src="https://hackmd.io/_uploads/S1iHUqkBT.jpg" alt="A7306676-2"><br>民國時期修建的水池，由當時關押的犯人製作。由於犯人來自各地，便帶有犯人所來源地的特色，而圖中該兩塔的原型則是高雄龍虎塔，隱含了犯人的思鄉情懷<br> <img data-src="https://hackmd.io/_uploads/ByQIL91rT.jpg" alt="A7306680-2"><br>為在水池右側的水牢</p>
+<h2 id="工廠"><a href="#工廠" class="headerlink" title="工廠"></a>工廠</h2><p> <img data-src="https://hackmd.io/_uploads/r1_ILcySp.jpg" alt="A7306683-2"><br>犯人工廠建築的雨淋板<br> <img data-src="https://hackmd.io/_uploads/SJEv85JBa.jpg" alt="A7306689-2"><br>廁所中馬桶的朝向為向外，顯示毫不介意犯人隱私的設計思路，側面回應監獄管理與社會都流行著對於犯人應該給予懲治，而非感化的觀念。<br> <img data-src="https://hackmd.io/_uploads/S1cPI5JHa.jpg" alt="A7306690-2"><br>監獄藝術作品，明顯描繪了死刑犯人，右側的腳鐐綁了一千元鈔票，用於感謝行刑者，而行刑者則需要將錢花完，不能存入銀行。死刑犯的腳鐐在當時相當受犯人青睞，並不避忌死人，而是奉行”人不能死兩次”的觀念，期待配戴以行刑犯人的腳鐐</p>
+<h3 id="工廠外一隅"><a href="#工廠外一隅" class="headerlink" title="工廠外一隅"></a>工廠外一隅</h3><p><img data-src="https://hackmd.io/_uploads/B1Ed89Jra.jpg" alt="A7306691-2"><br>工廠外即是犯人的洗浴地方，直到民國才開始在冬天有限的提供熱水。左側的架子則是犯人的晾衣架，後方建築則為監獄囚室。</p>
+<ul>
+<li><img data-src="https://hackmd.io/_uploads/SJ9_UqJra.jpg" alt="A7306693-2"><br>香菇</li>
 </ul>
 <h2 id="女子宿舍"><a href="#女子宿舍" class="headerlink" title="女子宿舍"></a>女子宿舍</h2><ul>
-<li><img data-src="https://hackmd.io/_uploads/BygYL9kSp.jpg" alt="A7306696-2"><br>放飯口位於地上，顯示當時男女尊卑</li>
-<li><img data-src="https://hackmd.io/_uploads/rJHKU91rp.jpg" alt="A7306698-2"><br>育嬰用品，懷孕女犯人被允許在獄中撫養小孩直到小孩三歲</li>
+<li><img data-src="https://hackmd.io/_uploads/BygYL9kSp.jpg" alt="A7306696-2"><br>女子宿舍的放飯口位於地上，對比於男子囚舍位於胸口高度的放飯口，顯示當時男女尊卑</li>
+<li><img data-src="https://hackmd.io/_uploads/rJHKU91rp.jpg" alt="A7306698-2"><br>館內象徵性的擺放育嬰用品，當時懷孕的女犯人被允許在獄中撫養小孩直到小孩三歲。</li>
 </ul>
 ]]></content>
       <categories>
