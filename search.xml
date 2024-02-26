@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>哲學系發癲 EP1</title>
-    <url>/Philosophy-Department-Craziness/</url>
-    <content><![CDATA[<p>原來我開的笑話都指向空虛的所指<br>我還以為你是一個真實他者</p>
-<span id="more"></span>
-<p>沒想到是個大他者<br>我的能指只是傳達了純粹意識形態<br>我們的關係之間連一場遊戲都玩不成</p>
-<center><img data-src="lulu00.jpg" height=400>
-
-<p><a href="https://www.pixiv.net/artworks/101402823/"><strong>圖源</strong></a></center></p>
-]]></content>
-      <categories>
-        <category>日常廢文</category>
-      </categories>
-      <tags>
-        <tag>哲學</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【B級調酒EP1】</title>
     <url>/B-class-bartending-EP1/</url>
     <content><![CDATA[<p>覺旅咖啡英式午餐茶+蘇格蘭威士忌 </p>
@@ -33,6 +16,61 @@
         <tag>調酒</tag>
         <tag>酒譜</tag>
         <tag>土製</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>哲學系發癲 EP1</title>
+    <url>/Philosophy-Department-Craziness/</url>
+    <content><![CDATA[<p>原來我開的笑話都指向空虛的所指<br>我還以為你是一個真實他者<br>沒想到是個大他者<br>我的能指只是傳達了純粹意識形態<br>我們的關係之間連一場遊戲都玩不成</p>
+<span id="more"></span>
+
+<center><img data-src="lulu00.jpg" height=400>
+
+<p><a href="https://www.pixiv.net/artworks/101402823/"><strong>圖源</strong></a></center></p>
+]]></content>
+      <categories>
+        <category>日常廢文</category>
+      </categories>
+      <tags>
+        <tag>哲學</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title> 爬蟲基礎入門: Requests</title>
+    <url>/Scraping-Basics-Requests/</url>
+    <content><![CDATA[<p>本系列預設各位擁有基本的python能力，對各種資料結構、套件、模組等有一定概念就行了。<br>本文的範例都是在python 3.10下操作的。</p>
+<h3 id="requests是什麼"><a href="#requests是什麼" class="headerlink" title="requests是什麼?"></a>requests是什麼?</h3><p>簡單來說就是能讓你抓取整個網頁的東西，也能夠丟上去一些東西。<br>比較常用到的有下列功能。</p>
+<ul>
+<li>get</li>
+<li>post</li>
+<li>session</li>
+</ul>
+<span id="more"></span>
+
+<p>python預設並沒有安裝，所以要先用pip安裝下。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
+
+<p>安裝完後在寫程式前也記得先import</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br></pre></td></tr></table></figure>
+
+<h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><p>基本上就是抓下網頁。在抓取網頁時加上昨天提到的header比較不會被擋下來。</p>
+<p>舉例來說:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">	<span class="string">&#x27;Users-agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (X11; Ubuntu; Linux x86 64; rv:91.0) Gecko/20100101 Firefox/91.0&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">&#x27;你想爬的網站&#x27;</span></span><br><span class="line">r = requests.get(url, headers = headers)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(r.text)</span><br></pre></td></tr></table></figure>
+
+<p>上述的程式應該會把網頁的html印在終端機，<br>可以填入各種網址試試看這樣的程式會印出什麼。<br>當然單純只做這樣被擋下來而只會顯示<code>respone&lt;XXX&gt;</code>的機率也不低就是。<br>也可以試試看換個header看網頁會不會有差異。</p>
+<p>總之抓下來的單純html當然是沒什麼用，要解析html並取出其中有用的資訊的話就要靠後面幾天會提到的bs4跟lxml了。</p>
+<h3 id="post"><a href="#post" class="headerlink" title="post"></a>post</h3><p>能夠丟字串或json檔上去，在需要給網站資訊時會用到。<br>舉例來說，投票機器人。<br>但一時之間想不到什麼很好的網站舉例。</p>
+<h3 id="session"><a href="#session" class="headerlink" title="session"></a>session</h3><p>能夠在多個請求中保持一些數據。<br>如果網站會用到cookie的話就需要使用這個。</p>
+<p>舉例來說你用session登入一個網站後，之後在用這個物件抓取該網站其他頁面也會默認你是登入的。<br>但一時之間想不到什麼很好的網站舉例。</p>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>爬蟲</category>
+      </categories>
+      <tags>
+        <tag>爬蟲</tag>
+        <tag>程式</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -101,44 +139,6 @@
       </tags>
   </entry>
   <entry>
-    <title> 爬蟲基礎入門: Requests</title>
-    <url>/Scraping-Basics-Requests/</url>
-    <content><![CDATA[<p>本系列預設各位擁有基本的python能力，對各種資料結構、套件、模組等有一定概念就行了。<br>本文的範例都是在python 3.10下操作的。</p>
-<h3 id="requests是什麼"><a href="#requests是什麼" class="headerlink" title="requests是什麼?"></a>requests是什麼?</h3><p>簡單來說就是能讓你抓取整個網頁的東西，也能夠丟上去一些東西。<br>比較常用到的有下列功能。</p>
-<ul>
-<li>get</li>
-<li>post</li>
-<li>session</li>
-</ul>
-<span id="more"></span>
-
-<p>python預設並沒有安裝，所以要先用pip安裝下。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
-
-<p>安裝完後在寫程式前也記得先import</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br></pre></td></tr></table></figure>
-
-<h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><p>基本上就是抓下網頁。在抓取網頁時加上昨天提到的header比較不會被擋下來。</p>
-<p>舉例來說:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">	<span class="string">&#x27;Users-agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (X11; Ubuntu; Linux x86 64; rv:91.0) Gecko/20100101 Firefox/91.0&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">&#x27;你想爬的網站&#x27;</span></span><br><span class="line">r = requests.get(url, headers = headers)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(r.text)</span><br></pre></td></tr></table></figure>
-
-<p>上述的程式應該會把網頁的html印在終端機，<br>可以填入各種網址試試看這樣的程式會印出什麼。<br>當然單純只做這樣被擋下來而只會顯示<code>respone&lt;XXX&gt;</code>的機率也不低就是。<br>也可以試試看換個header看網頁會不會有差異。</p>
-<p>總之抓下來的單純html當然是沒什麼用，要解析html並取出其中有用的資訊的話就要靠後面幾天會提到的bs4跟lxml了。</p>
-<h3 id="post"><a href="#post" class="headerlink" title="post"></a>post</h3><p>能夠丟字串或json檔上去，在需要給網站資訊時會用到。<br>舉例來說，投票機器人。<br>但一時之間想不到什麼很好的網站舉例。</p>
-<h3 id="session"><a href="#session" class="headerlink" title="session"></a>session</h3><p>能夠在多個請求中保持一些數據。<br>如果網站會用到cookie的話就需要使用這個。</p>
-<p>舉例來說你用session登入一個網站後，之後在用這個物件抓取該網站其他頁面也會默認你是登入的。<br>但一時之間想不到什麼很好的網站舉例。</p>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>爬蟲</category>
-      </categories>
-      <tags>
-        <tag>爬蟲</tag>
-        <tag>程式</tag>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Discord Bot-基本架構</title>
     <url>/Discord-Bot-Basic-structure/</url>
     <content><![CDATA[<p>首先先用一個最基本的機器人來示範。請打開一個python檔並鍵入以下內容:</p>
@@ -167,24 +167,6 @@
 <h3 id="if-name-“-main-“"><a href="#if-name-“-main-“" class="headerlink" title="if __name__ &#x3D;&#x3D; “__main__“:"></a>if __name__ &#x3D;&#x3D; “__main__“:</h3><p>這行就是確保你是直接執行了這檔案才會跑以下的指令。<br>bot.run()的括號中間輸入您昨天取得的token碼。</p>
 <hr>
 <p>接著就讓機器人上線並邀請你的機器人進自己的伺服器來玩玩吧。<br>也可以試著改一些設定，或甚至嘗試一些你在官方API找到的功能。<br>看不太懂上面和官方API到底在講什麼鬼的也沒關係，後面跟著做就會漸漸熟悉了。</p>
-]]></content>
-      <categories>
-        <category>程式</category>
-        <category>Discord bot</category>
-      </categories>
-      <tags>
-        <tag>程式</tag>
-        <tag>python</tag>
-        <tag>Discord</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Discord Bot-創建一隻bot</title>
-    <url>/Discord-Bot-create-a-bot/</url>
-    <content><![CDATA[<p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
-<span id="more"></span>
-<p><img data-src="/Discord-Bot-create-a-bot/20152706MBGmHIhGdS.png"><br>大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。</p>
-<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img data-src="/Discord-Bot-create-a-bot/20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img data-src="/Discord-Bot-create-a-bot/20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img data-src="/Discord-Bot-create-a-bot/20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
 ]]></content>
       <categories>
         <category>程式</category>
@@ -233,6 +215,24 @@
 <p>而load回來的話可以發現指令有反應了，help中也看的到了。<br><img data-src="/Discord-Bot-Cogs/20152706uqPycyubVO.png"></p>
 <hr>
 <p>前述的的程式結構較簡單可能沒什麼感覺，但要是程式複雜到如下圖能夠先unload一塊調整完後再load回去還是挺方便的。<br><img data-src="/Discord-Bot-Cogs/20152706kGyb4P4XHd.png"></p>
+]]></content>
+      <categories>
+        <category>程式</category>
+        <category>Discord bot</category>
+      </categories>
+      <tags>
+        <tag>程式</tag>
+        <tag>python</tag>
+        <tag>Discord</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Discord Bot-創建一隻bot</title>
+    <url>/Discord-Bot-create-a-bot/</url>
+    <content><![CDATA[<p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
+<span id="more"></span>
+<p><img data-src="/Discord-Bot-create-a-bot/20152706MBGmHIhGdS.png"><br>大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。</p>
+<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img data-src="/Discord-Bot-create-a-bot/20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img data-src="/Discord-Bot-create-a-bot/20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img data-src="/Discord-Bot-create-a-bot/20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
 ]]></content>
       <categories>
         <category>程式</category>
@@ -502,13 +502,13 @@
       </tags>
   </entry>
   <entry>
-    <title>光電實驗(一) 幾何光學基本定律</title>
-    <url>/2-Fundamental-Laws-of-Geometric-Optics/</url>
+    <title>光電實驗(一) 擴束與平行光束</title>
+    <url>/3-Expanded-Beam-and-Parallel-Beam/</url>
     <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 幾何光學基本定律 結報</center><span id="more"></span>
+<center>光電實驗(一) 擴束與平行光束 結報</center><span id="more"></span>
 
 <center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/2-Fundamental-Laws-of-Geometric-Optics.pdf">
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/3-Expanded-Beam-and-Parallel-Beam.pdf">
     <font color=blue> 新分頁開啟結報</font>
 </a>
 </center>]]></content>
@@ -521,13 +521,13 @@
       </tags>
   </entry>
   <entry>
-    <title>光電實驗(一) 擴束與平行光束</title>
-    <url>/3-Expanded-Beam-and-Parallel-Beam/</url>
+    <title>光電實驗(一) 幾何光學基本定律</title>
+    <url>/2-Fundamental-Laws-of-Geometric-Optics/</url>
     <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 擴束與平行光束 結報</center><span id="more"></span>
+<center>光電實驗(一) 幾何光學基本定律 結報</center><span id="more"></span>
 
 <center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/3-Expanded-Beam-and-Parallel-Beam.pdf">
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/2-Fundamental-Laws-of-Geometric-Optics.pdf">
     <font color=blue> 新分頁開啟結報</font>
 </a>
 </center>]]></content>
@@ -580,6 +580,25 @@
       </tags>
   </entry>
   <entry>
+    <title>光電實驗(一) 干涉與繞射</title>
+    <url>/6-Interference-and-Diffraction/</url>
+    <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
+<center>光電實驗(一) 干涉與繞射 結報</center><span id="more"></span>
+
+<center>
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/6-Interference-and-Diffraction.pdf">
+    <font color=blue> 新分頁開啟結報</font>
+</a>
+</center>]]></content>
+      <categories>
+        <category>結報</category>
+        <category>成大光電</category>
+      </categories>
+      <tags>
+        <tag>結報</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LK-99樣本合成製備</title>
     <url>/LK-99-Sample-Synthesis-Preparation/</url>
     <content><![CDATA[<h3 id="所需材料"><a href="#所需材料" class="headerlink" title="所需材料"></a>所需材料</h3><ul>
@@ -599,25 +618,6 @@
       <tags>
         <tag>自製</tag>
         <tag>食譜</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>光電實驗(一) 干涉與繞射</title>
-    <url>/6-Interference-and-Diffraction/</url>
-    <content><![CDATA[<center>國立成功大學光電科學與工程學系</center>
-<center>光電實驗(一) 干涉與繞射 結報</center><span id="more"></span>
-
-<center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/6-Interference-and-Diffraction.pdf">
-    <font color=blue> 新分頁開啟結報</font>
-</a>
-</center>]]></content>
-      <categories>
-        <category>結報</category>
-        <category>成大光電</category>
-      </categories>
-      <tags>
-        <tag>結報</tag>
       </tags>
   </entry>
   <entry>
@@ -751,6 +751,22 @@
       </categories>
   </entry>
   <entry>
+    <title>【B級調酒EP2】無酒精琴啤酒</title>
+    <url>/B-class-bartending-EP2/</url>
+    <content><![CDATA[<p>. 雖然不知道為什麼，琴啤酒的存在一直不受到重視。但自從在BiliBili發現這種喝法後，一試便愛上了。個人認為琴啤酒的特點在於啤酒的清爽，和加入的烈酒會決定啤酒的走向，若加入較多酒感濃烈，少量摻入則有類似於精釀的體驗。對於酒量不好或窮鬼來說相當友善。筆者淺見是清爽的程度不下於gin tonic，材料則更易取得<br>. <span id="more"></span><br>. 將啤酒垂直倒入杯中，讓氣泡經由撞擊排空，加入適量琴酒，不須太多，5-10ml即可，杯子隨意<br>.<br>. 這次用了即期品商店的10元無酒精啤酒，簡單的搭配gorden 或是較貴的monkey 47，都有不錯的風味表現<br>.</p>
+<p><strong>推薦指數：★★★★★（懶人必備）</strong></p>
+]]></content>
+      <categories>
+        <category>飲食</category>
+        <category>酒</category>
+      </categories>
+      <tags>
+        <tag>調酒</tag>
+        <tag>酒譜</tag>
+        <tag>土製</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>NTUST遊記EP1-二重疏洪道</title>
     <url>/NTUST-travel-notes-EP1/</url>
     <content><![CDATA[<img data-src="01.jpg" alt="" height="400"/>
@@ -777,22 +793,6 @@
       <categories>
         <category>日常廢文</category>
       </categories>
-  </entry>
-  <entry>
-    <title>【B級調酒EP2】無酒精琴啤酒</title>
-    <url>/B-class-bartending-EP2/</url>
-    <content><![CDATA[<p>. 雖然不知道為什麼，琴啤酒的存在一直不受到重視。但自從在BiliBili發現這種喝法後，一試便愛上了。個人認為琴啤酒的特點在於啤酒的清爽，和加入的烈酒會決定啤酒的走向，若加入較多酒感濃烈，少量摻入則有類似於精釀的體驗。對於酒量不好或窮鬼來說相當友善。筆者淺見是清爽的程度不下於gin tonic，材料則更易取得<br>. <span id="more"></span><br>. 將啤酒垂直倒入杯中，讓氣泡經由撞擊排空，加入適量琴酒，不須太多，5-10ml即可，杯子隨意<br>.<br>. 這次用了即期品商店的10元無酒精啤酒，簡單的搭配gorden 或是較貴的monkey 47，都有不錯的風味表現<br>.</p>
-<p><strong>推薦指數：★★★★★（懶人必備）</strong></p>
-]]></content>
-      <categories>
-        <category>飲食</category>
-        <category>酒</category>
-      </categories>
-      <tags>
-        <tag>調酒</tag>
-        <tag>酒譜</tag>
-        <tag>土製</tag>
-      </tags>
   </entry>
   <entry>
     <title>NTUST遊記EP2-樂山雷達站附近</title>
@@ -837,17 +837,6 @@
       </tags>
   </entry>
   <entry>
-    <title>光電系隨筆EP1-BAD APPLE!</title>
-    <url>/Optoelectronics-Department-Essay-EP1/</url>
-    <content><![CDATA[<p>幹，剛才yt又推給我bad apple的二創，是用3D列印機做出bad apple的連續動畫。</p>
-<span id="more"></span>
-<p>害我突然想到，假設將連續動畫切割成好幾偵，那每一偵應該都可以視為是2D函數的分布，如果對其做2D-FFT，那就可以得到組成這偵動畫的空間頻率分布。接著因為光波導內部的mode本來就是不同頻率的sin函數，所以模擬上，如果有無限多個光波導，其具有不同的結構使得每個波導的propagating mode不同，那理論上只要透過對不同波導輸光，最後耦合在一起，那是不是就能透過不同的空間頻率組合，最後合成出那一偵的動畫。</p>
-]]></content>
-      <categories>
-        <category>日常廢文</category>
-      </categories>
-  </entry>
-  <entry>
     <title>十分鐘一堂雙語自然課~小學生也能聽得懂的近代物理（大概）</title>
     <url>/10-minute-phy-lesson/</url>
     <content><![CDATA[<center>
@@ -874,24 +863,15 @@
       </tags>
   </entry>
   <entry>
-    <title>獨居蜂旅館(Solitary bee hotel)演講紀錄暨心得</title>
-    <url>/Solitary-bee-hotel/</url>
-    <content><![CDATA[<center>
-獨居蜂旅館(Solitary bee hotel)演講紀錄暨心得
+    <title>光電系隨筆EP1-BAD APPLE!</title>
+    <url>/Optoelectronics-Department-Essay-EP1/</url>
+    <content><![CDATA[<p>幹，剛才yt又推給我bad apple的二創，是用3D列印機做出bad apple的連續動畫。</p>
 <span id="more"></span>
-</center>
-<center>
-<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/Solitary_bee_hotel_111012009.pdf">
-    <font color=blue> 新分頁開啟</font>
-</a>
-</center>]]></content>
+<p>害我突然想到，假設將連續動畫切割成好幾偵，那每一偵應該都可以視為是2D函數的分布，如果對其做2D-FFT，那就可以得到組成這偵動畫的空間頻率分布。接著因為光波導內部的mode本來就是不同頻率的sin函數，所以模擬上，如果有無限多個光波導，其具有不同的結構使得每個波導的propagating mode不同，那理論上只要透過對不同波導輸光，最後耦合在一起，那是不是就能透過不同的空間頻率組合，最後合成出那一偵的動畫。</p>
+]]></content>
       <categories>
-        <category>結報</category>
-        <category>國北教自</category>
+        <category>日常廢文</category>
       </categories>
-      <tags>
-        <tag>結報</tag>
-      </tags>
   </entry>
   <entry>
     <title>鰲鼓溼地觀察紀錄</title>
@@ -922,6 +902,26 @@
       <categories>
         <category>日常廢文</category>
       </categories>
+  </entry>
+  <entry>
+    <title>獨居蜂旅館(Solitary bee hotel)演講紀錄暨心得</title>
+    <url>/Solitary-bee-hotel/</url>
+    <content><![CDATA[<center>
+獨居蜂旅館(Solitary bee hotel)演講紀錄暨心得
+<span id="more"></span>
+</center>
+<center>
+<a onclick="window.open(this.href,'_blank');return false;" href="/pdf/Solitary_bee_hotel_111012009.pdf">
+    <font color=blue> 新分頁開啟</font>
+</a>
+</center>]]></content>
+      <categories>
+        <category>結報</category>
+        <category>國北教自</category>
+      </categories>
+      <tags>
+        <tag>結報</tag>
+      </tags>
   </entry>
   <entry>
     <title>嘉義舊監獄參訪</title>
