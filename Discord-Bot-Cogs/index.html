@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="navoni1024">
+
+
+    <meta name="subtitle" content="奇怪的人都在這裡">
+
+
+
+
+
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+    />
+ 
+
+
+
+<title>Discord Bot-Cogs | 皇家維修熱線</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/menu.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 7.1.1"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            Navoni1024.
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/tag/">Tags</a>
+              </li> 
+                   
+          
+          
+            <li class="menu-item search-btn">
+              <a href="#">Search</a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+                
+                    <span class="post-tag">
+                        <a href="/tags/coding/">
+                            程式
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/python/">
+                            python
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/Discord/">
+                            Discord
+                        </a>
+                    </span>    
+                           
+            
+        </div>
+        <div class="post-title">
+            
+            
+                Discord Bot-Cogs
+            
+            
+        </div>
+        <span class="post-date">
+            7月 26, 2023
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <p>如果你的機器人功能多到一個程度，把全部的程式碼全部塞在一個文件裡顯然不是好辦法。<br>不但看起來雜亂，也難以維護，就算只是其中一個功能出問題也必須要把整個bot關掉。<br>這時候就可以使用<strong>Cogs</strong>的架構來寫，<br>可以將commands和listener等東西分堆塞在各自文件裡並方便我們裝卸。</p>
+<span id="more"></span>
+<p>照<a target="_blank" rel="noopener" href="https://discordpy.readthedocs.io/en/stable/ext/commands/cogs.html">官方文件</a>的說法，比較重要的有這幾點:</p>
+<ul>
+<li>每個cogs都是<code>commands.Cog</code>的子類別</li>
+<li>每個command要前加<code>@commands.command()</code></li>
+<li>每個listener要前加<code>@commands.Cog.listener()</code></li>
+<li>Cogs可以用<code>Bot.add_cog()</code>來註冊</li>
+<li>Cogs可以用<code>Bot.remove_cog()</code>來卸載</li>
+<li>通常會跟<a target="_blank" rel="noopener" href="https://discordpy.readthedocs.io/en/stable/ext/commands/extensions.html#ext-commands-extensions">Extension</a>功能配合</li>
+</ul>
+<p>當然單純這樣條列出來是看不懂的，底下來看實例。<br>其檔案架構通常會長下面這樣<br><img src="20152706EJhEPhiYQA.png"></p>
+<p>cogs資料夾是拿來放各個cogs的<br>core資料夾是拿來放一些你cogs可能會常用到的函數。<br>main.py是拿來運行的檔案，裡面也包含了載入和裝卸cogs的程式碼，會長的類似下面這樣:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">bot = commands.Bot(<span class="string">&#x27;prefix&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#下面這塊從cogs資料夾中取出所有.py結尾的檔案並用load_extension載入cogs</span></span><br><span class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> os.listdir(<span class="string">&#x27;./cogs&#x27;</span>):</span><br><span class="line">	<span class="keyword">if</span> filename.endswith(<span class="string">&#x27;.py&#x27;</span>):</span><br><span class="line">		bot.load_extension(<span class="string">f&#x27;cogs.<span class="subst">&#123;filename[:-<span class="number">3</span>]&#125;</span>&#x27;</span>) </span><br><span class="line"></span><br><span class="line"><span class="meta">@bot.event</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">on_ready</span>():</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&#x27;Test begin...&#x27;</span>) </span><br><span class="line">	</span><br><span class="line"><span class="comment">#這裡建個指令讓你可以載入Cog</span></span><br><span class="line"><span class="meta">@bot.command()</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">load</span>(<span class="params">ctx, cog_name</span>):</span><br><span class="line">	<span class="keyword">try</span>:</span><br><span class="line">		bot.load_extension(<span class="string">f&#x27;cogs.<span class="subst">&#123;cog_name&#125;</span>&#x27;</span>)</span><br><span class="line">	<span class="keyword">except</span>:</span><br><span class="line">		<span class="keyword">await</span> ctx.send(<span class="string">&#x27;Failed.&#x27;</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	<span class="keyword">await</span> ctx.send(<span class="string">&#x27;load success!&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#這裡建個指令讓你可以卸載Cog</span></span><br><span class="line"><span class="meta">@bot.command()</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">unload</span>(<span class="params">ctx, cog_name</span>):</span><br><span class="line">	<span class="keyword">try</span>:</span><br><span class="line">		bot.unload_extension(<span class="string">f&#x27;cogs.<span class="subst">&#123;cog_name&#125;</span>&#x27;</span>)</span><br><span class="line">	<span class="keyword">except</span>:</span><br><span class="line">		<span class="keyword">await</span> ctx.send(<span class="string">&#x27;Failed.&#x27;</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	<span class="keyword">await</span> ctx.send(<span class="string">&#x27;unload success!&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#這裡建個指令讓你可以重新載入Cog</span></span><br><span class="line"><span class="meta">@bot.command()</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">reload</span>(<span class="params">ctx, cog_name</span>):</span><br><span class="line">	<span class="keyword">try</span>:</span><br><span class="line">		bot.reload_extension(<span class="string">f&#x27;cogs.<span class="subst">&#123;cog_name&#125;</span>&#x27;</span>)</span><br><span class="line">	<span class="keyword">except</span>:</span><br><span class="line">		<span class="keyword">await</span> ctx.send(<span class="string">&#x27;Failed.&#x27;</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	<span class="keyword">await</span> ctx.send(<span class="string">&#x27;reload success!&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">	bot.run(<span class="string">&#x27;TOKEN&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>接著在core底下加一個文檔，這裡我叫他init.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> discord</span><br><span class="line"><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Cog_Extension</span>(commands.Cog):</span><br><span class="line">	<span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, bot</span>):</span><br><span class="line">		self.bot = bot</span><br></pre></td></tr></table></figure>
+
+
+<p>接著來把一個指令用成cogs。<br>就拿上篇那個<a href="https://navoni1024.github.io/Discord-Bot-Basic-structure/">请不要随意地触碰我！ 十分感谢！</a>來舉例<br>他原本的程式區塊大概長這樣:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@bot.command(<span class="params">aliases=[<span class="string">&#x27;touch&#x27;</span>]</span>)</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">t</span>(<span class="params">message</span>):</span><br><span class="line">	<span class="keyword">await</span> message.channel.send(<span class="string">&#x27;请不要随意地触碰我！ 十分感谢！&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>把他用成cogs的話會需要把它塞進Class並加上我們剛剛寫的東西，所以會長得像這樣</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands</span><br><span class="line"><span class="keyword">from</span> core.init <span class="keyword">import</span> Cog_Extension</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">touch</span>(<span class="title class_ inherited__">Cog_Extension</span>):        <span class="comment">#建議class名稱跟檔案名稱一樣</span></span><br><span class="line"><span class="meta">@commands.command(<span class="params">aliases=[<span class="string">&#x27;touch&#x27;</span>]</span>)    </span></span><br><span class="line">	<span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">t</span>(<span class="params">self, message</span>):    <span class="comment">#記得在參數列最前面加上self</span></span><br><span class="line">		<span class="keyword">await</span> message.channel.send(<span class="string">&#x27;请不要随意地触碰我！ 十分感谢！&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>記得要import需要的套件</p>
+<p>接著在下面加上setup的函數</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands</span><br><span class="line"><span class="keyword">from</span> core.init <span class="keyword">import</span> Cog_Extension</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">touch</span>(<span class="title class_ inherited__">Cog_Extension</span>):</span><br><span class="line"><span class="meta">	@commands.command(<span class="params">aliases=[<span class="string">&#x27;touch&#x27;</span>]</span>)</span></span><br><span class="line">	<span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">t</span>(<span class="params">self, message</span>):</span><br><span class="line">		<span class="keyword">await</span> message.channel.send(<span class="string">&#x27;请不要随意地触碰我！ 十分感谢！&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">setup</span>(<span class="params">bot</span>):</span><br><span class="line">	bot.add_cog(touch(bot))</span><br><span class="line"><span class="comment">#這裡的bot.add_cog(touch(bot))中的(bot)前面填上你class的名子</span></span><br></pre></td></tr></table></figure>
+
+<p>這樣運行後給機器人預設的help指令後就能看到結構了。<br><img src="20152706dMFbDgmc8p.png"></p>
+<p>像這邊unload掉touch後可以發現輸t他也沒反應了，輸help也看不見了。<br><img src="20152706NNRA2I8xr8.png"></p>
+<p>而load回來的話可以發現指令有反應了，help中也看的到了。<br><img src="20152706uqPycyubVO.png"></p>
+<hr>
+<p>前述的的程式結構較簡單可能沒什麼感覺，但要是程式複雜到如下圖能夠先unload一塊調整完後再load回去還是挺方便的。<br><img src="20152706kGyb4P4XHd.png"></p>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+                <div class="icon arrow-left"></div>
+                <div class="post-link">
+                    <a href="/Gin-Fizz/">Prev</a>
+                </div>
+            
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/Discord-Bot-Basic-structure/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+    
+        <div id="waline"></div>
+        <script type="module">
+            import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+            init({
+                el: '#waline',
+                serverURL: 'https://waline-server-7vji-524goqhwr-navoni1024.vercel.app/',
+                lang: 'zh-TW',
+                dark: false,
+                meta: ['nick', 'mail'],
+                requiredFields: [],
+                mageUploader: true,
+            });
+        </script>    
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+            
+                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+      <div class="search-popup">
+    <div class="search-popup-overlay">  
+    </div>
+    <div class="search-popup-window" >
+        <div class="search-header">
+            <div class="search-input-container">
+              <input autocomplete="off" autocapitalize="off" maxlength="80"
+                     placeholder="Search Anything" spellcheck="false"
+                     type="search" class="search-input">
+            </div>
+            <div class="search-close-btn">
+                <div class="icon close-btn"></div>
+            </div>
+        </div>
+        <div class="search-result-container">
+        </div>
+    </div>
+</div>
+
+<script>
+    const searchConfig = {
+        path             : "/search.xml",
+        top_n_per_article: "1",
+        unescape         : "false",
+        trigger: "auto",
+        preload: "false"
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js"></script>
+<script src="/js/search.js"></script>
+    
+    
+
+  </body>
+</html>

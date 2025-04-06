@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="navoni1024">
+
+
+    <meta name="subtitle" content="奇怪的人都在這裡">
+
+
+
+
+
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+    />
+ 
+
+
+
+<title>Mygo隨機幀機器人 | 皇家維修熱線</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/menu.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 7.1.1"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            Navoni1024.
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/tag/">Tags</a>
+              </li> 
+                   
+          
+          
+            <li class="menu-item search-btn">
+              <a href="#">Search</a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+                
+                    <span class="post-tag">
+                        <a href="/tags/coding/">
+                            程式
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/python/">
+                            python
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/Discord/">
+                            Discord
+                        </a>
+                    </span>    
+                           
+            
+        </div>
+        <div class="post-title">
+            
+            
+                Mygo隨機幀機器人
+            
+            
+        </div>
+        <span class="post-date">
+            5月 10, 2024
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <p>可以隨機輸出影片一幀&#x2F;一段gif的discord機器人。</p>
+<p>任意影片都行，不過原始目的是隨機Mygo就是</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/navoni1024/Mygo_random_frame_bot">GITHUB連結</a></p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="示範用機器人"><a href="#示範用機器人" class="headerlink" title="示範用機器人"></a>示範用機器人</h3><p><a target="_blank" rel="noopener" href="https://discord.com/oauth2/authorize?client_id=988015342603370556&permissions=274877942912&scope=bot">邀請連結</a>(因為是架在舊電腦上的，可能會出圖慢或偶爾斷線)</p>
+<p>片源是木棉花的YT，並去除OP&#x2F;ED的片段。</p>
+<h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><ul>
+<li><p>@買夠</p>
+<p>輸出隨機一張圖</p>
+<img src="01.png">
+</li>
+<li><p>@買夠 g [num]</p>
+<p>輸出[num]秒數的一段GIF，預設5秒，最多10秒</p>
+<img src="03.png"></li>
+</ul>
+<p>也可以在與機器人的私訊中用指令刷圖</p>
+<hr>
+<p>已知BUG:</p>
+<ul>
+<li>GIF太大的話，在Discord對話中可能卡住播不了。</li>
+<li>出圖很慢。 -&gt; Core 2 Duo他努力了。</li>
+</ul>
+<p>有任何bug或問題歡迎留言。</p>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/Simple-Oyakodon/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+    
+        <div id="waline"></div>
+        <script type="module">
+            import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+            init({
+                el: '#waline',
+                serverURL: 'https://waline-server-7vji-524goqhwr-navoni1024.vercel.app/',
+                lang: 'zh-TW',
+                dark: false,
+                meta: ['nick', 'mail'],
+                requiredFields: [],
+                mageUploader: true,
+            });
+        </script>    
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+            
+                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+      <div class="search-popup">
+    <div class="search-popup-overlay">  
+    </div>
+    <div class="search-popup-window" >
+        <div class="search-header">
+            <div class="search-input-container">
+              <input autocomplete="off" autocapitalize="off" maxlength="80"
+                     placeholder="Search Anything" spellcheck="false"
+                     type="search" class="search-input">
+            </div>
+            <div class="search-close-btn">
+                <div class="icon close-btn"></div>
+            </div>
+        </div>
+        <div class="search-result-container">
+        </div>
+    </div>
+</div>
+
+<script>
+    const searchConfig = {
+        path             : "/search.xml",
+        top_n_per_article: "1",
+        unescape         : "false",
+        trigger: "auto",
+        preload: "false"
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js"></script>
+<script src="/js/search.js"></script>
+    
+    
+
+  </body>
+</html>

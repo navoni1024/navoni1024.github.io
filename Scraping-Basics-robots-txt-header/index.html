@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="navoni1024">
+
+
+    <meta name="subtitle" content="奇怪的人都在這裡">
+
+
+
+
+
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+    />
+ 
+
+
+
+<title> 爬蟲基礎入門: robots.txt &amp; header | 皇家維修熱線</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/menu.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 7.1.1"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            Navoni1024.
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/tag/">Tags</a>
+              </li> 
+                   
+          
+          
+            <li class="menu-item search-btn">
+              <a href="#">Search</a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+                
+                    <span class="post-tag">
+                        <a href="/tags/scraping/">
+                            爬蟲
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/coding/">
+                            程式
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/python/">
+                            python
+                        </a>
+                    </span>    
+                           
+            
+        </div>
+        <div class="post-title">
+            
+            
+                 爬蟲基礎入門: robots.txt &amp; header
+            
+            
+        </div>
+        <span class="post-date">
+            7月 25, 2023
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <p>今天要來介紹當我們在爬蟲前，應該要知道的一些技巧與規範</p>
+<hr>
+<h3 id="為甚麼需要知道這些爬蟲規範？"><a href="#為甚麼需要知道這些爬蟲規範？" class="headerlink" title="為甚麼需要知道這些爬蟲規範？"></a>為甚麼需要知道這些爬蟲規範？</h3><p>首先，我們必須知道過度的網路爬蟲可能是違法的，<br>如使用多執行緒進行對網站的大量拜訪，在沒有適當的存取時間間隔下，可能會造成一般人熟知的<strong>DDOS</strong>(Denial-Of-Service Attack)，進而造成其他使用者無法拜訪、甚至是主機癱瘓。<br>因此，某些網站有制定所謂的「規範」，讓爬蟲使用者能夠去遵守並避免存取到private data</p>
+<span id="more"></span>
+<p>請注意這項規範並不具有強制力，並無法阻擋真正有心攻擊的爬蟲程式。</p>
+<h3 id="「規範」—-robots-txt"><a href="#「規範」—-robots-txt" class="headerlink" title="「規範」— robots.txt"></a>「規範」— robots.txt</h3><p>robots.txt是一個告訴爬蟲哪些內容是否可存取的文字檔。<br>這項檔案通常位於網頁根目錄下的robots.txt，<br>換句話說，在main-page下加個&#x2F;robots.txt就能檢視。</p>
+<p>舉個例子吧，我們先進到<a target="_blank" rel="noopener" href="http://google.com/">google</a>的首頁</p>
+<img src="20152706kiMp9LoNrj.png">
+
+
+
+<p>相當正常，不是嗎?<br>再來利用上面的方法去找robots.txt，<br>我們接著在.com後面接著&#x2F;robots.txt，<br>使網址成為<a target="_blank" rel="noopener" href="https://www.google.com/robots.txt">https://www.google.com/robots.txt</a></p>
+<img src="20152706qRcQSJ2ABd.png">
+
+
+
+<p>成功了！<br>可是密密麻麻的，打這麼多字誰他媽看得完?<br>但事實上，這份文字檔可以被拆分成幾個部分，<br>我們從第一行開始：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1. User-Agent: *</span><br></pre></td></tr></table></figure>
+<p>User-Agent這一欄代表的是允許的爬蟲類型，而 <strong>*</strong> 則代表<strong>所有</strong>的意思，<br>所以第一行可以被解讀成，允許所有爬蟲拜訪。<br>此外有一些特別的程式只允許特定爬蟲拜訪網頁，如Googlebot、Applebot等，<br>如在最後幾行處，可以看到google的網頁允許Twitterbot能夠比一般使用者額外拜訪&#x2F;imgres的子目錄。</p>
+<p>再來我們繼續往下探討，大致上可以分為<strong>Allow</strong>開頭的，以及<strong>Disallow</strong>開頭的句子</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2. Disallow: /search</span><br></pre></td></tr></table></figure>
+<p>這句話代表著，拒絕網路爬蟲訪問search子目錄以及其子目錄下所有目錄，<br>而接下來的第三行，你們應該也就猜的到意思了，就是允許拜訪冒號後面的子目錄。</p>
+<h3 id="表頭headers"><a href="#表頭headers" class="headerlink" title="表頭headers"></a>表頭headers</h3><p>headers是對client端向server發出請求時的敘述資訊。<br>有一些網站會針對網路爬蟲進行阻擋，其中一項阻擋的手法就是針對headers，<br>當網頁收到非瀏覽器的headers發出的請求時，網頁就拒絕client的存取。</p>
+<p>解決手段非常的簡單粗暴，既然你拒絕非瀏覽器外的訪問，那我就成為瀏覽器就好了啊!?<br>那我們要怎麼成為瀏覽器呢?<br>這樣推薦一個作法：</p>
+<ul>
+<li>開啟Chrome時按下F12鍵後，先按F5使其重整載入資源，點選其中一項被載入的資源，點選Network欄中的Header，複製其中的Uger-Agent</li>
+</ul>
+<p>如此一來就得到瀏覽器的header，將自己偽裝成瀏覽器了。<br>下一章在requests時，我們會介紹在requests.get()中可以帶入header參數，<br>在header參數中帶入我們剛剛取得的瀏覽器header，我們就可以成功偽裝了。</p>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+                <div class="icon arrow-left"></div>
+                <div class="post-link">
+                    <a href="/Scraping-Basics-JSON/">Prev</a>
+                </div>
+            
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/Scraping-Basics-Beautiful-Soup/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+    
+        <div id="waline"></div>
+        <script type="module">
+            import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+            init({
+                el: '#waline',
+                serverURL: 'https://waline-server-7vji-524goqhwr-navoni1024.vercel.app/',
+                lang: 'zh-TW',
+                dark: false,
+                meta: ['nick', 'mail'],
+                requiredFields: [],
+                mageUploader: true,
+            });
+        </script>    
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+            
+                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+      <div class="search-popup">
+    <div class="search-popup-overlay">  
+    </div>
+    <div class="search-popup-window" >
+        <div class="search-header">
+            <div class="search-input-container">
+              <input autocomplete="off" autocapitalize="off" maxlength="80"
+                     placeholder="Search Anything" spellcheck="false"
+                     type="search" class="search-input">
+            </div>
+            <div class="search-close-btn">
+                <div class="icon close-btn"></div>
+            </div>
+        </div>
+        <div class="search-result-container">
+        </div>
+    </div>
+</div>
+
+<script>
+    const searchConfig = {
+        path             : "/search.xml",
+        top_n_per_article: "1",
+        unescape         : "false",
+        trigger: "auto",
+        preload: "false"
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js"></script>
+<script src="/js/search.js"></script>
+    
+    
+
+  </body>
+</html>

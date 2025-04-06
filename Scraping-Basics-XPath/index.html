@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="navoni1024">
+
+
+    <meta name="subtitle" content="奇怪的人都在這裡">
+
+
+
+
+
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+    />
+ 
+
+
+
+<title>爬蟲基礎入門-XPath | 皇家維修熱線</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/menu.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 7.1.1"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            Navoni1024.
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/tag/">Tags</a>
+              </li> 
+                   
+          
+          
+            <li class="menu-item search-btn">
+              <a href="#">Search</a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+                
+                    <span class="post-tag">
+                        <a href="/tags/scraping/">
+                            爬蟲
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/coding/">
+                            程式
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/python/">
+                            python
+                        </a>
+                    </span>    
+                           
+            
+        </div>
+        <div class="post-title">
+            
+            
+                爬蟲基礎入門-XPath
+            
+            
+        </div>
+        <span class="post-date">
+            7月 26, 2023
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <p>我們在selenium時有講到幾個指令像是find_element_by的指令，<br>但如果我們的html沒有class或是id等節點的話，其實對我們爬蟲有點不太友善，<br>所以今天我們會教xpath的搜尋方法</p>
+<span id="more"></span>
+
+<h3 id="XPath"><a href="#XPath" class="headerlink" title="XPath"></a>XPath</h3><p>XML Path簡稱XPath，是一種可以用來確定一個東西在XML&#x2F;HTML檔案中的位置的語言&#x2F;工具<br>可以將一個HTML看成是一棵樹，或是更生活化一點，利用樹狀結構的目錄資料夾<br>像是檔案開頭的<code>&lt;html&gt;</code>包含了整個文件，而這個節點就是整個html的根節點<br>或者是如<code>&lt;head&gt;</code>或是<code>&lt;body&gt;</code>在html下一層，而這兩個節點就是html的子節點，<br>相反地，<code>&lt;html&gt;</code>也是<code>&lt;head&gt;</code>或是<code>&lt;body&gt;</code>的父節點<br>此外，<code>&lt;html&gt;</code>與<code>&lt;head&gt;</code>相互是兄弟節點<br>樹中有許多的節點代表不同元素，而我們就可以使用XPath去查詢這些節點</p>
+<p>在XPath中，我們有兩種方式去表現一個節點的位置</p>
+<ul>
+<li><strong>絕對路徑</strong><br>  絕對路徑以 <strong>&#x2F;</strong> 來代表，需要從html的根節點開始寫完整的路徑到目標的節點<br>  如:&#x2F;html[1]&#x2F;body[1]&#x2F;div[3]&#x2F;div[1]&#x2F;div[1]&#x2F;div[1]&#x2F;div[2]&#x2F;div[3]&#x2F;div[1]&#x2F;h2[1]，是我們在Day13網頁中標題的絕對路徑</li>
+<li><strong>相對路徑</strong><br>  相對路徑以 <strong>&#x2F;&#x2F;</strong> 來代表<br>  如:&#x2F;&#x2F;h2[contains(text(),’Day13、Selenium指令使用’)]來代表上面相同上面絕對路徑的相對路徑</li>
+</ul>
+<hr>
+<h3 id="find-element-by-xpath"><a href="#find-element-by-xpath" class="headerlink" title="find_element_by_xpath()"></a>find_element_by_xpath()</h3><p>利用上面絕對路徑或是相對路徑的方法，直接塞進function就好了，如:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&#x27;/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/h2[1]&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>常常在html中會看到在同個檔案不同個子樹下有相同的節點命名，當使用xpath的相對路徑時可能會有問題<br>這個時候可以透過index索引去找是哪一個節點，如:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&#x27;//p[0]&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>或是利用attribute屬性去標註說我們現在要的是哪一個，如:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&#x27;title&#x27;</span>&gt;</span>I&#x27;m title<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&quot;//p[@class=&#x27;title&#x27;]&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>還有一些神奇的指令像是contains()，可以找出包含字串的節點，如:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node = chrome.find_element_by_path(<span class="string">&quot;//p[contains(text(), &#x27;title&#x27;)]&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>上面講了xpath的語法，但是其實你知道只需要有html樹狀的概念就好了嗎?<br>俗話說的好，不要重複造輪子，今天就介紹一個好用的工具可以自動產生xpath</p>
+<h3 id="ChroPath"><a href="#ChroPath" class="headerlink" title="ChroPath"></a>ChroPath</h3><p>ChroPath是一個Chrome的插件，可以在chrome的應用程式商店找到他<br>它是一個協助我們在chrome中定位想要的元素的插件<br>假如你想針對一個網頁的按鈕找出它的xpath去進行selenium控制的話，可以右鍵找到「檢查」的地方後點下去，會進入F12開發者模式，同時F12的html畫面也會同步到一樣的程式片段<br>在此時，我們在右邊開發者模式視窗的地方中間有一排選擇子視窗的地方去找一個叫做ChroPath的地方點開來<br>點開之後，插件就會告訴你路徑的絕對位置或相對位置囉!<br><img src="20152706sgIGrAITNx.png"></p>
+<p>XPath就是這麼簡單!</p>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+                <div class="icon arrow-left"></div>
+                <div class="post-link">
+                    <a href="/Discord-Bot-create-a-bot/">Prev</a>
+                </div>
+            
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/Scraping-Basics-Selenium/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+    
+        <div id="waline"></div>
+        <script type="module">
+            import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+            init({
+                el: '#waline',
+                serverURL: 'https://waline-server-7vji-524goqhwr-navoni1024.vercel.app/',
+                lang: 'zh-TW',
+                dark: false,
+                meta: ['nick', 'mail'],
+                requiredFields: [],
+                mageUploader: true,
+            });
+        </script>    
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+            
+                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+      <div class="search-popup">
+    <div class="search-popup-overlay">  
+    </div>
+    <div class="search-popup-window" >
+        <div class="search-header">
+            <div class="search-input-container">
+              <input autocomplete="off" autocapitalize="off" maxlength="80"
+                     placeholder="Search Anything" spellcheck="false"
+                     type="search" class="search-input">
+            </div>
+            <div class="search-close-btn">
+                <div class="icon close-btn"></div>
+            </div>
+        </div>
+        <div class="search-result-container">
+        </div>
+    </div>
+</div>
+
+<script>
+    const searchConfig = {
+        path             : "/search.xml",
+        top_n_per_article: "1",
+        unescape         : "false",
+        trigger: "auto",
+        preload: "false"
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js"></script>
+<script src="/js/search.js"></script>
+    
+    
+
+  </body>
+</html>

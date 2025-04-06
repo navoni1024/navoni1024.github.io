@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="navoni1024">
+
+
+    <meta name="subtitle" content="奇怪的人都在這裡">
+
+
+
+
+
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+    />
+ 
+
+
+
+<title>Discord Bot-創建一隻bot | 皇家維修熱線</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/menu.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 7.1.1"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            Navoni1024.
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/tag/">Tags</a>
+              </li> 
+                   
+          
+          
+            <li class="menu-item search-btn">
+              <a href="#">Search</a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+                
+                    <span class="post-tag">
+                        <a href="/tags/coding/">
+                            程式
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/python/">
+                            python
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/Discord/">
+                            Discord
+                        </a>
+                    </span>    
+                           
+            
+        </div>
+        <div class="post-title">
+            
+            
+                Discord Bot-創建一隻bot
+            
+            
+        </div>
+        <span class="post-date">
+            7月 26, 2023
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <p>Discord是一個方便的通訊軟體，而他比起一般通訊軟體的優勢就是便利的語音以及多功能的群組(內稱伺服器)，甚至伺服器內部還可以再分為多個子頻道，提供主題分類，也可以加入自訂的機器人，增添更多的變化。</p>
+<span id="more"></span>
+<img src="20152706MBGmHIhGdS.png">
+大概就像這樣，其中左上角的test2就是整個伺服器(guild、server)的名稱，左邊那排則是這個伺服器所有的文字頻道和語音頻道(channel)，中間則是文字訊息內容，而rever chan則是我自己加進來的機器人。
+
+<p>那麼，在新增機器人之前，我們必須要先取得創建機器人專案，並取得他的token。<br>首先，我們先進入dc developer的網頁，並登入dc帳號後，點選右上角的new application。<br><img src="20152706uRtcasLHmn.png"><br>取名並創建完成後，進到該application並且選擇左邊的bot項目，接著點選add bot，新增一個新的機器人。<br><img src="20152706cOtUkl6jZV.png"><br>在dc bot的編寫中，我們是撰寫dc bot的主要內容，而後在程式中填寫要啟用的bot的token，就可以為持有該token的bot加載程式內容，而適用範圍為所有有把該bot拉為成員的server，意即只要伺服器有把bot拉進去，那個server裡的bot就會加載此程式內容。<br><img src="20152706nF0OR14070.png"><br>那麼我們這邊就要點選reset token，取得bot的新token。<br>這邊要注意的是，bot的token絕對不行外流，否則容易被有心人士利用加載其他程式內容，可能你隔半小時回來就發現你的伺服器已經被自己的bot洗版各種釣魚連結了。</p>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+                <div class="icon arrow-left"></div>
+                <div class="post-link">
+                    <a href="/Discord-Bot-Basic-structure/">Prev</a>
+                </div>
+            
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/Scraping-Basics-XPath/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+    
+        <div id="waline"></div>
+        <script type="module">
+            import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+            init({
+                el: '#waline',
+                serverURL: 'https://waline-server-7vji-524goqhwr-navoni1024.vercel.app/',
+                lang: 'zh-TW',
+                dark: false,
+                meta: ['nick', 'mail'],
+                requiredFields: [],
+                mageUploader: true,
+            });
+        </script>    
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+            
+                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+      <div class="search-popup">
+    <div class="search-popup-overlay">  
+    </div>
+    <div class="search-popup-window" >
+        <div class="search-header">
+            <div class="search-input-container">
+              <input autocomplete="off" autocapitalize="off" maxlength="80"
+                     placeholder="Search Anything" spellcheck="false"
+                     type="search" class="search-input">
+            </div>
+            <div class="search-close-btn">
+                <div class="icon close-btn"></div>
+            </div>
+        </div>
+        <div class="search-result-container">
+        </div>
+    </div>
+</div>
+
+<script>
+    const searchConfig = {
+        path             : "/search.xml",
+        top_n_per_article: "1",
+        unescape         : "false",
+        trigger: "auto",
+        preload: "false"
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js"></script>
+<script src="/js/search.js"></script>
+    
+    
+
+  </body>
+</html>

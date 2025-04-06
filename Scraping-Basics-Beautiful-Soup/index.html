@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="navoni1024">
+
+
+    <meta name="subtitle" content="奇怪的人都在這裡">
+
+
+
+
+
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+    />
+ 
+
+
+
+<title>爬蟲基礎入門: Beautiful Soup | 皇家維修熱線</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/menu.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 7.1.1"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            Navoni1024.
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/tag/">Tags</a>
+              </li> 
+                   
+          
+          
+            <li class="menu-item search-btn">
+              <a href="#">Search</a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+                
+                    <span class="post-tag">
+                        <a href="/tags/scraping/">
+                            爬蟲
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/coding/">
+                            程式
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/python/">
+                            python
+                        </a>
+                    </span>    
+                           
+            
+        </div>
+        <div class="post-title">
+            
+            
+                爬蟲基礎入門: Beautiful Soup
+            
+            
+        </div>
+        <span class="post-date">
+            7月 25, 2023
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <h3 id="什麼是BeautifulSoup"><a href="#什麼是BeautifulSoup" class="headerlink" title="什麼是BeautifulSoup?"></a>什麼是BeautifulSoup?</h3><p>BeautifulSoup，又名美麗的湯，就如同魯迅所說過的，吃日料要喝味噌湯，到台南要喝牛肉湯，爬蟲的話就要用美麗的湯。(誤<br>BeautifulSoup4我們一般簡稱BS4，是用來做網站的html架構解析，如同前面所講的，html碼是以多層標籤作為架構，也因此我們可以利用BS4這個套件來建立其專屬class BeautifulSoup底下的物件，其就包含了原網站html碼的相關結構，像是標籤的父子、兄弟關係，更可以利用其中的搜尋功能找尋標籤名稱、內容或屬性，進而定位到我們感興趣的位置。</p>
+<span id="more"></span>
+
+<p>在經過基本的pip install後，我們就可以引入bs4了。<br><img src="20152706UAEuGzKBvW.png"></p>
+<p>之後我們就能像這樣，引入網址後，利用基本request取得html源碼，再利用BS4進行基本解析，建立出soup_m1的物件，之後便可以利用BS4的函式對其定位、分析。<br><img src="20152706L0rBAzgmoz.png"></p>
+<h3 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h3><p>昨天出現的這句</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">soup_m1 = BeautifulSoup(html_m1.text, <span class="string">&quot;html.parser&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>其中的<code>html.parser</code>便是使用的解析器，是python內建的。<br>除了這個外還能用html5lib和lxml但我也沒用過，詳細優缺點可能要google下。<br>哪天有試了再補充上來吧</p>
+<h3 id="解析方法"><a href="#解析方法" class="headerlink" title="解析方法"></a>解析方法</h3><p>比較常用到的是find()、find_all()和select()。</p>
+<ul>
+<li><p>find()、find_all()<br>兩個都是使用html的標籤進行搜尋的。<br>而這兩者的差別是find()只會回傳第一個符合的結果，find_all()則會回傳所有符合的結果</p>
+</li>
+<li><p>select()<br>使用CSS選擇器(CSS selectors)來進行搜尋。<br>CSS之前沒有提到，主要是用來把網站上色的。<br>其中會用到選擇器來指定特定範圍的HTML進行操作。<br>select()便是利用這東西的語法來爬的。</p>
+</li>
+</ul>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+                <div class="icon arrow-left"></div>
+                <div class="post-link">
+                    <a href="/Scraping-Basics-robots-txt-header/">Prev</a>
+                </div>
+            
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/Scraping-Basics-Requests/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+    
+        <div id="waline"></div>
+        <script type="module">
+            import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+            init({
+                el: '#waline',
+                serverURL: 'https://waline-server-7vji-524goqhwr-navoni1024.vercel.app/',
+                lang: 'zh-TW',
+                dark: false,
+                meta: ['nick', 'mail'],
+                requiredFields: [],
+                mageUploader: true,
+            });
+        </script>    
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+            
+                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+      <div class="search-popup">
+    <div class="search-popup-overlay">  
+    </div>
+    <div class="search-popup-window" >
+        <div class="search-header">
+            <div class="search-input-container">
+              <input autocomplete="off" autocapitalize="off" maxlength="80"
+                     placeholder="Search Anything" spellcheck="false"
+                     type="search" class="search-input">
+            </div>
+            <div class="search-close-btn">
+                <div class="icon close-btn"></div>
+            </div>
+        </div>
+        <div class="search-result-container">
+        </div>
+    </div>
+</div>
+
+<script>
+    const searchConfig = {
+        path             : "/search.xml",
+        top_n_per_article: "1",
+        unescape         : "false",
+        trigger: "auto",
+        preload: "false"
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js"></script>
+<script src="/js/search.js"></script>
+    
+    
+
+  </body>
+</html>
