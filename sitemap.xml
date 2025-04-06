@@ -443,6 +443,13 @@
 
   
   <url>
+    <loc>http://navoni1024.github.io/tags/philosophy/</loc>
+    <lastmod>2025-04-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://navoni1024.github.io/tags/bartending/</loc>
     <lastmod>2025-04-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -458,13 +465,6 @@
   
   <url>
     <loc>http://navoni1024.github.io/tags/%E5%9C%9F%E8%A3%BD/</loc>
-    <lastmod>2025-04-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://navoni1024.github.io/tags/philosophy/</loc>
     <lastmod>2025-04-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -543,14 +543,14 @@
 
   
   <url>
-    <loc>http://navoni1024.github.io/categories/diet/</loc>
+    <loc>http://navoni1024.github.io/categories/shitpost/</loc>
     <lastmod>2025-04-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/shitpost/</loc>
+    <loc>http://navoni1024.github.io/categories/diet/</loc>
     <lastmod>2025-04-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
