@@ -4,11 +4,49 @@
   
     
     <entry>
+      <title>NTUST好吃驚EP4-板橋</title>
+      <link href="/NTUST-travel-notes-EP4/"/>
+      <url>/NTUST-travel-notes-EP4/</url>
+      
+        <content type="html"><![CDATA[<p>這裡的公寓還蠻屌的<br>面停屍間那排全部把門口設在背對面<br>而且幾乎面殯儀館那面沒有開窗</p><img src="01.jpg"><p>壁畫那一面過去就殯儀館<br>那個壁畫那邊就單純一面牆擋住看到那邊的視線</p><img src="02.jpg"><p>之前這間廟的主委是謝新達<br>我記得他之前捐了一百萬建廟 但我找不到紀錄<br>可能在廟裡面 但裡面有廟婆不敢進去<br>巷口外面有店門口貼爆乳海報<br>玻璃霧化 應該做黑的</p><img src="03.jpg"><p>今天天氣比較好再上來一次<br>這次有拿單眼<br>今天有冷氣</p><img src="04.jpg"><p>不過今天的可見度沒太好<br>沒像上次有一天剛下完雨放晴能看到雪山那樣<br>但也還行</p><hr><p>上次是剛好走到板橋大遠百<br>順便上來市政府的觀景台看</p><img src="05.jpg"><p>半個人都沒有 還沒有燈<br>才發現這裡除了101那個角度以外都看得到</p><img src="06.jpg"><img src="07.jpg"><img src="08.jpg"><hr><p><strong>筆者: NTUST So Hard</strong></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 日常廢文 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>NTUST好吃驚EP3-雙溪+三貂嶺舊隧道</title>
+      <link href="/NTUST-travel-notes-EP3/"/>
+      <url>/NTUST-travel-notes-EP3/</url>
+      
+        <content type="html"><![CDATA[<p>週六固定找比較遠的沒去過的地方玩，因為沒去過雙溪，所以決定去雙溪+一直想去的三貂嶺舊隧道預約騎腳踏車<br><img src="01.jpg"></p><p>先看著google map走進雙溪老街，非常短，看點應該是兩側的建築跟街尾的渡船頭<br><img src="02.jpg"></p><p>之後晃到了雙溪區公所，現在有活動，只要騎車或走路經過，分享給兩位好友就可以拿冰棒，送的是桂山冰棒，下重本，但吃光了所以我沒有拍。<br>往車站走的路上有一家餅店，跟風排了一個寒天布丁蛋糕，原本預期蛋糕裡面會有寒天塊，但是沒吃到，因為也吃光了所以沒拍。</p><p>雙溪晃完之後去牡丹站借車往隧道騎，車站到幹道的社區營造做得蠻不錯的，好像大部分都是車站出來的一家店的老闆做的，開車的話可以停在三貂運動公園，位置很多。<br>到隧道報到處之後會有人查QR code，預約兩點半提早半小時到可以進去，並不一定要真的等到預約時間才進去。</p><img src="03.jpg"><img src="04.jpg"><p>裡面絕大部分的景色跟隧道裡的圖片一樣，沒騎腳踏車的話可能有點無聊，看點大致集中在靠三貂嶺側的出口水影反光、兩隧道間的陽光照射下來，還有掛在隧道上面的蝙蝠，周圍會管制不能騎腳踏車，算是養活一些保全的生計，只是數量不多，很多人還會拿閃光燈照蝙蝠，可能以前一大部分跑光了。</p><img src="05.jpg"><img src="06.jpg"> <p>出去隧道後在三貂嶺站的對側，一路順遊三貂嶺回去車站坐回牡丹，可能是因為周六，所以開了很多文青店。</p><img src="07.jpg"><img src="08.jpg"><img src="09.jpg"> <p>之後就坐回去牡丹了，列車開門的時候沒看到縫超大差點掉下去，站出來看發現這月台超彎。</p><img src="10.jpg"><img src="11.jpg"><p>離開牡丹往不厭亭開，常常看到照片但沒有去過的地方，路上有遇到一個成功的學弟騎youbike也要往不厭亭，只是他看起來騎不太上去:(</p> <img src="12.jpg"> <p>再來因為沒有油所以就趕去瑞濱加油了，沒有晚上的九份</p><hr><p><strong>筆者: NTUST So Hard</strong></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 日常廢文 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Mygo隨機幀機器人</title>
       <link href="/Mygo-random-frame-bot/"/>
       <url>/Mygo-random-frame-bot/</url>
       
-        <content type="html"><![CDATA[<p>可以隨機輸出影片一幀&#x2F;一段gif的discord機器人。</p><p>任意影片都行，不過原始目的是隨機Mygo就是</p><p><a href="https://github.com/navoni1024/Mygo_random_frame_bot">GITHUB連結</a></p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="示範用機器人"><a href="#示範用機器人" class="headerlink" title="示範用機器人"></a>示範用機器人</h3><p><a href="https://discord.com/oauth2/authorize?client_id=988015342603370556&permissions=274877942912&scope=bot">邀請連結</a>(因為是架在舊電腦上的，可能會出圖慢或偶爾斷線)</p><p>片源是木棉花的YT，並去除OP&#x2F;ED的片段。</p><h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><ul><li><p>@買夠</p><p>輸出隨機一張圖</p><img src="01.png"></li><li><p>@買夠 g [num]</p><p>輸出[num]秒數的一段GIF，預設5秒，最多10秒</p><img src="03.png"></li></ul><p>也可以在與機器人的私訊中用指令刷圖</p><hr><p>已知BUG:</p><ul><li>GIF太大的話，在Discord對話中可能卡住播不了。</li><li>出圖很慢。 -&gt; Core 2 Duo他努力了。</li></ul><p>有任何bug或問題歡迎留言。</p>]]></content>
+        <content type="html"><![CDATA[<p>可以隨機輸出影片一幀&#x2F;一段gif的discord機器人。</p><p>任意影片都行，不過原始目的是隨機Mygo就是</p><p><a href="https://github.com/navoni1024/Mygo_random_frame_bot">GITHUB連結</a></p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="示範用機器人"><a href="#示範用機器人" class="headerlink" title="示範用機器人"></a>示範用機器人</h3><p><a href="https://discord.com/oauth2/authorize?client_id=988015342603370556&permissions=274877942912&scope=bot">邀請連結</a>(因為是架在舊電腦上的，可能會出圖慢或偶爾斷線)</p><p>片源是木棉花的YT，並去除OP&#x2F;ED的片段。</p><h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><ul><li><p>@買夠</p><p>輸出隨機一張圖</p><img src="01.png"></li><li><p>@買夠 g [num]</p><p>輸出[num]秒數的一段GIF，預設3秒，最多10秒</p><img src="03.png"></li></ul><p>記得確認標的是<strong>機器人本身</strong>，如果標到機器人的身分組會沒反應。<br>也可以在與機器人的私訊中用指令刷圖</p><hr><p>已知BUG:</p><ul><li>GIF太大的話，在Discord對話中可能卡住播不了。</li><li>出圖很慢。 -&gt; Core 2 Duo他努力了。</li></ul><p>有任何bug或問題歡迎留言。</p>]]></content>
       
       
       
@@ -1180,25 +1218,6 @@
         <tags>
             
             <tag> 哲學 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>NTUST好吃驚EP3-雙溪+三貂嶺舊隧道</title>
-      <link href="/NTUST-travel-notes-EP3/"/>
-      <url>/NTUST-travel-notes-EP3/</url>
-      
-        <content type="html"><![CDATA[<p>週六固定找比較遠的沒去過的地方玩，因為沒去過雙溪，所以決定去雙溪+一直想去的三貂嶺舊隧道預約騎腳踏車<br><img src="01.jpg"></p><p>先看著google map走進雙溪老街，非常短，看點應該是兩側的建築跟街尾的渡船頭<br><img src="02.jpg"></p><p>之後晃到了雙溪區公所，現在有活動，只要騎車或走路經過，分享給兩位好友就可以拿冰棒，送的是桂山冰棒，下重本，但吃光了所以我沒有拍。<br>往車站走的路上有一家餅店，跟風排了一個寒天布丁蛋糕，原本預期蛋糕裡面會有寒天塊，但是沒吃到，因為也吃光了所以沒拍。</p><p>雙溪晃完之後去牡丹站借車往隧道騎，車站到幹道的社區營造做得蠻不錯的，好像大部分都是車站出來的一家店的老闆做的，開車的話可以停在三貂運動公園，位置很多。<br>到隧道報到處之後會有人查QR code，預約兩點半提早半小時到可以進去，並不一定要真的等到預約時間才進去。</p><img src="03.jpg"><img src="04.jpg"><p>裡面絕大部分的景色跟隧道裡的圖片一樣，沒騎腳踏車的話可能有點無聊，看點大致集中在靠三貂嶺側的出口水影反光、兩隧道間的陽光照射下來，還有掛在隧道上面的蝙蝠，周圍會管制不能騎腳踏車，算是養活一些保全的生計，只是數量不多，很多人還會拿閃光燈照蝙蝠，可能以前一大部分跑光了。</p><img src="05.jpg"><img src="06.jpg"> <p>出去隧道後在三貂嶺站的對側，一路順遊三貂嶺回去車站坐回牡丹，可能是因為周六，所以開了很多文青店。</p><img src="07.jpg"><img src="08.jpg"><img src="09.jpg"> <p>之後就坐回去牡丹了，列車開門的時候沒看到縫超大差點掉下去，站出來看發現這月台超彎。</p><img src="10.jpg"><img src="11.jpg"><p>離開牡丹往不厭亭開，常常看到照片但沒有去過的地方，路上有遇到一個成功的學弟騎youbike也要往不厭亭，只是他看起來騎不太上去:(</p> <img src="12.jpg"> <p>再來因為沒有油所以就趕去瑞濱加油了，沒有晚上的九份</p><hr><p><strong>筆者: NTUST So Hard</strong></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 日常廢文 </tag>
             
         </tags>
       
