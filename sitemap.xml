@@ -473,6 +473,13 @@
   </url>
   
   <url>
+    <loc>http://navoni1024.github.io/tags/philosophy/</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://navoni1024.github.io/tags/scraping/</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -501,13 +508,6 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/tags/philosophy/</loc>
-    <lastmod>2025-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://navoni1024.github.io/tags/DIY/</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -515,14 +515,14 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/tags/report/</loc>
+    <loc>http://navoni1024.github.io/tags/recipe/</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/tags/recipe/</loc>
+    <loc>http://navoni1024.github.io/tags/report/</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -559,6 +559,13 @@
   </url>
   
   <url>
+    <loc>http://navoni1024.github.io/categories/shitpost/</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://navoni1024.github.io/categories/coding/</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -567,13 +574,6 @@
   
   <url>
     <loc>http://navoni1024.github.io/categories/diet/wine/</loc>
-    <lastmod>2025-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://navoni1024.github.io/categories/shitpost/</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -594,14 +594,14 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/report/</loc>
+    <loc>http://navoni1024.github.io/categories/diet/recipe/</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/diet/recipe/</loc>
+    <loc>http://navoni1024.github.io/categories/report/</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
