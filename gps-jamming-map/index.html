@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H3 Visualizer</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@2"></script>
+    <script src="./h3.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/papaparse@5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+    <div id="app" class="map-container">
+        <div id="mapid"></div>
+        <div class="controls">
+            <div class="control-group">
+                <label for="dataFileSelect">選擇資料檔案:</label>
+                <select id="dataFileSelect" v-model="selectedFile">
+                    <option v-for="file in availableFiles" :value="file">{{ file }}</option>
+                </select>
+                <button @click="loadData">讀取</button>
+            </div>
+            
+            <div class="control-group">
+                <input v-model="gotoLatLon" placeholder="緯度,經度" />
+                <button @click="gotoLocation">前往</button>
+            </div>
+            <div class="control-group">
+                <input v-model="searchH3Id" placeholder="H3 ID" />
+                <button @click="findH3">搜尋</button>
+            </div>
+        </div>
+    </div>
+    <script src="map.js"></script>
+</body>
+</html>

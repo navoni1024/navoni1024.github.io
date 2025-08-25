@@ -2,24 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://navoni1024.github.io/h3-viewer-main/h3-viewer-main/README</loc>
-    
-    <lastmod>2025-08-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://navoni1024.github.io/h3-viewer-main/h3-viewer-main/</loc>
-    
-    <lastmod>2025-08-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://navoni1024.github.io/NTUST-travel-notes-EP4/</loc>
     
     <lastmod>2025-04-08</lastmod>
@@ -470,13 +452,6 @@
 
   
   <url>
-    <loc>http://navoni1024.github.io/tags/philosophy/</loc>
-    <lastmod>2025-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://navoni1024.github.io/tags/scraping/</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -513,6 +488,13 @@
   
   <url>
     <loc>http://navoni1024.github.io/tags/%E5%9C%9F%E8%A3%BD/</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/tags/philosophy/</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -570,13 +552,6 @@
 
   
   <url>
-    <loc>http://navoni1024.github.io/categories/shitpost/</loc>
-    <lastmod>2025-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://navoni1024.github.io/categories/coding/</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -591,7 +566,7 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/coding/Discord-bot/</loc>
+    <loc>http://navoni1024.github.io/categories/shitpost/</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -599,6 +574,13 @@
   
   <url>
     <loc>http://navoni1024.github.io/categories/coding/scraping/</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/categories/coding/Discord-bot/</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
