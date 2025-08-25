@@ -64,6 +64,31 @@ const interferenceLevel = (good, bad) => {
     }
 };
 
+// 修正跨換日線的邊界點
+function wrapBoundary(boundary) {
+    const fixed = [];
+    let prevLng = null;
+
+    for (let [lat, lng] of boundary) {
+        if (lng > 180) lng -= 360;
+        if (lng < -180) lng += 360;
+
+        if (prevLng !== null) {
+            const diff = lng - prevLng;
+            if (diff > 180) {
+                lng -= 360;
+            } else if (diff < -180) {
+                lng += 360;
+            }
+        }
+
+        fixed.push([lat, lng]);
+        prevLng = lng;
+    }
+
+    return fixed;
+}
+
 var app = new Vue({
     el: "#app",
 
@@ -96,44 +121,47 @@ var app = new Vue({
             if (hexLayer) {
                 hexLayer.remove();
             }
-
             hexLayer = L.layerGroup().addTo(map);
 
             this.currentH3Res = getH3ResForMapZoom(map.getZoom());
             const { _southWest: sw, _northEast: ne } = map.getBounds();
 
+            // 把經度 normalize 到 -180~180
+            const normalizeLng = (lng) => {
+                while (lng < -180) lng += 360;
+                while (lng > 180) lng -= 360;
+                return lng;
+            };
+
             const h3s = new Set();
 
-            if (ne.lng < sw.lng) {
-                    // 跨換日線：將地圖範圍分成兩部分
-                    const leftPolygon = [
-                        [sw.lat, sw.lng],
-                        [ne.lat, sw.lng],
-                        [ne.lat, 180],
-                        [sw.lat, 180],
-                        [sw.lat, sw.lng],
-                    ];
-                    const rightPolygon = [
-                        [sw.lat, -180],
-                        [ne.lat, -180],
-                        [ne.lat, ne.lng],
-                        [sw.lat, ne.lng],
-                        [sw.lat, -180],
-                    ];
-                    h3.polygonToCells(leftPolygon, this.currentH3Res).forEach(h3id => h3s.add(h3id));
-                    h3.polygonToCells(rightPolygon, this.currentH3Res).forEach(h3id => h3s.add(h3id));
-                } else {
-                    // 未跨換日線：使用單一多邊形
-                    const mainBoundsPolygon = [
-                        [sw.lat, sw.lng],
-                        [ne.lat, sw.lng],
-                        [ne.lat, ne.lng],
-                        [sw.lat, ne.lng],
-                        [sw.lat, sw.lng],
-                    ];
-                    h3.polygonToCells(mainBoundsPolygon, this.currentH3Res).forEach(h3id => h3s.add(h3id));
-            }
+            const addPolygonCells = (boundsSw, boundsNe) => {
+                const polygon = [
+                    [boundsSw.lat, boundsSw.lng],
+                    [boundsNe.lat, boundsSw.lng],
+                    [boundsNe.lat, boundsNe.lng],
+                    [boundsSw.lat, boundsNe.lng],
+                    [boundsSw.lat, boundsSw.lng],
+                ];
+                h3.polygonToCells(polygon, this.currentH3Res).forEach(h3id => h3s.add(h3id));
+            };
 
+            // 一般情況
+            addPolygonCells(sw, ne);
+
+            // 如果經度範圍超過 180，需要複製偏移世界
+            if (ne.lng > 180) {
+                addPolygonCells(
+                    { lat: sw.lat, lng: normalizeLng(sw.lng - 360) },
+                    { lat: ne.lat, lng: normalizeLng(ne.lng - 360) }
+                );
+            }
+            if (sw.lng < -180) {
+                addPolygonCells(
+                    { lat: sw.lat, lng: normalizeLng(sw.lng + 360) },
+                    { lat: ne.lat, lng: normalizeLng(ne.lng + 360) }
+                );
+            }
 
             for (const h3id of h3s) {
                 const isSelected = h3id === this.searchH3Id;
@@ -168,25 +196,25 @@ var app = new Vue({
                     style.fillOpacity = 0.8;
                 }
 
-                const h3Bounds = h3.cellToBoundary(h3id);
+                let h3Bounds = wrapBoundary(h3.cellToBoundary(h3id));
 
-                const tooltipText = `
-                Cell ID: <b>${h3id}</b>
-                <br />
-                干擾等級: <b>${level}</b>
-                <br />
-                好航班: <b>${goodAircraftCount}</b>
-                <br />
-                壞航班: <b>${badAircraftCount}</b>
-                `;
-
-                const latLngs = h3Bounds.map(b => L.latLng(b[0], b[1]));
-
-                L.polygon(latLngs, style)
-                    .on('click', () => copyToClipboard(h3id))
-                    .bindTooltip(tooltipText)
-                    .addTo(hexLayer);
-
+                // 複製多邊形到 ±360 經度（確保 wrapAround 時可見）
+                [-360, 0, 360].forEach(offset => {
+                    const latLngs = h3Bounds.map(b => L.latLng(b[0], b[1] + offset));
+                    const tooltipText = `
+                        Cell ID: <b>${h3id}</b>
+                        <br />
+                        干擾等級: <b>${level}</b>
+                        <br />
+                        好航班: <b>${goodAircraftCount}</b>
+                        <br />
+                        壞航班: <b>${badAircraftCount}</b>
+                    `;
+                    L.polygon(latLngs, style)
+                        .on('click', () => copyToClipboard(h3id))
+                        .bindTooltip(tooltipText)
+                        .addTo(hexLayer);
+                });
             }
         },
 
@@ -245,26 +273,17 @@ var app = new Vue({
 
     mounted() {
         document.addEventListener("DOMContentLoaded", () => {
-            // 定義地圖的邊界，防止平移超出
-            const restrictedBounds = L.latLngBounds([
-                [-90, -180], // 西南角
-                [90, 180]    // 東北角
-            ]);
-
             map = L.map('mapid', {
                 minZoom: 6,
                 maxZoom: 10,
-                worldCopyJump: false,
-                maxBounds: restrictedBounds, // 使用 maxBounds 限制範圍
-                maxBoundsViscosity: 1.0,     // 讓地圖在邊界處有彈性，如果設為 1.0 則完全停止
+                worldCopyJump: false // 保留，讓地圖可以自由滾動
             });
-
-            // 其餘程式碼保持不變
+            
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 minZoom: 6,
                 attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>',
             }).addTo(map);
-
+            
             pointsLayer = L.layerGroup([]).addTo(map);
 
             const initialLat = queryParams.lat ?? 25.0330;
