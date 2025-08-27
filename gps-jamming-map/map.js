@@ -55,9 +55,9 @@ const interferenceLevel = (good, bad) => {
         return INTERFERENCE_LOW;
     }
     const ratio = bad / total;
-    if (ratio > 0.5) {
+    if (ratio > 0.2) {
         return INTERFERENCE_HIGH;
-    } else if (ratio > 0.1) {
+    } else if (ratio > 0.05) {
         return INTERFERENCE_MED;
     } else {
         return INTERFERENCE_LOW;
@@ -97,7 +97,12 @@ var app = new Vue({
         gotoLatLon: undefined,
         currentH3Res: undefined,
         h3Data: {},
-        availableFiles: ['2022-04-06-h3_4.csv', '2025-8-1_0000_filterA.csv', '2025-8-1_0000_unfilter.csv', '2025-8-1_0000_filterB.csv'],
+        availableFiles: [
+            '2022-04-06-h3_4.csv',
+            '2025-8-1_0000_filterA.csv',
+            '2025-8-1_0000_filterB.csv',
+            '2025-8-1_0000_unfilter.csv',
+        ],
         selectedFile: '2025-8-1_0000_filterB.csv'
     },
 
@@ -302,6 +307,30 @@ var app = new Vue({
             }
 
             this.loadData();
+
+            // 新增圖例控制項
+            const legend = L.control({ position: 'bottomleft' });
+
+            legend.onAdd = function (map) {
+                const div = L.DomUtil.create('div', 'info legend');
+                const grades = ['#33ff33', '#ffff33', '#ff3333'];
+                const labels = ['低干擾 (Low)', '中干擾 (Med)', '高干擾 (High)'];
+                const percentages = ['< 5%', '5% - 20%', '> 20%'];
+                
+                div.innerHTML += '<h4>干擾等級</h4>';
+
+                for (let i = 0; i < grades.length; i++) {
+                    div.innerHTML +=
+                        '<div class="legend-item">' +
+                        '<i class="legend-color-box" style="background:' + grades[i] + ';"></i> ' +
+                        '<span>' + labels[i] + ' (' + percentages[i] + ')</span>' +
+                        '</div>';
+                }
+
+                return div;
+            };
+
+            legend.addTo(map);
         });
     }
 });
