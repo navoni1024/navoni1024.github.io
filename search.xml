@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>用CALIBRE翻譯整本書</title>
+      <link href="/use-calibre-translate-whole-book/"/>
+      <url>/use-calibre-translate-whole-book/</url>
+      
+        <content type="html"><![CDATA[<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>近日發現CALIBRE 有個插件可以調用翻譯軟體，包括各家的LLM。於是就試用了一下發覺翻譯整本書效果尚可。</p><h1 id="核心論點"><a href="#核心論點" class="headerlink" title="核心論點"></a>核心論點</h1><p>從[[永久筆記A]]、[[永久筆記B]]，想到與[[永久筆記C]]的想法相呼應……。</p><h1 id="綱要"><a href="#綱要" class="headerlink" title="綱要"></a>綱要</h1><h2 id="1-Ebook-Translator"><a href="#1-Ebook-Translator" class="headerlink" title="1. Ebook Translator"></a>1. Ebook Translator</h2><p>CALIBRE 插件「 Ebook Translator 」可以調用翻譯軟體，包括各家的LLM，詳細參考<a href="https://bookfere.com/post/1057.html">Ebook Translator：用 Calibre 翻译多格式双语对照电子书 – 书伴</a>  </p><h2 id="2-安裝插件"><a href="#2-安裝插件" class="headerlink" title="2. 安裝插件"></a>2. 安裝插件</h2><p>安裝過程可以照著下述步驟，或是參考此文章：<a href="https://jingyan.baidu.com/article/a948d6512f60d70a2dcd2e3c.html">Calibre如何安装插件-百度经验</a></p><ol><li>首先我们打开calibre客户端，如<img src="Pasted image 20250829142205.png"></li><li>接著，選擇介面中的「偏好設定」，<img src="Pasted image 20250829142532.png"></li><li>然後，點選「外掛」選項<img src="Pasted image 20250829142544.png"></li><li>進入之後，選擇「取得新外掛」的選項<img src="Pasted image 20250829142601.png"></li><li>輸入「Ebook Translator 」或下滑找到<img src="Pasted image 20250829143010.png"></li></ol><h2 id="3-免費的API：GEMINI"><a href="#3-免費的API：GEMINI" class="headerlink" title="3. 免費的API：GEMINI"></a>3. 免費的API：GEMINI</h2><p>考慮免費的API，現在有提供免費額度的有Google Gemini、<strong>OpenAI API</strong>提供新註冊帳戶免費試用金。如果要穩定的使用建議還是使用Gemini，以下以Gemini為案例。</p><h2 id="4-調整頻率以自動翻譯"><a href="#4-調整頻率以自動翻譯" class="headerlink" title="4. 調整頻率以自動翻譯"></a>4. 調整頻率以自動翻譯</h2><p>所謂翻譯整本書是指透過調低時間間隔，避免頂到google 免費tier的回應上限，利用每日的免費額度翻譯書籍，所以有這些要件<br>4. 免費額度上限<br>5. 時間間隔<br>設定一下頻率不要頂到google給的上限</p><p>免費額度上限根據模型不同，建議選擇Gemini 2.5 Flash-lite，其有著咕咕嚕提供的<strong>慷慨的免費額度</strong>。Gemini 2.5 Flash-lite 提供1000個RPD，RPD是**Requests Per Day (每日請求次數)**，意味著您每天可以發送 1000 次 API 請求來處理文本，通常會搭配較小的單次請求字符限制。<br><img src="Pasted image 20250828154223.png"><br>不同方案的使用限制。詳細請參考<a href="https://ai.google.dev/gemini-api/docs/rate-limits?hl=zh-tw#free-tier">頻率限制  |  Gemini API  |  Google AI for Developers</a></p><p><img src="Pasted image 20250828160817.png">選擇Model（模型） 為Gemini 2.5 Flash-lite。</p><p>想要順利翻譯完整本書，需要注意的是模型的RPM（每分鐘要求數）需要低於15次每分鐘，以免觸發超速錯誤。</p><p><img src="Pasted image 20250828160746.png">因此，將時間間隔設置為4秒。</p><h3 id="文本切割與批次處理-Chunking-Batching"><a href="#文本切割與批次處理-Chunking-Batching" class="headerlink" title="文本切割與批次處理 (Chunking &amp; Batching)"></a><strong>文本切割與批次處理 (Chunking &amp; Batching)</strong></h3><p>由於存在RPD限制，同時每本書很可能被切分超過千條，適當的將段落合併可以減少遇到RPD上限。因此，策略會從「如何不超過 RPD 或 RPM」轉變為「<strong>如何最大化單次請求的 Token 負載，以最少的請求次數高效利用每日的總 Token 免費額度，並維持最佳翻譯品質</strong>」。用更少的請求處理更多的內容，降低觸發任何速率限制的風險。</p><p><img src="Pasted image 20250828161318.png">要實現段落合併，選擇「合併翻譯」即可，英文字數建議在1000-1500，日文則為500左右，閱讀時較為方便比對原文。</p><h1 id="關鍵字"><a href="#關鍵字" class="headerlink" title="關鍵字"></a>關鍵字</h1><h1 id="文獻"><a href="#文獻" class="headerlink" title="文獻"></a>文獻</h1><ul><li><a href="https://bookfere.com/post/1057.html">Ebook Translator：用 Calibre 翻译多格式双语对照电子书 – 书伴</a></li><li><a href="https://ai.google.dev/gemini-api/docs/rate-limits?hl=zh-tw#free-tier">頻率限制  |  Gemini API  |  Google AI for Developers</a></li><li><a href="https://blog.csdn.net/gitblog_07891/article/details/142224977">【免费下载】 Calibre-Douban 插件安装与配置指南-CSDN博客</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 程式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 程式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>NTUST好吃驚EP4-板橋</title>
       <link href="/NTUST-travel-notes-EP4/"/>
       <url>/NTUST-travel-notes-EP4/</url>
