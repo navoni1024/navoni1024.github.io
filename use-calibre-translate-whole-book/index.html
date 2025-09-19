@@ -149,7 +149,6 @@
 </div>
     <div class="post-content">
     <h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>近日發現CALIBRE 有個插件可以調用翻譯軟體，包括各家的LLM。於是就試用了一下發覺翻譯整本書效果尚可。</p>
-<h1 id="核心論點"><a href="#核心論點" class="headerlink" title="核心論點"></a>核心論點</h1><p>從[[永久筆記A]]、[[永久筆記B]]，想到與[[永久筆記C]]的想法相呼應……。</p>
 <h1 id="綱要"><a href="#綱要" class="headerlink" title="綱要"></a>綱要</h1><h2 id="1-Ebook-Translator"><a href="#1-Ebook-Translator" class="headerlink" title="1. Ebook Translator"></a>1. Ebook Translator</h2><p>CALIBRE 插件「 Ebook Translator 」可以調用翻譯軟體，包括各家的LLM，詳細參考<a target="_blank" rel="noopener" href="https://bookfere.com/post/1057.html">Ebook Translator：用 Calibre 翻译多格式双语对照电子书 – 书伴</a>  </p>
 <h2 id="2-安裝插件"><a href="#2-安裝插件" class="headerlink" title="2. 安裝插件"></a>2. 安裝插件</h2><p>安裝過程可以照著下述步驟，或是參考此文章：<a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/a948d6512f60d70a2dcd2e3c.html">Calibre如何安装插件-百度经验</a></p>
 <ol>
@@ -167,7 +166,7 @@
 <p><img src="Pasted image 20250828160746.png">因此，將時間間隔設置為4秒。</p>
 <h3 id="文本切割與批次處理-Chunking-Batching"><a href="#文本切割與批次處理-Chunking-Batching" class="headerlink" title="文本切割與批次處理 (Chunking &amp; Batching)"></a><strong>文本切割與批次處理 (Chunking &amp; Batching)</strong></h3><p>由於存在RPD限制，同時每本書很可能被切分超過千條，適當的將段落合併可以減少遇到RPD上限。因此，策略會從「如何不超過 RPD 或 RPM」轉變為「<strong>如何最大化單次請求的 Token 負載，以最少的請求次數高效利用每日的總 Token 免費額度，並維持最佳翻譯品質</strong>」。用更少的請求處理更多的內容，降低觸發任何速率限制的風險。</p>
 <p><img src="Pasted image 20250828161318.png">要實現段落合併，選擇「合併翻譯」即可，英文字數建議在1000-1500，日文則為500左右，閱讀時較為方便比對原文。</p>
-<h1 id="關鍵字"><a href="#關鍵字" class="headerlink" title="關鍵字"></a>關鍵字</h1><h1 id="文獻"><a href="#文獻" class="headerlink" title="文獻"></a>文獻</h1><ul>
+<h1 id="文獻"><a href="#文獻" class="headerlink" title="文獻"></a>文獻</h1><ul>
 <li><a target="_blank" rel="noopener" href="https://bookfere.com/post/1057.html">Ebook Translator：用 Calibre 翻译多格式双语对照电子书 – 书伴</a></li>
 <li><a target="_blank" rel="noopener" href="https://ai.google.dev/gemini-api/docs/rate-limits?hl=zh-tw#free-tier">頻率限制  |  Gemini API  |  Google AI for Developers</a></li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/gitblog_07891/article/details/142224977">【免费下载】 Calibre-Douban 插件安装与配置指南-CSDN博客</a></li>
