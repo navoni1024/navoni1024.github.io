@@ -148,9 +148,16 @@
     </div>
 </div>
     <div class="post-content">
-    <h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>近日發現CALIBRE 有個插件可以調用翻譯軟體，包括各家的LLM。於是就試用了一下發覺翻譯整本書效果尚可。</p>
-<h1 id="綱要"><a href="#綱要" class="headerlink" title="綱要"></a>綱要</h1><h2 id="1-Ebook-Translator"><a href="#1-Ebook-Translator" class="headerlink" title="1. Ebook Translator"></a>1. Ebook Translator</h2><p>CALIBRE 插件「 Ebook Translator 」可以調用翻譯軟體，包括各家的LLM，詳細參考<a target="_blank" rel="noopener" href="https://bookfere.com/post/1057.html">Ebook Translator：用 Calibre 翻译多格式双语对照电子书 – 书伴</a>  </p>
-<h2 id="2-安裝插件"><a href="#2-安裝插件" class="headerlink" title="2. 安裝插件"></a>2. 安裝插件</h2><p>安裝過程可以照著下述步驟，或是參考此文章：<a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/a948d6512f60d70a2dcd2e3c.html">Calibre如何安装插件-百度经验</a></p>
+    <h1 id="摘要：為什麼選擇Calibre自動翻譯？"><a href="#摘要：為什麼選擇Calibre自動翻譯？" class="headerlink" title="摘要：為什麼選擇Calibre自動翻譯？"></a>摘要：為什麼選擇Calibre自動翻譯？</h1><p>近日發現CALIBRE 有個插件可以調用翻譯軟體，包括各家的LLM。於是就試用了一下發覺翻譯整本書效果尚可。<br>本文重點在於實現<strong>24小時無人值守Calibre自動翻譯</strong>。相較於傳統手動翻譯需要持續監控，本方法可讓你「睡一覺醒來，翻譯就完成了」！</p>
+<h1 id="大綱"><a href="#大綱" class="headerlink" title="大綱"></a>大綱</h1><ol start="2">
+<li>Calibre 翻譯電子書：Ebook Translator插件安裝設定</li>
+<li>翻譯API挑選：Gemini vs OpenAI</li>
+<li><strong>核心技巧：自動化頻率設定避免限制</strong></li>
+<li>實際測試數據</li>
+<li>效果最佳化</li>
+</ol>
+<h2 id="1-Calibre-翻譯電子書：Ebook-Translator插件安裝設定"><a href="#1-Calibre-翻譯電子書：Ebook-Translator插件安裝設定" class="headerlink" title="1.  Calibre 翻譯電子書：Ebook Translator插件安裝設定"></a>1.  Calibre 翻譯電子書：Ebook Translator插件安裝設定</h2><p>CALIBRE 插件「 Ebook Translator 」可以調用翻譯軟體，包括各家的LLM，詳細參考<a target="_blank" rel="noopener" href="https://bookfere.com/post/1057.html">Ebook Translator：用 Calibre 翻译多格式双语对照电子书 – 书伴</a>  </p>
+<p>安裝過程可以照著下述步驟，或是參考此文章：<a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/a948d6512f60d70a2dcd2e3c.html">Calibre如何安装插件-百度经验</a></p>
 <ol>
 <li>首先我们打开calibre客户端，如<img src="Pasted image 20250829142205.png"></li>
 <li>接著，選擇介面中的「偏好設定」，<img src="Pasted image 20250829142532.png"></li>
@@ -158,14 +165,30 @@
 <li>進入之後，選擇「取得新外掛」的選項<img src="Pasted image 20250829142601.png"></li>
 <li>輸入「Ebook Translator 」或下滑找到<img src="Pasted image 20250829143010.png"></li>
 </ol>
-<h2 id="3-免費的API：GEMINI"><a href="#3-免費的API：GEMINI" class="headerlink" title="3. 免費的API：GEMINI"></a>3. 免費的API：GEMINI</h2><p>考慮免費的API，現在有提供免費額度的有Google Gemini、<strong>OpenAI API</strong>提供新註冊帳戶免費試用金。如果要穩定的使用建議還是使用Gemini，以下以Gemini為案例。</p>
-<h2 id="4-調整頻率以自動翻譯"><a href="#4-調整頻率以自動翻譯" class="headerlink" title="4. 調整頻率以自動翻譯"></a>4. 調整頻率以自動翻譯</h2><p>所謂翻譯整本書是指透過調低時間間隔，避免頂到google 免費tier的回應上限，利用每日的免費額度翻譯書籍，所以有這些要件<br>4. 免費額度上限<br>5. 時間間隔<br>設定一下頻率不要頂到google給的上限</p>
-<p>免費額度上限根據模型不同，建議選擇Gemini 2.5 Flash-lite，其有著咕咕嚕提供的<strong>慷慨的免費額度</strong>。Gemini 2.5 Flash-lite 提供1000個RPD，RPD是**Requests Per Day (每日請求次數)**，意味著您每天可以發送 1000 次 API 請求來處理文本，通常會搭配較小的單次請求字符限制。<br><img src="Pasted image 20250828154223.png"><br>不同方案的使用限制。詳細請參考<a target="_blank" rel="noopener" href="https://ai.google.dev/gemini-api/docs/rate-limits?hl=zh-tw#free-tier">頻率限制  |  Gemini API  |  Google AI for Developers</a></p>
+<h2 id="3-免費API選擇：Gemini-vs-OpenAI"><a href="#3-免費API選擇：Gemini-vs-OpenAI" class="headerlink" title="3. 免費API選擇：Gemini vs OpenAI"></a>3. 免費API選擇：Gemini vs OpenAI</h2><p>考慮免費的API，現在有提供免費額度的有Google Gemini、OpenAI API。其中OpenAI有提供新註冊帳戶免費試用金，但可用量有限，且只有一次。如果以穩定使用為訴求，建議還是使用Gemini API，以下以Gemini為案例。</p>
+<h2 id="4-核心技巧：自動化頻率設定避免限制"><a href="#4-核心技巧：自動化頻率設定避免限制" class="headerlink" title="4. 核心技巧：自動化頻率設定避免限制"></a>4. 核心技巧：自動化頻率設定避免限制</h2><p>所謂翻譯整本書是指透過調低時間間隔，避免頂到google 免費tier的回應上限，利用每日的免費額度翻譯書籍，所以有這些要件<br>4. 免費額度上限<br>5. 時間間隔<br>設定一下頻率不要頂到google給的上限</p>
+<p>免費額度上限根據模型不同，建議選擇Gemini 2.5 Flash-lite，其有著咕咕嚕所提供<strong>慷慨的免費額度</strong>。如下圖，Gemini 2.5 Flash-lite 提供1000個RPD，RPD是**Requests Per Day (每日請求次數)**，意思是每天可以向Gemini發送 1000 次 API 請求來處理文本，由於筆者的個人需求，通常會搭配較小的單次請求字符限制。（參6. 效果最佳化）<br><img src="Pasted image 20250828154223.png"><br>不同方案的使用限制。詳細請參考<a target="_blank" rel="noopener" href="https://ai.google.dev/gemini-api/docs/rate-limits?hl=zh-tw#free-tier">頻率限制  |  Gemini API  |  Google AI for Developers</a></p>
 <p><img src="Pasted image 20250828160817.png">選擇Model（模型） 為Gemini 2.5 Flash-lite。</p>
 <p>想要順利翻譯完整本書，需要注意的是模型的RPM（每分鐘要求數）需要低於15次每分鐘，以免觸發超速錯誤。</p>
 <p><img src="Pasted image 20250828160746.png">因此，將時間間隔設置為4秒。</p>
-<h3 id="文本切割與批次處理-Chunking-Batching"><a href="#文本切割與批次處理-Chunking-Batching" class="headerlink" title="文本切割與批次處理 (Chunking &amp; Batching)"></a><strong>文本切割與批次處理 (Chunking &amp; Batching)</strong></h3><p>由於存在RPD限制，同時每本書很可能被切分超過千條，適當的將段落合併可以減少遇到RPD上限。因此，策略會從「如何不超過 RPD 或 RPM」轉變為「<strong>如何最大化單次請求的 Token 負載，以最少的請求次數高效利用每日的總 Token 免費額度，並維持最佳翻譯品質</strong>」。用更少的請求處理更多的內容，降低觸發任何速率限制的風險。</p>
-<p><img src="Pasted image 20250828161318.png">要實現段落合併，選擇「合併翻譯」即可，英文字數建議在1000-1500，日文則為500左右，閱讀時較為方便比對原文。</p>
+<h2 id="5-實際測試數據"><a href="#5-實際測試數據" class="headerlink" title="5. 實際測試數據"></a>5. 實際測試數據</h2><p>我們簡單計算一下</p>
+<ul>
+<li>一本300頁英文小說，設定4秒間隔，以一頁為單位，約須20分鐘完成 </li>
+<li>使用Gemini免費額度，單日可處理約1000頁內容 </li>
+<li>同時翻譯品質對比：Gemini &gt; Google Translate &gt; DeepL免費版</li>
+</ul>
+<img src="Pasted image 20250920161249.jpg">
+在此以歷史學家霍布斯邦（Eric Hobsbawm）年代四部曲為例，《帝國的年代》被拆分為1134個段落，從下午14:24 開始翻譯，下午16:10完成整本書的翻譯，全書翻譯時間約106分鐘。
+
+<h2 id="6-效果最佳化"><a href="#6-效果最佳化" class="headerlink" title="6. 效果最佳化"></a>6. 效果最佳化</h2><h3 id="文本切割與批次處理-Chunking-Batching"><a href="#文本切割與批次處理-Chunking-Batching" class="headerlink" title="文本切割與批次處理 (Chunking &amp; Batching)"></a><strong>文本切割與批次處理 (Chunking &amp; Batching)</strong></h3><p>由於存在RPD限制，同時每本書很可能被切分超過千條，適當的將段落合併可以減少遇到RPD上限。因此，策略會從「如何不超過 RPD 或 RPM」轉變為「<strong>如何最大化單次請求的 Token 負載，以最少的請求次數高效利用每日的總 Token 免費額度，並維持最佳翻譯品質</strong>」。用更少的請求處理更多的內容，降低觸發任何速率限制的風險。</p>
+<p><img src="Pasted image 20250828161318.png">要實現段落合併，選擇「合併翻譯」即可。</p>
+<p>此外，當閱讀翻譯書籍時，最大的問題是語彙的指涉不清，這時往往須求助於英語原文，所以適量的減低單次的英文字數可能有重要性。對於英語原文，建議合適的一次性翻譯字元數在1000-1500字之間，日文則為500字左右，閱讀時較為方便比對原文。</p>
+<h1 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h1><p>用這種方式除了不能應對即時性的翻譯需求以外，基本上相當便利。但是整本書還是會有少數錯誤（但統計起來也麻煩，之後再說）錯誤主要有：</p>
+<ol>
+<li>少數字詞沒有翻譯到指定語言，例如翻譯日語書時把詞彙翻譯成英文</li>
+<li>完全沒有翻譯，整段重複</li>
+<li>組塊錯誤導致的語義斷裂<br>所以在閱讀翻譯好的書時，仍然需要備用的手段，比如即時的手動翻譯。或著說，未經校閱的書更適合閱讀語速比較慢的人，而不是完全語言不通者。</li>
+</ol>
 <h1 id="文獻"><a href="#文獻" class="headerlink" title="文獻"></a>文獻</h1><ul>
 <li><a target="_blank" rel="noopener" href="https://bookfere.com/post/1057.html">Ebook Translator：用 Calibre 翻译多格式双语对照电子书 – 书伴</a></li>
 <li><a target="_blank" rel="noopener" href="https://ai.google.dev/gemini-api/docs/rate-limits?hl=zh-tw#free-tier">頻率限制  |  Gemini API  |  Google AI for Developers</a></li>
