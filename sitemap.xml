@@ -236,7 +236,7 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/Optoelectronics-Department-Essay-EP1/</loc>
+    <loc>http://navoni1024.github.io/10-minute-phy-lesson/</loc>
     
     <lastmod>2024-02-29</lastmod>
     
@@ -245,7 +245,7 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/10-minute-phy-lesson/</loc>
+    <loc>http://navoni1024.github.io/Optoelectronics-Department-Essay-EP1/</loc>
     
     <lastmod>2024-02-29</lastmod>
     
@@ -468,27 +468,6 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/tags/scraping/</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://navoni1024.github.io/tags/coding/</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://navoni1024.github.io/tags/python/</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://navoni1024.github.io/tags/bartending/</loc>
     <lastmod>2025-09-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -504,6 +483,27 @@
   
   <url>
     <loc>http://navoni1024.github.io/tags/%E5%9C%9F%E8%A3%BD/</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/tags/scraping/</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/tags/coding/</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://navoni1024.github.io/tags/python/</loc>
     <lastmod>2025-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -568,6 +568,13 @@
   </url>
   
   <url>
+    <loc>http://navoni1024.github.io/categories/diet/</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://navoni1024.github.io/categories/coding/</loc>
     <lastmod>2025-09-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -575,7 +582,7 @@
   </url>
   
   <url>
-    <loc>http://navoni1024.github.io/categories/diet/</loc>
+    <loc>http://navoni1024.github.io/categories/diet/wine/</loc>
     <lastmod>2025-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -590,13 +597,6 @@
   
   <url>
     <loc>http://navoni1024.github.io/categories/coding/scraping/</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://navoni1024.github.io/categories/diet/wine/</loc>
     <lastmod>2025-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
