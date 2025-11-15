@@ -59,7 +59,7 @@
 
 
 
-  <meta name="generator" content="Hexo 7.1.1"></head>
+  <meta name="generator" content="Hexo 7.3.0"></head>
   <body>
     <div class="mask-border">
     </div>
@@ -159,7 +159,6 @@
 <span id="more"></span>
 <p>插入時，對於根節點編輯距離重複的點會碰撞，因此，新加入的點會以碰撞點為父節點進行插入，並且編輯距離變成與該碰撞節點的編輯距離。</p>
 <img src="01.png" alt="例圖">
-
 <p>對於搜尋最接近的正確單字，我們需要設置一個容錯值(Tolerance)，以及計算目前的字與root間的距離，稱dist，然後我們就可以去迭代[dist-tolerance, dist+tolerance]間距離的所有單字，以降低暴力搜尋所有節點的複雜度。針對每一個在距離內的節點，將其加入可能列表中，並對該點進行遞迴再判斷，藉以達成所以相近字詞搜尋。</p>
 <p><strong>筆者: NTUST So Hard</strong></p>
 
